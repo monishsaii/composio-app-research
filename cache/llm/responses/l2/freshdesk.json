@@ -1,0 +1,118 @@
+{
+ "id": "freshdesk",
+ "name": "Freshdesk",
+ "category": "Support & Helpdesk",
+ "one_liner": "Cloud customer support helpdesk with a JSON REST API v2 for tickets, contacts, companies and knowledge base.",
+ "docs_url": "https://developer.freshdesk.com/api/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Per-agent API key as Basic auth username (dummy password). The API reference also lists an 'OAuth 2.0 Scope' per endpoint (e.g. freshdesk.tickets.create), so OAuth exists; registration flow not confirmed. Freshworks MCP supports API key only.",
+ "oauth_details": {
+  "flows": [],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_trial",
+ "access_notes": "API key is available to any agent in any account incl. trials (trial default limit 50 calls/min). Rate limit is plan based: Growth 100, Pro 400, Enterprise 700 per minute. No plan is stated to lack API access.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://<your-freshdesk-domain>/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve key via trial or paid account, broad documented REST API, per-plan rate limits. Sandbox only on Enterprise per pricing page.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": [
+  {
+   "field": "mcp",
+   "url": "https://support.freshdesk.com/support/solutions/articles/50000014411",
+   "quote": "The Freshworks MCP server is exposed as a tenant-specific endpoint:",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "access",
+   "url": "https://developer.freshdesk.com/api/",
+   "quote": "For all trial users, there is a default API limit of 50 calls/minute.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "sandbox",
+   "url": "https://www.freshworks.com/freshdesk/pricing/",
+   "quote": "Skill-based routing - Sandbox - Audit logs",
+   "source_type": "pricing_page"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "api_key"
+   ],
+   "yours": [
+    "api_key",
+    "oauth2"
+   ],
+   "why": "API reference lists 'OAuth 2.0 Scope' per endpoint."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "Freshworks support article documents an official tenant-specific MCP endpoint, API-key auth."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_trial",
+   "why": "Docs state trial accounts have API limit of 50 calls/min, so API usable in trial."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "API reference lists well over 100 /api/v2 endpoint entries."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Support docs/search describe automation-rule webhooks counting against API quota; no dedicated webhooks API page fetched."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Pricing page lists Sandbox on Enterprise plan."
+  }
+ ]
+}

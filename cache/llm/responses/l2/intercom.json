@@ -1,0 +1,39 @@
+{
+ "id": "intercom",
+ "name": "Intercom",
+ "category": "Support & Helpdesk",
+ "one_liner": "Customer messaging and support platform with a REST API for conversations, contacts and help center.",
+ "docs_url": "https://developers.intercom.com/docs/references/2.9/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Private apps use an Access Token as Bearer; public apps must use OAuth.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": true},
+ "access": "app_review_required",
+ "access_notes": "Private apps for your own paid workspace need no review. Public multi-customer apps must be reviewed and approved by Intercom. Free development workspaces exist.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["ruby", "node"]},
+ "mcp": {"exists": "official", "url": "https://mcp.intercom.com/mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "app_review", "rationale": "Multi-customer integration is a public app needing OAuth and Intercom review; private token path needs a paid workspace.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "medium", "api_surface": "low", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "identity": [{"url": "https://developers.intercom.com/docs/webhooks", "quote": "Webhooks are a way that you can access real-time notifications about events that happen in your Intercom workspace.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app", "quote": "Choose \"Directly from the Intercom App Store\" and provide the Direct installation url, which should be the link that will kick off the OAuth flow", "source_type": "official_docs"}],
+  "access": [
+   {"url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app", "quote": "This means that the Intercom team must review and approve your app before it is available to install.", "source_type": "official_docs"},
+   {"url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app", "quote": "Private apps that only access your own paid workspace data do not require a review.", "source_type": "official_docs"}
+  ],
+  "sandbox": [{"url": "https://developers.intercom.com/docs/build-an-integration/getting-started/", "quote": "Development workspaces are free and intended for development purposes only.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developers.intercom.com/docs/webhooks", "quote": "You can create a webhook subscription within your Intercom app by choosing the topics that you want to be notified about", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://developers.intercom.com/docs/guides/mcp", "quote": "Intercom hosts a remote MCP server that follows the authenticated remote MCP specification", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app", "quote": "you will need to submit it for a review from the Intercom team.", "source_type": "official_docs"}]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "app_review_required", "why": "Public apps must be reviewed and approved by Intercom before install."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "app_review", "why": "Documented public app review gate."},
+  {"field": "sandbox_or_test_env", "first_pass": "unknown", "yours": true, "why": "Getting-started page documents free development workspaces."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Webhooks docs describe topic subscriptions."}
+ ]
+}

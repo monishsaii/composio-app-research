@@ -1,0 +1,49 @@
+{
+ "id": "help-scout",
+ "name": "Help Scout",
+ "category": "Support & Helpdesk",
+ "one_liner": "Customer support help desk (shared inboxes, Docs knowledge base, Beacon) with Inbox API v2 and Docs API.",
+ "docs_url": "https://developer.helpscout.com",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "api_key"],
+ "auth_notes": "Inbox API v2 uses OAuth2 (auth code / client credentials) with an app created under Your Profile > My apps. Docs API uses an API key as Basic-auth username with a dummy password. Webhooks are HMAC signed.",
+ "oauth_details": {"flows": ["auth_code", "client_credentials"], "scopes_granular": "unknown", "app_review_required": false},
+ "access": "paid_plan_required",
+ "access_notes": "Help Scout support article: 'The Free plan does not include access to the API or integrations.' Standard 200 calls/min without reporting endpoints; Plus 400; Pro 800. Standard and Plus offer a free trial.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["php"]
+ },
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve OAuth app creation, documented REST API and signed webhooks, but the API is unavailable on the Free plan and reporting endpoints need Plus/Pro; developer needs a trial or paid account.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "api_surface": "medium", "mcp": "medium", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": [
+  {"field": "access", "url": "https://docs.helpscout.com/article/1140-mailbox-api", "quote": "The Free plan does not include access to the API or integrations.", "source_type": "official_docs"},
+  {"field": "api_surface.rate_limits_documented", "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting", "quote": "Your current rate limit depends on your plan.", "source_type": "official_docs"},
+  {"field": "api_surface.webhooks", "url": "https://developer.helpscout.com/webhooks/", "quote": "Each webhook includes two Help Scout headers", "source_type": "official_docs"},
+  {"field": "mcp", "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/", "quote": "we're bringing Help Scout's Model Context Protocol (MCP) server out of beta, making it generally available to all Help Scout customers.", "source_type": "official_docs"},
+  {"field": "auth", "url": "https://developer.helpscout.com/mailbox-api/overview/authentication", "quote": "You need to create an OAuth2 application before you can use the API.", "source_type": "official_docs"}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Help Scout docs state Free plan has no API access; paid plans (trial available) required."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_NOW", "yours": "BUILD_WITH_CAVEATS", "why": "Paid tier needed for API; Standard lacks reporting endpoints."},
+  {"field": "buildability.main_blocker", "first_pass": "none", "yours": "paid_plan_gate", "why": "API excluded from Free plan."},
+  {"field": "oauth_details.app_review_required", "first_pass": "unknown", "yours": false, "why": "Apps are self-created under My apps; no review step documented."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["php"], "why": "Developer site lists official PHP SDK for Inbox API 2.0 plus Laravel adapter."}
+ ]
+}

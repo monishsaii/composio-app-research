@@ -1,0 +1,48 @@
+{
+ "id": "lark-larksuite",
+ "name": "Lark (Larksuite)",
+ "category": "Comms & Messaging",
+ "one_liner": "Enterprise collaboration platform (Lark) with messaging, calendar, docs and video, exposed via OpenAPIs.",
+ "docs_url": "https://open.larksuite.com/llms.txt",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "App ID/App Secret yield tenant_access_token (app identity) or user_access_token via standard OAuth 2.0; sent in HTTP headers. International platform is open.larksuite.com; Feishu (open.feishu.cn) is the separate CN platform.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "admin_approval",
+ "access_notes": "Custom apps created self-serve in the Developer Console; each API scope needs enterprise administrator approval before calls work. Store apps limited to ISV-qualified users. Pricing/plan gating of API not found (plans page returned no text).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["go", "python", "java", "node"]
+ },
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Self-serve custom app credentials and documented OAuth OpenAPIs, but each scope needs per-tenant admin approval; store distribution restricted to ISVs. Intl Lark vs Feishu need separate domains.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Docs pages are JS-rendered (rate limits, event guide, plans returned no text); rate limits and sandbox unverified.",
+ "evidence": [
+  {"field": "access", "url": "https://open.larksuite.com/llms.txt", "quote": "only after the enterprise administrator approves can the application proceed with subsequent API calls or event listening."},
+  {"field": "access", "url": "https://open.larksuite.com/llms.txt", "quote": "(Only ISV-qualified users can create store apps.)"},
+  {"field": "mcp", "url": "https://github.com/larksuite/lark-openapi-mcp", "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool"},
+  {"field": "webhooks", "url": "https://open.larksuite.com/llms.txt", "quote": "Traditional webhook mode, requiring you to provide a public internet address for receiving event messages."}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "admin_approval", "why": "llms.txt states API calls require enterprise administrator approval of scopes."},
+  {"field": "oauth_details.app_review_required", "first_pass": "unknown", "yours": true, "why": "Scope/data-permission review by tenant admin is required; store apps also need ISV qualification."},
+  {"field": "mcp.url", "first_pass": null, "yours": null, "why": "Official local MCP at github.com/larksuite/lark-openapi-mcp (npm @larksuiteoapi/lark-mcp); no hosted URL, so exists stays official."},
+  {"field": "api_surface.style", "first_pass": ["other"], "yours": ["rest"], "why": "HTTP OpenAPIs with header tokens; REST-style, SDKs wrap them."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "llms.txt lists messaging, calendar, docs, bitable, contacts, CoreHR etc.; count not verified."}
+ ]
+}

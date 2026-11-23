@@ -1,0 +1,183 @@
+{
+ "id": "hubspot",
+ "name": "HubSpot",
+ "category": "CRM & Sales",
+ "one_liner": "Developer platform for building custom CRM and data-driven website experiences on HubSpot.",
+ "docs_url": "https://developers.hubspot.com/docs/guides/api/overview",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "bearer_token",
+  "api_key"
+ ],
+ "auth_notes": "OAuth required to distribute to multiple accounts; static auth token (private app) for a single account; both sent as Bearer. A separate developer API key (hapikey) is used only for app-management endpoints. Client-credentials OAuth tokens are used for the webhooks journal.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Standard HubSpot accounts can be free; developer test accounts are free (up to 10). Private-distribution OAuth apps are limited to 10 accounts; Marketplace listing is manually reviewed and needs 3 active installs, but is not required to call the API. Some scopes are tiered by plan; rate limits depend on account subscription.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "nodejs"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://developers.hubspot.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Free developer and test accounts, documented REST API, standard OAuth. Caveats: scope tiering by plan, per-plan rate limits, private OAuth apps capped at 10 accounts, and Marketplace review for public distribution.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Endpoint count not measured; per-tier rate-limit numbers not captured.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "Learn about the different types of HubSpot accounts and what each one is used for.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+    "quote": "OAuth is required for multiple accounts, while static auth access tokens are used for installing in a single account at a time.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+    "quote": "Some app features and settings require a developer API key",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "It can be free or paid, and is used as your production environment.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+    "quote": "you can install your app in a maximum of 10 accounts at a time",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "quote": "You can create up to 10 test accounts to test apps and integrations without affecting any real HubSpot data.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developers.hubspot.com/docs/api/usage-details",
+    "quote": "each HubSpot account that installs your app is limited to 110 requests every 10 seconds",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.hubspot.com/docs/api/webhooks",
+    "quote": "the webhooks v4 API builds on the previous version of the webhooks subscription API",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/list-apps/listing-your-app/app-marketplace-listing-requirements",
+    "quote": "or be built with HubSpot’s MCP Server.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/list-apps/listing-your-app/app-marketplace-listing-requirements",
+    "quote": "App listing submissions are manually reviewed by the HubSpot Ecosystem Quality team",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+    "quote": "you can install your app in a maximum of 10 accounts at a time",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Free developer test accounts and free standard accounts can create apps and tokens; only some scopes are plan-tiered."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Up to 10 free developer test accounts; enterprise sandboxes too."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Date-versioned API reference spans CRM, marketing, CMS, webhooks and more; count not measured."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Webhooks v4 and webhooks journal API documented."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Usage guidelines page documents 110 req/10s for public OAuth apps plus per-account tiers."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "yours": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+   ],
+   "why": "Developer API key (hapikey) exists for app-management endpoints."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "paid_plan_gate",
+   "yours": "app_review",
+   "why": "Free accounts can call the API; Marketplace listing review and the 10-account private cap are the main gates."
+  }
+ ]
+}

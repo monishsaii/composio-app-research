@@ -1,0 +1,114 @@
+{
+ "id": "whatsapp-business",
+ "name": "WhatsApp Business",
+ "category": "Comms & Messaging",
+ "one_liner": "Meta's WhatsApp Business Platform Cloud API (HTTP, webhooks); the on-premises API was shut down.",
+ "docs_url": "https://developers.facebook.com/docs/whatsapp",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token"
+ ],
+ "auth_notes": "Not verified on an official page (Meta docs returned HTTP 400 to fetch). Commonly a Meta access token (system user or user token) sent as Bearer; unverified.",
+ "oauth_details": null,
+ "access": "app_review_required",
+ "access_notes": "Free API access, per-message billing. Needs a Meta developer app, business portfolio, phone number, approved display name; business verification to raise limits. Test number available. Third-party sources only.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "unknown",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Cloud API is the only option since on-premises ended; self-serve start with test number, but production needs business verification, template approval and per-message billing. Official docs not retrievable.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "low",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "low",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Meta developer docs block automated fetch (HTTP 400); auth, endpoints, rate limits and MCP status rest on third-party blogs.",
+ "evidence": {
+  "auth": [],
+  "access": [
+   {
+    "url": "https://iimagined.ai/blog/whatsapp-business-api-guide-2026",
+    "quote": "You create a Meta developer app, add the WhatsApp product, connect it to your business portfolio and get a test number",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://iimagined.ai/blog/whatsapp-business-api-guide-2026",
+    "quote": "Production needs your own number, an approved display name and, to raise limits, business verification.",
+    "source_type": "third_party"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://iimagined.ai/blog/whatsapp-business-api-guide-2026",
+    "quote": "You create a Meta developer app, add the WhatsApp product, connect it to your business portfolio and get a test number",
+    "source_type": "third_party"
+   }
+  ],
+  "api_surface": [],
+  "mcp": [],
+  "buildability": [],
+  "identity": [
+   {
+    "url": "https://iimagined.ai/blog/whatsapp-business-api-guide-2026",
+    "quote": "Meta's own hosted version, the Cloud API, is now the only option: the self-hosted On-Premises API stopped working on October 23, 2025.",
+    "source_type": "third_party"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "self_serve_free",
+   "yours": "app_review_required",
+   "why": "Production needs business verification and display-name approval (third-party source)."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "app_review",
+   "why": "Verification and approval steps are the main gate."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Guide says Meta provides a test number."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Guide describes webhook-based routing of inbound messages (third-party)."
+  },
+  {
+   "field": "confidence.identity",
+   "first_pass": "medium",
+   "yours": "high",
+   "why": "Cloud API is now the only option; on-prem ended Oct 2025, so ambiguity largely resolved."
+  }
+ ]
+}

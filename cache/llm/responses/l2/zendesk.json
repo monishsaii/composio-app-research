@@ -1,0 +1,42 @@
+{
+ "id": "zendesk",
+ "name": "Zendesk",
+ "category": "Support & Helpdesk",
+ "one_liner": "Customer support platform with ticketing, Help Center, messaging and custom data APIs.",
+ "docs_url": "https://developer.zendesk.com/api-reference/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "basic"],
+ "auth_notes": "OAuth access tokens as Bearer are the supported method; API tokens (basic) are deprecated. Multi-customer apps need global OAuth tokens.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "Pricing page lists only paid per-agent plans (Support Team from US$19/agent/month). Trial and sandbox not verified. Rate limits vary by plan (200 to 2500 req/min).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "paid_plan_gate", "rationale": "Documented API with OAuth and webhooks, but needs a paid Zendesk account; multi-customer apps need global OAuth; rate limits are plan-tiered.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Trial/sandbox availability, endpoint count and official MCP status not confirmed.",
+ "evidence": {
+  "identity": [{"url": "https://developer.zendesk.com/api-reference/webhooks/webhooks-api/webhooks/", "quote": "A webhook sends an HTTP request to a specified URL in response to an activity in Zendesk Support.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.", "source_type": "official_docs"},
+   {"url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "quote": "API token (deprecated)", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.zendesk.com/pricing/", "quote": "US$ 19agent/month paid yearly", "source_type": "pricing_page"},
+   {"url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/", "quote": "Support and Help Center API requests per minute | 200 | 400 | 400 | 700 | 2500", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developer.zendesk.com/api-reference/webhooks/webhooks-api/webhooks/", "quote": "you can configure a webhook to send requests when a user is deleted or a new ticket is created.", "source_type": "official_docs"},
+   {"url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/", "quote": "If the rate limit is exceeded, the API responds with a 429 Too Many Requests status code.", "source_type": "official_docs"}
+  ],
+  "buildability": [{"url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "quote": "If you plan on distributing an app, integration, or bot to multiple Zendesk customers, you must use global OAuth tokens", "source_type": "official_docs"}]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Pricing page shows only paid per-agent plans and rate limits are plan-tiered; no free API tier seen."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Official Webhooks API reference exists."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Rate limits page lists per-plan requests per minute and 429 behavior."}
+ ]
+}

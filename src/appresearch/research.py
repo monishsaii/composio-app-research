@@ -163,6 +163,29 @@ def normalize(raw: dict, rid: str) -> dict:
         if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] in (None, "unknown", "none_found"):
             cache.log_event("normalize", id=rid, field=".".join(path), change=f"{cur[path[-1]]!r}->[]")
             cur[path[-1]] = []
+    for path in (("one_liner",), ("auth_notes",), ("access_notes",), ("needs_human_reason",), ("buildability", "rationale")):
+        cur = raw
+        for k in path[:-1]:
+            cur = cur.get(k) if isinstance(cur, dict) else None
+        if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] is None:
+            cur[path[-1]] = ""
+            cache.log_event("normalize", id=rid, field=".".join(path), change="null->''")
+    od = raw.get("oauth_details")
+    if isinstance(od, dict) and isinstance(od.get("flows"), list):
+        syn = {"authorization_code": "auth_code", "pkce": "PKCE", "device_code": "device", "auth_code_pkce": "PKCE"}
+        flows, dropped = [], []
+        for f in od["flows"]:
+            g = syn.get(str(f).lower(), f)
+            (flows if g in ("auth_code", "client_credentials", "device", "PKCE") else dropped).append(g)
+        if dropped or flows != od["flows"]:
+            cache.log_event("normalize", id=rid, field="oauth_details.flows", change=f"{od['flows']}->{flows}; dropped {dropped}")
+        od["flows"] = list(dict.fromkeys(flows))
+        if dropped:
+            raw["auth_notes"] = ((raw.get("auth_notes") or "") + f" Other OAuth flows: {', '.join(map(str, dropped))}.").strip()
+    if raw.get("needs_human") is None:
+        raw["needs_human"] = False
+    if raw.get("confidence") is None:
+        raw["confidence"] = {}
     for path in TRI_PATHS:
         cur = raw
         for k in path[:-1]:

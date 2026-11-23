@@ -1,0 +1,125 @@
+{
+ "id": "discord",
+ "name": "Discord",
+ "category": "Comms & Messaging",
+ "one_liner": "Discord REST (v10) + Gateway APIs for bots and OAuth2 apps; OpenAPI 3.1 preview spec published by Discord.",
+ "docs_url": "https://docs.discord.com/developers/reference.md",
+ "openapi_spec_url": "https://github.com/discord/discord-api-spec",
+ "auth_methods": [
+  "oauth2",
+  "bearer_token",
+  "other"
+ ],
+ "auth_notes": "Bot token from Developer Portal ('Authorization: Bot TOKEN'); OAuth2 user bearer tokens; incoming webhook URLs need no auth.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Bot creation is self-serve. Privileged gateway intents are toggled in portal; apps in 100+ guilds require verification and intent approval.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest",
+   "websocket"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "community",
+  "url": "https://docsearch.algolia.com/mcp/docs/repo/saseq/discord-mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve bot token and documented REST/Gateway API with an OpenAPI preview spec. Verification only matters at 100+ guilds or privileged intents at scale.",
+  "est_tool_count_if_built": 73,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "high",
+  "mcp": "medium",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": "No official Discord MCP found; spec endpoint count not computed (fetch truncated).",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.discord.com/developers/events/gateway.md",
+    "quote": "For verified apps (required for apps in 100+ guilds), the intent must also be approved after the verification process",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://github.com/discord/discord-api-spec",
+    "quote": "This repository contains the public preview of the OpenAPI 3.1 specification for Discord's API.",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://docs.discord.com/developers/topics/rate-limits.md",
+    "quote": "rate limits should not be hard coded into your app",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [],
+  "buildability": [],
+  "identity": []
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Bot tokens self-serve; no paid plan stated for API use."
+  },
+  {
+   "field": "openapi_spec_url",
+   "first_pass": null,
+   "yours": "https://github.com/discord/discord-api-spec",
+   "why": "Official OpenAPI 3.1 preview spec exists in Discord GitHub org."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Spec and docs cover dozens of resources; first pass itself estimated 73 tools."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "oauth2",
+    "other"
+   ],
+   "yours": [
+    "oauth2",
+    "bearer_token",
+    "other"
+   ],
+   "why": "OAuth2 user tokens are bearer tokens."
+  },
+  {
+   "field": "oauth_details.scopes_granular",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "OAuth2 scopes are granular per Discord docs."
+  }
+ ]
+}

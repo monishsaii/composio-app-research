@@ -1,0 +1,118 @@
+{
+ "id": "meta-ads",
+ "name": "Meta Ads",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Meta (Facebook/Instagram) Marketing API, part of the Graph API, for reading and managing ad accounts, campaigns, ad sets, ads and Insights reporting.",
+ "docs_url": "https://developers.facebook.com/docs/marketing-apis/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "bearer_token"
+ ],
+ "auth_notes": "Facebook Login OAuth user access tokens (ads_read / ads_management); long-lived (~60 days) and non-expiring System User tokens for server jobs. No API key; app ID/secret identify the app. Per third-party guides citing Meta docs; official pages returned errors to the fetcher.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": true
+ },
+ "access": "app_review_required",
+ "access_notes": "Own ad accounts: standard access to ads_read/ads_management works without review. Managing other businesses' accounts needs advanced access via per-permission App Review and business verification. Marketing API tier Limited (default) vs Full (500 successful calls in 15 days, under 15% errors). Free per call. Evidence is third-party summaries of Meta docs.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "python"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.facebook.com/ads"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Public Graph/Marketing API with self-serve app creation; multi-tenant use requires App Review, business verification and Full-tier rate limits. Official MCP at mcp.facebook.com is in open beta per a third party.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "medium",
+  "auth": "medium",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Meta developer docs were not fetchable (error pages); claims rest on third-party guides and the official SDK README. Verify tier names, sandbox, webhooks on developers.facebook.com.",
+ "evidence": [
+  {
+   "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/README.md",
+   "quote": "To manage the Marketing API, please visit your App Dashboard and add the Marketing API product to your app."
+  },
+  {
+   "url": "https://skaler.app/blog/meta-marketing-api",
+   "quote": "If it manages other people's ad accounts (an agency tool or a SaaS product), you need advanced access, which goes through App Review per permission."
+  },
+  {
+   "url": "https://skaler.app/blog/meta-marketing-api",
+   "quote": "at least 500 successful Marketing API calls in the last 15 days, and an error rate under 15% across your last 500 calls"
+  },
+  {
+   "url": "https://mcp.facebook.com/ads",
+   "quote": "MCP endpoints accept POST for JSON-RPC; GET is not supported."
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "app_review_required",
+   "why": "Third-party guides citing Meta docs: other accounts need advanced access via App Review; own accounts do not."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "why": "Facebook Login access tokens and System User tokens."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "mcp.facebook.com/ads responds as an MCP JSON-RPC endpoint; open beta per Variafy guide."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Public API with app review gating for multi-tenant use."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Marketing API covers campaigns, ad sets, ads, creatives, audiences, catalogs, insights; Business SDK bundles many APIs."
+  },
+  {
+   "field": "docs_url",
+   "first_pass": null,
+   "yours": "https://developers.facebook.com/docs/marketing-apis/",
+   "why": "Canonical docs, though fetcher got error pages."
+  }
+ ]
+}

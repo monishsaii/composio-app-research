@@ -1,0 +1,125 @@
+{
+ "id": "close",
+ "name": "Close",
+ "category": "CRM & Sales",
+ "one_liner": "Close (close.com) sales CRM with a REST API for leads, contacts, opportunities and activities.",
+ "docs_url": "https://developer.close.com/api",
+ "openapi_spec_url": "https://api.close.com/api/openapi.json",
+ "auth_methods": [
+  "api_key",
+  "basic",
+  "oauth2",
+  "hmac_signature"
+ ],
+ "auth_notes": "API key via HTTP Basic (key as username, empty password); OAuth 2.0 apps get all.full_access offline_access scopes only. Webhooks signed with HMAC sha256 (close-sig-hash).",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": false,
+  "app_review_required": true
+ },
+ "access": "unknown",
+ "access_notes": "API keys from Settings > Developer > API Keys within a Close account (plan/trial requirement not stated on fetched pages). OAuth apps are Private by default; making them Public requires review by Close. Dev org via support email per first pass.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.close.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Self-serve API keys and private OAuth apps work; serving arbitrary Close customers via OAuth needs Close review to make the app Public. OAuth scope is full access only.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "low",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Trial or plan requirement for API key not verified.",
+ "evidence": [
+  {
+   "field": "oauth_details.app_review_required",
+   "url": "https://developer.close.com/integrations/publish.md",
+   "quote": "Click **Make Public** and submit for review.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "oauth_details.scopes",
+   "url": "https://developer.close.com/integrations/create-an-oauth-app.md",
+   "quote": "All OAuth applications are granted the `all.full_access offline_access` scopes",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "mcp.url",
+   "url": "https://developer.close.com/mcp",
+   "quote": "The MCP server URL is https://mcp.close.com/mcp",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "api_surface.webhooks",
+   "url": "https://developer.close.com/topics/webhooks",
+   "quote": "The maximum number of webhook subscriptions per organization is 40.",
+   "source_type": "official_docs"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "mcp.url",
+   "first_pass": "https://developer.close.com/mcp",
+   "yours": "https://mcp.close.com/mcp",
+   "why": "First pass gave the docs page; docs state the actual MCP server URL."
+  },
+  {
+   "field": "oauth_details.app_review_required",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Public OAuth apps need submission and review; private apps do not."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_NOW",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Multi-customer OAuth requires Close approval; scopes are full-access only."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "none",
+   "yours": "app_review",
+   "why": "Make Public review gate."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "api_key",
+    "oauth2"
+   ],
+   "yours": [
+    "api_key",
+    "basic",
+    "oauth2",
+    "hmac_signature"
+   ],
+   "why": "Key is sent via HTTP Basic; webhooks HMAC-signed."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "id": "twilio",
+ "name": "Twilio",
+ "category": "Comms & Messaging",
+ "one_liner": "Cloud communications platform offering APIs for SMS, voice, email, verification and customer engagement.",
+ "docs_url": "https://www.twilio.com/docs",
+ "openapi_spec_url": "https://github.com/twilio/twilio-oai",
+ "auth_methods": ["api_key", "basic", "oauth2"],
+ "auth_notes": "HTTP Basic with API key SID/secret (or Account SID/Auth Token); OAuth 2.0 also offered per first pass (not re-verified).",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_trial",
+ "access_notes": "Free trial without credit card: 100 SMS, 75 voice minutes etc, expires after 30 days; trial messaging limited to verified numbers. Production is pay-as-you-go (US SMS $0.0083/segment); US A2P 10DLC registration requires a paid account.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["server-side SDKs in many languages (list not verified)"]
+ },
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve credentials and broad documented REST API with OpenAPI spec, but trial is time-limited and production messaging needs a paid account plus regulatory registration (A2P 10DLC, toll-free verification).",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": [
+  {"field": "access", "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "quote": "You can sign up for a Twilio free trial account without a credit card."},
+  {"field": "access", "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "quote": "To complete A2P 10DLC registration, you must have a paid Twilio account."},
+  {"field": "auth", "url": "https://www.twilio.com/docs/iam/api", "quote": "Twilio supports HTTP Basic authentication. Use your API key SID as the username and your API key secret as the password."},
+  {"field": "mcp", "url": "https://github.com/twilio-labs/mcp", "quote": "MCP Server for all of Twilio's Public API"},
+  {"field": "webhooks", "url": "https://www.twilio.com/docs/usage/webhooks", "quote": "Twilio uses webhooks."}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "self_serve_free", "yours": "self_serve_trial", "why": "Trial is 30-day limited free units; production use is pay-as-you-go and 10DLC needs paid account."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_NOW", "yours": "BUILD_WITH_CAVEATS", "why": "Paid account and messaging compliance registration needed for real use; trial restricted to verified recipients."},
+  {"field": "buildability.main_blocker", "first_pass": "none", "yours": "paid_plan_gate", "why": "Trial expires in 30 days; production requires paid upgrade."},
+  {"field": "sandbox_or_test_env", "first_pass": "unknown", "yours": true, "why": "Free trial account with free units documented."},
+  {"field": "auth_methods", "first_pass": ["oauth2", "api_key", "other"], "yours": ["api_key", "basic", "oauth2"], "why": "API key SID/secret via HTTP Basic is the documented standard; 'other' unneeded."},
+  {"field": "mcp.url", "first_pass": null, "yours": null, "why": "Official repo twilio-labs/mcp (npx @twilio-alpha/mcp, stdio); no hosted URL found. Alpha, under twilio-labs org."},
+  {"field": "openapi_spec_url", "first_pass": "https://www.twilio.com/docs/openapi", "yours": "https://github.com/twilio/twilio-oai", "why": "Official repo holding OpenAPI json/yaml files."}
+ ]
+}

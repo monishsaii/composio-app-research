@@ -1,0 +1,120 @@
+{
+ "id": "pumble",
+ "name": "Pumble",
+ "category": "Comms & Messaging",
+ "one_liner": "Team chat app by CAKE.com with an API addon (API key, Swagger-documented HTTP API) and an official MCP server driven by Pumble apps.",
+ "docs_url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "bearer_token",
+  "other"
+ ],
+ "auth_notes": "API addon: install in workspace, generate API key in sidebar. Pumble apps (Configure apps > Create app) yield App key, user token and bot token with scopes; these drive the MCP server.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Pricing page states the FREE plan has no limitations; no plan gate for API addon or app creation is stated. Needs a user able to install the addon in the workspace. 7-day trial of paid features also offered.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "narrow",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "none",
+  "rationale": "Self-serve on free plan; API addon exposes about 7 documented actions; MCP server lists 19 tools gated by app scopes. Narrow API and per-workspace install.",
+  "est_tool_count_if_built": 19,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Swagger URL and webhook/event support for Pumble apps not verified.",
+ "evidence": {
+  "auth": [],
+  "access": [
+   {
+    "url": "https://pumble.com/pricing",
+    "quote": "Our FREE plan doesn't have any limitations and is perfectly suited for startups and non-profit organizations",
+    "source_type": "pricing_page"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "quote": "The rate limit is up to 1000 requests per minute per user.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+    "quote": "you will have to create a Pumble addon and take credentials from there",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [],
+  "identity": []
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Pricing page says FREE plan has no limitations; no paid plan stated for API addon or key generation."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "none",
+   "why": "No gate found; only narrow API, which is a caveat not a blocker."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "narrow",
+   "why": "Help page lists 7 actions; MCP lists 19 tools."
+  },
+  {
+   "field": "api_surface.style",
+   "first_pass": [],
+   "yours": [
+    "rest"
+   ],
+   "why": "HTTP requests documented via Swagger."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "api_key",
+    "other"
+   ],
+   "yours": [
+    "api_key",
+    "bearer_token",
+    "other"
+   ],
+   "why": "Pumble app user/bot tokens are bearer-style tokens."
+  }
+ ]
+}

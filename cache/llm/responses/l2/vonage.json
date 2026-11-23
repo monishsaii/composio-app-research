@@ -1,0 +1,129 @@
+{
+ "id": "vonage",
+ "name": "Vonage",
+ "category": "Comms & Messaging",
+ "one_liner": "Communications API platform (SMS, Voice, Messages, Verify, Video, Identity/Network APIs).",
+ "docs_url": "https://developer.vonage.com/en/documentation",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "basic",
+  "jwt_service_account",
+  "hmac_signature",
+  "oauth2"
+ ],
+ "auth_notes": "Account API key + secret (Basic or request params) for Numbers, Account, SMS, Verify v1 etc.; Application JWT (RS256 signed with app private key) for Voice, Messages, Verify v2, Video; signed SMS via signature secret; webhooks verified via HS256 JWT. OAuth 2.0/CIBA only for Network APIs and the separate Business Communications line.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": false
+ },
+ "access": "self_serve_free",
+ "access_notes": "Sign up at dashboard.vonage.com to get API key and secret immediately; free credit on signup, then pay-per-request. US A2P SMS needs 10DLC registration.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "node",
+   "python",
+   "java",
+   "php",
+   "ruby",
+   "dotnet"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://developer.vonage.com/en/mcp-server/overview"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve signup gives key/secret and JWT-app auth; broad documented REST API with webhooks and official SDKs. Pay-as-you-go cost and 10DLC/regulatory registration are operational caveats, not credential gates.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Confirm product line wanted (core Communications APIs vs Business Communications); endpoint count and rate limits not verified.",
+ "evidence": [
+  {
+   "url": "https://developer.vonage.com/en/getting-started/overview",
+   "quote": "To work with our APIs, you will need to sign up for an account. This will give you an API key and secret"
+  },
+  {
+   "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+   "quote": "When you create a Vonage account, an API key and secret will be created for you."
+  },
+  {
+   "url": "https://developer.vonage.com/llms.txt",
+   "quote": "US A2P SMS requires 10 DLC registration before sending application-to-person messages to US numbers."
+  },
+  {
+   "url": "https://developer.vonage.com/en/mcp-server/overview",
+   "quote": "The Vonage MCP Server enables AI agents and developer tools to discover, describe, and use Vonage capabilities via the Model Context Protocol."
+  }
+ ],
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "oauth2"
+   ],
+   "yours": [
+    "basic",
+    "jwt_service_account",
+    "hmac_signature",
+    "oauth2"
+   ],
+   "why": "Core APIs use API key/secret Basic and RS256 application JWT; OAuth is only for Network/Business Comms."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Dashboard signup yields key/secret instantly with free credit; no approval gate for core APIs."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_NOW",
+   "why": "Self-serve credentials, documented broad API, standard auth; UNCLEAR is not in rubric."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "ambiguous_product",
+   "yours": "none",
+   "why": "Vonage Communications APIs is the clear product; Business Communications is a separate line."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Auth table lists ~25 distinct APIs (SMS, Voice, Messages, Verify, Video, Numbers...), implying well over 100 endpoints."
+  },
+  {
+   "field": "mcp.url",
+   "first_pass": null,
+   "yours": "https://developer.vonage.com/en/mcp-server/overview",
+   "why": "Official MCP server overview exists on vendor docs domain."
+  }
+ ]
+}

@@ -1290,3 +1290,560 @@
 {"t": "2026-11-23T14:04:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization", "status": 400, "chars": 122}
 {"t": "2026-11-23T14:04:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview", "status": 200, "chars": 3242}
 {"t": "2026-11-23T14:04:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md", "status": 200, "chars": 9307}
+{"t": "2026-11-23T14:06:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/", "status": 200, "chars": 2395}
+{"t": "2026-11-23T14:06:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/developers/extend/api.md", "status": 200, "chars": 3410}
+{"t": "2026-11-23T14:06:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.freshworks.com/freshdesk/pricing/", "status": 200, "chars": 3123}
+{"t": "2026-11-23T14:06:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/webhooks/overview.html", "status": 200, "chars": 3071}
+{"t": "2026-11-23T14:06:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/pricing", "status": 200, "chars": 14438}
+{"t": "2026-11-23T14:06:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/llms.txt", "status": 200, "chars": 53991}
+{"t": "2026-11-23T14:06:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.freshworks.com/docs/", "status": 200, "chars": 940}
+{"t": "2026-11-23T14:06:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://twenty.com/pricing", "status": 200, "chars": 6441}
+{"t": "2026-11-23T14:06:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.copper.com/pricing", "status": 200, "chars": 4500}
+{"t": "2026-11-23T14:06:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/api-references/llms.txt", "status": 200, "chars": 510}
+{"t": "2026-11-23T14:06:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/llms.txt", "status": 200, "chars": 7823}
+{"t": "2026-11-23T14:06:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/team-plain", "status": 200, "chars": 1089}
+{"t": "2026-11-23T14:06:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://aircall.io/pricing/", "status": 200, "chars": 1005}
+{"t": "2026-11-23T14:06:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/doc/hooks", "status": 200, "chars": 5027}
+{"t": "2026-11-23T14:06:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limiting", "status": 200, "chars": 862}
+{"t": "2026-11-23T14:06:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/tutorials/aircall-oauth-flow/", "status": 200, "chars": 2301}
+{"t": "2026-11-23T14:06:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/index/limits", "status": 200, "chars": 2247}
+{"t": "2026-11-23T14:06:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:06:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/helpscout", "status": 200, "chars": 1321}
+{"t": "2026-11-23T14:06:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://podio.com/pricing", "status": 200, "chars": 1965}
+{"t": "2026-11-23T14:06:17Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:17Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pumble.com/help/integrations/add-pumble-api-addon/", "status": 404, "chars": 1809}
+{"t": "2026-11-23T14:06:17Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:17Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.slack.dev/reference/rate-limits", "status": 404, "chars": 769}
+{"t": "2026-11-23T14:06:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.freshdesk.com/api/#webhooks", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:06:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/introduction", "status": 200, "chars": 2301}
+{"t": "2026-11-23T14:06:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://front.com/pricing", "status": 200, "chars": 4612}
+{"t": "2026-11-23T14:06:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/api-references/llms-full.txt", "status": 200, "chars": 510}
+{"t": "2026-11-23T14:06:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/rate-limiting", "status": 200, "chars": 6031}
+{"t": "2026-11-23T14:06:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/ai/mcp-server", "status": 200, "chars": 9764}
+{"t": "2026-11-23T14:06:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/signup", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:06:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://slack.com/pricing", "status": 200, "chars": 3293}
+{"t": "2026-11-23T14:06:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/_llms/en/developers.txt", "status": 200, "chars": 23649}
+{"t": "2026-11-23T14:06:25Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:25Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/PumbleApp", "status": 404, "chars": 9}
+{"t": "2026-11-23T14:06:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/apis/events-api", "status": 200, "chars": 27027}
+{"t": "2026-11-23T14:06:27Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Copper API reference rate limits webhooks official MCP server", "n": 2}
+{"t": "2026-11-23T14:06:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://dev.frontapp.com/docs/webhooks", "status": 404, "chars": 295}
+{"t": "2026-11-23T14:06:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.aircall.io/docs/mcp", "status": 404, "chars": 288}
+{"t": "2026-11-23T14:06:27Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DealCloud API reference rate limits webhooks official MCP server", "n": 2}
+{"t": "2026-11-23T14:06:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.salesforce.com/editions-pricing/sales-cloud/", "status": 200, "chars": 7450}
+{"t": "2026-11-23T14:06:27Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zendesk API reference rate limits webhooks official MCP server", "n": 1}
+{"t": "2026-11-23T14:06:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intercom API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:06:28Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:28Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.helpscout.com/article/1459-inbox-api", "status": 404, "chars": 202}
+{"t": "2026-11-23T14:06:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/developers/extend/webhooks.md", "status": 200, "chars": 3753}
+{"t": "2026-11-23T14:06:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twenty API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:06:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/salesforcecli/mcp", "status": 200, "chars": 25463}
+{"t": "2026-11-23T14:06:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/", "status": 200, "chars": 480}
+{"t": "2026-11-23T14:06:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/apis/web-api/rate-limits", "status": 200, "chars": 8958}
+{"t": "2026-11-23T14:06:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html", "status": 200, "chars": 9993}
+{"t": "2026-11-23T14:06:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/api/usage-details", "status": 200, "chars": 7059}
+{"t": "2026-11-23T14:06:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/webhooks/", "status": 200, "chars": 4965}
+{"t": "2026-11-23T14:06:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/overview.html", "status": 200, "chars": 1403}
+{"t": "2026-11-23T14:06:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/api-references/#rate-limiting", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:06:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/pricing/", "status": 200, "chars": 15300}
+{"t": "2026-11-23T14:06:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/api/webhooks", "status": 200, "chars": 9791}
+{"t": "2026-11-23T14:06:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/automation-workflow-integrations/", "status": 200, "chars": 1974}
+{"t": "2026-11-23T14:06:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/HubSpot/hubspot-api-nodejs", "status": 200, "chars": 10762}
+{"t": "2026-11-23T14:06:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/pumble-apps/", "status": 200, "chars": 1795}
+{"t": "2026-11-23T14:06:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.slack.dev/reference/methods", "status": 200, "chars": 220}
+{"t": "2026-11-23T14:06:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/docs-api/", "status": 200, "chars": 3058}
+{"t": "2026-11-23T14:06:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/llms.txt", "status": 200, "chars": 979}
+{"t": "2026-11-23T14:06:38Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.docs.dealcloud.com/docs/rate-limits", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:06:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho CRM API access requirements which plan pricing developer app review partner", "n": 1}
+{"t": "2026-11-23T14:06:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html", "status": 200, "chars": 2968}
+{"t": "2026-11-23T14:06:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/authentication/installing-with-oauth", "status": 200, "chars": 19182}
+{"t": "2026-11-23T14:06:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/multi-dc.html", "status": 200, "chars": 2265}
+{"t": "2026-11-23T14:06:42Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Slack API access requirements which plan pricing developer app review partner", "n": 1}
+{"t": "2026-11-23T14:06:42Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:42Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/Pumble-Apps", "status": 404, "chars": 9}
+{"t": "2026-11-23T14:06:42Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:42Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.freshworks.com/docs/oauth/", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:06:43Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:43Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.hubspot.com/pricing/crm", "status": 200, "chars": 20}
+{"t": "2026-11-23T14:06:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.aircall.io/en/articles/1252503-aircall-api", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:06:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.docs.dealcloud.com/docs/webhooks", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:06:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.zoho.com/portal/en/kb/crm/developer-guide/sandbox", "status": 200, "chars": 0}
+{"t": "2026-11-23T14:06:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps", "status": 200, "chars": 10322}
+{"t": "2026-11-23T14:06:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Close API access requirements which plan pricing developer app review partner", "n": 1}
+{"t": "2026-11-23T14:06:50Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:50Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pumble-docs.apps.pumble.com/", "status": 0, "chars": 0}
+{"t": "2026-11-23T14:06:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/", "status": 200, "chars": 9003}
+{"t": "2026-11-23T14:06:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/foundations/llms.txt", "status": 200, "chars": 3701}
+{"t": "2026-11-23T14:06:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/llms.txt", "status": 200, "chars": 62104}
+{"t": "2026-11-23T14:06:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/aircall-ai/llms.txt", "status": 200, "chars": 1538}
+{"t": "2026-11-23T14:06:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Help Scout API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:06:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Plain API reference rate limits webhooks official MCP server", "n": 2}
+{"t": "2026-11-23T14:06:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/slack-marketplace/distributing-your-app-in-the-slack-marketplace", "status": 200, "chars": 46715}
+{"t": "2026-11-23T14:06:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gorgias API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:06:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gladly API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:06:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/publish/llms.txt", "status": 200, "chars": 910}
+{"t": "2026-11-23T14:06:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/topics/rate-limits", "status": 200, "chars": 3036}
+{"t": "2026-11-23T14:06:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:53Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.freshworks.com/docs/api-integration/", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:06:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/webhooks/webhooks-api/webhooks/", "status": 200, "chars": 71070}
+{"t": "2026-11-23T14:06:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.helpscout.com/article/1140-mailbox-api", "status": 200, "chars": 2004}
+{"t": "2026-11-23T14:06:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/topics/webhooks", "status": 200, "chars": 3448}
+{"t": "2026-11-23T14:06:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/topics/authentication", "status": 200, "chars": 1237}
+{"t": "2026-11-23T14:06:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.eesel.ai/blog/helpscout-api", "status": 200, "chars": 13273}
+{"t": "2026-11-23T14:06:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/how-to-register.md", "status": 200, "chars": 5561}
+{"t": "2026-11-23T14:06:57Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:57Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/developer-centers/integration-apis", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:06:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.close.com/pricing", "status": 200, "chars": 910}
+{"t": "2026-11-23T14:06:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md", "status": 200, "chars": 2545}
+{"t": "2026-11-23T14:06:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.slack.com/developer-program", "status": 200, "chars": 74}
+{"t": "2026-11-23T14:06:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:06:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pumble.com/api", "status": 404, "chars": 3167}
+{"t": "2026-11-23T14:06:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/mcp", "status": 200, "chars": 6813}
+{"t": "2026-11-23T14:07:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:01Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.freshworks.com/oauth/", "status": 404, "chars": 68}
+{"t": "2026-11-23T14:07:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/forcedotcom/mcp/issues/46", "status": 200, "chars": 705}
+{"t": "2026-11-23T14:07:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sandbox-account/", "status": 404, "chars": 716}
+{"t": "2026-11-23T14:07:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/llms.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:07:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/integrations/publish.md", "status": 200, "chars": 1493}
+{"t": "2026-11-23T14:07:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/", "status": 200, "chars": 4914}
+{"t": "2026-11-23T14:07:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/integrations/create-an-oauth-app.md", "status": 200, "chars": 2193}
+{"t": "2026-11-23T14:07:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.helpscout.com/article/1700-help-scout-mcp-server", "status": 404, "chars": 214}
+{"t": "2026-11-23T14:07:07Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Podio API access requirements which plan pricing developer app review partner", "n": 1}
+{"t": "2026-11-23T14:07:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/en-us/sms/pricing/us", "status": 200, "chars": 1590}
+{"t": "2026-11-23T14:07:08Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:08Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.salesforce.com/s/articleView?id=sf.users_free_developer_account.htm", "status": 200, "chars": 62}
+{"t": "2026-11-23T14:07:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/webhooks", "status": 200, "chars": 4039}
+{"t": "2026-11-23T14:07:10Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:11Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-zendesk-account-for-development/", "status": 404, "chars": 716}
+{"t": "2026-11-23T14:07:11Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:11Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.freshworks.com/mcp/", "status": 404, "chars": 325}
+{"t": "2026-11-23T14:07:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Aircall API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T14:07:12Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:12Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pumble.com/help/integrations/automation-workflow-integrations/pumble-mcp-server/", "status": 404, "chars": 1809}
+{"t": "2026-11-23T14:07:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://supergood.ai/api-report-card/aircall", "status": 200, "chars": 6754}
+{"t": "2026-11-23T14:07:14Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:14Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.helpscout.com/mcp/", "status": 404, "chars": 418}
+{"t": "2026-11-23T14:07:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zendesk.com/pricing/", "status": 200, "chars": 48760}
+{"t": "2026-11-23T14:07:15Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:15Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.podio.com/hc/en-us/articles/360010011799", "status": 200, "chars": 66}
+{"t": "2026-11-23T14:07:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/CassiaResearch/aircall-mcp-server", "status": 200, "chars": 3903}
+{"t": "2026-11-23T14:07:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/platform/mcp/overview", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:07:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/automation-workflow-integrations/zapier-integration/", "status": 200, "chars": 2645}
+{"t": "2026-11-23T14:07:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pumble API access requirements which plan pricing developer app review partner", "n": 0}
+{"t": "2026-11-23T14:07:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/endpoints/conversations/list/", "status": 200, "chars": 11381}
+{"t": "2026-11-23T14:07:17Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:17Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.twilio.com/docs/usage/api/usage-limits", "status": 404, "chars": 2010}
+{"t": "2026-11-23T14:07:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/podio", "status": 200, "chars": 1397}
+{"t": "2026-11-23T14:07:20Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:20Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.freshdesk.com/api/llms.txt", "status": 404, "chars": 494}
+{"t": "2026-11-23T14:07:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/twilio-labs/mcp", "status": 200, "chars": 2191}
+{"t": "2026-11-23T14:07:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/topics/rate-limits.md", "status": 200, "chars": 8449}
+{"t": "2026-11-23T14:07:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/llms.txt", "status": 200, "chars": 20003}
+{"t": "2026-11-23T14:07:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/resources/webhook.md", "status": 200, "chars": 21838}
+{"t": "2026-11-23T14:07:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:07:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.zendesk.com/documentation/ticketing/getting-started/getting-a-trial-or-sandbox-account/", "status": 404, "chars": 716}
+{"t": "2026-11-23T14:07:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.progress.com/podio/pricing", "status": 200, "chars": 3935}
+{"t": "2026-11-23T14:07:26Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk API reference rate limits webhooks official MCP server", "n": 0}
+{"t": "2026-11-23T14:07:26Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:26Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.vonage.com/communications-apis/pricing/", "status": 403, "chars": 16}
+{"t": "2026-11-23T14:07:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/twilio/twilio-oai", "status": 200, "chars": 1141}
+{"t": "2026-11-23T14:07:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.discord.com/developers/llms.txt", "status": 404, "chars": 0}
+{"t": "2026-11-23T14:07:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/libraries", "status": 200, "chars": 1436}
+{"t": "2026-11-23T14:07:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/iam/api", "status": 200, "chars": 1733}
+{"t": "2026-11-23T14:07:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/getting-started/concepts/authentication", "status": 200, "chars": 23370}
+{"t": "2026-11-23T14:07:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/discord/discord-api-spec", "status": 200, "chars": 2152}
+{"t": "2026-11-23T14:07:32Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:32Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.zendesk.com/documentation/api-basics/authentication/using-the-api-with-oauth/", "status": 404, "chars": 716}
+{"t": "2026-11-23T14:07:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://discord.com/developers/docs/change-log", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:07:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/pricing.html", "status": 200, "chars": 14057}
+{"t": "2026-11-23T14:07:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/_llms/developer.txt", "status": 200, "chars": 28931}
+{"t": "2026-11-23T14:07:35Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:35Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/Vonage/vonage-mcp-server-api-bindings", "status": 404, "chars": 1133}
+{"t": "2026-11-23T14:07:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/zendesk", "status": 200, "chars": 1404}
+{"t": "2026-11-23T14:07:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/api/overview/rate-limits.md", "status": 200, "chars": 3222}
+{"t": "2026-11-23T14:07:38Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce API access requirements which plan pricing developer app review partner", "n": 3}
+{"t": "2026-11-23T14:07:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs", "status": 200, "chars": 30456}
+{"t": "2026-11-23T14:07:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/discord/discord-api-spec/main/specs/openapi.json", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:07:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide", "status": 200, "chars": 17566}
+{"t": "2026-11-23T14:07:40Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:40Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/restapi/v3/", "status": 403, "chars": 27}
+{"t": "2026-11-23T14:07:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/events/gateway.md", "status": 200, "chars": 54859}
+{"t": "2026-11-23T14:07:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/integrations/mcp-server.md", "status": 200, "chars": 11272}
+{"t": "2026-11-23T14:07:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://sliick.com/articles/salesforce-api-terms-of-service-update-isv-guide/", "status": 200, "chars": 4575}
+{"t": "2026-11-23T14:07:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rate-limiting", "status": 404, "chars": 311}
+{"t": "2026-11-23T14:07:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T14:07:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/webhooks", "status": 200, "chars": 3328}
+{"t": "2026-11-23T14:07:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/getting-started/account-types", "status": 200, "chars": 5686}
+{"t": "2026-11-23T14:07:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/platform/webhooks.html", "status": 404, "chars": 125}
+{"t": "2026-11-23T14:07:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.freshdesk.com/support/solutions/articles/50000014411", "status": 200, "chars": 4365}
+{"t": "2026-11-23T14:07:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/events/gateway", "status": 200, "chars": 29842}
+{"t": "2026-11-23T14:07:49Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:49Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.plain.com/docs/graphql/rate-limits.md", "status": 404, "chars": 500}
+{"t": "2026-11-23T14:07:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/api-reference/overview", "status": 200, "chars": 800}
+{"t": "2026-11-23T14:07:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview", "status": 200, "chars": 4486}
+{"t": "2026-11-23T14:07:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth", "status": 200, "chars": 2767}
+{"t": "2026-11-23T14:07:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/graphql/introduction", "status": 200, "chars": 1610}
+{"t": "2026-11-23T14:07:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/apps/developer-platform/list-apps/listing-your-app/app-marketplace-listing-requirements", "status": 200, "chars": 8593}
+{"t": "2026-11-23T14:07:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vonage API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:07:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/mcp-server/overview", "status": 200, "chars": 509}
+{"t": "2026-11-23T14:07:55Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:55Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/restapi/v3/rate-limit/", "status": 404, "chars": 125}
+{"t": "2026-11-23T14:07:55Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:07:55Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.freshdesk.com/support/solutions/articles/216548", "status": 200, "chars": 222}
+{"t": "2026-11-23T14:07:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/getting-started/overview", "status": 200, "chars": 6114}
+{"t": "2026-11-23T14:07:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app", "status": 200, "chars": 8768}
+{"t": "2026-11-23T14:07:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/reference/limitations.md", "status": 200, "chars": 1919}
+{"t": "2026-11-23T14:07:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/bots/faq", "status": 200, "chars": 6058}
+{"t": "2026-11-23T14:07:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/building-a-high-quality-gorgias-app", "status": 200, "chars": 3469}
+{"t": "2026-11-23T14:08:00Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.hubspot.com/llms.txt", "status": 404, "chars": 244}
+{"t": "2026-11-23T14:08:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.gorgias.com/pricing", "status": 200, "chars": 3649}
+{"t": "2026-11-23T14:08:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/bots/features", "status": 200, "chars": 52844}
+{"t": "2026-11-23T14:08:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:01Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.vonage.com/en/api-reference", "status": 404, "chars": 306}
+{"t": "2026-11-23T14:08:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/llms.txt", "status": 200, "chars": 64710}
+{"t": "2026-11-23T14:08:03Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:03Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rate-limiting/", "status": 404, "chars": 311}
+{"t": "2026-11-23T14:08:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/mcp-server", "status": 200, "chars": 26733}
+{"t": "2026-11-23T14:08:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/getting-started/concepts/webhooks", "status": 200, "chars": 16404}
+{"t": "2026-11-23T14:08:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md", "status": 200, "chars": 1077}
+{"t": "2026-11-23T14:08:08Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:08Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction.md", "status": 404, "chars": 4166}
+{"t": "2026-11-23T14:08:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/mcp", "status": 200, "chars": 1908}
+{"t": "2026-11-23T14:08:09Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:09Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://dev.frontapp.com/docs/sandbox", "status": 404, "chars": 295}
+{"t": "2026-11-23T14:08:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pipedrive.com/docs/api/v1", "status": 200, "chars": 1559}
+{"t": "2026-11-23T14:08:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/gorgias", "status": 200, "chars": 1210}
+{"t": "2026-11-23T14:08:10Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:10Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/oauth", "status": 404, "chars": 311}
+{"t": "2026-11-23T14:08:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/platform/bots.html", "status": 200, "chars": 1738}
+{"t": "2026-11-23T14:08:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting", "status": 200, "chars": 7914}
+{"t": "2026-11-23T14:08:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization", "status": 200, "chars": 8916}
+{"t": "2026-11-23T14:08:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v2/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:08:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token", "status": 200, "chars": 21703}
+{"t": "2026-11-23T14:08:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.readme.io/docs/getting-started", "status": 200, "chars": 2688}
+{"t": "2026-11-23T14:08:13Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:13Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/intercom", "status": 200, "chars": 779}
+{"t": "2026-11-23T14:08:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/best-practices/quotas", "status": 200, "chars": 11368}
+{"t": "2026-11-23T14:08:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/gorgias/mcp-cookbook", "status": 200, "chars": 4799}
+{"t": "2026-11-23T14:08:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/", "status": 200, "chars": 5595}
+{"t": "2026-11-23T14:08:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/oauth/overview", "status": 200, "chars": 2566}
+{"t": "2026-11-23T14:08:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/oauth.md", "status": 200, "chars": 10550}
+{"t": "2026-11-23T14:08:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/sunset-dates", "status": 200, "chars": 10412}
+{"t": "2026-11-23T14:08:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/webhooks-1.md", "status": 200, "chars": 5690}
+{"t": "2026-11-23T14:08:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/pipedrive/pipedrive-mcp-server", "status": 404, "chars": 1112}
+{"t": "2026-11-23T14:08:20Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:20Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/pipedrive", "status": 200, "chars": 1441}
+{"t": "2026-11-23T14:08:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/api-evangelist/gladly", "status": 200, "chars": 12504}
+{"t": "2026-11-23T14:08:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/rest/openapi/openapi.yaml", "status": 200, "chars": 54508}
+{"t": "2026-11-23T14:08:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.readme.io/docs/guide-for-webhooks-v2", "status": 200, "chars": 10566}
+{"t": "2026-11-23T14:08:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/", "status": 200, "chars": 920}
+{"t": "2026-11-23T14:08:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pipedrive.com/changelog", "status": 200, "chars": 1139}
+{"t": "2026-11-23T14:08:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/platform/incoming-webhook.html", "status": 404, "chars": 125}
+{"t": "2026-11-23T14:08:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/gladly", "status": 200, "chars": 1144}
+{"t": "2026-11-23T14:08:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/pricing", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/rest/overview", "status": 200, "chars": 2498}
+{"t": "2026-11-23T14:08:31Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:31Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.zoho.com/cliq/help/mcp/introduction.html", "status": 404, "chars": 125}
+{"t": "2026-11-23T14:08:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/googleads/google-ads-mcp", "status": 200, "chars": 16969}
+{"t": "2026-11-23T14:08:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/zoho", "status": 200, "chars": 1406}
+{"t": "2026-11-23T14:08:35Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Google Ads API reference rate limits webhooks official MCP server", "n": 2}
+{"t": "2026-11-23T14:08:35Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Front API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:08:35Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pylon API access requirements which plan pricing developer app review partner usepylon", "n": 3}
+{"t": "2026-11-23T14:08:36Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LiveAgent API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:08:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/llms.txt", "status": 200, "chars": 35184}
+{"t": "2026-11-23T14:08:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.gladly.com/pricing/", "status": 200, "chars": 1501}
+{"t": "2026-11-23T14:08:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://usepylon.com/pricing", "status": 200, "chars": 10116}
+{"t": "2026-11-23T14:08:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pipedrive API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T14:08:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Attio official MCP server mcp.attio.com docs", "n": 3}
+{"t": "2026-11-23T14:08:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://usepylon.com/blog/product-launch-api", "status": 200, "chars": 1113}
+{"t": "2026-11-23T14:08:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-apis/", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipeline.zoominfo.com/sales/pipedrive-api", "status": 200, "chars": 28434}
+{"t": "2026-11-23T14:08:42Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:42Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview/business-account-limits", "status": 404, "chars": 40}
+{"t": "2026-11-23T14:08:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/pipedrive/pipedrive-skills", "status": 200, "chars": 4680}
+{"t": "2026-11-23T14:08:43Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:43Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.gladly.com/docs/mcp", "status": 404, "chars": 240}
+{"t": "2026-11-23T14:08:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.readme.io/docs/developer-sandbox-account", "status": 200, "chars": 1364}
+{"t": "2026-11-23T14:08:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/WhatsApp", "status": 200, "chars": 653}
+{"t": "2026-11-23T14:08:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.larksuite.com/en_us/pricing", "status": 200, "chars": 54}
+{"t": "2026-11-23T14:08:48Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:48Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/overview/authorization", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.liveagent.com/pricing", "status": 200, "chars": 441}
+{"t": "2026-11-23T14:08:49Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:49Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.pipedrive.com/en/pricing", "status": 403, "chars": 517}
+{"t": "2026-11-23T14:08:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/309314-Are-there-extra-charges-for-AI-features-in-LiveAgent-subscriptions", "status": 200, "chars": 693}
+{"t": "2026-11-23T14:08:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/QualityUnit", "status": 200, "chars": 452}
+{"t": "2026-11-23T14:08:54Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:54Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://open.larksuite.com/document/server-docs/api-call-guide/frequency-control", "status": 200, "chars": 30}
+{"t": "2026-11-23T14:08:56Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:56Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/get-started", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:08:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/mcp/overview", "status": 200, "chars": 5176}
+{"t": "2026-11-23T14:08:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/larksuite/lark-openapi-mcp", "status": 200, "chars": 6087}
+{"t": "2026-11-23T14:08:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://attio.com/apps/mcp", "status": 200, "chars": 722}
+{"t": "2026-11-23T14:08:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/guides/rate-limiting", "status": 200, "chars": 2708}
+{"t": "2026-11-23T14:08:59Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:08:59Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://liveagent.com/pricing/api", "status": 404, "chars": 630}
+{"t": "2026-11-23T14:08:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/guides/webhooks", "status": 200, "chars": 10175}
+{"t": "2026-11-23T14:09:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://attio.com/pricing", "status": 200, "chars": 7219}
+{"t": "2026-11-23T14:09:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:01Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://business.whatsapp.com/products/business-platform", "status": 400, "chars": 115}
+{"t": "2026-11-23T14:09:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/llms.txt", "status": 200, "chars": 73597}
+{"t": "2026-11-23T14:09:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://open.larksuite.com/document/server-docs/event-subscription-guide/overview", "status": 200, "chars": 30}
+{"t": "2026-11-23T14:09:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/attio", "status": 200, "chars": 1181}
+{"t": "2026-11-23T14:09:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.liveagent.com/features/api/", "status": 200, "chars": 2585}
+{"t": "2026-11-23T14:09:07Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:07Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://business.whatsapp.com/developers/developer-hub", "status": 400, "chars": 115}
+{"t": "2026-11-23T14:09:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/guides/authentication", "status": 200, "chars": 4403}
+{"t": "2026-11-23T14:09:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/facebook/facebook-python-business-sdk", "status": 200, "chars": 17331}
+{"t": "2026-11-23T14:09:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling", "status": 200, "chars": 7395}
+{"t": "2026-11-23T14:09:10Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:10Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.liveagent.com/513550-Webhooks", "status": 404, "chars": 480}
+{"t": "2026-11-23T14:09:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/README.md", "status": 200, "chars": 20801}
+{"t": "2026-11-23T14:09:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/authenticate_", "status": 200, "chars": 5666}
+{"t": "2026-11-23T14:09:15Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:15Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages.md", "status": 404, "chars": 40}
+{"t": "2026-11-23T14:09:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.attio.com/openapi/api", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:09:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/overview", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:09:17Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:17Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.liveagent.com/llms.txt", "status": 404, "chars": 33}
+{"t": "2026-11-23T14:09:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts", "status": 200, "chars": 1143}
+{"t": "2026-11-23T14:09:20Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:20Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.klaviyo.com/en/docs/webhooks_api", "status": 404, "chars": 259}
+{"t": "2026-11-23T14:09:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://liveagent.com/pricing", "status": 200, "chars": 441}
+{"t": "2026-11-23T14:09:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.liveagent.com/pricing/?afsrc=1", "status": 200, "chars": 441}
+{"t": "2026-11-23T14:09:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Marketing API access requirements app review Advanced Access ads_management standard access rate limits MCP", "n": 3}
+{"t": "2026-11-23T14:09:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/llms.txt", "status": 200, "chars": 17907}
+{"t": "2026-11-23T14:09:23Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WhatsApp Business API access requirements which plan pricing developer app review partner", "n": 3}
+{"t": "2026-11-23T14:09:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://skaler.app/blog/meta-marketing-api", "status": 200, "chars": 15247}
+{"t": "2026-11-23T14:09:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://iimagined.ai/blog/whatsapp-business-api-guide-2026", "status": 200, "chars": 11486}
+{"t": "2026-11-23T14:09:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.variafy.com/guides/meta-marketing-api", "status": 200, "chars": 7453}
+{"t": "2026-11-23T14:09:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.eesel.ai/blog/whatsapp-business-api-pricing", "status": 200, "chars": 18796}
+{"t": "2026-11-23T14:09:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.klaviyo.com/pricing", "status": 200, "chars": 405}
+{"t": "2026-11-23T14:09:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.liveagent.com.br/precos", "status": 200, "chars": 590}
+{"t": "2026-11-23T14:09:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/WhatsApp/WhatsApp-Nodejs-SDK", "status": 200, "chars": 2670}
+{"t": "2026-11-23T14:09:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/docs/mcp-server", "status": 200, "chars": 3173}
+{"t": "2026-11-23T14:09:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.liveagent.com/pricing/", "status": 200, "chars": 441}
+{"t": "2026-11-23T14:09:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/guides/quick-start/", "status": 200, "chars": 1121}
+{"t": "2026-11-23T14:09:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://systeme.io/pricing", "status": 200, "chars": 4613}
+{"t": "2026-11-23T14:09:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/llms.txt", "status": 200, "chars": 32208}
+{"t": "2026-11-23T14:09:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/", "status": 200, "chars": 849}
+{"t": "2026-11-23T14:09:30Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:30Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/webhooks", "status": 404, "chars": 40}
+{"t": "2026-11-23T14:09:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/api/root/", "status": 200, "chars": 1743}
+{"t": "2026-11-23T14:09:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/getting-started/set-up-app/", "status": 200, "chars": 3126}
+{"t": "2026-11-23T14:09:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md", "status": 200, "chars": 3325}
+{"t": "2026-11-23T14:09:33Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.liveagent.com/777340-API-v3-reference", "status": 404, "chars": 3977}
+{"t": "2026-11-23T14:09:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/pricing/marketing/", "status": 200, "chars": 17306}
+{"t": "2026-11-23T14:09:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/reference/rate-limits/", "status": 200, "chars": 2975}
+{"t": "2026-11-23T14:09:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/docs/errors/", "status": 200, "chars": 1744}
+{"t": "2026-11-23T14:09:40Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:40Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.facebook.com/ads", "status": 405, "chars": 116}
+{"t": "2026-11-23T14:09:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/llms.txt", "status": 200, "chars": 6315}
+{"t": "2026-11-23T14:09:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/", "status": 200, "chars": 2562}
+{"t": "2026-11-23T14:09:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server.md", "status": 200, "chars": 20595}
+{"t": "2026-11-23T14:09:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/llms.txt", "status": 200, "chars": 23879}
+{"t": "2026-11-23T14:09:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.pinterest.com/docs/api/v5/", "status": 200, "chars": 115}
+{"t": "2026-11-23T14:09:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:09:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/ads-mcp", "status": 404, "chars": 40}
+{"t": "2026-11-23T14:09:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/get_started.md", "status": 200, "chars": 6346}
+{"t": "2026-11-23T14:09:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/create_a_test_account.md", "status": 200, "chars": 4589}
+{"t": "2026-11-23T14:09:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/reference/llms.txt", "status": 200, "chars": 4373}
+{"t": "2026-11-23T14:09:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/reference/api.md", "status": 200, "chars": 6473}
+{"t": "2026-11-23T14:09:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/sdk_overview.md", "status": 200, "chars": 3863}
+{"t": "2026-11-23T14:09:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/docs/webhooks.md", "status": 200, "chars": 8450}
+{"t": "2026-11-23T14:09:54Z", "event": "removed_fabricated_search", "query": "Slack API access requirements which plan pricing developer app review partner", "reason": "subagent recorded a search it did not run"}
+{"t": "2026-11-23T14:09:58Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "systeme.io API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:09:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/api-concepts/llms.txt", "status": 200, "chars": 2209}
+{"t": "2026-11-23T14:10:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/getting-started/access-tiers/", "status": 200, "chars": 4822}
+{"t": "2026-11-23T14:10:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/api/llms.txt", "status": 200, "chars": 44661}
+{"t": "2026-11-23T14:10:07Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:07Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mailchimp.com/developer/marketing/docs/webhooks/", "status": 404, "chars": 232}
+{"t": "2026-11-23T14:10:08Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:08Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.pinterest.com/docs/api/v5/webhooks", "status": 200, "chars": 115}
+{"t": "2026-11-23T14:10:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/pinterest/api-quickstart", "status": 200, "chars": 7727}
+{"t": "2026-11-23T14:10:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/getting-started/scopes-and-authentication/", "status": 200, "chars": 3126}
+{"t": "2026-11-23T14:10:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mailchimp.com/developer/marketing/docs/limits/", "status": 404, "chars": 232}
+{"t": "2026-11-23T14:10:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/apis/web-api/rate-limits/", "status": 200, "chars": 8958}
+{"t": "2026-11-23T14:10:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/apis/events-api/", "status": 200, "chars": 27027}
+{"t": "2026-11-23T14:10:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps/", "status": 200, "chars": 10322}
+{"t": "2026-11-23T14:10:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/ai/slack-mcp-server/", "status": 200, "chars": 9764}
+{"t": "2026-11-23T14:10:19Z", "event": "l2_invalid", "id": "slack", "error": "1 validation error for Record\nneeds_human_reason\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type"}
+{"t": "2026-11-23T14:10:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mailchimp", "status": 200, "chars": 1563}
+{"t": "2026-11-23T14:10:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/pricing/", "status": 200, "chars": 17306}
+{"t": "2026-11-23T14:10:23Z", "event": "l2_invalid", "id": "slack", "error": "1 validation error for Record\nneeds_human_reason\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type"}
+{"t": "2026-11-23T14:10:25Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:25Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:10:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts.md", "status": 200, "chars": 2487}
+{"t": "2026-11-23T14:10:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/api-concepts/authentication/api-keys.md", "status": 200, "chars": 1670}
+{"t": "2026-11-23T14:10:30Z", "event": "l2_invalid", "id": "copper", "error": "4 validation errors for Record\napi_surface.webhooks.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='yes: create/update/delet...bscriptions, no retries', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsin"}
+{"t": "2026-11-23T14:10:30Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:10:30Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:10:30Z", "event": "l2_invalid", "id": "intercom", "error": "4 validation errors for Record\nsandbox_or_test_env.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='free development workspa...S region only; limited)', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing"}
+{"t": "2026-11-23T14:10:30Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:10:30Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:10:30Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:10:30Z", "event": "l2_invalid", "id": "zendesk", "error": "4 validation errors for Record\napi_surface.webhooks.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='yes: Webhooks API (create/manage webhooks)', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing\napi_su"}
+{"t": "2026-11-23T14:10:31Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:31Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads/get-started", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:10:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://marketplace.gohighlevel.com/docs/", "status": 200, "chars": 1847}
+{"t": "2026-11-23T14:10:38Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://marketplace.gohighlevel.com/docs/oauth/Overview", "status": 200, "chars": 41}
+{"t": "2026-11-23T14:10:38Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads/webhooks", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:10:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken", "status": 200, "chars": 6850}
+{"t": "2026-11-23T14:10:45Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:45Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads/overview", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:10:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://marketplace.gohighlevel.com/docs/oas/Overview", "status": 200, "chars": 41}
+{"t": "2026-11-23T14:10:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/GoHighLevel", "status": 200, "chars": 1413}
+{"t": "2026-11-23T14:10:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.gohighlevel.com/pricing", "status": 200, "chars": 7190}
+{"t": "2026-11-23T14:10:51Z", "event": "removed_empty_search", "query": "Pumble API access requirements which plan pricing developer app review partner", "reason": "recorded with 0 URLs, no search run"}
+{"t": "2026-11-23T14:10:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:10:53Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads/troubleshooting", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:10:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/GoHighLevel/highlevel-api-docs", "status": 200, "chars": 1038}
+{"t": "2026-11-23T14:10:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/sendgrid/api-reference", "status": 200, "chars": 795}
+{"t": "2026-11-23T14:10:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/GoHighLevel/highlevel-api-docs/main/README.md", "status": 200, "chars": 1304}
+{"t": "2026-11-23T14:10:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys", "status": 200, "chars": 4627}
+{"t": "2026-11-23T14:10:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits", "status": 200, "chars": 1013}
+{"t": "2026-11-23T14:10:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://marketplace.gohighlevel.com/docs/oauth/AppDistribution", "status": 200, "chars": 5187}
+{"t": "2026-11-23T14:11:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://sendgrid.com/en-us/pricing", "status": 200, "chars": 1485}
+{"t": "2026-11-23T14:11:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.gohighlevel.com/support/solutions/articles/155000001491-highlevel-mcp-server", "status": 200, "chars": 7616}
+{"t": "2026-11-23T14:11:04Z", "event": "l2_invalid", "id": "copper", "error": "4 validation errors for Record\napi_surface.webhooks.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='yes: create/update/delet...bscriptions, no retries', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsin"}
+{"t": "2026-11-23T14:11:04Z", "event": "l2_invalid", "id": "front", "error": "1 validation error for Record\noauth_details.flows.0\n  Input should be 'auth_code', 'client_credentials', 'device' or 'PKCE' [type=literal_error, input_value='authorization_code', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T14:11:04Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:04Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:04Z", "event": "l2_invalid", "id": "intercom", "error": "4 validation errors for Record\nsandbox_or_test_env.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='free development workspa...S region only; limited)', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing"}
+{"t": "2026-11-23T14:11:04Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:04Z", "event": "l2_invalid", "id": "salesforce", "error": "1 validation error for Record\noauth_details.flows.3\n  Input should be 'auth_code', 'client_credentials', 'device' or 'PKCE' [type=literal_error, input_value='jwt_bearer', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T14:11:04Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:04Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:04Z", "event": "l2_invalid", "id": "zendesk", "error": "4 validation errors for Record\napi_surface.webhooks.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='yes: Webhooks API (create/manage webhooks)', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing\napi_su"}
+{"t": "2026-11-23T14:11:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/sendgrid", "status": 200, "chars": 251}
+{"t": "2026-11-23T14:11:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GoHighLevel API reference rate limits webhooks official MCP server", "n": 2}
+{"t": "2026-11-23T14:11:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://marketplace.gohighlevel.com/docs/other/rate-limits", "status": 200, "chars": 7412}
+{"t": "2026-11-23T14:11:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/en-us/sendgrid/pricing", "status": 200, "chars": 1485}
+{"t": "2026-11-23T14:11:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/event", "status": 200, "chars": 24535}
+{"t": "2026-11-23T14:11:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/sp-api-sandbox", "status": 200, "chars": 7963}
+{"t": "2026-11-23T14:11:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://marketplace.gohighlevel.com/mcp", "status": 200, "chars": 41}
+{"t": "2026-11-23T14:11:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/twilio/sendgrid-oai", "status": 200, "chars": 1346}
+{"t": "2026-11-23T14:11:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits", "status": 200, "chars": 11658}
+{"t": "2026-11-23T14:11:21Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T14:11:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/", "status": 200, "chars": 8087}
+{"t": "2026-11-23T14:11:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/notifications-api-v1-use-case-guide", "status": 200, "chars": 2948}
+{"t": "2026-11-23T14:11:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.adobe.com/commerce/webapi/", "status": 200, "chars": 1302}
+{"t": "2026-11-23T14:11:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://marketplace.gohighlevel.com/docs/webhook/WebhookIntegrationGuide", "status": 200, "chars": 20076}
+{"t": "2026-11-23T14:11:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.adobe.com/commerce/webapi/rest/", "status": 200, "chars": 3793}
+{"t": "2026-11-23T14:11:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/api/usage/rate-limits", "status": 200, "chars": 4140}
+{"t": "2026-11-23T14:11:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/register-as-a-developer", "status": 200, "chars": 525}
+{"t": "2026-11-23T14:11:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started", "status": 200, "chars": 9348}
+{"t": "2026-11-23T14:11:26Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:26Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.twilio.com/docs/sendgrid/ui/sending-email/sandbox-mode", "status": 404, "chars": 2010}
+{"t": "2026-11-23T14:11:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "status": 200, "chars": 9233}
+{"t": "2026-11-23T14:11:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/sp-api-fees", "status": 200, "chars": 525}
+{"t": "2026-11-23T14:11:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/community-management/community-management-overview", "status": 200, "chars": 6252}
+{"t": "2026-11-23T14:11:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/llms.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:11:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/rate-limits", "status": 200, "chars": 2320}
+{"t": "2026-11-23T14:11:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication", "status": 200, "chars": 881}
+{"t": "2026-11-23T14:11:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/amzn/selling-partner-api-models", "status": 200, "chars": 1252}
+{"t": "2026-11-23T14:11:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/versioning", "status": 200, "chars": 6400}
+{"t": "2026-11-23T14:11:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/apps/build/devmcp", "status": 200, "chars": 7979}
+{"t": "2026-11-23T14:11:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications", "status": 200, "chars": 3736}
+{"t": "2026-11-23T14:11:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/account-structure/create-and-manage-campaigns", "status": 200, "chars": 76868}
+{"t": "2026-11-23T14:11:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/apis/rest-api/", "status": 200, "chars": 8879}
+{"t": "2026-11-23T14:11:32Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:32Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.adobe.com/commerce/webhooks/", "status": 404, "chars": 55}
+{"t": "2026-11-23T14:11:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-1-prepare-for-registration", "status": 200, "chars": 2729}
+{"t": "2026-11-23T14:11:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/src/Internal/Features/README.md", "status": 404, "chars": 405}
+{"t": "2026-11-23T14:11:40Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:40Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.adobe.com/commerce/webapi/get-started/rate-limiting/", "status": 404, "chars": 55}
+{"t": "2026-11-23T14:11:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits", "status": 200, "chars": 4043}
+{"t": "2026-11-23T14:11:42Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LinkedIn Ads API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:11:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/AdobeDocs/commerce-services", "status": 200, "chars": 2053}
+{"t": "2026-11-23T14:11:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers", "status": 200, "chars": 3244}
+{"t": "2026-11-23T14:11:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SendGrid free plan retired free trial 60 days API access Twilio", "n": 2}
+{"t": "2026-11-23T14:11:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Threads (Meta) API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T14:11:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pinterest API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T14:11:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api", "status": 200, "chars": 1878}
+{"t": "2026-11-23T14:11:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:11:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.adobe.com/commerce/extensibility/webhooks/", "status": 200, "chars": 3059}
+{"t": "2026-11-23T14:11:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan", "status": 200, "chars": 1555}
+{"t": "2026-11-23T14:11:48Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Amazon Selling Partner API reference rate limits webhooks official MCP server", "n": 4}
+{"t": "2026-11-23T14:11:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/en-us/products/email-api/pricing", "status": 200, "chars": 7227}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T14:11:50Z", "event": "l2_invalid", "id": "google-ads", "error": "1 validation error for Record\napi_surface.style.0\n  Input should be 'rest', 'graphql', 'soap', 'sdk_only', 'cli_only', 'websocket' or 'other' [type=literal_error, input_value='grpc', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:50Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T14:11:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.datadoe.com/blog-posts/amazon-sp-api-mcp-ultimate-guide", "status": 200, "chars": 29350}
+{"t": "2026-11-23T14:11:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:53Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.adobe.com/commerce/webapi/get-started/gs-web-api-request/", "status": 404, "chars": 55}
+{"t": "2026-11-23T14:11:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/sp-api-mcp", "status": 200, "chars": 525}
+{"t": "2026-11-23T14:11:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/api-features/mcp/", "status": 200, "chars": 1963}
+{"t": "2026-11-23T14:11:54Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:11:54Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html", "status": 403, "chars": 70}
+{"t": "2026-11-23T14:11:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.adobe.com/commerce/webapi/graphql/", "status": 200, "chars": 4462}
+{"t": "2026-11-23T14:11:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/amzn/selling-partner-api-docs", "status": 200, "chars": 2530}
+{"t": "2026-11-23T14:11:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/fbsamples/threads_api", "status": 200, "chars": 5299}
+{"t": "2026-11-23T14:11:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk", "status": 200, "chars": 21978}
+{"t": "2026-11-23T14:11:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://brightdata.com/pricing", "status": 200, "chars": 1579}
+{"t": "2026-11-23T14:11:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/amzn/selling-partner-api-samples", "status": 200, "chars": 3783}
+{"t": "2026-11-23T14:12:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:12:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.adobe.com/commerce/webapi/get-started/rate-limits", "status": 404, "chars": 55}
+{"t": "2026-11-23T14:12:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:12:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/threads/get-started/get-access-tokens-and-permissions", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:12:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:12:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.ahrefs.com/api/docs/rate-limits-and-api-units", "status": 404, "chars": 95}
+{"t": "2026-11-23T14:12:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:12:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.brightdata.com/api-reference/rate-limiting", "status": 404, "chars": 120000}
+{"t": "2026-11-23T14:12:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://ahrefs.com/api", "status": 200, "chars": 2045}
+{"t": "2026-11-23T14:12:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/brightdata/brightdata-mcp", "status": 200, "chars": 22648}
+{"t": "2026-11-23T14:12:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/llms.txt", "status": 200, "chars": 9871}
+{"t": "2026-11-23T14:12:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://apify.com/pricing", "status": 200, "chars": 10160}
+{"t": "2026-11-23T14:12:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api/v2/getting-started.md", "status": 200, "chars": 5406}
+{"t": "2026-11-23T14:12:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/llms.txt", "status": 200, "chars": 26937}
+{"t": "2026-11-23T14:12:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.firecrawl.dev/llms.txt", "status": 200, "chars": 4106}
+{"t": "2026-11-23T14:12:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.firecrawl.dev/rate-limits", "status": 200, "chars": 5792}
+{"t": "2026-11-23T14:12:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.firecrawl.dev/webhooks/overview", "status": 200, "chars": 681}
+{"t": "2026-11-23T14:12:35Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:12:35Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://magento.com/products/magento-open-source", "status": 0, "chars": 0}
+{"t": "2026-11-23T14:12:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/magento/magento2", "status": 200, "chars": 3094}

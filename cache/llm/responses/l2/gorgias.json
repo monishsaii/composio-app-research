@@ -1,0 +1,50 @@
+{
+ "id": "gorgias",
+ "name": "Gorgias",
+ "category": "Support & Helpdesk",
+ "one_liner": "Ecommerce-focused helpdesk with a REST API for tickets, customers, macros, rules and integrations.",
+ "docs_url": "https://developers.gorgias.com/reference",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "basic", "oauth2"],
+ "auth_notes": "Private integrations use HTTP Basic (account email + API key from Settings > REST API). OAuth2 is mandatory for any third-party app and required for App Store listing.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "self_serve_trial",
+ "access_notes": "Pricing page: 'Start free trial No credit card required'; API rate limit 2 req/s listed on every plan. Distributable OAuth apps need partner-portal registration and tech partnership review; developer sandbox requires emailing techpartners.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": 145,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.gorgias.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "A per-account API key is self-serve after a trial, but a distributable OAuth2 app (mandatory for third-party apps) goes through Gorgias partner review; limits 40/80 requests per 20s.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": [
+  {"field": "oauth", "url": "https://developers.gorgias.com/docs/building-a-high-quality-gorgias-app", "quote": "Using OAuth2 is mandatory for any 3rd party app.", "source_type": "official_docs"},
+  {"field": "sandbox", "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal.md", "quote": "Currently all new Sandbox accounts are Demo accounts by default.", "source_type": "official_docs"},
+  {"field": "rate_limits", "url": "https://developers.gorgias.com/reference/limitations.md", "quote": "API key integrations** can make 40 requests in a 20 second window", "source_type": "official_docs"},
+  {"field": "access", "url": "https://www.gorgias.com/pricing", "quote": "Start free trialNo credit card required", "source_type": "pricing_page"},
+  {"field": "mcp", "url": "https://github.com/gorgias/mcp-cookbook", "quote": "The Gorgias MCP is a first-party connector that plugs your Gorgias account into any AI client that speaks MCP", "source_type": "official_repo"}
+ ],
+ "disputes": [
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "Gorgias GitHub org's mcp-cookbook documents a first-party MCP at https://mcp.gorgias.com/mcp (OAuth)."},
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Pricing page offers a no-card trial; API access on all plans."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "llms.txt lists about 145 reference pages (approximate endpoint/object pages)."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_NOW", "yours": "BUILD_WITH_CAVEATS", "why": "OAuth2 mandatory for third-party apps and requires partner portal/review; BUILD_NOW only for private API-key use."},
+  {"field": "buildability.main_blocker", "first_pass": "none", "yours": "app_review", "why": "Public apps are reviewed by the tech partnership team."},
+  {"field": "auth_methods", "first_pass": ["api_key", "oauth2"], "yours": ["api_key", "basic", "oauth2"], "why": "Key is sent via HTTP Basic auth; basic listed explicitly."}
+ ]
+}

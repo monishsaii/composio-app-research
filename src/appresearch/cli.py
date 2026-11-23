@@ -10,6 +10,11 @@ from dotenv import load_dotenv
 from . import cache
 
 load_dotenv(cache.ROOT / ".env")
+for _s in (sys.stdout, sys.stderr):  # Windows consoles default to cp1252; page text is Unicode
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 
 def cmd_research(a):

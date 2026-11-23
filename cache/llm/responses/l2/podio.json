@@ -1,0 +1,109 @@
+{
+ "id": "podio",
+ "name": "Podio",
+ "category": "CRM & Sales",
+ "one_liner": "Podio (Progress) work platform with apps, items, tasks and a public REST API.",
+ "docs_url": "https://developers.podio.com/doc",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "OAuth2 with server-side, client-side, username/password and app authentication flows; API key (client_id/secret) created in account settings.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": false
+ },
+ "access": "self_serve_free",
+ "access_notes": "Free plan (up to 5 users) lists 1000 API calls per hour; higher limits need paid API add-ons (paid plans only). Some operations need Podio support approval per first pass.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "php",
+   "ruby",
+   "dotnet",
+   "python",
+   "java",
+   "ios"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.podio.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve API key on free plan, documented REST API with webhooks and 1000 calls/hour; higher limits need paid add-on. Official MCP is beta.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": [
+  {
+   "field": "access",
+   "url": "https://www.progress.com/podio/pricing",
+   "quote": "API Integrations | 1000 calls per hour | 1000 calls per hour Upgrade with Add-ons",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "api_surface.rate_limits",
+   "url": "https://developers.podio.com/index/limits",
+   "quote": "The general limit is 1,000 API calls per hour",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "api_surface.webhooks",
+   "url": "https://developers.podio.com/doc/hooks",
+   "quote": "Hooks are webhooks that can call external sites when certain actions occur in Podio.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "mcp",
+   "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+   "quote": "The Podio MCP Server is currently in beta and is intended for evaluation and testing.",
+   "source_type": "official_docs"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Pricing page shows Free plan with 1000 API calls per hour; paid only for add-ons."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Doc index lists dozens of areas (items, apps, tasks, hooks, files, etc.); count not verified."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "official",
+   "yours": "official (beta)",
+   "why": "Progress docs state beta, 22 tools."
+  }
+ ]
+}

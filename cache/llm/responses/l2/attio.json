@@ -1,0 +1,167 @@
+{
+ "id": "attio",
+ "name": "Attio",
+ "category": "CRM & Sales",
+ "one_liner": "Customizable CRM platform with a public REST API, webhooks, App SDK and hosted MCP server.",
+ "docs_url": "https://docs.attio.com/rest-api/overview",
+ "openapi_spec_url": "https://api.attio.com/openapi/api",
+ "auth_methods": [
+  "oauth2",
+  "api_key",
+  "basic",
+  "bearer_token"
+ ],
+ "auth_notes": "OAuth 2.0 authorization code (PKCE) for multi-workspace apps; workspace API keys from developer settings; tokens sent as Bearer.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "PKCE"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Free plan is $0 for up to 3 users; every new workspace gets a 14-day Pro trial. Pricing FAQ says every plan includes the MCP server. Workspace admin must authorize workspace-level tokens, which is ordinary install consent rather than an approval gate. Some features (custom objects, call intelligence) are Pro and above.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": 193,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.attio.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Free workspace gives self-serve API keys and OAuth apps; documented OpenAPI REST API with HMAC-signed webhooks and clear rate limits (100 read / 25 write per second). Only some objects and features are plan-gated.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "API availability on the Free plan is inferred from the pricing page (feature table cells ambiguous) and the free plan FAQ; endpoint count approximated from about 193 REST endpoint-reference pages in llms.txt.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://docs.attio.com/mcp/overview",
+    "quote": "Learn how to connect AI agents to your Attio workspace.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "quote": "If you only need a token for a single workspace, you can generate an API key",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "quote": "Only workspace admins can grant a workspace-level token.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "quote": "We also support [HTTP Basic",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://attio.com/pricing",
+    "quote": "Yes. The Free plan costs nothing for up to three users.",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://attio.com/pricing",
+    "quote": "Every new Attio workspace starts with a 14-day free trial of the Pro plan",
+    "source_type": "pricing_page"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+    "quote": "100 requests per second for read requests, 25 requests per second for write requests",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.attio.com/rest-api/guides/webhooks",
+    "quote": "We cryptographically sign every webhook request using your webhook secret",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.attio.com/llms.txt",
+    "quote": "[Overview](https://docs.attio.com/rest-api/overview.md): Learn about the REST API",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://docs.attio.com/mcp/overview",
+    "quote": "Attio MCP is Attio’s hosted MCP server that gives AI tools secure access to your Attio workspace.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://attio.com/pricing",
+    "quote": "Yes. The Free plan costs nothing for up to three users.",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "quote": "An unpublished app can be installed in up to 25 workspaces.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "admin_approval",
+   "yours": "self_serve_free",
+   "why": "Free plan and 14-day Pro trial; admin consent is normal OAuth install, not a gate."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "Attio hosts an official MCP at mcp.attio.com/mcp, documented on docs.attio.com."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_WITH_CAVEATS",
+   "yours": "BUILD_NOW",
+   "why": "Self-serve credentials, documented API, standard auth, no blocker found."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "none",
+   "why": "25-workspace cap applies only to unpublished apps; API keys work per workspace."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "llms.txt lists about 193 REST endpoint-reference pages."
+  }
+ ]
+}

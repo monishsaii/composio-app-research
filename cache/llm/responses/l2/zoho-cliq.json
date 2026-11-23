@@ -1,0 +1,48 @@
+{
+ "id": "zoho-cliq",
+ "name": "Zoho Cliq",
+ "category": "Comms & Messaging",
+ "one_liner": "Zoho's collaboration and messaging app, with REST APIs, bots and an official MCP server.",
+ "docs_url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "Zoho OAuth 2.0 authorization code via accounts.zoho.com with scopes like ZohoCliq.Channels.READ; access_type=offline for refresh tokens; per-data-center domains.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "A Free Cliq plan exists (pricing page; paid Standard US$18/month up to 25 users, Professional US$2/user/month, Enterprise US$4/user/month). Apps are registered self-serve in the Zoho API console. No documented API plan gating found; unverified.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve Zoho OAuth app registration, free plan, documented REST v2/v3 with per-endpoint quotas; per-data-center domains add minor complexity.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Plan-tier gating of API access not explicitly confirmed; webhook docs pages 404ed so webhooks (incoming webhooks / bot handlers) inferred; MCP URL not found.",
+ "evidence": [
+  {"field": "pricing", "url": "https://www.zoho.com/cliq/pricing.html", "quote": "| Free | Free | Free |"},
+  {"field": "rate_limits", "url": "https://www.zoho.com/cliq/help/restapi/v2/", "quote": "The quota limit for this API is 20 requests per minute per user"},
+  {"field": "api", "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/", "quote": "v2 remains fully supported alongside v3."}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Free plan on pricing page plus self-serve console; no plan gating found for API."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_WITH_CAVEATS", "yours": "BUILD_NOW", "why": "Blocker was only missing info; free plan and self-serve OAuth found."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "none", "why": "No gate evidenced."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "v2 docs list per-endpoint quota limits (e.g. 5 or 20 requests/min/user)."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "medium", "why": "v2 docs show many resource families (users, channels, chats, messages); exact count unverified, v2 page truncated."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Cliq platform has bots/incoming webhook handlers; only bots intro page fetched, weak evidence."}
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "id": "google-ads",
+ "name": "Google Ads",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Programmatic API (gRPC and REST) for managing Google Ads accounts, campaigns, budgets, assets and reporting.",
+ "docs_url": "https://developers.google.com/google-ads/api/docs/start",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "jwt_service_account"
+ ],
+ "auth_notes": "OAuth 2.0 (scope adwords) user or service-account flows. Developer tokens were sunset on 9 Sept 2026: sending one is now optional and ignored; access level attaches to the Google Cloud project owning the OAuth client or service account.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": false,
+  "app_review_required": true
+ },
+ "access": "app_review_required",
+ "access_notes": "Enabling the API gives Test access (test accounts only). Explorer (2,880 ops/day prod) via apply, may auto-upgrade; Basic (15,000/day) needs brand verification, automated review within minutes; Standard (unlimited) manual review ~10 business days. API itself is free.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "grpc",
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": false,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "python",
+   "java",
+   "dotnet",
+   "php",
+   "ruby",
+   "perl"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/googleads/google-ads-mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Documented API with self-serve test access; production needs access-level application (Explorer/Basic quick, Standard manual). No push webhooks. Official MCP exists.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Endpoint count not measured; no push webhooks found.",
+ "evidence": [
+  {
+   "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+   "quote": "Developer tokens were sunset on September 9, 2026."
+  },
+  {
+   "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+   "quote": "Basic access applications are automated and will be reviewed within minutes after brand verification and submission."
+  },
+  {
+   "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+   "quote": "apply for Explorer access level"
+  },
+  {
+   "url": "https://developers.google.com/google-ads/api/docs/best-practices/quotas",
+   "quote": "Unlimited API operations per day against both test and production accounts"
+  },
+  {
+   "url": "https://github.com/googleads/google-ads-mcp",
+   "quote": "An MCP (Model Context Protocol) server that enables LLMs and AI agents to query and manage Google Ads accounts."
+  }
+ ],
+ "disputes": [
+  {
+   "field": "auth_notes",
+   "first_pass": "Developer tokens are being sunset on September 9, 2026",
+   "yours": "Developer tokens were already sunset 9 Sept 2026; optional and ignored",
+   "why": "Page says 'were sunset'; date has passed."
+  },
+  {
+   "field": "api_surface.style",
+   "first_pass": [
+    "rest"
+   ],
+   "yours": [
+    "grpc",
+    "rest"
+   ],
+   "why": "REST overview says API is called via gRPC or REST; client libraries use gRPC."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": false,
+   "why": "No webhook/push mechanism in docs or search results; reporting is pull via GAQL search."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "oauth2",
+    "other"
+   ],
+   "yours": [
+    "oauth2",
+    "jwt_service_account"
+   ],
+   "why": "Developer token no longer needed; service account workflow documented."
+  },
+  {
+   "field": "access_notes",
+   "first_pass": "Standard needs manual audit; Basic listed",
+   "yours": "Basic is automated after brand verification; Explorer is the first production step",
+   "why": "Access-levels and developer-token pages."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Resource-oriented API with dozens of services; restricted-service list alone names 20+ services."
+  }
+ ]
+}

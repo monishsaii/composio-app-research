@@ -1,0 +1,49 @@
+{
+ "id": "slack",
+ "name": "Slack",
+ "category": "Comms & Messaging",
+ "one_liner": "Workplace messaging platform whose developer platform lets teams build apps, agents and integrations.",
+ "docs_url": "https://docs.slack.dev/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "OAuth v2 authorization code flow (slack.com/oauth/v2/authorize, oauth.v2.access) yields bot (xoxb) and user tokens; xapp app-level token for Socket Mode.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Create an app and install to a workspace self-serve; Web API rate tiers are identical across plans. Commercial distribution of apps must go through the Slack Marketplace (review); non-Marketplace commercially distributed apps get conversations.history/replies at 1 req/min, 15 objects. Internal custom apps keep 50+/min, 1000 objects.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest", "other"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["python", "node", "java"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.slack.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Self-serve app creation and OAuth, broad Web API plus Events API; but commercial multi-workspace distribution requires Marketplace approval or throttled history/replies limits.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": [
+  {"field": "rate_limits", "url": "https://docs.slack.dev/apis/web-api/rate-limits/", "quote": "All Slack plans receive the same rate limit tier for each method."},
+  {"field": "app_review", "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps/", "quote": "the Slack Marketplace is the only appropriate channel for commercially distributing apps built with Slack APIs"},
+  {"field": "webhooks", "url": "https://docs.slack.dev/apis/events-api/", "quote": "When you use the Events API, Slack calls you."},
+  {"field": "mcp", "url": "https://docs.slack.dev/ai/slack-mcp-server/", "quote": "Workspace admins can approve and manage all MCP client integrations"}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "App creation/install and same rate tiers on all plans documented; free plan exists (pricing page)."},
+  {"field": "buildability.main_blocker", "first_pass": "paid_plan_gate", "yours": "app_review", "why": "No paid gate for API; Marketplace approval is required for commercial distribution or history/replies drop to 1 req/min."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Large Web API method reference with many families; exact count not verified (page JS-rendered)."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Events API and incoming webhooks documented."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Tiered rate limit page documented."},
+  {"field": "oauth_details.scopes_granular", "first_pass": "unknown", "yours": true, "why": "Bot and user scopes requested per install per OAuth docs."}
+ ]
+}

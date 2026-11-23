@@ -1,0 +1,47 @@
+{
+ "id": "plain",
+ "name": "Plain",
+ "category": "Support & Helpdesk",
+ "one_liner": "API-first customer support platform (plain.com) whose whole product is exposed via a single GraphQL API.",
+ "docs_url": "https://www.plain.com/docs/graphql/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "GraphQL endpoint https://core-api.uk.plain.com/graphql/v1 with Authorization: Bearer <API key> from a machine user with fine-grained permissions. OAuth only for the MCP server (acts as the user).",
+ "oauth_details": null,
+ "access": "self_serve_trial",
+ "access_notes": "Pricing page: 'Start today, no credit card required.' Paid plans Foundation $45-55 and Horizon $99 per user/month billed annually; no plan gate on API or machine users stated.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["graphql"],
+  "breadth": "broad",
+  "approx_endpoint_count": 446,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["typescript"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.plain.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve trial, machine-user API key, broad GraphQL API (178 queries, 268 mutations per llms.txt) and signed webhook targets. API plan gating not stated; rate limits not found.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": [
+  {"field": "access", "url": "https://www.plain.com/pricing", "quote": "Support for teams that ship. Start today, no credit card required.", "source_type": "pricing_page"},
+  {"field": "mcp", "url": "https://www.plain.com/docs/integrations/mcp-server.md", "quote": "The Plain MCP server at `https://mcp.plain.com/mcp` lets tools like Claude, ChatGPT, and Cursor work with your support data directly.", "source_type": "official_docs"},
+  {"field": "api_surface.webhooks", "url": "https://www.plain.com/docs/_llms/developer.txt", "quote": "A webhook target is an HTTP endpoint Plain delivers events to, subscribed to the events you choose.", "source_type": "official_docs"},
+  {"field": "api_surface.style", "url": "https://www.plain.com/docs/graphql/introduction", "quote": "API URL: https://core-api.uk.plain.com/graphql/v1", "source_type": "official_docs"}
+ ],
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Pricing page states no credit card required to start; API key creation is in-product."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Official llms.txt lists 178 queries and 268 mutations."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Webhook targets, ~50 event types and HMAC request signing documented."},
+  {"field": "needs_human", "first_pass": true, "yours": false, "why": "Pricing page resolves access question; API plan-gating still unstated but low risk."}
+ ]
+}

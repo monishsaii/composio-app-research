@@ -1,0 +1,41 @@
+{
+ "id": "copper",
+ "name": "Copper",
+ "category": "CRM & Sales",
+ "one_liner": "Copper is a CRM with a RESTful Developer API.",
+ "docs_url": "https://developer.copper.com/",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "API key via X-PW-AccessToken plus X-PW-UserEmail headers; OAuth2 for partner integrations.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "API available on trial, Professional and Business plans (not Basic). Keys generated self-serve in System settings > API Keys.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "paid_plan_gate", "rationale": "Self-serve API keys but API only on trial/Professional/Business plans. Documented REST API, webhooks and rate limits.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "identity": [{"url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "quote": "The API provides a RESTful interface with JSON-formatted responses to use Copper entities.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://developer.copper.com/introduction/authentication.html", "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.", "source_type": "official_docs"},
+   {"url": "https://developer.copper.com/introduction/requests.html", "quote": "X-PW-AccessToken | API Key", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "quote": "Available on our trial, professional and business plan", "source_type": "official_docs"},
+   {"url": "https://developer.copper.com/introduction/authentication.html", "quote": "in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY' button.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developer.copper.com/webhooks/overview.html", "quote": "Webhooks allow systems integrated with Copper to receive near real-time notification of certain events", "source_type": "official_docs"},
+   {"url": "https://developer.copper.com/introduction/requests.html", "quote": "All API calls are limited to 180 requests per minute.", "source_type": "official_docs"}
+  ],
+  "buildability": [{"url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "quote": "Available on our trial, professional and business plan", "source_type": "official_docs"}]
+ },
+ "disputes": [
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Webhooks overview documents create/update/delete subscriptions for several record types."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "requests.html documents 180 requests/min and bulk 3 req/s."}
+ ]
+}

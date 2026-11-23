@@ -1,0 +1,44 @@
+{
+ "id": "gladly",
+ "name": "Gladly",
+ "category": "Support & Helpdesk",
+ "one_liner": "Customer service and commerce AI platform (gladly.com, now gladly.ai) with REST API, Lookup API, webhooks and App Platform.",
+ "docs_url": "https://developer.gladly.com/rest/",
+ "openapi_spec_url": "https://developer.gladly.com/rest/openapi/openapi.yaml",
+ "auth_methods": ["basic"],
+ "auth_notes": "Token-based HTTP Basic: username is agent email, password is API token. User needs API User permission granted by an admin. Tokens have unrestricted API access.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "No public signup, pricing page or trial found (gladly.com/pricing redirects to marketing site gladly.ai). Credentials come from a customer org's admin (Settings > Users > API User). Sandbox enabled separately at {org}.gladly.qa.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": 64,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Well-documented OpenAPI with webhooks and 10 req/s limits, but no self-serve account: needs an existing Gladly customer org, admin-granted API User permission, and sandbox enablement via Gladly.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "high", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "No public signup, trial or pricing found; confirm how a developer obtains a Gladly org or sandbox (sales contact likely).",
+ "evidence": [
+  {"field": "auth", "url": "https://developer.gladly.com/rest/openapi/openapi.yaml", "quote": "To create and use an API token, your user must have the API User permission.", "source_type": "official_docs"},
+  {"field": "sandbox", "url": "https://developer.gladly.com/rest/openapi/openapi.yaml", "quote": "Your sandbox environment is accessible at `https://{organization}.gladly.qa`", "source_type": "official_docs"},
+  {"field": "rate_limits", "url": "https://developer.gladly.com/rest/openapi/openapi.yaml", "quote": "GET                 | 10 Requests per second", "source_type": "official_docs"}
+ ],
+ "disputes": [
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "medium", "why": "OpenAPI root lists about 64 path entries."},
+  {"field": "access", "first_pass": "unknown", "yours": "unknown", "why": "Agree unknown: no self-serve signup or pricing evidence; third-party sources say no free trial, unverified."}
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "id": "pylon",
+ "name": "Pylon",
+ "category": "Support & Helpdesk",
+ "one_liner": "B2B support platform (usepylon.com) for issues, accounts, contacts and knowledge base with REST API, webhooks and MCP.",
+ "docs_url": "https://docs.usepylon.com/pylon-docs/developer/api",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token"
+ ],
+ "auth_notes": "Admin-created Bearer API token (scoped tokens listed on pricing page); MCP additionally OAuth 2.0.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "Pricing page lists REST API, MCP and Webhooks under the Professional seat ($89/seat, annual contract). Free trials are arranged through a sales rep; no self-serve signup seen.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "typescript",
+   "python",
+   "go"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.usepylon.com"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented API, SDKs and webhooks, but need a paying or sales-arranged trial workspace; tokens are admin-created per customer.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": [
+  {
+   "field": "access",
+   "url": "https://usepylon.com/pricing",
+   "quote": "Pylon offers free trials for prospects. Your sales representative will work with you on setting up the demo organization.",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "access",
+   "url": "https://usepylon.com/pricing",
+   "quote": "Viewer seats Core support Out-of-the-box Analytics Automations Skills Broadcasts MCP API Integrations",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "webhooks",
+   "url": "https://docs.usepylon.com/llms.txt",
+   "quote": "Webhooks](https://docs.usepylon.com/pylon-docs/developer/webhooks.md): Receive webhooks for various events happening in Pylon.",
+   "source_type": "official_docs"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "paid_plan_required",
+   "why": "API listed under paid Professional plan; trials only via sales rep."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_NOW",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "No self-serve signup; paid plan or sales-arranged trial needed."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "none",
+   "yours": "paid_plan_gate",
+   "why": "API bundled in paid seat plans."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Webhooks docs page exists in official index."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "API reference covers ~25 resource groups."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Pricing feature list includes Sandbox Environment (tier unclear)."
+  }
+ ]
+}

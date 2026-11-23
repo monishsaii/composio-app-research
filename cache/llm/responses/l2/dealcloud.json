@@ -1,0 +1,35 @@
+{
+ "id": "dealcloud",
+ "name": "DealCloud",
+ "category": "CRM & Sales",
+ "one_liner": "DealCloud is a data/CRM platform with REST APIs and an MCP server.",
+ "docs_url": "https://api.docs.dealcloud.com/docs",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "API key from user profile exchanged with client_id and scopes for a bearer token via client credentials; tokens expire after 900 seconds.",
+ "oauth_details": {"flows": ["client_credentials"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "admin_approval",
+ "access_notes": "API must be enabled for a user group by a site admin or CSM. No self-serve signup or pricing seen.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://api.docs.dealcloud.com/mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Documented OAuth client-credentials API, but each customer site must enable API access per user group via its admin or CSM.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "medium", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "low", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Rate limits, webhooks, sandbox and pricing not confirmed on official pages; Intapp ownership not confirmed.",
+ "evidence": {
+  "identity": [{"url": "https://api.docs.dealcloud.com/mcp", "quote": "The DealCloud MCP Server helps teams turn their DealCloud data into faster, higher-quality outcomes.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://api.docs.dealcloud.com/docs/token", "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token", "source_type": "official_docs"},
+   {"url": "https://api.docs.dealcloud.com/docs/token", "quote": "Tokens expire after 900 seconds (15 minutes) and must be refreshed by repeating the flow.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://api.docs.dealcloud.com/docs/apikeys", "quote": "If you do not see the Admin section, contact your organization's admin or DealCloud Customer Success Manager (CSM) for assistance.", "source_type": "official_docs"},
+   {"url": "https://api.docs.dealcloud.com/docs/apikeys", "quote": "go to Capabilities > Site Areas, and enable \"API\".", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://api.docs.dealcloud.com/mcp", "quote": "A compatible AI assistant connects to the DealCloud MCP Server and signs in as the user.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://api.docs.dealcloud.com/docs/apikeys", "quote": "ensure the intended user is assigned to a user group with the appropriate permissions.", "source_type": "official_docs"}]
+ },
+ "disputes": []
+}

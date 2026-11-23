@@ -32,3 +32,15 @@
 {"stage":"l1_entail","batch":2,"model":"sonnet","apps":20,"tokens":57353,"tool_uses":7,"ms":37855}
 {"stage":"l1_entail","batch":1,"model":"sonnet","apps":20,"tokens":56134,"tool_uses":6,"ms":38980}
 {"stage":"l1_entail","batch":4,"model":"sonnet","apps":20,"tokens":60972,"tool_uses":7,"ms":43626}
+{"stage":"auditor","batch":2,"model":"opus","apps":["higgsfield","lark-larksuite","linear","meta-ads","otter-ai"],"tokens":83592,"tool_uses":30,"ms":217870}
+{"stage":"l2","batch":1,"model":"sonnet","apps":["twenty","podio","zoho-crm","close"],"tokens":87330,"tool_uses":16,"ms":169033}
+{"stage":"l2","batch":2,"model":"sonnet","apps":["copper","dealcloud","zendesk","intercom"],"tokens":71284,"tool_uses":17,"ms":195959}
+{"stage":"l2","batch":5,"model":"sonnet","apps":["slack","twilio","zoho-cliq","lark-larksuite"],"tokens":80116,"tool_uses":21,"ms":227393,"note":"recorded 1 search it did not run; record deleted"}
+{"stage":"l2","batch":4,"model":"sonnet","apps":["plain","help-scout","gorgias","gladly"],"tokens":101747,"tool_uses":29,"ms":235215}
+{"stage":"l2","batch":6,"model":"sonnet","apps":["pumble","discord","telegram","whatsapp-business"],"tokens":79500,"tool_uses":21,"ms":273193,"note":"evidence unlabeled -> retry"}
+{"stage":"l2","batch":3,"model":"sonnet","apps":["freshdesk","front","pylon","liveagent"],"tokens":89684,"tool_uses":26,"ms":283450}
+{"stage":"l2","batch":0,"model":"sonnet","apps":["salesforce","hubspot","pipedrive","attio"],"tokens":107401,"tool_uses":25,"ms":289195}
+{"stage":"l2_retry","batch":6,"model":"sonnet","apps":["pumble","discord","telegram","whatsapp-business"],"tokens":1603,"tool_uses":1,"ms":29560,"note":"incremental retry tokens approx (81103-79500)"}
+{"stage":"l2_retry","batch":2,"model":"sonnet","apps":["copper","dealcloud","zendesk","intercom"],"tokens":10809,"tool_uses":5,"ms":42635,"note":"incremental approx"}
+{"stage":"l2","batch":7,"model":"sonnet","apps":["aircall","vonage","google-ads","meta-ads"],"tokens":110819,"tool_uses":27,"ms":335023}
+{"stage":"l2","batch":0,"model":"sonnet","apps":["salesforce","hubspot","pipedrive","attio"],"tokens":6302,"tool_uses":3,"ms":67753,"note":"retry incremental approx"}

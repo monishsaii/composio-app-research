@@ -1,0 +1,201 @@
+{
+ "id": "salesforce",
+ "name": "Salesforce",
+ "category": "CRM & Sales",
+ "one_liner": "Cloud CRM platform (Sales Cloud etc.) exposing REST, SOAP, Bulk, Pub/Sub and GraphQL APIs on customer orgs.",
+ "docs_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "jwt_service_account",
+  "other"
+ ],
+ "auth_notes": "No static API key: OAuth access token from a Connected App or External Client App registered in the org; flows include client credentials, JWT bearer, PKCE/auth code (activepieces guide, 2026-11-19). Username+password+token and sf CLI login also used by community tools. Official docs return HTTP 403 to the fetcher.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "PKCE",
+   "client_credentials",
+   "jwt_bearer"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "paid_plan_required",
+ "access_notes": "API access included in Enterprise, Unlimited, Performance and Developer (free dev org); Professional needs a paid API add-on; Essentials has none (third-party guide citing Salesforce Help, read 2026-11-19). Commercial multi-tenant apps are said to need AppExchange Partner Program enrolment under updated API terms (Sliick, third party).",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest",
+   "soap",
+   "graphql",
+   "other"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/salesforcecli/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Rich documented APIs with standard OAuth and free Developer Edition orgs for building, but customer production access depends on edition (Enterprise+ or paid add-on) and commercial apps may need AppExchange partner enrolment. Official docs unfetchable, so claims rely on third-party summaries.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "medium",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "developer.salesforce.com and help.salesforce.com returned 403 or a JS shell, so edition gating and partner-program terms rest on third-party pages. Official MCP (salesforcecli/mcp, local @salesforce/mcp) reached end of life 2026-11-02 and the repo is archived; any hosted successor is unverified.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://www.salesforce.com/sales/pricing/",
+    "quote": "Unleash growth with fully customizable sales force automation software.",
+    "source_type": "pricing_page"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "You will not find a static API key in Salesforce",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "For server-to-server jobs with no person present, use client credentials or JWT bearer.",
+    "source_type": "third_party"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "Professional: API access only as a paid add-on",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "Enterprise: API access included",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://sliick.com/articles/salesforce-api-terms-of-service-update-isv-guide/",
+    "quote": "you are required to enrol in the Salesforce AppExchange Partner Program",
+    "source_type": "third_party"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "Developer: API access included",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "| Full Sandbox | 5,000,000 |",
+    "source_type": "third_party"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "exposes its records through REST, SOAP, Bulk, Pub/Sub and GraphQL APIs",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "Salesforce meters a rolling 24-hour allocation of requests per org",
+    "source_type": "third_party"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/forcedotcom/mcp/issues/46",
+    "quote": "The Salesforce DX local MCP server (@salesforce/mcp) reaches end of life on November 2nd, 2026.",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://github.com/salesforcecli/mcp",
+    "quote": "MCP Server for Interacting with Salesforce Orgs",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://www.activepieces.com/blog/salesforce-api-types-access-and-limits-2026-guide",
+    "quote": "Professional: API access only as a paid add-on",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://sliick.com/articles/salesforce-api-terms-of-service-update-isv-guide/",
+    "quote": "you are required to enrol in the Salesforce AppExchange Partner Program",
+    "source_type": "third_party"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "paid_plan_required",
+   "why": "Edition-gated API: Enterprise+ includes it, Professional add-on, Essentials none; free Developer org only for building."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "salesforcecli/mcp publishes @salesforce/mcp (local-only, EOL 2026-11-02); the community repo also exists."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Edition gating and partner terms found; documented broad API with standard OAuth."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "paid_plan_gate",
+   "why": "API unavailable on Essentials, paid add-on on Professional."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "REST, SOAP, Bulk 2.0, Pub/Sub, GraphQL, Metadata APIs listed; exact endpoint count unverified."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "oauth2",
+    "other"
+   ],
+   "yours": [
+    "oauth2",
+    "jwt_service_account",
+    "other"
+   ],
+   "why": "JWT bearer flow listed for server-to-server; no static API key exists."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Free Developer Edition org and full sandboxes mentioned."
+  }
+ ]
+}

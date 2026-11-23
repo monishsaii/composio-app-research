@@ -1,0 +1,121 @@
+{
+ "id": "front",
+ "name": "Front",
+ "category": "Support & Helpdesk",
+ "one_liner": "Shared inbox and customer communication platform with a broad Core REST API, webhooks and an official MCP server.",
+ "docs_url": "https://dev.frontapp.com/reference/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token",
+  "oauth2"
+ ],
+ "auth_notes": "Company API tokens (admin created) or OAuth 2.0 authorization-code only (authorize/token at app.frontapp.com). Authorizing OAuth apps requires an admin. OAuth required for public integrations unless Front grants exception.",
+ "oauth_details": {
+  "flows": [
+   "authorization_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_trial",
+ "access_notes": "Free 14-day trial with all Professional features, no credit card. Rate limit 50/100/200 rpm by plan (Starter/Pro/Enterprise); increases need Professional+. Partner integrations get a separate 120 rpm.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.frontapp.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Self-serve via trial and admin-created token or OAuth app; per-customer admin must authorize; low default rate limits; public listing needs OAuth and App Store process.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": [
+  {
+   "field": "access",
+   "url": "https://front.com/pricing",
+   "quote": "Our free 14-day trial offers all the features available in our Professional plan.",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "rate_limits",
+   "url": "https://dev.frontapp.com/docs/rate-limiting",
+   "quote": "By default, Front's API rate limit starts at 50 requests per minute and varies depending on your plan.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "oauth",
+   "url": "https://dev.frontapp.com/docs/oauth.md",
+   "quote": "End users authorizing OAuth apps must be admins. This applies to both private and public OAuth apps.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "webhooks",
+   "url": "https://dev.frontapp.com/docs/webhooks-1.md",
+   "quote": "Front offers two methods for configuring webhooks:",
+   "source_type": "official_docs"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_trial",
+   "why": "Pricing page: free 14-day trial with Professional features, no card needed."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "llms.txt index lists ~368 API reference pages."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Application and rule webhooks documented."
+  },
+  {
+   "field": "oauth_details.flows",
+   "first_pass": [],
+   "yours": [
+    "authorization_code"
+   ],
+   "why": "OAuth doc: only authorization code grant supported."
+  },
+  {
+   "field": "api_surface.style",
+   "first_pass": [
+    "other"
+   ],
+   "yours": [
+    "rest"
+   ],
+   "why": "Core API is REST with HTTP verbs and JSON; no other style observed."
+  }
+ ]
+}

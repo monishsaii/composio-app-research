@@ -1,0 +1,144 @@
+{
+ "id": "twenty",
+ "name": "Twenty",
+ "category": "CRM & Sales",
+ "one_liner": "Open-source CRM (twenty.com) with schema-generated REST and GraphQL APIs, available as managed cloud or self-hosted.",
+ "docs_url": "https://docs.twenty.com/developers/extend/api.md",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "oauth2",
+  "hmac_signature"
+ ],
+ "auth_notes": "API key as Bearer token from Settings > Developers > API; OAuth 2.0 auth code+PKCE and client credentials. Outbound webhooks signed with HMAC SHA256 (X-Twenty-Webhook-Signature).",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "PKCE",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": false
+ },
+ "access": "self_serve_trial",
+ "access_notes": "Cloud: 30-day trial, no credit card; Pro $9/user/mo includes REST & GraphQL API, webhooks, MCP. Self-hosting the open-source core is free. API is not plan-gated, only rate limited (50/min Pro, 100/min Organization, custom Enterprise).",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest",
+   "graphql"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve API keys and OAuth on cloud trial or free self-host; documented REST/GraphQL with signed webhooks. API is per-workspace schema-generated, so tool definitions must be built dynamically.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "MCP endpoint URL not found in fetched pages; no static OpenAPI spec (schema is per workspace).",
+ "evidence": [
+  {
+   "field": "access",
+   "url": "https://twenty.com/pricing",
+   "quote": "Sign up for Cloud in under a minute and start your 30-day trial.",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "access",
+   "url": "https://twenty.com/pricing",
+   "quote": "Self-hosting the open source core is free.",
+   "source_type": "pricing_page"
+  },
+  {
+   "field": "api_surface.rate_limits",
+   "url": "https://docs.twenty.com/developers/extend/api.md",
+   "quote": "Requests | 100 per minute",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "api_surface.webhooks",
+   "url": "https://docs.twenty.com/developers/extend/webhooks.md",
+   "quote": "Twenty sends an HTTP POST to your URL whenever a record is created, updated, or deleted.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "mcp",
+   "url": "https://twenty.com/pricing",
+   "quote": "Every Cloud workspace ships with a native MCP server.",
+   "source_type": "pricing_page"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_trial",
+   "why": "Pricing page shows 30-day trial, API included on all plans, free self-host."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Webhooks doc exists with HMAC-signed payloads for all record events."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "API docs list 100 per minute; pricing lists 50 per minute on Pro."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "api_key",
+    "oauth2"
+   ],
+   "yours": [
+    "api_key",
+    "oauth2",
+    "hmac_signature"
+   ],
+   "why": "Webhook signature uses HMAC SHA256."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Pricing lists Local and Production environments; self-hostable."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_WITH_CAVEATS",
+   "yours": "BUILD_NOW",
+   "why": "Plan gating resolved: API on all plans, MCP on cloud, self-serve."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "none",
+   "why": "No gate found."
+  }
+ ]
+}

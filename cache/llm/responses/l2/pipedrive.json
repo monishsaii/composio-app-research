@@ -1,0 +1,181 @@
+{
+ "id": "pipedrive",
+ "name": "Pipedrive",
+ "category": "CRM & Sales",
+ "one_liner": "Sales CRM with a RESTful API (v1/v2), OAuth 2.0 Marketplace apps, webhooks and an official MCP server.",
+ "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Personal API token generated in the Pipedrive app; OAuth 2.0 authorization code flow (oauth.pipedrive.com) required for Marketplace apps.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "paid_plan_required",
+ "access_notes": "Requires a Pipedrive company account (ZoomInfo review says API access on all paid plans incl. Lite $14/seat; trial not verified). Free developer sandbox account available via request form (5 seats; deleted if inactive). Developers in sanctioned countries are excluded. Token-based daily budget: 30,000 x plan multiplier x seats.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "nodejs",
+   "php"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.pipedrive.ai/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented REST API, API token and OAuth, free developer sandbox. Customers need a paid Pipedrive plan; daily token budget scales with plan and seats; Marketplace apps need OAuth and review.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "high",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Pricing page returned 403; whether a free trial account suffices for an API token is not verified from an official page. MCP URL comes from a vendor GitHub org plugin config only.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://pipedrive.readme.io/docs/getting-started",
+    "quote": "Pipedrive is a global CRM with headquarters in the USA and operations in the USA and EU, featuring an intuitive RESTful API.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "The API token can be obtained manually from the Pipedrive app.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+    "quote": "Using OAuth 2.0 is necessary for developing apps that are available in the Pipedrive Marketplace.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://pipeline.zoominfo.com/sales/pipedrive-api",
+    "quote": "Getting API access requires a paid Pipedrive account on any plan.",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+    "quote": "30,000 base tokens × subscription plan multiplier × number of seats",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+    "quote": "Fill in the form here to get access to your developer sandbox account!",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "This reference helps you implement the RESTful Pipedrive API.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://pipedrive.readme.io/docs/guide-for-webhooks-v2",
+    "quote": "Webhooks allow you to get programmatic notifications from Pipedrive about changes to your data as they happen.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "quote": "We offer two official Pipedrive API client libraries: Node.js and PHP.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+    "quote": "Each company account is allocated a daily API token budget, which is shared among all users within that account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/pipedrive/pipedrive-skills",
+    "quote": "the official Pipedrive MCP, which the plugin references (.mcp.json, https://mcp.pipedrive.ai/mcp)",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://pipeline.zoominfo.com/sales/pipedrive-api",
+    "quote": "Getting API access requires a paid Pipedrive account on any plan.",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+    "quote": "30,000 base tokens × subscription plan multiplier × number of seats",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "self_serve_free",
+   "yours": "paid_plan_required",
+   "why": "API token needs a Pipedrive company account on a paid plan (trial aside); only the developer sandbox is free."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Vendor GitHub org pipedrive/pipedrive-skills references the official Pipedrive MCP at mcp.pipedrive.ai/mcp."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_NOW",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Paid plan needed for production accounts; token budget tied to plan and seats."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "none",
+   "yours": "paid_plan_gate",
+   "why": "Customer accounts must be paid; sandbox is for development only."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Token-based rate limit page with plan multipliers and per-endpoint costs."
+  },
+  {
+   "field": "oauth_details.flows",
+   "first_pass": [],
+   "yours": [
+    "auth_code"
+   ],
+   "why": "OAuth authorize/token authorization-code flow documented."
+  }
+ ]
+}

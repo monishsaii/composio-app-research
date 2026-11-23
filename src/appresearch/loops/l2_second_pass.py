@@ -84,6 +84,9 @@ def _load_l2(rid: str) -> dict | None:
         return None
     app = BY_ID[rid]
     raw.update(id=rid, name=app["name"], category=app["category"])
+    raw["evidence"] = group_evidence(raw.get("evidence"))
+    from ..research import normalize
+    raw = normalize(raw, rid)
     for evs in (raw.get("evidence") or {}).values():
         for e in evs:
             e["fetched_at"] = web.fetch(e["url"])["fetched_at"]
@@ -96,6 +99,30 @@ def _load_l2(rid: str) -> dict | None:
         return None
     rec["_l2_disputes"] = disputes
     return rec
+
+
+GROUP_RULES = [("mcp", "mcp"), ("sandbox", "sandbox"), ("test", "sandbox"),
+               ("auth", "auth"), ("oauth", "auth"), ("token", "auth"), ("scope", "auth"), ("key", "auth"),
+               ("access", "access"), ("pric", "access"), ("plan", "access"), ("trial", "access"), ("review", "access"),
+               ("partner", "access"), ("approv", "access"), ("tier", "access"),
+               ("blocker", "buildability"), ("verdict", "buildability"),
+               ("breadth", "api_surface"), ("endpoint", "api_surface"), ("webhook", "api_surface"), ("rate", "api_surface"),
+               ("paginat", "api_surface"), ("sdk", "api_surface"), ("api", "api_surface"), ("openapi", "api_surface"),
+               ("doc", "identity"), ("identity", "identity")]
+
+
+def group_evidence(ev) -> dict:
+    """Accept the schema dict, or a flat list of {field|group, url, quote} (some L2 answers used that shape)."""
+    if isinstance(ev, dict):
+        return ev
+    out: dict = {}
+    for e in ev or []:
+        if not isinstance(e, dict) or not e.get("url"):
+            continue
+        f = str(e.get("group") or e.get("field") or "").lower()
+        g = next((grp for k, grp in GROUP_RULES if k in f), "identity")
+        out.setdefault(g, []).append({"url": e["url"], "quote": e.get("quote", ""), "source_type": e.get("source_type", "official_docs")})
+    return out
 
 
 def _verified(evs: list[dict]) -> list[dict]:

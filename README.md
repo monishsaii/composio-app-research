@@ -2,7 +2,7 @@
 
 For each of 100 apps, the pipeline records how it authenticates and what gates API credentials. It also records how big the API is, whether an MCP server exists, and a rubric verdict (BUILD_NOW … BLOCKED_NO_PUBLIC_API). Every non-unknown value carries `{url, ≤25-word quote, source_type, fetched_at}`. The output is `site/index.html`, a self-contained case study, plus `data/final.json`.
 
-**How it runs (no hidden autonomy).** Python handles search plumbing, fetch, cache, validation, rule checks, analysis and the site. The LLM steps are done by **Claude Code subagents** inside a Claude Code session: Haiku extracts, Sonnet runs the adversarial pass and entailment, and Opus adjudicates. Python writes a task file, a subagent answers it, and Python validates the answer with pydantic and retries invalid output. There is no Anthropic API key and no API spend. Composio's SDK supplies the toolkit catalog, and Composio search is tried first; see Limitations.
+**How it runs (no hidden autonomy).** Python handles search plumbing, fetch, cache, validation, rule checks, analysis and the site. The LLM steps are done by **Claude Code subagents** inside a Claude Code session: Haiku extracts and labels claim support (L1; the shipped L1 run used Sonnet), Sonnet runs the adversarial pass, and Opus adjudicates. Python writes a task file, a subagent answers it, and Python validates the answer with pydantic and retries invalid output. There is no Anthropic API key and no API spend. Composio's SDK supplies the toolkit catalog, and Composio search is tried first; see Limitations.
 
 ## Two modes
 

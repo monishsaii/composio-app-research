@@ -1,0 +1,114 @@
+{
+ "id": "zoho-crm",
+ "name": "Zoho CRM",
+ "category": "CRM & Sales",
+ "one_liner": "Zoho CRM sales CRM with REST API v8, notification webhooks and official pre-built MCP servers.",
+ "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "OAuth 2.0 only; client registered in Zoho Developer Console (server, client-based, mobile, self client). Multi-DC: accounts and API domains differ per region.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": false
+ },
+ "access": "self_serve_free",
+ "access_notes": "Developer Console registration is open; API credit table includes a Free Edition (5000 credits/24h) and trial editions share paid-edition limits. Higher tiers get more credits. Per-region data center handling required.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve OAuth client registration, documented REST API with credit-based limits, notification webhooks and official MCP. Caveats: multi-datacenter domains and edition-based credit limits.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Sandbox availability and edition gating not verified.",
+ "evidence": [
+  {
+   "field": "access",
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+   "quote": "Free Edition | 5000 credits | 5000 credits",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "access",
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/register-client.html",
+   "quote": "Go to Zoho Developer Console and click on GET STARTED.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "api_surface.webhooks",
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/notifications/overview.html",
+   "quote": "Notification APIs allow you to get instant notifications whenever an action is performed on the records of a module.",
+   "source_type": "official_docs"
+  },
+  {
+   "field": "api_surface.rate_limits",
+   "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+   "quote": "API Usage in Zoho CRM is calculated based on credits",
+   "source_type": "official_docs"
+  }
+ ],
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Developer Console is open; API limits table includes Free Edition with 5000 credits."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Notification APIs documented."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Credit-based limits per edition documented."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "v8 docs cover metadata, records, composite, bulk, notifications, COQL; count not verified."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_NOW",
+   "why": "Evidence now supports self-serve credentials and documented API."
+  }
+ ]
+}

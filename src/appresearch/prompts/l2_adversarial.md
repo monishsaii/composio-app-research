@@ -9,7 +9,7 @@ Pay special attention to the "known ambiguity" line: resolve WHICH product/entit
 Method:
 - Use DIFFERENT pages from the first pass. Prefer primary sources: official docs, developer portal, pricing page, official GitHub.
 - Run the provided search queries (at most 1 more of your own), record them, and read pages ONLY via
-  `python -m appresearch fetch "<url>" --show 20000` (so every page you cite is cached and re-checkable).
+  `python -m appresearch fetch "<url>" --show 12000` (so every page you cite is cached and re-checkable).
 - Quotes must be copied VERBATIM from the fetched page text, <=25 words. If you cannot find support, use "unknown".
 - Gated-with-evidence is a correct finding. "unknown" is better than a guess.
 
@@ -24,3 +24,8 @@ Enums: auth_methods [oauth2, api_key, basic, bearer_token, jwt_service_account, 
 access [self_serve_free, self_serve_trial, paid_plan_required, admin_approval, app_review_required, partner_or_contact_sales, no_public_api, unknown];
 main_blocker [none, partner_gate, paid_plan_gate, app_review, enterprise_only, no_api, unstable_or_undocumented_api, auth_complexity, regulatory_or_pci, cli_or_local_only, ambiguous_product, other];
 breadth broad(>100 endpoints)/medium(20-100)/narrow(<20)/none/unknown; source_type [official_docs, pricing_page, official_repo, third_party].
+
+EVIDENCE FORMAT (required; a dict keyed by field group, NOT a flat list):
+  "evidence": {"auth": [{"url": "...", "quote": "verbatim <=25 words", "source_type": "official_docs"}],
+               "access": [...], "sandbox": [...], "api_surface": [...], "mcp": [...], "buildability": [...], "identity": [...]}
+Include evidence for EVERY group where your value is not "unknown", and especially for every disputed field.

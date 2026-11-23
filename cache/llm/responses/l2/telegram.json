@@ -1,0 +1,120 @@
+{
+ "id": "telegram",
+ "name": "Telegram",
+ "category": "Comms & Messaging",
+ "one_liner": "Telegram Bot API (HTTPS, bot token via @BotFather) is the intended integration surface; MTProto client API and Gateway API are separate products.",
+ "docs_url": "https://core.telegram.org/bots/api",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "other"
+ ],
+ "auth_notes": "Bot API: unique bot token issued by @BotFather, placed in the URL. MTProto: api_id/api_hash plus user login. Gateway API: Bearer token.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Bots are created free via @BotFather. Optional paid broadcasts cost 0.1 Stars per message above 30/s. No app review.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "community",
+  "url": "https://github.com/sparfenyuk/mcp-telegram"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Bot API is free, self-serve, documented, with setWebhook and getUpdates. Bots cannot read user chats; MTProto user-account use is a different, riskier path.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": "Ambiguity resolved to Bot API; confirm product wants bot, not user-account, semantics.",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "Each bot is given a unique authentication token when it is created",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://core.telegram.org/bots/faq",
+    "quote": "bots are not able to broadcast more than about 30 messages per second, unless they enable paid broadcasts",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [],
+  "buildability": [],
+  "identity": [
+   {
+    "url": "https://core.telegram.org/bots/api",
+    "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "bearer_token",
+    "other"
+   ],
+   "yours": [
+    "api_key",
+    "other"
+   ],
+   "why": "Bot API token is bot-specific, placed in URL path, not a Bearer header; Bearer applies only to Gateway."
+  },
+  {
+   "field": "api_surface.style",
+   "first_pass": [
+    "other"
+   ],
+   "yours": [
+    "rest"
+   ],
+   "why": "Bot API is HTTP-based with JSON methods."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Bot API reference (v10.5) lists well over 100 methods; count not verified."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "FAQ documents 30 msg/s broadcast and 20 msg/min group limits."
+  },
+  {
+   "field": "needs_human",
+   "first_pass": true,
+   "yours": false,
+   "why": "Bot API reference and token details were fetched; ambiguity resolved."
+  }
+ ]
+}
