@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["api_key"], "url": "https://docs.higgsfield.ai/docs/authentication.md", "quote": "Create and manage API credentials in [Higgsfield Console](https://console.higgsfield.ai). Each credential consists of a key ID and a secret.", "confidence": "high"},
+  "access": {"value": "self_serve_free", "url": "https://docs.higgsfield.ai/docs/help/faq.md", "quote": "Create an account at [console.higgsfield.ai](https://console.higgsfield.ai) 2. Generate your API credentials from the dashboard", "confidence": "medium"},
+  "api_surface.breadth": {"value": "medium", "url": "https://docs.higgsfield.ai/docs/llms.txt", "quote": "Start at https://console.higgsfield.ai to discover models and open their model-specific API documentation.", "confidence": "low"},
+  "mcp.exists": {"value": "official", "url": "https://higgsfield.ai/mcp", "quote": "Model and render in Blender with Claude", "confidence": "medium"},
+  "buildability.main_blocker": {"value": "none", "url": "https://docs.higgsfield.ai/docs/help/faq.md", "quote": "The API runs on pay-as-you-go by default: you top up a balance and pay per generation.", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_NOW", "url": "https://docs.higgsfield.ai/docs/authentication.md", "quote": "Send both values in the `Authorization` header", "confidence": "medium"}
+}

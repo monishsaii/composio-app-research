@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["api_key", "bearer_token"], "url": "https://docs.mrscraper.com/docs/api/authentication", "quote": "The MrScraper API uses API token authentication to secure all endpoints. Every request must include a valid API token in the HTTP request headers.", "confidence": "high"},
+ "access": {"value": "self_serve_free", "url": "https://mrscraper.com/pricing", "quote": "Free costs nothing - no credit card required. It's the fastest way to try scraping, proxies and AI extraction before upgrading.", "confidence": "high"},
+ "api_surface.breadth": {"value": "medium", "url": "https://docs.mrscraper.com/llms.txt", "quote": "Comprehensive documentation for MrScraper's API endpoints, including authentication, pagination, error handling, and scraper management.", "confidence": "medium"},
+ "mcp.exists": {"value": "official", "url": "https://docs.mrscraper.com/llms.txt", "quote": "Official MrScraper MCP server for retrieving web pages, web search, and account usage.", "confidence": "high"},
+ "buildability.main_blocker": {"value": "none", "url": "https://mrscraper.com/pricing", "quote": "Sign in to the dashboard, open your account settings, and copy the token from the API Token page.", "confidence": "high"},
+ "buildability.verdict": {"value": "BUILD_NOW", "url": "https://docs.mrscraper.com/docs/api/authentication", "quote": "API tokens are managed directly from your MrScraper dashboard.", "confidence": "high"}
+}

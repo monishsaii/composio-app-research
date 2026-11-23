@@ -1,0 +1,41 @@
+{
+  "auth_methods": {
+    "value": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+    "quote": "The authorization process verifies the users and apps that will be accessing the Marketing API and grants them permissions.",
+    "confidence": "high"
+  },
+  "access": {
+    "value": "app_review_required",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+    "quote": "During [App Review](https://developers.facebook.com/docs/app-review), your app must also request specific permissions and features.",
+    "confidence": "high"
+  },
+  "api_surface.breadth": {
+    "value": "broad",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+    "quote": "Access to all [Business Manager](https://developers.facebook.com/docs/business-manager-api) and [Catalog](https://developers.facebook.com/documentation/ads-commerce/catalog) APIs.",
+    "confidence": "high"
+  },
+  "mcp.exists": {
+    "value": "official",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "quote": "The ads MCP server is a Meta-hosted [Model Context Protocol](https://modelcontextprotocol.io/) server",
+    "confidence": "high"
+  },
+  "buildability.main_blocker": {
+    "value": "app_review",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+    "quote": "Your tier is determined by whether your app has been approved through App Review.",
+    "confidence": "high"
+  },
+  "buildability.verdict": {
+    "value": "BUILD_WITH_CAVEATS",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md",
+    "quote": "Heavily rate-limited per ad account. For development only. Not for production apps running for live advertisers.",
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["api_key"], "url": "https://pitchbook.com/help/pitchbook-api", "quote": "authentication uses a static key sent on each request (search-snippet paraphrase; page returned 403)", "confidence": "low"},
+ "access": {"value": "partner_or_contact_sales", "url": "https://pitchbook.com/help/pitchbook-api", "quote": "reach out to our Direct Data team to request access to the API", "confidence": "medium"},
+ "api_surface.breadth": {"value": "medium", "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc", "quote": "PitchBook Public API v2", "confidence": "low"},
+ "mcp.exists": {"value": "none_found", "url": "https://pitchbook.com/help/pitchbook-api", "quote": "", "confidence": "low"},
+ "buildability.main_blocker": {"value": "enterprise_only", "url": "https://pitchbook.com/help/pitchbook-api", "quote": "reach out to our Direct Data team to request access to the API", "confidence": "medium"},
+ "buildability.verdict": {"value": "BLOCKED_NEEDS_OUTREACH", "url": "https://pitchbook.com/help/pitchbook-api", "quote": "reach out to our Direct Data team to request access to the API", "confidence": "medium"}
+}

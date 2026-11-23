@@ -1,0 +1,16 @@
+{
+ "identity#0": "supports",
+ "auth#0": "supports",
+ "auth#1": "supports",
+ "auth#2": "supports",
+ "access#0": "supports",
+ "access#1": "supports",
+ "access#2": "supports",
+ "sandbox#0": "supports",
+ "sandbox#1": "supports",
+ "api_surface#0": "supports",
+ "api_surface#1": "irrelevant",
+ "mcp#0": "supports",
+ "mcp#1": "irrelevant",
+ "buildability#0": "irrelevant"
+}

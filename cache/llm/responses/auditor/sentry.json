@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["bearer_token", "oauth2"], "url": "https://docs.sentry.io/api/auth/", "quote": "Sentry supports OAuth2 with the authorization code grant type.", "confidence": "high"},
+ "access": {"value": "self_serve_free", "url": "https://docs.sentry.io/api/auth/", "quote": "You can create authentication tokens within Sentry by creating an internal integration. This is also available for self-hosted Sentry.", "confidence": "high"},
+ "api_surface.breadth": {"value": "broad", "url": "https://docs.sentry.io/api/", "quote": "You can use the APIs to manage account-level resources, like organizations and teams, as well as manage and export data.", "confidence": "medium"},
+ "mcp.exists": {"value": "official", "url": "https://docs.sentry.io/ai/mcp/", "quote": "The base MCP server address is: https://mcp.sentry.dev/mcp", "confidence": "high"},
+ "buildability.main_blocker": {"value": "none", "url": "https://docs.sentry.io/api/", "quote": "Our public endpoints are generally stable, but beta endpoints are subject to change.", "confidence": "high"},
+ "buildability.verdict": {"value": "BUILD_NOW", "url": "https://docs.sentry.io/api/auth/", "quote": "Authentication tokens are passed using an auth header, and are used to authenticate as a user or organization account with the API.", "confidence": "high"}
+}

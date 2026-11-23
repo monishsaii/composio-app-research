@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["oauth2", "bearer_token", "other"], "url": "https://open.larksuite.com/llms.txt", "quote": "tenant_access_token: The credentials required to call the API as an app.", "confidence": "high"},
+  "access": {"value": "admin_approval", "url": "https://open.larksuite.com/llms.txt", "quote": "only after the enterprise administrator approves can the application proceed with subsequent API calls or event listening.", "confidence": "medium"},
+  "api_surface.breadth": {"value": "broad", "url": "https://open.larksuite.com/llms.txt", "quote": "The Lark Developer is based on the numerous OpenAPIs exposed by Lark", "confidence": "high"},
+  "mcp.exists": {"value": "official", "url": "https://cdn.jsdelivr.net/npm/@larksuiteoapi/lark-mcp@0.5.1/README.md", "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool", "confidence": "high"},
+  "buildability.main_blocker": {"value": "app_review", "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md", "quote": "The permissions will take effect only after the app review is approved", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md", "quote": "After applying, you need to create a version and submit it for review. The app administrator will review and approve it before it takes effect.", "confidence": "medium"}
+}

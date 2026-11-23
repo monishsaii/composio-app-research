@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["basic", "api_key"], "url": "https://www.twilio.com/docs/usage/requests-to-twilio", "quote": "To authenticate requests to the Twilio APIs, use HTTP Basic authentication. Use your API key SID as the username and your API key secret as the password.", "confidence": "high"},
+  "access": {"value": "self_serve_trial", "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "quote": "You can sign up for a Twilio free trial account without a credit card.", "confidence": "high"},
+  "api_surface.breadth": {"value": "broad", "url": "https://www.twilio.com/en-us/blog/developers/introducing-twilio-mcp-skills", "quote": "Twilio has over 1,800 API endpoints and more than 30 products.", "confidence": "high"},
+  "mcp.exists": {"value": "official", "url": "https://github.com/twilio-labs/mcp", "quote": "This is a monorepo for the Model Context Protocol server that exposes all of Twilio APIs.", "confidence": "high"},
+  "buildability.main_blocker": {"value": "none", "url": "https://www.twilio.com/docs/usage/requests-to-twilio", "quote": "You can create an API key either in the Twilio Console or using the API.", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_NOW", "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "quote": "After signing up, the Twilio Console opens so you can find your Twilio credentials, check your usage, and use Twilio products.", "confidence": "high"}
+}

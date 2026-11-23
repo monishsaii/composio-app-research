@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["oauth2", "api_key"], "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "quote": "Your app sends the token in the `X-Shopify-Access-Token` header on every GraphQL Admin API request.", "confidence": "medium"},
+  "access": {"value": "self_serve_free", "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "quote": "The credentials that identify your app, issued when you create it. The client ID is public.", "confidence": "medium"},
+  "api_surface.breadth": {"value": "broad", "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "quote": "Shopify apps call the [GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql) to read and write store data on behalf of merchants.", "confidence": "medium"},
+  "mcp.exists": {"value": "official", "url": "https://shopify.dev/docs/api/ai-toolkit", "quote": "Shopify AI Toolkit connects your AI coding tools to Shopify's developer docs, API schemas, and CLI store management", "confidence": "high"},
+  "buildability.main_blocker": {"value": "app_review", "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "quote": "Fields that return a customer's personal data need a separate approval if your app is public.", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://shopify.dev/docs/apps/build/authentication-authorization", "quote": "Shopify grants some access scopes to individual apps rather than to every app that declares them.", "confidence": "medium"}
+}

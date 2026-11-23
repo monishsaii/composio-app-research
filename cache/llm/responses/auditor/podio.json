@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["oauth2"], "url": "https://developers.podio.com/authentication", "quote": "The Podio API uses the OAuth2 protocol for authentication.", "confidence": "high"},
+  "access": {"value": "self_serve_free", "url": "https://developers.podio.com/index/faq", "quote": "The Podio API is available to use for both paid and free Podio accounts. Both have full access to the API", "confidence": "medium"},
+  "api_surface.breadth": {"value": "broad", "url": "https://developers.podio.com/doc", "quote": "Our API is split up into different areas, that each contains a subset of methods grouped by functionality.", "confidence": "medium"},
+  "mcp.exists": {"value": "none_found", "url": "https://developers.podio.com/doc", "quote": "Our API is split up into different areas, that each contains a subset of methods grouped by functionality.", "confidence": "low"},
+  "buildability.main_blocker": {"value": "none", "url": "https://developers.podio.com/index/faq", "quote": "You have to sign in or sign up with Podio. Then you find your API keys as a tab under your account settings.", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_NOW", "url": "https://developers.podio.com/index/faq", "quote": "There is no extra charge for using the API as long as the usage is within these base rate limits.", "confidence": "medium"}
+}

@@ -1,0 +1,6 @@
+{"auth_methods": {"value": ["api_key", "oauth2"], "url": "https://developer.copper.com/introduction/oauth/index.html", "quote": "This authentication method is an alternative to Copper's legacy API Keys", "confidence": "high"},
+ "access": {"value": "self_serve_trial", "url": "https://developer.copper.com/introduction/oauth/index.html", "quote": "Authentication is open to all users, not just administrators", "confidence": "medium"},
+ "api_surface.breadth": {"value": "medium", "url": "https://developer.copper.com/introduction/requests.html", "quote": "For PUT or POST requests (e.g. create, update, search), the request parameters must be provided as JSON in the request body.", "confidence": "medium"},
+ "mcp.exists": {"value": "community", "url": "https://developer.copper.com/introduction/oauth/index.html", "quote": "", "confidence": "low"},
+ "buildability.main_blocker": {"value": "none", "url": "https://developer.copper.com/introduction/requests.html", "quote": "All Copper API calls must include the following headers to authenticate the request", "confidence": "medium"},
+ "buildability.verdict": {"value": "BUILD_NOW", "url": "https://developer.copper.com/introduction/requests.html", "quote": "X-PW-AccessToken | API Key | X-PW-Application | developer_api", "confidence": "medium"}}

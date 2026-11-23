@@ -1,0 +1,40 @@
+{
+ "auth_methods": {
+  "value": [
+   "none"
+  ],
+  "url": "https://github.com/sherlock-project/sherlock",
+  "quote": "pipx install sherlock-project",
+  "confidence": "high"
+ },
+ "access": {
+  "value": "no_public_api",
+  "url": "https://github.com/sherlock-project/sherlock",
+  "quote": "To search for only one user: sherlock user123",
+  "confidence": "high"
+ },
+ "api_surface.breadth": {
+  "value": "none",
+  "url": "https://github.com/sherlock-project/sherlock",
+  "quote": "usage: sherlock [-h] [--version] [--verbose]",
+  "confidence": "high"
+ },
+ "mcp.exists": {
+  "value": "community",
+  "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+  "quote": "",
+  "confidence": "medium"
+ },
+ "buildability.main_blocker": {
+  "value": "cli_or_local_only",
+  "url": "https://github.com/sherlock-project/sherlock",
+  "quote": "docker run -it --rm sherlock/sherlock",
+  "confidence": "high"
+ },
+ "buildability.verdict": {
+  "value": "NOT_APPLICABLE_NOT_A_SERVICE",
+  "url": "https://github.com/sherlock-project/sherlock",
+  "quote": "Hunt down social media accounts by username across 400+ social networks",
+  "confidence": "high"
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["oauth2", "bearer_token"], "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/", "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.", "confidence": "high"},
+ "access": {"value": "self_serve_trial", "url": "https://www.helpscout.com/pricing/", "quote": "When you sign up for a free trial of the Standard or Plus plan, you'll get 15 days to take all of the plan's features for a test drive", "confidence": "medium"},
+ "api_surface.breadth": {"value": "medium", "url": "https://developer.helpscout.com/mailbox-api/", "quote": "Welcome to the second generation of our Inbox API. This is an HTTPS-only API, with OAuth 2 authentication and CORS support", "confidence": "medium"},
+ "mcp.exists": {"value": "official", "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports", "quote": "Help Scout MCP gives AI assistants secure, official access to Help Scout data.", "confidence": "high"},
+ "buildability.main_blocker": {"value": "paid_plan_gate", "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports", "quote": "Your Help Scout account must have API access, which is included on the Standard, Plus, and Pro plans.", "confidence": "medium"},
+ "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports", "quote": "Your Help Scout account must have API access, which is included on the Standard, Plus, and Pro plans.", "confidence": "medium"}
+}

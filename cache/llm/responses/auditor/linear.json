@@ -1,0 +1,41 @@
+{
+  "auth_methods": {
+    "value": [
+      "oauth2",
+      "api_key"
+    ],
+    "url": "https://linear.app/developers/graphql",
+    "quote": "The Linear API supports personal API keys and OAuth2 authentication.",
+    "confidence": "high"
+  },
+  "access": {
+    "value": "self_serve_free",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "For personal scripts API keys are the easiest way to access the API. Visit Security & access settings to create and manage them.",
+    "confidence": "high"
+  },
+  "api_surface.breadth": {
+    "value": "broad",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "It supports introspection so you can query the whole schema.",
+    "confidence": "medium"
+  },
+  "mcp.exists": {
+    "value": "official",
+    "url": "https://linear.app/docs/mcp",
+    "quote": "Linear’s MCP server follows the authenticated remote MCP spec, so the server is centrally hosted and managed.",
+    "confidence": "high"
+  },
+  "buildability.main_blocker": {
+    "value": "none",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "If you’re building an application for others to use, we recommend you use OAuth2 authentication.",
+    "confidence": "high"
+  },
+  "buildability.verdict": {
+    "value": "BUILD_NOW",
+    "url": "https://linear.app/developers/graphql",
+    "quote": "Linear’s public API is built using GraphQL.",
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,14 @@
+{
+ "L1": {
+  "exact": 641,
+  "fuzzy": 1,
+  "pending": 1,
+  "unfetchable": 0,
+  "entailed": 1,
+  "unsupported": 0,
+  "groups_reset": 20,
+  "claim_supports": 489,
+  "claim_irrelevant": 150,
+  "claim_contradicts": 4
+ }
+}

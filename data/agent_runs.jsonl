@@ -21,3 +21,14 @@
 {"stage":"pass1","batch":"G2","model":"haiku","apps":["higgsfield","mermaid-cli","youtube-transcript","grain"],"tokens":141750,"tool_uses":47,"ms":255399}
 {"stage":"pass1","batch":"C","model":"haiku","apps":["jira","asana","coda","smartsheet","harvest"],"tokens":142815,"tool_uses":43,"ms":257500}
 {"stage":"pass1","batch":"B","model":"haiku","apps":["supabase","mongodb-atlas","datadog","sentry","linear"],"tokens":160929,"tool_uses":43,"ms":280719}
+{"stage":"pass1","batch":"E","model":"haiku","apps":["quickbooks","xero","brex","ramp","pitchbook"],"tokens":122211,"tool_uses":50,"ms":296802}
+{"stage":"auditor","batch":4,"model":"opus","apps":["sherlock","smartsheet","supabase","telegram","waterfall-io"],"tokens":67092,"tool_uses":16,"ms":106474}
+{"stage":"auditor","batch":1,"model":"opus","apps":["amazon-selling-partner","copper","dealcloud","fanbasis","google-ads"],"tokens":63138,"tool_uses":17,"ms":117639}
+{"stage":"auditor","batch":5,"model":"opus","apps":["datadog","help-scout","linkedin-ads","mrscraper","notebooklm"],"tokens":69816,"tool_uses":21,"ms":150624}
+{"stage":"auditor","batch":3,"model":"opus","apps":["paygent-connect","pitchbook","plain","pylon","sentry"],"tokens":64311,"tool_uses":19,"ms":165222}
+{"stage":"auditor","batch":6,"model":"opus","apps":["notion","podio","quickbooks","shopify","twilio"],"tokens":87247,"tool_uses":29,"ms":193159}
+{"stage":"l1_entail","batch":3,"model":"sonnet","apps":20,"tokens":58489,"tool_uses":5,"ms":33037}
+{"stage":"l1_entail","batch":5,"model":"sonnet","apps":20,"tokens":55286,"tool_uses":5,"ms":36384}
+{"stage":"l1_entail","batch":2,"model":"sonnet","apps":20,"tokens":57353,"tool_uses":7,"ms":37855}
+{"stage":"l1_entail","batch":1,"model":"sonnet","apps":20,"tokens":56134,"tool_uses":6,"ms":38980}
+{"stage":"l1_entail","batch":4,"model":"sonnet","apps":20,"tokens":60972,"tool_uses":7,"ms":43626}

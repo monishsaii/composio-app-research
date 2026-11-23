@@ -94,20 +94,43 @@ def first_pass(records: list[dict], refetch: bool = True) -> tuple[list[dict], d
                 stats[kind] += 1
                 if kind == "pending":
                     pend.append((g, i, e, best_window(page["text"], e["quote"])))
-        if pend:
-            lines = [(TASK_HEADER)]
-            for g, i, e, window in pend:
-                lines.append(f"\n### ITEM {g}#{i}\nURL: {e['url']}\nCLAIMED QUOTE/PARAPHRASE: {e['quote']}\n"
-                             f"FIELD GROUP: {g}\nPAGE WINDOW (best match):\n{window or '(page not fetchable)'}\n")
-            (TASKS / f"{r['id']}.md").write_text("".join(lines), encoding="utf-8")
+        # Every evidence item gets a claim-support check (does the quote support the CLAIMED VALUE?);
+        # items whose quote was not found verbatim/fuzzily also get the best-matching page window.
+        windows = {(g, i): w for g, i, _, w in pend}
+        lines = [TASK_HEADER, f"\nApp: {r['name']}\n"]
+        for g, evs in r.get("evidence", {}).items():
+            if g == "composio":
+                continue
+            for i, e in enumerate(evs):
+                lines.append(f"\n### ITEM {g}#{i}\nCLAIMED VALUE ({g}): {claim(r, g)}\nURL: {e['url']}\nQUOTE: {e['quote']}\n")
+                if (g, i) in windows:
+                    lines.append(f"QUOTE NOT FOUND VERBATIM. PAGE WINDOW (best match):\n{windows[(g, i)] or '(page not fetchable)'}\n")
+        (TASKS / f"{r['id']}.md").write_text("".join(lines), encoding="utf-8")
         out.append(r)
     return out, stats
 
 
-TASK_HEADER = """# l1_entail v1 — evidence entailment check
-For each ITEM decide whether the PAGE WINDOW supports the CLAIMED QUOTE/PARAPHRASE (same meaning; wording may differ).
-If the window is empty or unrelated, answer unsupported. Output ONLY JSON: {"<group>#<index>": "entailed"|"unsupported", ...}
+TASK_HEADER = """# l1_entail v2 — evidence entailment check
+For each ITEM decide whether the QUOTE, read on its own, supports the CLAIMED VALUE for that field group.
+  "supports"     : the quote states or directly implies the claimed value (or a key part of it).
+  "irrelevant"   : the quote is about something else, or is too generic to support the value.
+  "contradicts"  : the quote implies a different value.
+If an item says QUOTE NOT FOUND VERBATIM, first check the PAGE WINDOW contains the same statement; if not, answer "not_on_page".
+Judge only from the text shown. Output ONLY JSON: {"<group>#<index>": "supports"|"irrelevant"|"contradicts"|"not_on_page", ...}
 """
+
+
+def claim(r: dict, g: str) -> str:
+    api, b, m = r.get("api_surface") or {}, r.get("buildability") or {}, r.get("mcp") or {}
+    return {
+        "auth": f"auth_methods={r.get('auth_methods')}; oauth={r.get('oauth_details')}",
+        "access": f"access={r.get('access')}; notes={(r.get('access_notes') or '')[:200]}",
+        "sandbox": f"sandbox_or_test_env={r.get('sandbox_or_test_env')}",
+        "api_surface": f"style={api.get('style')}; breadth={api.get('breadth')}; endpoints~{api.get('approx_endpoint_count')}; webhooks={api.get('webhooks')}",
+        "mcp": f"mcp={m.get('exists')} url={m.get('url')}",
+        "buildability": f"main_blocker={b.get('main_blocker')}; verdict={b.get('verdict')}",
+        "identity": f"one_liner={r.get('one_liner')}; docs_url={r.get('docs_url')}",
+    }.get(g, g)
 
 GROUP_FIELDS = {
     "auth": {"auth_methods": [], "oauth_details": None},
@@ -135,9 +158,19 @@ def finalize(records: list[dict]) -> tuple[list[dict], dict]:
         for g, evs in list(r.get("evidence", {}).items()):
             keep = []
             for i, e in enumerate(evs):
+                if g == "composio":
+                    keep.append(e)
+                    continue
+                verdict = ans.get(f"{g}#{i}", "missing")
+                e["claim_check"] = verdict
                 if e.get("support") in ("pending", "unfetchable"):
-                    e["support"] = "entailed" if ans.get(f"{g}#{i}") == "entailed" else "unsupported"
+                    e["support"] = "entailed" if verdict in ("supports", "irrelevant", "contradicts") else "unsupported"
                     stats[e["support"]] += 1
+                if verdict in ("irrelevant", "contradicts"):
+                    e["support"] = "unsupported"
+                    stats["claim_" + verdict] = stats.get("claim_" + verdict, 0) + 1
+                elif verdict == "supports":
+                    stats["claim_supports"] = stats.get("claim_supports", 0) + 1
                 if e.get("support") != "unsupported":
                     keep.append(e)
                 else:

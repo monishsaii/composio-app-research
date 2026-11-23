@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["api_key", "oauth2"], "url": "https://docs.datadoghq.com/api/latest/authentication/", "quote": "Requests that write data require reporting access and require an API key. Requests that read data require full access and also require an application key.", "confidence": "high"},
+ "access": {"value": "self_serve_trial", "url": "https://www.datadoghq.com/pricing/", "quote": "Start Free Trial", "confidence": "medium"},
+ "api_surface.breadth": {"value": "broad", "url": "https://docs.datadoghq.com/api/latest/authentication/", "quote": "All requests to Datadog's API must be authenticated.", "confidence": "high"},
+ "mcp.exists": {"value": "official", "url": "https://docs.datadoghq.com/mcp_server/setup.md", "quote": "Learn how to set up and configure the Datadog MCP Server, which lets you retrieve telemetry insights and manage platform features directly from AI-powered clients.", "confidence": "high"},
+ "buildability.main_blocker": {"value": "none", "url": "https://docs.datadoghq.com/api/latest/authentication/", "quote": "Manage your account's API and application keys in Datadog, and see the API and Application Keys page in the documentation.", "confidence": "medium"},
+ "buildability.verdict": {"value": "BUILD_NOW", "url": "https://docs.datadoghq.com/api/latest/authentication/", "quote": "Manage your account's API and application keys in Datadog, and see the API and Application Keys page in the documentation.", "confidence": "medium"}
+}

@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["bearer_token"], "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication", "quote": "The Pylon API uses Bearer authentication.", "confidence": "high"},
+ "access": {"value": "paid_plan_required", "url": "https://www.usepylon.com/pricing", "quote": "MCP API Integrations $89/seat on an annual contract", "confidence": "medium"},
+ "api_surface.breadth": {"value": "medium", "url": "https://www.usepylon.com/integrations/api-webhooks", "quote": "The API spans the full range of Pylon objects - accounts, contacts, issues, messages, tasks and projects, knowledge base, custom fields", "confidence": "medium"},
+ "mcp.exists": {"value": "official", "url": "https://www.usepylon.com/pricing", "quote": "Out-of-the-box Analytics Automations Skills Broadcasts MCP API Integrations", "confidence": "medium"},
+ "buildability.main_blocker": {"value": "paid_plan_gate", "url": "https://www.usepylon.com/pricing", "quote": "$89/seat on an annual contract", "confidence": "medium"},
+ "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication", "quote": "Only Admins can create and manage API tokens.", "confidence": "medium"}
+}

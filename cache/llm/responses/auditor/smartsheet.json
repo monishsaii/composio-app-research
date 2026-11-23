@@ -1,0 +1,41 @@
+{
+ "auth_methods": {
+  "value": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication.md",
+  "quote": "it's typically best to use OAuth with Smartsheet. Note that the Smartsheet implementation of OAuth 2.0 is a 3-legged process",
+  "confidence": "high"
+ },
+ "access": {
+  "value": "paid_plan_required",
+  "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md",
+  "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+  "confidence": "medium"
+ },
+ "api_surface.breadth": {
+  "value": "broad",
+  "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md",
+  "quote": "Browse the REST API operations",
+  "confidence": "medium"
+ },
+ "mcp.exists": {
+  "value": "official",
+  "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools.md",
+  "quote": "The Smartsheet Model Context Protocol (MCP) server provides a way to leverage Smartsheet’s public API via AI clients",
+  "confidence": "high"
+ },
+ "buildability.main_blocker": {
+  "value": "paid_plan_gate",
+  "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md",
+  "quote": "Required plan: Business, Enterprise, or Advanced Work Management",
+  "confidence": "medium"
+ },
+ "buildability.verdict": {
+  "value": "BUILD_WITH_CAVEATS",
+  "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md",
+  "quote": "Making your first API call is as easy as generating an API access token and sending a request",
+  "confidence": "medium"
+ }
+}

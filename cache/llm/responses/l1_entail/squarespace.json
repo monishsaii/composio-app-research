@@ -1,0 +1,8 @@
+{
+ "identity#0": "supports",
+ "auth#0": "supports",
+ "access#0": "supports",
+ "access#1": "supports",
+ "api_surface#0": "supports",
+ "mcp#0": "supports"
+}

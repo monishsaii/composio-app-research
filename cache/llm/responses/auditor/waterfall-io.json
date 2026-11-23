@@ -1,0 +1,40 @@
+{
+ "auth_methods": {
+  "value": [
+   "api_key"
+  ],
+  "url": "https://docs.waterfall.io/v1/authentication.md",
+  "quote": "send your API key in the x-api-key header",
+  "confidence": "high"
+ },
+ "access": {
+  "value": "partner_or_contact_sales",
+  "url": "https://docs.waterfall.io/v1/authentication.md",
+  "quote": "Contact the team for API access and pricing.",
+  "confidence": "high"
+ },
+ "api_surface.breadth": {
+  "value": "medium",
+  "url": "https://docs.waterfall.io/llms.txt",
+  "quote": "One GTM API to find prospects, enrich contacts and companies, verify emails, and check job changes.",
+  "confidence": "medium"
+ },
+ "mcp.exists": {
+  "value": "none_found",
+  "url": "https://docs.waterfall.io/llms.txt",
+  "quote": "Explore Waterfall's APIs and compare their inputs, results, and use cases",
+  "confidence": "low"
+ },
+ "buildability.main_blocker": {
+  "value": "partner_gate",
+  "url": "https://docs.waterfall.io/v1/authentication.md",
+  "quote": "Contact the team for API access and pricing.",
+  "confidence": "high"
+ },
+ "buildability.verdict": {
+  "value": "BLOCKED_NEEDS_OUTREACH",
+  "url": "https://docs.waterfall.io/v1/authentication.md",
+  "quote": "Contact the team for API access and pricing.",
+  "confidence": "medium"
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["oauth2"], "url": "https://www.apideck.com/blog/how-to-get-your-quickbooks-api-key", "quote": "QuickBooks doesn't use traditional API keys. Instead, it uses OAuth 2.0 authentication with Client ID and Client Secret credentials.", "confidence": "high"},
+  "access": {"value": "app_review_required", "url": "https://www.apideck.com/blog/how-to-get-your-quickbooks-api-key", "quote": "For real data, requires app assessment (yes, really)", "confidence": "medium"},
+  "api_surface.breadth": {"value": "broad", "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "It includes full CRUD operations for 29 entity types and 11 financial reports, giving you comprehensive access to QuickBooks Online functionality.", "confidence": "medium"},
+  "mcp.exists": {"value": "official", "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.", "confidence": "high"},
+  "buildability.main_blocker": {"value": "app_review", "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "QuickBooks Online integration is gated by Intuit's OAuth app setup. You must register an app on the Intuit Developer Portal", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://www.apideck.com/blog/how-to-get-your-quickbooks-api-key", "quote": "For testing, works with sandbox companies", "confidence": "medium"}
+}

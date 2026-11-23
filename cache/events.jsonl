@@ -910,3 +910,383 @@
 {"t": "2026-11-23T14:02:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "sherlock-project sherlock username search github MCP server", "n": 3}
 {"t": "2026-11-23T14:02:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intapp DealCloud API documentation authentication client credentials", "n": 3}
 {"t": "2026-11-23T14:02:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Smartsheet official MCP server API", "n": 3}
+{"t": "2026-11-23T14:02:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "fanbasis API documentation developers", "n": 2}
+{"t": "2026-11-23T14:02:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/help/faq.md", "status": 200, "chars": 5066}
+{"t": "2026-11-23T14:02:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Supabase MCP server official Management API docs", "n": 3}
+{"t": "2026-11-23T14:02:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Google Ads API developer token access levels basic access application", "n": 2}
+{"t": "2026-11-23T14:02:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Paygent Connect NMI payment gateway API documentation", "n": 3}
+{"t": "2026-11-23T14:02:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Telegram Bot API MCP server", "n": 3}
+{"t": "2026-11-23T14:02:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "PitchBook API developer documentation access", "n": 3}
+{"t": "2026-11-23T14:02:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Plain.com GraphQL API authentication API key MCP", "n": 3}
+{"t": "2026-11-23T14:02:18Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pylon usepylon API documentation authentication token", "n": 3}
+{"t": "2026-11-23T14:02:18Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Sentry API authentication auth tokens docs MCP server", "n": 3}
+{"t": "2026-11-23T14:02:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/makenotion/notion-mcp-server", "status": 200, "chars": 14453}
+{"t": "2026-11-23T14:02:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/authentication/app_auth", "status": 200, "chars": 1959}
+{"t": "2026-11-23T14:02:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/", "status": 200, "chars": 3563}
+{"t": "2026-11-23T14:02:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://cake.com/updates/mcp-server", "status": 200, "chars": 1650}
+{"t": "2026-11-23T14:02:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://api-docs.ecwid.com", "status": 200, "chars": 1691}
+{"t": "2026-11-23T14:02:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://academy.klaviyo.com/en-us/learning-paths/api-fundamentals-for-marketers/courses/interpret-api-documentation/lessons/dissect-api-documentation", "status": 200, "chars": 3640}
+{"t": "2026-11-23T14:02:24Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "fanbasis.com API key webhooks developer docs", "n": 1}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/releases", "status": 200, "chars": 14354}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/gateway", "status": 200, "chars": 4097}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/api", "status": 200, "chars": 15984}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs/apikeys", "status": 200, "chars": 1283}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs", "status": 200, "chars": 1690}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs/token", "status": 200, "chars": 2132}
+{"t": "2026-11-23T14:02:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens", "status": 200, "chars": 5004}
+{"t": "2026-11-23T14:02:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/authentication", "status": 200, "chars": 4139}
+{"t": "2026-11-23T14:02:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/sp-api-registration-overview", "status": 200, "chars": 525}
+{"t": "2026-11-23T14:02:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview", "status": 200, "chars": 8417}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://coda.io/developers/apis/v1", "status": 200, "chars": 90715}
+{"t": "2026-11-23T14:02:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.smartsheet.com/api/smartsheet/ai-integration/mcp-server.md", "status": 404, "chars": 332}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://dataforseo.com/update/pricing-update-in-dataforseo-apis", "status": 200, "chars": 2164}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/rest-api-reference", "status": 200, "chars": 2544}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/reference/introduction", "status": 200, "chars": 2544}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://devdocs.magento.com/guides/v2.2/rest/catalog-notes.html", "status": 200, "chars": 1425}
+{"t": "2026-11-23T14:02:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/register-as-a-private-developer", "status": 200, "chars": 3222}
+{"t": "2026-11-23T14:02:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.atlassian.com/server/jira/platform/jira-apis-32344053.html", "status": 200, "chars": 3115}
+{"t": "2026-11-23T14:02:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/", "status": 200, "chars": 1469}
+{"t": "2026-11-23T14:02:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/guides/partner_authentication", "status": 200, "chars": 10549}
+{"t": "2026-11-23T14:02:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "status": 200, "chars": 10835}
+{"t": "2026-11-23T14:02:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/", "status": 200, "chars": 4631}
+{"t": "2026-11-23T14:02:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/api-references/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/Getting%20Started", "status": 200, "chars": 1581}
+{"t": "2026-11-23T14:02:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "\"Paygent\" payment gateway developer API", "n": 2}
+{"t": "2026-11-23T14:02:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/", "status": 200, "chars": 966}
+{"t": "2026-11-23T14:02:30Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Higgsfield official MCP server", "n": 5}
+{"t": "2026-11-23T14:02:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/llms.txt", "status": 200, "chars": 38841}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.nmi.com/reference", "status": 200, "chars": 1718}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication.md", "status": 200, "chars": 3623}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/mcp", "status": 200, "chars": 10556}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/docs/mcp", "status": 200, "chars": 10236}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/", "status": 200, "chars": 1774}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/introduction/authentication.html", "status": 200, "chars": 784}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/integrations", "status": 200, "chars": 2613}
+{"t": "2026-11-23T14:02:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/api", "status": 200, "chars": 1379}
+{"t": "2026-11-23T14:02:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.bigcommerce.com/docs/start/about", "status": 200, "chars": 20143}
+{"t": "2026-11-23T14:02:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/llms.txt", "status": 200, "chars": 40456}
+{"t": "2026-11-23T14:02:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/llms.txt", "status": 200, "chars": 3361}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/llms.txt", "status": 200, "chars": 60579}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/overview/authentication", "status": 200, "chars": 4631}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/authentication.md", "status": 200, "chars": 4122}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/reference", "status": 200, "chars": 1122}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/introduction/oauth/index.html", "status": 200, "chars": 3289}
+{"t": "2026-11-23T14:02:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/reference/api", "status": 200, "chars": 5878}
+{"t": "2026-11-23T14:02:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/introduction/requests.html", "status": 200, "chars": 972}
+{"t": "2026-11-23T14:02:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:02:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.clickup.com", "status": 200, "chars": 261}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/vonage-business-cloud/getting-started/create-an-access-token", "status": 200, "chars": 8610}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/", "status": 200, "chars": 12621}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/", "status": 200, "chars": 4196}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.uc.vonage.com/getting-started/create-an-access-token", "status": 200, "chars": 1854}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/rest/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/documentation", "status": 200, "chars": 4099}
+{"t": "2026-11-23T14:02:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/features/mcp/", "status": 200, "chars": 15378}
+{"t": "2026-11-23T14:02:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.asana.com/docs/asana", "status": 200, "chars": 1434}
+{"t": "2026-11-23T14:02:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools.md", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.asana.com/docs/authentication", "status": 200, "chars": 4488}
+{"t": "2026-11-23T14:02:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.xero.com/support", "status": 200, "chars": 1911}
+{"t": "2026-11-23T14:02:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.clay.com/llms.txt", "status": 200, "chars": 10923}
+{"t": "2026-11-23T14:02:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.clay.com/quickstart.md", "status": 200, "chars": 2447}
+{"t": "2026-11-23T14:02:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md", "status": 200, "chars": 3203}
+{"t": "2026-11-23T14:02:38Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Podio generate API key client ID free plan MCP server", "n": 3}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/", "status": 200, "chars": 5071}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "status": 200, "chars": 5432}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/index.html", "status": 200, "chars": 1930}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.cloudflare.com/support/cloudflare-client-api/", "status": 200, "chars": 296}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/", "status": 200, "chars": 415}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/documentation/api-basics/authentication/creating-and-using-oauth-tokens-with-the-api", "status": 200, "chars": 8305}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/llms.txt", "status": 200, "chars": 5942}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/api-overview", "status": 200, "chars": 1687}
+{"t": "2026-11-23T14:02:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/faq", "status": 200, "chars": 8606}
+{"t": "2026-11-23T14:02:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/mcp-docs", "status": 200, "chars": 590}
+{"t": "2026-11-23T14:02:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.freshdesk.com/api/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/access-tokens-api-keys", "status": 200, "chars": 1329}
+{"t": "2026-11-23T14:02:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/mcp/authentication", "status": 200, "chars": 1062}
+{"t": "2026-11-23T14:02:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.paygentconnect.com", "status": 0, "chars": 0}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/llms.txt", "status": 200, "chars": 20429}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/notebook/docs/authentication", "status": 200, "chars": 5414}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "status": 200, "chars": 9024}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/adwords/api/docs/?csw=1", "status": 200, "chars": 3977}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/reference", "status": 200, "chars": 1011}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.progress.com/podio/documentation/using-podio/upgrade-and-billing/podio-hybrid-pricing-faq", "status": 200, "chars": 13962}
+{"t": "2026-11-23T14:02:41Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Help Scout MCP server official", "n": 3}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "status": 200, "chars": 24018}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth.md", "status": 200, "chars": 3829}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/index.md", "status": 200, "chars": 2406}
+{"t": "2026-11-23T14:02:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/api/working-with-oauth", "status": 200, "chars": 2767}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/guides/authorization/overview.md", "status": 200, "chars": 26900}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/guides/api/overview", "status": 200, "chars": 800}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/references/2.9/introduction", "status": 200, "chars": 691}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/page/changelog.md", "status": 200, "chars": 109780}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/", "status": 200, "chars": 3004}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/mcp", "status": 200, "chars": 7287}
+{"t": "2026-11-23T14:02:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/reference/intro.md", "status": 200, "chars": 2290}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com", "status": 200, "chars": 1608}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/authentication", "status": 200, "chars": 4195}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports", "status": 200, "chars": 14401}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pipedrive.com/docs/api", "status": 200, "chars": 1559}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/reference/api/introduction", "status": 200, "chars": 6750}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/index/faq", "status": 200, "chars": 3797}
+{"t": "2026-11-23T14:02:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/doc", "status": 200, "chars": 3685}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.nmi.com/docs/authentication", "status": 200, "chars": 4049}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication", "status": 200, "chars": 3162}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/guides/mcp", "status": 200, "chars": 28669}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/api/docs/introduction", "status": 200, "chars": 3845}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/ahrefs-connect/docs/introduction", "status": 200, "chars": 1393}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/overview/welcome/", "status": 200, "chars": 1963}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/ai-tools/mcp.md", "status": 200, "chars": 35256}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/mcp/docs/introduction", "status": 200, "chars": 3275}
+{"t": "2026-11-23T14:02:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api.md", "status": 200, "chars": 7116}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.helpscout.com/pricing/", "status": 200, "chars": 6145}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api/v2.md", "status": 200, "chars": 30384}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/integrations/api.md", "status": 200, "chars": 15730}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/", "status": 200, "chars": 1660}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/platform/integrations/api?fpr=cliqto", "status": 200, "chars": 12647}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions", "status": 200, "chars": 3678}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/overview.md", "status": 200, "chars": 1451}
+{"t": "2026-11-23T14:02:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/guides/authentication.md", "status": 200, "chars": 7685}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview", "status": 200, "chars": 4684}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/gateway/verification-tutorial", "status": 200, "chars": 6672}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels", "status": 200, "chars": 9024}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/ko/api/latest", "status": 200, "chars": 4092}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.bigcommerce.com/", "status": 200, "chars": 5139}
+{"t": "2026-11-23T14:02:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/llms.txt", "status": 200, "chars": 17161}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/ja/bits_ai/mcp_server/", "status": 200, "chars": 2981}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/llms.txt", "status": 200, "chars": 46948}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/api-notebooks", "status": 200, "chars": 11665}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/api-reference/introduction", "status": 200, "chars": 6665}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction", "status": 200, "chars": 1313}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/v3.md", "status": 200, "chars": 9174}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/work-with-devin/devin-mcp", "status": 200, "chars": 3986}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions", "status": 200, "chars": 2087}
+{"t": "2026-11-23T14:02:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/v3/dataforseo_labs-overview/", "status": 200, "chars": 1078}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/reference.md", "status": 200, "chars": 31424}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/datasets/scrapers/scrapers-library/faqs", "status": 200, "chars": 9377}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/", "status": 200, "chars": 2758}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ecwid.com/llms.txt", "status": 200, "chars": 67611}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/topics/oauth2", "status": 200, "chars": 12888}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/bots/api", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs", "status": 200, "chars": 1076}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.firecrawl.dev/api-reference/", "status": 200, "chars": 1900}
+{"t": "2026-11-23T14:02:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/help/faq", "status": 200, "chars": 1453}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.openstage.live/fanbase/", "status": 200, "chars": 1376}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.openstage.live/manager/guides", "status": 200, "chars": 5525}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/authorization.txt", "status": 200, "chars": 15734}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api.md", "status": 200, "chars": 30112}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/", "status": 200, "chars": 3320}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-full.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.reducto.ai/mcp-server", "status": 200, "chars": 17710}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.reducto.ai/studio-account", "status": 200, "chars": 4357}
+{"t": "2026-11-23T14:02:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/topics/community-resources", "status": 200, "chars": 2208}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.getcargo.ai/integration/waterfall.md", "status": 200, "chars": 5375}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.mrscraper.com/docs/api/overview", "status": 200, "chars": 1175}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/api/auth", "status": 200, "chars": 12995}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/hosted/api", "status": 200, "chars": 1125}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/api/guides/oauth/", "status": 200, "chars": 12995}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/index.md", "status": 200, "chars": 60238}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/developers/extend/oauth.md", "status": 200, "chars": 5516}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.snowflake.com/developer-guide/snowflake-rest-api/reference", "status": 200, "chars": 382}
+{"t": "2026-11-23T14:02:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication", "status": 200, "chars": 7086}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.snowflake.com/llms.txt", "status": 200, "chars": 9746}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/developer", "status": 200, "chars": 933}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication", "status": 200, "chars": 4575}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/mcp", "status": 200, "chars": 9724}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/api/authentication", "status": 200, "chars": 5611}
+{"t": "2026-11-23T14:02:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/api", "status": 200, "chars": 6329}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/overview/", "status": 200, "chars": 6770}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/getsentry/sentry-mcp", "status": 200, "chars": 581}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://fanbaseapi.openstage.live/guides.html", "status": 200, "chars": 11755}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/github/github-mcp-server", "status": 200, "chars": 766}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/integrations/mcp", "status": 200, "chars": 52855}
+{"t": "2026-11-23T14:02:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/makenotion/notion-mcp-server", "status": 200, "chars": 1353}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/saseq/discord-mcp", "status": 200, "chars": 6538}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors", "status": 200, "chars": 2648}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/Enreign/freshdeck-mcp", "status": 200, "chars": 4853}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://zapier.com/apps/fanbasis/integrations/webhook/255617789/handle-manual-transactions-in-fanbasis-and-trigger-get-requests-with-webhooks-by-zapier", "status": 200, "chars": 1551}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/FINCH285/SendGrid-MCP-Server", "status": 200, "chars": 3775}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/ampcome-mcps/asana-mcp", "status": 200, "chars": 15189}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/brinzl/commercecloud-mcp-server", "status": 200, "chars": 3163}
+{"t": "2026-11-23T14:02:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/IndexSeek/mcp", "status": 200, "chars": 8540}
+{"t": "2026-11-23T14:02:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/collactivelabs/pinterest-mcp-server", "status": 200, "chars": 2011}
+{"t": "2026-11-23T14:02:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/MankowskiNick/jira-mcp", "status": 200, "chars": 19043}
+{"t": "2026-11-23T14:02:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/felixrieseberg/airtable-mcp-server", "status": 200, "chars": 6174}
+{"t": "2026-11-23T14:02:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/hridayshah7/gohighlevel-mcp", "status": 200, "chars": 21860}
+{"t": "2026-11-23T14:02:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/jay-trivedi/amazon_sp_mcp", "status": 200, "chars": 13726}
+{"t": "2026-11-23T14:02:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mcp/mongodb-js/mongodb-mcp-server", "status": 200, "chars": 55642}
+{"t": "2026-11-23T14:02:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mcp/com.apify/apify-mcp-server", "status": 200, "chars": 30466}
+{"t": "2026-11-23T14:02:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mermaid-js/mermaid-cli", "status": 200, "chars": 5403}
+{"t": "2026-11-23T14:02:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.fanbasis.com/", "status": 200, "chars": 5139}
+{"t": "2026-11-23T14:02:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.waterfall.io/llms.txt", "status": 200, "chars": 9929}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2025-11", "status": 200, "chars": 13552}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mcp/firecrawl/firecrawl-mcp-server", "status": 200, "chars": 78386}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/sherlock-project/sherlock", "status": 200, "chars": 3446}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp", "status": 200, "chars": 4883}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/kesslerio/attio-mcp-server", "status": 200, "chars": 31774}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/netlify/netlify-mcp", "status": 200, "chars": 3911}
+{"t": "2026-11-23T14:02:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/sparfenyuk/mcp-telegram", "status": 200, "chars": 4677}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/supabase/mcp", "status": 200, "chars": 7243}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://grain.com/contact", "status": 200, "chars": 1147}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://gumroad.com/help/article/280-create-application-api", "status": 200, "chars": 4974}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/tsmztech/mcp-server-salesforce", "status": 200, "chars": 13887}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/", "status": 200, "chars": 5801}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.front.com/en/articles/4883136", "status": 200, "chars": 7029}
+{"t": "2026-11-23T14:02:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/tttn13/threads-mcp", "status": 200, "chars": 3007}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.klaviyo.com/hc/en-us/articles/360045726811", "status": 200, "chars": 5715}
+{"t": "2026-11-23T14:02:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pitchbook.com/products/direct-access-data/api", "status": 403, "chars": 16}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.klaviyo.com/hc/en-us/articles/52833598880923", "status": 200, "chars": 9747}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.plain.com/article/developer", "status": 200, "chars": 1610}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "status": 200, "chars": 7126}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2025-11", "status": 200, "chars": 8656}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api", "status": 200, "chars": 8290}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/blog/higgsfield-api", "status": 200, "chars": 6295}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp", "status": 200, "chars": 10581}
+{"t": "2026-11-23T14:02:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx", "status": 200, "chars": 1341}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://apis.io/apis/otter-ai/otter-ai-api/", "status": 200, "chars": 395}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "status": 200, "chars": 4904}
+{"t": "2026-11-23T14:02:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/cli", "status": 200, "chars": 2279}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/", "status": 200, "chars": 8909}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/twentyhq/twenty/issues/12953", "status": 200, "chars": 8630}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/llms.txt", "status": 200, "chars": 53160}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/linkedin/marketing/increasing-access", "status": 200, "chars": 13552}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview", "status": 200, "chars": 5143}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://mermaid.ai/docs/ai/mcp-server", "status": 200, "chars": 7663}
+{"t": "2026-11-23T14:02:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://netlify.com/auth.md", "status": 200, "chars": 5270}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/advanced-configuration.md", "status": 200, "chars": 26446}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://neo4j.com/api_docs", "status": 200, "chars": 354}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.larksuite.com/llms.txt", "status": 200, "chars": 10752}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://linear.app/docs/api/graphql", "status": 200, "chars": 8740}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.waterfall.io", "status": 200, "chars": 4337}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://ipayx.ai/docs", "status": 200, "chars": 796}
+{"t": "2026-11-23T14:03:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/api-keys-integration", "status": 200, "chars": 2186}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://linear.app/developers/oauth-2-0-authentication", "status": 200, "chars": 16900}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://mongodb.com/docs/atlas/api/api-authentication/", "status": 200, "chars": 5305}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/linkedin-ads-mcp/", "status": 200, "chars": 8872}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/auth/add-to-app/", "status": 200, "chars": 12889}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/mcp-server-plaid/", "status": 200, "chars": 8427}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://mrscraper.com/blog/free-web-scraping-apis", "status": 200, "chars": 19521}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/resources/", "status": 200, "chars": 9014}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/neo4j-mcp-server/", "status": 200, "chars": 8207}
+{"t": "2026-11-23T14:03:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://reducto.ai/developers.md", "status": 200, "chars": 1404}
+{"t": "2026-11-23T14:03:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://requestly.com/api-explorer/github/", "status": 200, "chars": 1402}
+{"t": "2026-11-23T14:03:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "status": 200, "chars": 18775}
+{"t": "2026-11-23T14:03:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/bots/tutorial", "status": 200, "chars": 25746}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/project/getting-started/", "status": 200, "chars": 3551}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/integrations/mcp/", "status": 200, "chars": 7864}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/how-to-get-api/", "status": 200, "chars": 4702}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://sendgrid.com/docs/", "status": 200, "chars": 2367}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://stackone.com/connectors/squarespace/mcp/", "status": 200, "chars": 5634}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://stackone.com/connectors/gorgias/mcp/", "status": 200, "chars": 7101}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs", "status": 200, "chars": 1610}
+{"t": "2026-11-23T14:03:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/platform/management-api", "status": 200, "chars": 6750}
+{"t": "2026-11-23T14:03:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/api/usage/authentication", "status": 200, "chars": 3697}
+{"t": "2026-11-23T14:03:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/apps/tools/api-libraries", "status": 200, "chars": 6223}
+{"t": "2026-11-23T14:03:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.freshdesk.com/en/support/solutions/articles/215517", "status": 200, "chars": 701}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.grain.com/en/articles/15507288-grain-api", "status": 200, "chars": 3971}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/567924-Documentation", "status": 200, "chars": 918}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.grain.com/en/articles/14811968-grain-mcp", "status": 200, "chars": 4261}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API", "status": 200, "chars": 7832}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "status": 200, "chars": 514}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents", "status": 200, "chars": 4737}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/741982-API-key", "status": 200, "chars": 1437}
+{"t": "2026-11-23T14:03:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "status": 200, "chars": 6291}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://university.clay.com/docs/workspace-administration-documentation", "status": 200, "chars": 13984}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/ai-gateway/authentication-and-byok?from=graph", "status": 200, "chars": 13201}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/api/v2", "status": 200, "chars": 74228}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/mcp", "status": 200, "chars": 13212}
+{"t": "2026-11-23T14:03:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://commas.com/llms.txt", "status": 404, "chars": 188}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://thraads.com/api/", "status": 200, "chars": 13865}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://transcriptapi.com", "status": 200, "chars": 13126}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://woocommerce.com/document/woocommerce-rest-api/", "status": 200, "chars": 3752}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/rest-api/endpoints", "status": 200, "chars": 74228}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.brex.com/support/brex-api", "status": 200, "chars": 3096}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.datadoghq.com/blog/datadog-api-authentication.md", "status": 200, "chars": 10954}
+{"t": "2026-11-23T14:03:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://twilio.com/docs/api", "status": 200, "chars": 4378}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.firecrawl.dev/index.md", "status": 200, "chars": 16635}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.firecrawl.dev/pricing.md", "status": 200, "chars": 15015}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview", "status": 200, "chars": 1952}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.neo4j.com/docs/aura/api/authentication/", "status": 200, "chars": 3900}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.authgear.com/post/whatsapp-api-pricing", "status": 200, "chars": 12676}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/graphql/authentication.md", "status": 200, "chars": 1714}
+{"t": "2026-11-23T14:03:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api", "status": 200, "chars": 12933}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://twilio.com/en-us/blog/introducing-twilio-alpha-mcp-server", "status": 200, "chars": 12500}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md", "status": 200, "chars": 9464}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.pipedrive.com/en/features/api", "status": 200, "chars": 6524}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server", "status": 200, "chars": 14618}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.waterfall.io/v1/authentication.md", "status": 200, "chars": 1601}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.stackone.com/connectors/gladly/mcp/", "status": 200, "chars": 8015}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server", "status": 200, "chars": 7026}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.stackone.com/connectors/otterai/mcp/", "status": 200, "chars": 4452}
+{"t": "2026-11-23T14:03:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth", "status": 200, "chars": 3312}
+{"t": "2026-11-23T14:03:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.withone.ai/knowledge/waterfall/conn_mod_def%3A%3AGJ8TOqyg9n0%3A%3AAaJGRR9iRt6B7PPO2f2VMw/md", "status": 200, "chars": 4833}
+{"t": "2026-11-23T14:03:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/developers.html", "status": 200, "chars": 1226}
+{"t": "2026-11-23T14:03:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs.md", "status": 200, "chars": 9890}
+{"t": "2026-11-23T14:03:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.withone.ai/knowledge/waterfall/md", "status": 200, "chars": 5664}
+{"t": "2026-11-23T14:03:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/", "status": 200, "chars": 5109}
+{"t": "2026-11-23T14:03:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/", "status": 200, "chars": 13506}
+{"t": "2026-11-23T14:03:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/mcp-server.html", "status": 200, "chars": 3268}
+{"t": "2026-11-23T14:03:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "status": 200, "chars": 5568}
+{"t": "2026-11-23T14:03:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.coda.io/api", "status": 200, "chars": 90715}
+{"t": "2026-11-23T14:03:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "status": 200, "chars": 2601}
+{"t": "2026-11-23T14:03:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v2", "status": 200, "chars": 120000}
+{"t": "2026-11-23T14:03:11Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LinkedIn Ads official MCP server marketing API", "n": 3}
+{"t": "2026-11-23T14:03:12Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:12Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://otter.ai/api/docs", "status": 200, "chars": 36}
+{"t": "2026-11-23T14:03:13Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:13Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.commas.com/", "status": 0, "chars": 0}
+{"t": "2026-11-23T14:03:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.otter.ai/hc/en-us/articles/public-api", "status": 403, "chars": 16}
+{"t": "2026-11-23T14:03:22Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:22Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0", "status": 200, "chars": 62}
+{"t": "2026-11-23T14:03:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.mrscraper.com/llms.txt", "status": 200, "chars": 25668}
+{"t": "2026-11-23T14:03:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://mrscraper.com/pricing", "status": 200, "chars": 5035}
+{"t": "2026-11-23T14:03:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://documenter.gw.postman.com/view/metadata/TzCV1iRc", "status": 0, "chars": 0}
+{"t": "2026-11-23T14:03:38Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intuit developer QuickBooks Online production keys app assessment questionnaire sandbox free", "n": 3}
+{"t": "2026-11-23T14:03:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.mrscraper.com/docs/api/authentication", "status": 200, "chars": 1615}
+{"t": "2026-11-23T14:03:41Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Otter.ai MCP server public API Enterprise API key help.otter.ai", "n": 5}
+{"t": "2026-11-23T14:03:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pitchbook.com/help/data-feed-api-crm", "status": 403, "chars": 16}
+{"t": "2026-11-23T14:03:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://blogs.intuit.com/?p=33143", "status": 403, "chars": 16}
+{"t": "2026-11-23T14:03:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.businesswire.com/news/home/20251007385147/en", "status": 403, "chars": 227}
+{"t": "2026-11-23T14:03:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.apideck.com/blog/how-to-get-your-quickbooks-api-key.md", "status": 200, "chars": 10468}
+{"t": "2026-11-23T14:03:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks", "status": 200, "chars": 11665}
+{"t": "2026-11-23T14:03:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "status": 200, "chars": 15011}
+{"t": "2026-11-23T14:03:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/graphql/introduction.md", "status": 200, "chars": 2685}
+{"t": "2026-11-23T14:03:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/pricing", "status": 200, "chars": 5861}
+{"t": "2026-11-23T14:03:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-notebooklm", "status": 200, "chars": 10937}
+{"t": "2026-11-23T14:03:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.usepylon.com/integrations/api-webhooks", "status": 200, "chars": 3000}
+{"t": "2026-11-23T14:03:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.usepylon.com/pricing", "status": 200, "chars": 10116}
+{"t": "2026-11-23T14:03:57Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:03:57Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app/platform-requirements", "status": 200, "chars": 62}
+{"t": "2026-11-23T14:04:04Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "NotebookLM Enterprise license trial get subscription MCP server", "n": 3}
+{"t": "2026-11-23T14:04:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing", "status": 200, "chars": 8413}
+{"t": "2026-11-23T14:04:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/notebooklm-enterprise-mcp/", "status": 200, "chars": 24039}
+{"t": "2026-11-23T14:04:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/api/auth/", "status": 200, "chars": 12995}
+{"t": "2026-11-23T14:04:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/ai/mcp/", "status": 200, "chars": 2633}
+{"t": "2026-11-23T14:04:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Larksuite open platform API tenant_access_token custom app developer docs", "n": 5}
+{"t": "2026-11-23T14:04:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Linear API docs authentication OAuth personal API key GraphQL", "n": 5}
+{"t": "2026-11-23T14:04:14Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Marketing API access levels standard access app review authorization", "n": 5}
+{"t": "2026-11-23T14:04:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/apps/build/authentication-authorization.md", "status": 200, "chars": 13401}
+{"t": "2026-11-23T14:04:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/apps/build/devmcp.md", "status": 200, "chars": 9627}
+{"t": "2026-11-23T14:04:32Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Linear MCP server official mcp.linear.app docs", "n": 5}
+{"t": "2026-11-23T14:04:32Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "larksuite lark-openapi-mcp official MCP GitHub", "n": 5}
+{"t": "2026-11-23T14:04:32Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Ads official MCP server facebook marketing API", "n": 5}
+{"t": "2026-11-23T14:04:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/requests-to-twilio", "status": 200, "chars": 8013}
+{"t": "2026-11-23T14:04:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/twilio-labs/mcp/main/README.md", "status": 200, "chars": 3106}
+{"t": "2026-11-23T14:04:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://linear.app/docs/mcp", "status": 200, "chars": 14537}
+{"t": "2026-11-23T14:04:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://cdn.jsdelivr.net/npm/@larksuiteoapi/lark-mcp@0.5.1/README.md", "status": 200, "chars": 22487}
+{"t": "2026-11-23T14:04:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.larksuite.com/document/server-docs/getting-started/overview-of-app-scopes.md", "status": 200, "chars": 14935}
+{"t": "2026-11-23T14:04:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://twilio.com/en-us/blog/developers/introducing-twilio-mcp-skills", "status": 200, "chars": 10715}
+{"t": "2026-11-23T14:04:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "status": 200, "chars": 9568}
+{"t": "2026-11-23T14:04:51Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T14:04:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/marketing-api/get-started/authorization", "status": 400, "chars": 122}
+{"t": "2026-11-23T14:04:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview", "status": 200, "chars": 3242}
+{"t": "2026-11-23T14:04:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization.md", "status": 200, "chars": 9307}

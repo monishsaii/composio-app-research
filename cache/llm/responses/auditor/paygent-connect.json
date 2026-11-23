@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["api_key"], "url": "https://docs.nmi.com/reference/authentication", "quote": "Authentication across our APIs is done via secure API keys.", "confidence": "low"},
+ "access": {"value": "partner_or_contact_sales", "url": "https://docs.nmi.com/reference/authentication", "quote": "To generate API keys as a merchant: Log into your Merchant Portal; Navigate to Settings > Security Keys", "confidence": "low"},
+ "api_surface.breadth": {"value": "medium", "url": "https://docs.nmi.com/reference", "quote": "Process transactions seamlessly across a wide range of payment methods, including card-present, e-commerce, and alternative payment options", "confidence": "low"},
+ "mcp.exists": {"value": "none_found", "url": "https://docs.nmi.com/reference", "quote": "Manage API authentication, user access, and event-driven integrations.", "confidence": "low"},
+ "buildability.main_blocker": {"value": "ambiguous_product", "url": "https://www.paygentconnect.com", "quote": "", "confidence": "medium"},
+ "buildability.verdict": {"value": "UNCLEAR", "url": "https://docs.nmi.com/reference/authentication", "quote": "These keys are assigned to specific users on your account and inherit permissions from those users", "confidence": "low"}
+}

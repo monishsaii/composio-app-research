@@ -1,0 +1,6 @@
+{"auth_methods": {"value": ["api_key"], "url": "https://commas.com/", "quote": "Embedded checkouts, multi-rail payouts, APIs and SDKs.", "confidence": "low"},
+ "access": {"value": "partner_or_contact_sales", "url": "https://commas.com/", "quote": "Enterprise & APIs Embedded checkouts, multi-rail payouts, APIs and SDKs.", "confidence": "low"},
+ "api_surface.breadth": {"value": "unknown", "url": "https://commas.com/", "quote": "Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.", "confidence": "low"},
+ "mcp.exists": {"value": "official", "url": "https://commas.com/", "quote": "MCP beta Run Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English.", "confidence": "medium"},
+ "buildability.main_blocker": {"value": "unstable_or_undocumented_api", "url": "https://commas.com/", "quote": "Enterprise & APIs Embedded checkouts, multi-rail payouts, APIs and SDKs.", "confidence": "low"},
+ "buildability.verdict": {"value": "UNCLEAR", "url": "https://commas.com/", "quote": "Enterprise sellers make more money here.", "confidence": "low"}}

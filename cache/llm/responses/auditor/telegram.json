@@ -1,0 +1,40 @@
+{
+ "auth_methods": {
+  "value": [
+   "api_key"
+  ],
+  "url": "https://core.telegram.org/bots/api",
+  "quote": "Each bot is given a unique authentication token when it is created.",
+  "confidence": "high"
+ },
+ "access": {
+  "value": "self_serve_free",
+  "url": "https://core.telegram.org/bots/api",
+  "quote": "Each bot is given a unique authentication token when it is created.",
+  "confidence": "high"
+ },
+ "api_surface.breadth": {
+  "value": "broad",
+  "url": "https://core.telegram.org/bots/api",
+  "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+  "confidence": "high"
+ },
+ "mcp.exists": {
+  "value": "community",
+  "url": "https://github.com/siavashdelkhosh81/telegram-bot-mcp-server",
+  "quote": "",
+  "confidence": "medium"
+ },
+ "buildability.main_blocker": {
+  "value": "none",
+  "url": "https://core.telegram.org/bots/api",
+  "quote": "All queries to the Telegram Bot API must be served over HTTPS",
+  "confidence": "high"
+ },
+ "buildability.verdict": {
+  "value": "BUILD_NOW",
+  "url": "https://core.telegram.org/bots/api",
+  "quote": "https://api.telegram.org/bot<token>/METHOD_NAME",
+  "confidence": "high"
+ }
+}

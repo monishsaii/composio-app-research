@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["oauth2", "bearer_token"], "url": "https://developers.notion.com/guides/authorization/overview", "quote": "Internal connections use a static credential called an internal connection API token, personal access tokens use a user-scoped static token, and OAuth integrations and public integrations use the OAuth 2.0 protocol.", "confidence": "high"},
+  "access": {"value": "self_serve_free", "url": "https://developers.notion.com/guides/authorization/overview", "quote": "You can start authorization as soon as you configure the integration's client credentials and redirect URI; Marketplace submission or review is not required.", "confidence": "high"},
+  "api_surface.breadth": {"value": "medium", "url": "https://developers.notion.com/llms.txt", "quote": "Append block children ... Create a page ... Query a data source ... Create comment ... List all users", "confidence": "medium"},
+  "mcp.exists": {"value": "official", "url": "https://github.com/makenotion/notion-mcp-server", "quote": "For the best experience, use Remote Notion MCP, our official hosted MCP server.", "confidence": "high"},
+  "buildability.main_blocker": {"value": "none", "url": "https://developers.notion.com/guides/authorization/overview", "quote": "Marketplace submission or review is not required.", "confidence": "high"},
+  "buildability.verdict": {"value": "BUILD_NOW", "url": "https://developers.notion.com/guides/authorization/overview", "quote": "OAuth integrations and public integrations use the OAuth 2.0 protocol.", "confidence": "high"}
+}

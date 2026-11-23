@@ -1,0 +1,42 @@
+{
+ "auth_methods": {
+  "value": [
+   "oauth2",
+   "bearer_token",
+   "api_key"
+  ],
+  "url": "https://supabase.com/docs/reference/api/introduction",
+  "quote": "There are two ways to generate an access token: Personal access token (PAT)",
+  "confidence": "high"
+ },
+ "access": {
+  "value": "self_serve_free",
+  "url": "https://supabase.com/docs/reference/api/introduction",
+  "quote": "To generate or manage your personal access tokens, visit your account page.",
+  "confidence": "high"
+ },
+ "api_surface.breadth": {
+  "value": "broad",
+  "url": "https://supabase.com/docs/reference/api/introduction",
+  "quote": "Manage your Supabase organizations and projects programmatically.",
+  "confidence": "medium"
+ },
+ "mcp.exists": {
+  "value": "official",
+  "url": "https://supabase.com/docs/guides/ai-tools/mcp.md",
+  "quote": "The hosted Supabase MCP server is available at `https://mcp.supabase.com/mcp`.",
+  "confidence": "high"
+ },
+ "buildability.main_blocker": {
+  "value": "none",
+  "url": "https://supabase.com/docs/reference/api/introduction",
+  "quote": "All API requests require an access token to be included in the Authorization header",
+  "confidence": "high"
+ },
+ "buildability.verdict": {
+  "value": "BUILD_NOW",
+  "url": "https://supabase.com/docs/reference/api/introduction",
+  "quote": "Use this if you're building a third-party app that needs to create or manage Supabase projects on behalf of your users.",
+  "confidence": "high"
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["oauth2"], "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access", "quote": "The following table lists each LinkedIn Marketing API product, who can access it, how to request access, and the OAuth permissions granted upon approval.", "confidence": "high"},
+ "access": {"value": "app_review_required", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start", "quote": "Apply to the desired API under the Products tab of your app. Complete the access form.", "confidence": "high"},
+ "api_surface.breadth": {"value": "broad", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access", "quote": "The Advertising API, Community Management API, Events Management API, Lead Sync API, Conversions API, and Matched Audiences API are open to all approved developers", "confidence": "medium"},
+ "mcp.exists": {"value": "community", "url": "https://pypi.org/project/linkedin-ads-mcp/", "quote": "There's no official LinkedIn MCP. This fills the gap with a thin, correctness-first wrapper", "confidence": "medium"},
+ "buildability.main_blocker": {"value": "app_review", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access", "quote": "Advertising API | Available to all developers approved for Advertising API access. | Apply to Advertising API.", "confidence": "high"},
+ "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access", "quote": "Advertising API | Available to all developers approved for Advertising API access. | Apply to Advertising API.", "confidence": "medium"}
+}

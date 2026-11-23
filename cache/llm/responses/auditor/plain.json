@@ -1,0 +1,8 @@
+{
+ "auth_methods": {"value": ["api_key", "oauth2"], "url": "https://www.plain.com/docs/graphql/introduction.md", "quote": "Authorization: Bearer YOUR_TOKEN where the token is your API key.", "confidence": "high"},
+ "access": {"value": "self_serve_trial", "url": "https://www.plain.com/pricing", "quote": "Support for teams that ship. Start today, no credit card required.", "confidence": "medium"},
+ "api_surface.breadth": {"value": "broad", "url": "https://www.plain.com/docs/graphql/introduction.md", "quote": "Plain itself is built on this same GraphQL API. This means that there are no limitations in what can be done via the API vs the UI.", "confidence": "medium"},
+ "mcp.exists": {"value": "official", "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx", "quote": "The Plain Model Context Protocol (MCP) server at https://mcp.plain.com/mcp supports OAuth only.", "confidence": "high"},
+ "buildability.main_blocker": {"value": "none", "url": "https://www.plain.com/docs/graphql/introduction.md", "quote": "Our API is compatible with all common GraphQL clients", "confidence": "medium"},
+ "buildability.verdict": {"value": "BUILD_NOW", "url": "https://www.plain.com/docs/graphql/introduction.md", "quote": "You will need an API key with the customer:read permission.", "confidence": "medium"}
+}

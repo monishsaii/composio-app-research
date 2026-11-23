@@ -50,10 +50,9 @@ def put(rec: dict, path: str, val) -> None:
 
 def queries(app: dict) -> list[str]:
     n = app["name"]
-    return [f"{n} developer portal app review partner program API access requirements",
-            f"{n} API which plan includes API access pricing",
-            f"{n} API reference rate limits webhooks",
-            f"{n} official MCP server"]
+    # 2 queries/app (WebSearch is capped at 200 calls per Claude Code turn, shared by all subagents)
+    return [f"{n} API access requirements which plan pricing developer app review partner",
+            f"{n} API reference rate limits webhooks official MCP server"]
 
 
 def emit(records: list[dict]) -> int:

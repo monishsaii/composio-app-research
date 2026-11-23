@@ -8,7 +8,7 @@ Pay special attention to the "known ambiguity" line: resolve WHICH product/entit
 
 Method:
 - Use DIFFERENT pages from the first pass. Prefer primary sources: official docs, developer portal, pricing page, official GitHub.
-- Run the provided search queries (and up to 2 more of your own), record them, and read pages ONLY via
+- Run the provided search queries (at most 1 more of your own), record them, and read pages ONLY via
   `python -m appresearch fetch "<url>" --show 20000` (so every page you cite is cached and re-checkable).
 - Quotes must be copied VERBATIM from the fetched page text, <=25 words. If you cannot find support, use "unknown".
 - Gated-with-evidence is a correct finding. "unknown" is better than a guess.

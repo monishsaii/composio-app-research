@@ -1,0 +1,8 @@
+{
+  "auth_methods": {"value": ["api_key", "bearer_token"], "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "It authenticates with a Bearer API key created in the workspace Developer settings, capped at two keys per user and 10 requests per second.", "confidence": "medium"},
+  "access": {"value": "paid_plan_required", "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only.", "confidence": "medium"},
+  "api_surface.breadth": {"value": "narrow", "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "It exposes channels and members, conversations (list, retrieve, and POST to ingest a file), audio download links, workspace details, and cursor-based pagination.", "confidence": "medium"},
+  "mcp.exists": {"value": "official", "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "Otter runs a provider-hosted MCP server at mcp.otter.ai/mcp. Access is OAuth-authenticated with per-meeting permissions", "confidence": "medium"},
+  "buildability.main_blocker": {"value": "enterprise_only", "url": "https://apis.io/apis/otter-ai/otter-ai-api/", "quote": "The Otter.ai REST API enables Enterprise customers to programmatically upload audio and video files for transcription", "confidence": "medium"},
+  "buildability.verdict": {"value": "BUILD_WITH_CAVEATS", "url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "The MCP server connects from a standard Otter account over OAuth; the Public API is gated to Enterprise workspaces and authenticates with Bearer API keys only", "confidence": "low"}
+}
