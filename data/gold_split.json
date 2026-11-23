@@ -1,0 +1,50 @@
+{
+ "seed": 20261123,
+ "created_at": "2026-11-23T13:47:17Z",
+ "design": "3 per category x 10 categories; forced-include gated/ambiguous apps; 1 DEV + 2 TEST per category",
+ "forced_include": [
+  "meta-ads",
+  "linkedin-ads",
+  "amazon-selling-partner",
+  "pitchbook",
+  "dealcloud",
+  "notebooklm",
+  "sherlock",
+  "paygent-connect",
+  "fanbasis"
+ ],
+ "dev": [
+  "datadog",
+  "help-scout",
+  "linkedin-ads",
+  "mrscraper",
+  "notebooklm",
+  "notion",
+  "podio",
+  "quickbooks",
+  "shopify",
+  "twilio"
+ ],
+ "test": [
+  "amazon-selling-partner",
+  "copper",
+  "dealcloud",
+  "fanbasis",
+  "google-ads",
+  "higgsfield",
+  "lark-larksuite",
+  "linear",
+  "meta-ads",
+  "otter-ai",
+  "paygent-connect",
+  "pitchbook",
+  "plain",
+  "pylon",
+  "sentry",
+  "sherlock",
+  "smartsheet",
+  "supabase",
+  "telegram",
+  "waterfall-io"
+ ]
+}
