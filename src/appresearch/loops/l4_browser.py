@@ -62,6 +62,9 @@ def run(records: list[dict], ids: list[str]) -> tuple[list[dict], dict]:
                                   "chars": len(b.get("text", "")), "fetched_at": b.get("fetched_at")} for u, b in rendered.items()]
         keep_dropped = []
         for e in r.get("l1_dropped_evidence", []):
+            if e.get("claim_check") in ("irrelevant", "contradicts"):  # dropped for meaning, not page access
+                keep_dropped.append(e)
+                continue
             b = rendered.get(e["url"])
             kind = L1.match(e["quote"], b["text"])[0] if b and b.get("text") else "unsupported"
             if kind in ("exact", "fuzzy"):

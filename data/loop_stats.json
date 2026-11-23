@@ -27,5 +27,30 @@
    "r_oauth_has_endpoints": 1,
    "r_breadth_vs_count": 1
   }
+ },
+ "L4": {
+  "apps": 15,
+  "pages": 37,
+  "restored_evidence": 0,
+  "restored_groups": 0,
+  "cache_upgrades": 3,
+  "selected": [
+   "supabase",
+   "binance",
+   "gumroad",
+   "monday-com",
+   "pylon",
+   "quickbooks",
+   "twenty",
+   "xero",
+   "asana",
+   "gorgias",
+   "snowflake",
+   "cloudflare",
+   "freshdesk",
+   "ipayx",
+   "notion"
+  ],
+  "note": "First run upgraded 3 cached pages to rendered text and wrongly restored 38 quotes L1 had dropped as irrelevant; bug fixed (only not-on-page drops are restorable), rerun restores 0 because L1 found every quote verbatim."
  }
 }
