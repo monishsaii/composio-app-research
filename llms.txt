@@ -1,0 +1,128 @@
+# Integration readiness: 100 apps for agent tool-calling
+
+> For each app: auth methods, what gates API credentials, API surface, MCP server, and a rubric verdict. Every non-unknown value cites a URL + quote. Research date 2026-11-23. Agent: Claude Code subagents + Composio SDK.
+
+## Files
+- [findings.json](findings.json): full records with evidence
+- [findings.csv](findings.csv): one row per app
+- [schema.json](schema.json): JSON Schema of a record
+- [human_check.csv](human_check.csv): gold-sample human audit sheet
+
+## Verdict counts
+- BUILD_NOW: 35
+- BUILD_WITH_CAVEATS: 52
+- BLOCKED_NEEDS_OUTREACH: 7
+- BLOCKED_NO_PUBLIC_API: 0
+- NOT_APPLICABLE_NOT_A_SERVICE: 2
+- UNCLEAR: 4
+
+## Headline findings
+- 57 of 100 apps give a developer working API credentials free and self-serve (45 free, 12 via trial).
+- 40 of 100 are gated. The most common gate is paid plan required (18 apps); only 4 require partner or sales contact.
+- Auth is dominated by oauth2 (70 apps) and api_key (48); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.
+- 72 of 100 vendors now publish an official MCP server; 15 more have only community servers.
+- 35 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.
+- Finance apps: 5 of 9 gated vs 35 of 88 in other categories.
+- Verification changed the verdict for 34 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.
+
+## Apps
+- Ahrefs: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2)
+- Aircall: BLOCKED_NEEDS_OUTREACH (access partner_or_contact_sales; auth oauth2+basic)
+- Airtable: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2)
+- Amazon Selling Partner: BUILD_WITH_CAVEATS (access app_review_required; auth oauth2)
+- Apify: BUILD_NOW (access self_serve_free; auth bearer_token)
+- Asana: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2)
+- Attio: BUILD_NOW (access self_serve_free; auth api_key+basic+bearer_token+oauth2)
+- BigCommerce: BUILD_WITH_CAVEATS (access self_serve_trial; auth oauth2+other)
+- Binance: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+hmac_signature+other)
+- Brex: BLOCKED_NEEDS_OUTREACH (access admin_approval; auth oauth2+bearer_token)
+- Bright Data: BUILD_NOW (access self_serve_free; auth api_key+basic+bearer_token)
+- Clay: BLOCKED_NEEDS_OUTREACH (access paid_plan_required; auth api_key)
+- ClickUp: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
+- Close: UNCLEAR (access unknown; auth api_key+basic+hmac_signature+oauth2)
+- Cloudflare: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+oauth2)
+- Coda: BUILD_NOW (access self_serve_free; auth bearer_token)
+- Consensus: BLOCKED_NEEDS_OUTREACH (access admin_approval; auth api_key+bearer_token+oauth2)
+- Copper: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2)
+- Datadog: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2+other)
+- DataForSEO: BUILD_WITH_CAVEATS (access paid_plan_required; auth basic)
+- DealCloud: BUILD_WITH_CAVEATS (access admin_approval; auth api_key+oauth2)
+- Devin: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+api_key)
+- Discord: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2+other)
+- Ecwid: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+oauth2)
+- fanbasis: UNCLEAR (access paid_plan_required; auth api_key)
+- Fathom: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+oauth2)
+- Firecrawl: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
+- Freshdesk: BUILD_NOW (access self_serve_trial; auth api_key+oauth2)
+- Front: BUILD_WITH_CAVEATS (access self_serve_trial; auth bearer_token+oauth2)
+- GitHub: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+jwt_service_account+oauth2)
+- Gladly: BUILD_WITH_CAVEATS (access admin_approval; auth basic)
+- GoHighLevel: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+oauth2)
+- Google Ads: BUILD_WITH_CAVEATS (access app_review_required; auth jwt_service_account+oauth2)
+- Gorgias: BUILD_NOW (access self_serve_trial; auth api_key+basic+oauth2)
+- Grain: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+bearer_token+oauth2)
+- Gumroad: BUILD_NOW (access self_serve_free; auth oauth2)
+- Harvest: BUILD_NOW (access self_serve_trial; auth oauth2+bearer_token)
+- Help Scout: BUILD_WITH_CAVEATS (access paid_plan_required; auth oauth2+api_key)
+- higgsfield: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key)
+- HubSpot: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+bearer_token+oauth2)
+- Intercom: BUILD_WITH_CAVEATS (access app_review_required; auth bearer_token+oauth2)
+- iPayX: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token)
+- Jira: BUILD_NOW (access self_serve_free; auth oauth2+basic)
+- Klaviyo: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
+- Lark (Larksuite): BUILD_WITH_CAVEATS (access admin_approval; auth oauth2+bearer_token)
+- Linear: BUILD_NOW (access self_serve_free; auth oauth2+api_key)
+- LinkedIn Ads: BUILD_WITH_CAVEATS (access app_review_required; auth oauth2)
+- LiveAgent: BUILD_NOW (access self_serve_trial; auth api_key)
+- Magento (Adobe Commerce): BUILD_WITH_CAVEATS (access admin_approval; auth bearer_token+oauth2+other)
+- Mailchimp: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
+- Mermaid CLI: NOT_APPLICABLE_NOT_A_SERVICE (access self_serve_free; auth none)
+- Meta Ads: BUILD_WITH_CAVEATS (access app_review_required; auth bearer_token+oauth2)
+- Monday.com: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
+- MongoDB Atlas: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2+api_key)
+- MrScraper: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key)
+- Neo4j: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
+- Netlify: BUILD_NOW (access self_serve_free; auth oauth2+bearer_token)
+- NotebookLM: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
+- Notion: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2)
+- Otter AI: BLOCKED_NEEDS_OUTREACH (access partner_or_contact_sales; auth api_key+oauth2)
+- Paygent Connect: UNCLEAR (access unknown; auth unknown)
+- Pinterest: BUILD_WITH_CAVEATS (access app_review_required; auth bearer_token+oauth2)
+- Pipedrive: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2)
+- PitchBook: BLOCKED_NEEDS_OUTREACH (access partner_or_contact_sales; auth unknown)
+- Plaid: BUILD_WITH_CAVEATS (access app_review_required; auth api_key+other)
+- Plain: BUILD_NOW (access self_serve_trial; auth api_key)
+- Podio: BUILD_NOW (access self_serve_free; auth oauth2)
+- Pumble: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+other)
+- Pylon: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token)
+- QuickBooks: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
+- Ramp: BUILD_WITH_CAVEATS (access app_review_required; auth oauth2)
+- Reducto: BUILD_WITH_CAVEATS (access self_serve_trial; auth api_key+bearer_token)
+- Salesforce: BUILD_WITH_CAVEATS (access paid_plan_required; auth jwt_service_account+oauth2+other)
+- Salesforce Commerce Cloud: UNCLEAR (access unknown; auth oauth2)
+- SE Ranking: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key)
+- SendGrid: BUILD_WITH_CAVEATS (access self_serve_trial; auth api_key+bearer_token)
+- Sentry: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2)
+- Sherlock: NOT_APPLICABLE_NOT_A_SERVICE (access no_public_api; auth none)
+- Shopify: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2+other)
+- Slack: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2+bearer_token)
+- Smartsheet: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+oauth2)
+- Snowflake: BUILD_WITH_CAVEATS (access self_serve_trial; auth bearer_token+jwt_service_account+oauth2)
+- Squarespace: BUILD_WITH_CAVEATS (access app_review_required; auth api_key+oauth2)
+- Stripe: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+oauth2)
+- Supabase: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+oauth2)
+- systeme.io: BUILD_NOW (access self_serve_free; auth api_key)
+- Telegram: BUILD_NOW (access self_serve_free; auth api_key+other)
+- Threads (Meta): BUILD_WITH_CAVEATS (access app_review_required; auth oauth2)
+- Twenty: BUILD_WITH_CAVEATS (access self_serve_trial; auth api_key+oauth2)
+- Twilio: BUILD_NOW (access self_serve_trial; auth api_key+basic+oauth2)
+- Vercel: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2)
+- Vonage: BUILD_NOW (access self_serve_free; auth basic+hmac_signature+jwt_service_account+oauth2)
+- Waterfall.io: BLOCKED_NEEDS_OUTREACH (access partner_or_contact_sales; auth api_key)
+- WhatsApp Business: BUILD_WITH_CAVEATS (access app_review_required; auth bearer_token)
+- WooCommerce: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+basic+other)
+- Xero: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
+- YouTube Transcript: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+bearer_token)
+- Zendesk: BUILD_WITH_CAVEATS (access paid_plan_required; auth oauth2+basic)
+- Zoho Cliq: BUILD_NOW (access self_serve_free; auth oauth2)
+- Zoho CRM: BUILD_NOW (access self_serve_free; auth oauth2)
