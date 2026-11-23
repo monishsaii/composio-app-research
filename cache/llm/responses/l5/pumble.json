@@ -1,0 +1,60 @@
+{
+ "fields": {
+  "auth_methods": {
+   "value": [
+    "api_key",
+    "other"
+   ],
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "quote": "This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "API addon uses generated API keys; MCP/app flow uses app key and tokens (other). No evidence for bearer."
+  },
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "quote": "Before you can create an API key, you need to install the API addon on your Pumble workspace.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Self-serve addon install and key generation; no plan or approval gate stated."
+  },
+  "api_surface.breadth": {
+   "value": "narrow",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "quote": "The full list of available actions is available in the Swagger documentation.",
+     "source_type": "official_docs"
+    },
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "quote": "Listing the channels and DMs that belong to the user who created the key",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Addon API lists about seven actions (messages, reactions, channels)."
+  },
+  "api_surface.webhooks": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No webhook info on fetched page."
+  }
+ },
+ "rationale": "Self-serve API key via addon, narrow action set; webhooks undetermined.",
+ "needs_human_reason": "Webhook support not found in fetched docs."
+}

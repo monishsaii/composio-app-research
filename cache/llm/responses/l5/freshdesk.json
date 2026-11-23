@@ -1,0 +1,18 @@
+{"fields": {
+"auth_methods": {"value": ["api_key", "oauth2"], "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://developer.freshdesk.com/api/", "quote": "You can use your personal API key to authenticate the request.", "source_type": "official_docs"},
+  {"url": "https://developer.freshdesk.com/api/", "quote": "OAuth 2.0 Scope", "source_type": "official_docs"}],
+ "why": "API key documented; every endpoint lists an OAuth 2.0 scope (e.g. freshdesk.tickets.create), so OAuth2 is supported."},
+"api_surface.breadth": {"value": "broad", "resolved": true, "confidence": "high",
+ "evidence": [
+  {"url": "https://developer.freshdesk.com/api/", "quote": "Freshdesk's APIs belong to the Representational State Transfer (REST) category.", "source_type": "official_docs"},
+  {"url": "https://developer.freshdesk.com/api/", "quote": "Code samples for accessing the Freshdesk API in various languages including Ruby, PHP, Java, Python, and Node JS", "source_type": "official_docs"}],
+ "why": "API index covers tickets, conversations, contacts, agents, companies, groups, discussions, solutions, surveys, time entries, mailboxes, settings with CRUD."},
+"api_surface.webhooks": {"value": true, "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://support.freshdesk.com/support/solutions/articles/132589-using-webhooks-in-automation-rules", "quote": "Update external systems when a ticket is created ( using rules on ticket create) or when a ticket is updated", "source_type": "official_docs"}],
+ "why": "Outbound webhooks exist via automation-rule Trigger Webhook action on ticket create/update (Growth+ plans), not a subscription API."}
+},
+"access_notes": "",
+"rationale": "API key (basic-auth username) plus OAuth2 scopes; broad REST API; webhooks via automation rules on paid plans."}

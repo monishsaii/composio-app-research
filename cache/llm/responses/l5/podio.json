@@ -1,0 +1,23 @@
+{
+ "fields": {
+  "access": {
+   "value": "self_serve_free",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://www.progress.com/podio/pricing",
+     "quote": "API Integrations | 1000 calls per hour | 1000 calls per hour Upgrade with Add-ons",
+     "source_type": "pricing_page"
+    },
+    {
+     "url": "https://developers.podio.com/index/faq",
+     "quote": "The Podio API is available to use for both paid and free Podio accounts.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "FAQ states API works on free accounts; pricing lists 1000 calls/hour on free tier."
+  }
+ },
+ "rationale": "Free accounts can use the API with OAuth2; higher rate limits via paid add-ons."
+}

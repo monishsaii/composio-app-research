@@ -25,6 +25,46 @@ def matrix(recs, row_key, col_key, rows, cols):
     return m
 
 
+def headlines(a: dict, final: list, cat_key: dict) -> list[dict]:
+    """Plain statements, each number computed here, each with a table filter."""
+    n, v, ac = a["n"], a["verdicts"], a["access"]
+    h = []
+    ss = a["self_serve"]
+    h.append({"text": f"{ss} of {n} apps give a developer working API credentials free and self-serve "
+                      f"({ac['self_serve_free']} free, {ac['self_serve_trial']} via trial).",
+              "filter": {"acc": "self_serve_free"}})
+    gated = a["gated"]
+    top_gate = max(("paid_plan_required", "app_review_required", "admin_approval", "partner_or_contact_sales", "no_public_api"), key=lambda k: ac[k])
+    h.append({"text": f"{gated} of {n} are gated. The most common gate is {top_gate.replace('_', ' ')} ({ac[top_gate]} apps); "
+                      f"only {ac['partner_or_contact_sales']} require partner or sales contact.",
+              "filter": {"acc": top_gate}})
+    auth = a["auth_single"]
+    top = list(auth.items())[:2]
+    h.append({"text": f"Auth is dominated by {top[0][0]} ({top[0][1]} apps) and {top[1][0]} ({top[1][1]}); "
+                      f"{a['oauth']} apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.",
+              "filter": {"auth": "oauth2"}})
+    mcp = a["mcp"]
+    h.append({"text": f"{mcp.get('official', 0)} of {n} vendors now publish an official MCP server; "
+                      f"{mcp.get('community', 0)} more have only community servers.", "filter": {}})
+    gap = a["composio_gap_build_now"]
+    h.append({"text": f"{v['BUILD_NOW']} apps are BUILD_NOW. {len(gap)} of them have no Composio toolkit today: "
+                      + ", ".join(x["name"] for x in gap[:6]) + ("…" if len(gap) > 6 else "") + ".",
+              "filter": {"ver": "BUILD_NOW"}})
+    reg = a["regulated_vs_not"]
+    h.append({"text": f"Finance is the most gated category among those with known access: {reg['regulated']['gated']} of "
+                      f"{reg['regulated']['n']} finance apps are gated vs {reg['other']['gated']} of {reg['other']['n']} elsewhere."
+              if reg["regulated"]["n"] and reg["regulated"]["gated"] / reg["regulated"]["n"] >= max(
+                  (g["gated"] / g["known"]) for g in a["gating_by_category"].values() if g["known"]) else
+              f"Finance apps: {reg['regulated']['gated']} of {reg['regulated']['n']} gated vs {reg['other']['gated']} of "
+              f"{reg['other']['n']} in other categories.", "filter": {"cat": "Finance/Fintech"}})
+    ch = a["changed_pass1_to_final"]
+    vch = sum(1 for c in ch if "verdict" in c["changes"])
+    h.append({"text": f"Verification changed the verdict for {vch} of {n} apps versus the single-shot pass 1; "
+                      f"access went from {a['pass1_unknown_access']} unknown to {ac['unknown']} unknown.",
+              "filter": {}})
+    return h
+
+
 def main() -> dict:
     final = research.load("final.json")
     pass1 = {r["id"]: r for r in research.load("pass1.json")}
@@ -94,6 +134,11 @@ def main() -> dict:
         "changed_pass1_to_final": changed, "needs_human": needs_human,
         "categories": CATEGORIES,
     }
+    out["pass1_unknown_access"] = sum(1 for r in pass1.values() if r["access"] == "unknown")
+    out["headlines"] = headlines(out, final, cat_key)
+    out["defeated"] = [{"id": r["id"], "name": r["name"],
+                        "why": (r.get("needs_human_reason") or "unresolved after all loops")[:220]}
+                       for r in final if r["buildability"]["verdict"] == "UNCLEAR" or r["access"] == "unknown"]
     (cache.DATA / "analysis.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"analysis.json: {n} apps; verdicts {dict(by_v)}")
     return out

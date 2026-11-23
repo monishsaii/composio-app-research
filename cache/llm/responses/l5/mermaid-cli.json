@@ -1,0 +1,32 @@
+{
+ "fields": {
+  "api_surface.breadth": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+     "quote": "This is a command-line interface (CLI) for mermaid.",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Local CLI with a Node.js wrapper only; no hosted API."
+  },
+  "api_surface.webhooks": {
+   "value": false,
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+     "quote": "This is a command-line interface (CLI) for mermaid.",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Local CLI has no webhooks."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Local OSS CLI, no hosted API surface or webhooks."
+}

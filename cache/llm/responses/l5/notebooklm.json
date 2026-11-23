@@ -1,0 +1,26 @@
+{
+ "fields": {
+  "api_surface.breadth": {
+   "value": "narrow",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://developers.google.com/notebook/docs",
+     "quote": "The Gemini Notebook API is a REST interface for programmatically creating and",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "REST API with notebooks and sources resources only; Public Preview."
+  },
+  "api_surface.webhooks": {
+   "value": false,
+   "resolved": true,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No webhook resources in REST reference; not documented."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Narrow REST API on notebooks/sources; no webhooks documented."
+}

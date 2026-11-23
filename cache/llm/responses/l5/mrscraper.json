@@ -1,0 +1,26 @@
+{
+ "fields": {
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [],
+   "why": "Free API token, documented API and SDK; no gating evidence."
+  },
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://github.com/mrscraper-com/mrscraper-mcp",
+     "quote": "An MCP server exposing the seven MrScraper services through hosted HTTP or local stdio.",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Official mrscraper-com GitHub org MCP repo with hosted mcp.mrscraper.com."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Official MCP exists; no blocker."
+}

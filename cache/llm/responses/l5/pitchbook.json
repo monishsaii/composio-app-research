@@ -1,0 +1,13 @@
+{
+ "fields": {
+  "mcp.exists": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Only third-party GitHub results seen; no vendor-published MCP verified; official pages 403."
+  }
+ },
+ "rationale": "No verified official MCP; API is quote-based enterprise add-on.",
+ "needs_human_reason": "Official PitchBook pages unreadable; could not confirm vendor MCP."
+}

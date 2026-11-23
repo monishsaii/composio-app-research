@@ -28,21 +28,16 @@ RESET_FIELDS = {"auth": ["auth_methods"], "access": ["access"], "sandbox": ["san
 
 
 def fields_to_adjudicate(r: dict) -> list[str]:
-    f = []
-    for d in r.get("disputes", []):
-        if d["field"] in ADJ_FIELDS:
-            f.append(d["field"])
+    """Genuinely unresolved fields only (usage budget): disputes L2 could NOT settle with string-verified evidence,
+    groups L1 reset to unknown, and access / MCP still unknown. Disputes where L2's value was adopted on verified
+    evidence count as resolved by L2."""
+    f = [d["field"] for d in r.get("disputes", []) if not d.get("adopted_l2") and d["field"] in ADJ_FIELDS]
     for g in r.get("l1_removed", {}):
         f += RESET_FIELDS.get(g, [])
-    conf = r.get("confidence") or {}
-    if conf.get("access") == "low" or r.get("access") == "unknown":
+    if r.get("access") == "unknown":
         f += ["access", "buildability.main_blocker"]
-    if conf.get("auth") == "low" or not r.get("auth_methods"):
-        f.append("auth_methods")
     if (r.get("mcp") or {}).get("exists") == "unknown":
         f.append("mcp.exists")
-    if (r.get("api_surface") or {}).get("breadth") == "unknown" and r.get("access") != "no_public_api":
-        f.append("api_surface.breadth")
     return [x for x in dict.fromkeys(f) if x in ADJ_FIELDS]
 
 

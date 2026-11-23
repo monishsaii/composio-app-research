@@ -1,0 +1,40 @@
+{
+ "fields": {
+  "auth_methods": {
+   "value": [
+    "bearer_token",
+    "jwt_service_account",
+    "oauth2"
+   ],
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "quote": "Authorization: Bearer JWT where JWT is the token that you generated.",
+     "source_type": "official_docs"
+    },
+    {
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "quote": "PROGRAMMATIC_ACCESS_TOKEN (for programmatic access tokens)",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Key-pair JWT, OAuth and programmatic access tokens documented."
+  },
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Vendor docs describe a Snowflake-managed MCP server."
+  }
+ },
+ "rationale": "Documented JWT/OAuth/PAT auth and official managed MCP."
+}

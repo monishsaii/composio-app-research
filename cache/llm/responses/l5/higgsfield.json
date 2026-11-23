@@ -1,0 +1,13 @@
+{"fields": {
+"access": {"value": "paid_plan_required", "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://higgsfield.ai/blog/higgsfield-api", "quote": "Add a payment method and top up your balance.", "source_type": "official_docs"},
+  {"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "quote": "Billing is pay-as-you-go from a US dollar balance, and the minimum top-up is $5.", "source_type": "official_docs"}],
+ "why": "Self-serve key creation but a paid balance (min $5) is required; no free tier, nearest enum is paid_plan_required."},
+"buildability.main_blocker": {"value": "paid_plan_gate", "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://higgsfield.ai/blog/higgsfield-api", "quote": "Spending stops at zero.", "source_type": "official_docs"}],
+ "why": "Usage is prepaid credit only; a small paid top-up is needed before any API calls, otherwise no technical blocker."}
+},
+"access_notes": "Self-serve: account, payment method, top up USD balance (min $5), create key.",
+"rationale": "Self-serve but prepaid pay-as-you-go only; no free tier, so payment is the gate."}

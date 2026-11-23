@@ -1,0 +1,31 @@
+{
+ "fields": {
+  "access": {
+   "value": "self_serve_free",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps/",
+     "quote": "the Slack Marketplace is the only appropriate channel for commercially distributing apps built with Slack APIs",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Apps can be created and installed self-serve; Marketplace only for commercial distribution."
+  },
+  "buildability.main_blocker": {
+   "value": "app_review",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps/",
+     "quote": "the Slack Marketplace is the only appropriate channel for commercially distributing apps built with Slack APIs",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Rate tiers same across plans, so no paid gate; Marketplace review for commercial distribution."
+  }
+ },
+ "rationale": "Self-serve; Marketplace review limits commercial distribution."
+}

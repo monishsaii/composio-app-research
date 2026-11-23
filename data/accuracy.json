@@ -1,0 +1,2083 @@
+{
+ "generated_at": "2026-11-23T16:38:59Z",
+ "offline_replay": true,
+ "gold_source": {
+  "human": 0,
+  "auditor": 180
+ },
+ "split": {
+  "dev": [
+   "datadog",
+   "help-scout",
+   "linkedin-ads",
+   "mrscraper",
+   "notebooklm",
+   "notion",
+   "podio",
+   "quickbooks",
+   "shopify",
+   "twilio"
+  ],
+  "test": [
+   "amazon-selling-partner",
+   "copper",
+   "dealcloud",
+   "fanbasis",
+   "google-ads",
+   "higgsfield",
+   "lark-larksuite",
+   "linear",
+   "meta-ads",
+   "otter-ai",
+   "paygent-connect",
+   "pitchbook",
+   "plain",
+   "pylon",
+   "sentry",
+   "sherlock",
+   "smartsheet",
+   "supabase",
+   "telegram",
+   "waterfall-io"
+  ]
+ },
+ "human": null,
+ "auditor_NOT_ground_truth": {
+  "dev": {
+   "pass1": {
+    "field_level": {
+     "k": 24,
+     "n": 60,
+     "acc": 0.4,
+     "ci95": [
+      0.286,
+      0.526
+     ]
+    },
+    "verdict": {
+     "k": 5,
+     "n": 10,
+     "acc": 0.5,
+     "ci95": [
+      0.237,
+      0.763
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 2,
+      "n": 10,
+      "acc": 0.2,
+      "ci95": [
+       0.057,
+       0.51
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "mcp.exists": {
+      "k": 7,
+      "n": 10,
+      "acc": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 2,
+      "n": 10,
+      "acc": 0.2,
+      "ci95": [
+       0.057,
+       0.51
+      ]
+     },
+     "buildability.verdict": {
+      "k": 5,
+      "n": 10,
+      "acc": 0.5,
+      "ci95": [
+       0.237,
+       0.763
+      ]
+     }
+    }
+   },
+   "L1": {
+    "field_level": {
+     "k": 22,
+     "n": 60,
+     "acc": 0.367,
+     "ci95": [
+      0.256,
+      0.493
+     ]
+    },
+    "verdict": {
+     "k": 5,
+     "n": 10,
+     "acc": 0.5,
+     "ci95": [
+      0.237,
+      0.763
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 2,
+      "n": 10,
+      "acc": 0.2,
+      "ci95": [
+       0.057,
+       0.51
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 3,
+      "n": 10,
+      "acc": 0.3,
+      "ci95": [
+       0.108,
+       0.603
+      ]
+     },
+     "mcp.exists": {
+      "k": 6,
+      "n": 10,
+      "acc": 0.6,
+      "ci95": [
+       0.313,
+       0.832
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 2,
+      "n": 10,
+      "acc": 0.2,
+      "ci95": [
+       0.057,
+       0.51
+      ]
+     },
+     "buildability.verdict": {
+      "k": 5,
+      "n": 10,
+      "acc": 0.5,
+      "ci95": [
+       0.237,
+       0.763
+      ]
+     }
+    }
+   },
+   "L2": {
+    "field_level": {
+     "k": 36,
+     "n": 60,
+     "acc": 0.6,
+     "ci95": [
+      0.474,
+      0.714
+     ]
+    },
+    "verdict": {
+     "k": 7,
+     "n": 10,
+     "acc": 0.7,
+     "ci95": [
+      0.397,
+      0.892
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 6,
+      "n": 10,
+      "acc": 0.6,
+      "ci95": [
+       0.313,
+       0.832
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     },
+     "mcp.exists": {
+      "k": 7,
+      "n": 10,
+      "acc": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "buildability.verdict": {
+      "k": 7,
+      "n": 10,
+      "acc": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     }
+    }
+   },
+   "L3": {
+    "field_level": {
+     "k": 37,
+     "n": 60,
+     "acc": 0.617,
+     "ci95": [
+      0.49,
+      0.729
+     ]
+    },
+    "verdict": {
+     "k": 8,
+     "n": 10,
+     "acc": 0.8,
+     "ci95": [
+      0.49,
+      0.943
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 6,
+      "n": 10,
+      "acc": 0.6,
+      "ci95": [
+       0.313,
+       0.832
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     },
+     "mcp.exists": {
+      "k": 7,
+      "n": 10,
+      "acc": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "buildability.verdict": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     }
+    }
+   },
+   "L4": {
+    "field_level": {
+     "k": 37,
+     "n": 60,
+     "acc": 0.617,
+     "ci95": [
+      0.49,
+      0.729
+     ]
+    },
+    "verdict": {
+     "k": 8,
+     "n": 10,
+     "acc": 0.8,
+     "ci95": [
+      0.49,
+      0.943
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 6,
+      "n": 10,
+      "acc": 0.6,
+      "ci95": [
+       0.313,
+       0.832
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     },
+     "mcp.exists": {
+      "k": 7,
+      "n": 10,
+      "acc": 0.7,
+      "ci95": [
+       0.397,
+       0.892
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "buildability.verdict": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     }
+    }
+   },
+   "final": {
+    "field_level": {
+     "k": 38,
+     "n": 60,
+     "acc": 0.633,
+     "ci95": [
+      0.507,
+      0.744
+     ]
+    },
+    "verdict": {
+     "k": 8,
+     "n": 10,
+     "acc": 0.8,
+     "ci95": [
+      0.49,
+      0.943
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "access": {
+      "k": 6,
+      "n": 10,
+      "acc": 0.6,
+      "ci95": [
+       0.313,
+       0.832
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     },
+     "mcp.exists": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 4,
+      "n": 10,
+      "acc": 0.4,
+      "ci95": [
+       0.168,
+       0.687
+      ]
+     },
+     "buildability.verdict": {
+      "k": 8,
+      "n": 10,
+      "acc": 0.8,
+      "ci95": [
+       0.49,
+       0.943
+      ]
+     }
+    }
+   },
+   "gated_final": {
+    "tp": 1,
+    "fp": 2,
+    "fn": 1,
+    "tn": 6,
+    "precision": 0.333,
+    "recall": 0.5
+   },
+   "gated_pass1": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 1,
+    "tn": 7,
+    "precision": 0.5,
+    "recall": 0.5
+   },
+   "verdict_confusion_final": {
+    "BUILD_NOW": {
+     "BUILD_WITH_CAVEATS": 2,
+     "BUILD_NOW": 3
+    },
+    "BUILD_WITH_CAVEATS": {
+     "BUILD_WITH_CAVEATS": 5
+    }
+   },
+   "marginal_gain": {
+    "L1": -0.033,
+    "L2": 0.233,
+    "L3": 0.017,
+    "L4": 0.0,
+    "final": 0.016
+   }
+  },
+  "test": {
+   "pass1": {
+    "field_level": {
+     "k": 48,
+     "n": 120,
+     "acc": 0.4,
+     "ci95": [
+      0.317,
+      0.489
+     ]
+    },
+    "verdict": {
+     "k": 11,
+     "n": 20,
+     "acc": 0.55,
+     "ci95": [
+      0.342,
+      0.742
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 9,
+      "n": 20,
+      "acc": 0.45,
+      "ci95": [
+       0.258,
+       0.658
+      ]
+     },
+     "access": {
+      "k": 4,
+      "n": 20,
+      "acc": 0.2,
+      "ci95": [
+       0.081,
+       0.416
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 3,
+      "n": 20,
+      "acc": 0.15,
+      "ci95": [
+       0.052,
+       0.36
+      ]
+     },
+     "mcp.exists": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 8,
+      "n": 20,
+      "acc": 0.4,
+      "ci95": [
+       0.219,
+       0.613
+      ]
+     },
+     "buildability.verdict": {
+      "k": 11,
+      "n": 20,
+      "acc": 0.55,
+      "ci95": [
+       0.342,
+       0.742
+      ]
+     }
+    }
+   },
+   "L1": {
+    "field_level": {
+     "k": 46,
+     "n": 120,
+     "acc": 0.383,
+     "ci95": [
+      0.301,
+      0.473
+     ]
+    },
+    "verdict": {
+     "k": 11,
+     "n": 20,
+     "acc": 0.55,
+     "ci95": [
+      0.342,
+      0.742
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 9,
+      "n": 20,
+      "acc": 0.45,
+      "ci95": [
+       0.258,
+       0.658
+      ]
+     },
+     "access": {
+      "k": 3,
+      "n": 20,
+      "acc": 0.15,
+      "ci95": [
+       0.052,
+       0.36
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 3,
+      "n": 20,
+      "acc": 0.15,
+      "ci95": [
+       0.052,
+       0.36
+      ]
+     },
+     "mcp.exists": {
+      "k": 12,
+      "n": 20,
+      "acc": 0.6,
+      "ci95": [
+       0.387,
+       0.781
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 8,
+      "n": 20,
+      "acc": 0.4,
+      "ci95": [
+       0.219,
+       0.613
+      ]
+     },
+     "buildability.verdict": {
+      "k": 11,
+      "n": 20,
+      "acc": 0.55,
+      "ci95": [
+       0.342,
+       0.742
+      ]
+     }
+    }
+   },
+   "L2": {
+    "field_level": {
+     "k": 78,
+     "n": 120,
+     "acc": 0.65,
+     "ci95": [
+      0.561,
+      0.729
+     ]
+    },
+    "verdict": {
+     "k": 14,
+     "n": 20,
+     "acc": 0.7,
+     "ci95": [
+      0.481,
+      0.855
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 11,
+      "n": 20,
+      "acc": 0.55,
+      "ci95": [
+       0.342,
+       0.742
+      ]
+     },
+     "access": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "mcp.exists": {
+      "k": 14,
+      "n": 20,
+      "acc": 0.7,
+      "ci95": [
+       0.481,
+       0.855
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.verdict": {
+      "k": 14,
+      "n": 20,
+      "acc": 0.7,
+      "ci95": [
+       0.481,
+       0.855
+      ]
+     }
+    }
+   },
+   "L3": {
+    "field_level": {
+     "k": 78,
+     "n": 120,
+     "acc": 0.65,
+     "ci95": [
+      0.561,
+      0.729
+     ]
+    },
+    "verdict": {
+     "k": 15,
+     "n": 20,
+     "acc": 0.75,
+     "ci95": [
+      0.531,
+      0.888
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 11,
+      "n": 20,
+      "acc": 0.55,
+      "ci95": [
+       0.342,
+       0.742
+      ]
+     },
+     "access": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "mcp.exists": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.verdict": {
+      "k": 15,
+      "n": 20,
+      "acc": 0.75,
+      "ci95": [
+       0.531,
+       0.888
+      ]
+     }
+    }
+   },
+   "L4": {
+    "field_level": {
+     "k": 78,
+     "n": 120,
+     "acc": 0.65,
+     "ci95": [
+      0.561,
+      0.729
+     ]
+    },
+    "verdict": {
+     "k": 15,
+     "n": 20,
+     "acc": 0.75,
+     "ci95": [
+      0.531,
+      0.888
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 11,
+      "n": 20,
+      "acc": 0.55,
+      "ci95": [
+       0.342,
+       0.742
+      ]
+     },
+     "access": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "mcp.exists": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.verdict": {
+      "k": 15,
+      "n": 20,
+      "acc": 0.75,
+      "ci95": [
+       0.531,
+       0.888
+      ]
+     }
+    }
+   },
+   "final": {
+    "field_level": {
+     "k": 83,
+     "n": 120,
+     "acc": 0.692,
+     "ci95": [
+      0.604,
+      0.767
+     ]
+    },
+    "verdict": {
+     "k": 16,
+     "n": 20,
+     "acc": 0.8,
+     "ci95": [
+      0.584,
+      0.919
+     ]
+    },
+    "per_field": {
+     "auth_methods": {
+      "k": 12,
+      "n": 20,
+      "acc": 0.6,
+      "ci95": [
+       0.387,
+       0.781
+      ]
+     },
+     "access": {
+      "k": 14,
+      "n": 20,
+      "acc": 0.7,
+      "ci95": [
+       0.481,
+       0.855
+      ]
+     },
+     "api_surface.breadth": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "mcp.exists": {
+      "k": 13,
+      "n": 20,
+      "acc": 0.65,
+      "ci95": [
+       0.433,
+       0.819
+      ]
+     },
+     "buildability.main_blocker": {
+      "k": 15,
+      "n": 20,
+      "acc": 0.75,
+      "ci95": [
+       0.531,
+       0.888
+      ]
+     },
+     "buildability.verdict": {
+      "k": 16,
+      "n": 20,
+      "acc": 0.8,
+      "ci95": [
+       0.584,
+       0.919
+      ]
+     }
+    }
+   },
+   "gated_final": {
+    "tp": 12,
+    "fp": 2,
+    "fn": 1,
+    "tn": 5,
+    "precision": 0.857,
+    "recall": 0.923
+   },
+   "gated_pass1": {
+    "tp": 5,
+    "fp": 1,
+    "fn": 8,
+    "tn": 6,
+    "precision": 0.833,
+    "recall": 0.385
+   },
+   "verdict_confusion_final": {
+    "BUILD_WITH_CAVEATS": {
+     "BUILD_WITH_CAVEATS": 6,
+     "BLOCKED_NEEDS_OUTREACH": 1
+    },
+    "BUILD_NOW": {
+     "BUILD_WITH_CAVEATS": 2,
+     "BUILD_NOW": 5
+    },
+    "BLOCKED_NEEDS_OUTREACH": {
+     "BUILD_WITH_CAVEATS": 1,
+     "BLOCKED_NEEDS_OUTREACH": 2
+    },
+    "UNCLEAR": {
+     "UNCLEAR": 2
+    },
+    "NOT_APPLICABLE_NOT_A_SERVICE": {
+     "NOT_APPLICABLE_NOT_A_SERVICE": 1
+    }
+   },
+   "marginal_gain": {
+    "L1": -0.017,
+    "L2": 0.267,
+    "L3": 0.0,
+    "L4": 0.0,
+    "final": 0.042
+   }
+  },
+  "misses_final": [
+   {
+    "split": "test",
+    "id": "amazon-selling-partner",
+    "name": "Amazon Selling Partner",
+    "field": "mcp.exists",
+    "agent": "official",
+    "gold": "community",
+    "pass1": "community",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "copper",
+    "name": "Copper",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "gold": "self_serve_trial",
+    "pass1": "paid_plan_required",
+    "cause": "misread pricing/access gate"
+   },
+   {
+    "split": "test",
+    "id": "copper",
+    "name": "Copper",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "copper",
+    "name": "Copper",
+    "field": "mcp.exists",
+    "agent": "official",
+    "gold": "community",
+    "pass1": "unknown",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "copper",
+    "name": "Copper",
+    "field": "buildability.main_blocker",
+    "agent": "paid_plan_gate",
+    "gold": "none",
+    "pass1": "paid_plan_gate",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "copper",
+    "name": "Copper",
+    "field": "buildability.verdict",
+    "agent": "BUILD_WITH_CAVEATS",
+    "gold": "BUILD_NOW",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "gold": "oauth2",
+    "pass1": "api_key|oauth2",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "access",
+    "agent": "admin_approval",
+    "gold": "partner_or_contact_sales",
+    "pass1": "admin_approval",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "gold": "enterprise_only",
+    "pass1": "other",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "buildability.verdict",
+    "agent": "BUILD_WITH_CAVEATS",
+    "gold": "BLOCKED_NEEDS_OUTREACH",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "gold": "partner_or_contact_sales",
+    "pass1": "paid_plan_required",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "gold": "official",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "buildability.main_blocker",
+    "agent": "ambiguous_product",
+    "gold": "unstable_or_undocumented_api",
+    "pass1": "ambiguous_product",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "google-ads",
+    "name": "Google Ads",
+    "field": "auth_methods",
+    "agent": "jwt_service_account|oauth2",
+    "gold": "oauth2",
+    "pass1": "oauth2|other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "higgsfield",
+    "name": "higgsfield",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "gold": "self_serve_free",
+    "pass1": "unknown",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "higgsfield",
+    "name": "higgsfield",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "higgsfield",
+    "name": "higgsfield",
+    "field": "buildability.main_blocker",
+    "agent": "paid_plan_gate",
+    "gold": "none",
+    "pass1": "other",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "higgsfield",
+    "name": "higgsfield",
+    "field": "buildability.verdict",
+    "agent": "BUILD_WITH_CAVEATS",
+    "gold": "BUILD_NOW",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "lark-larksuite",
+    "name": "Lark (Larksuite)",
+    "field": "auth_methods",
+    "agent": "bearer_token|oauth2",
+    "gold": "bearer_token|oauth2|other",
+    "pass1": "bearer_token|oauth2",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "lark-larksuite",
+    "name": "Lark (Larksuite)",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "gold": "app_review",
+    "pass1": "other",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "linear",
+    "name": "Linear",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "broad",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "name": "Meta Ads",
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "gold": "official",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "name": "Otter AI",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "gold": "api_key|bearer_token",
+    "pass1": "",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "name": "Otter AI",
+    "field": "access",
+    "agent": "partner_or_contact_sales",
+    "gold": "paid_plan_required",
+    "pass1": "unknown",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "name": "Otter AI",
+    "field": "mcp.exists",
+    "agent": "community",
+    "gold": "official",
+    "pass1": "community",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "name": "Otter AI",
+    "field": "buildability.verdict",
+    "agent": "BLOCKED_NEEDS_OUTREACH",
+    "gold": "BUILD_WITH_CAVEATS",
+    "pass1": "UNCLEAR",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "paygent-connect",
+    "name": "Paygent Connect",
+    "field": "auth_methods",
+    "agent": "",
+    "gold": "api_key",
+    "pass1": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "paygent-connect",
+    "name": "Paygent Connect",
+    "field": "access",
+    "agent": "unknown",
+    "gold": "partner_or_contact_sales",
+    "pass1": "unknown",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "test",
+    "id": "paygent-connect",
+    "name": "Paygent Connect",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "name": "PitchBook",
+    "field": "auth_methods",
+    "agent": "",
+    "gold": "api_key",
+    "pass1": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "name": "PitchBook",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "name": "PitchBook",
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "gold": "none_found",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "plain",
+    "name": "Plain",
+    "field": "auth_methods",
+    "agent": "api_key",
+    "gold": "api_key|oauth2",
+    "pass1": "api_key",
+    "cause": "misread docs"
+   },
+   {
+    "split": "test",
+    "id": "sherlock",
+    "name": "Sherlock",
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "gold": "community",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "test",
+    "id": "supabase",
+    "name": "Supabase",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "broad",
+    "pass1": "unknown",
+    "cause": "JS-rendered or blocked page"
+   },
+   {
+    "split": "test",
+    "id": "telegram",
+    "name": "Telegram",
+    "field": "auth_methods",
+    "agent": "api_key|other",
+    "gold": "api_key",
+    "pass1": "bearer_token|other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2|other",
+    "gold": "api_key|oauth2",
+    "pass1": "api_key|oauth2|other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "gold": "self_serve_trial",
+    "pass1": "unknown",
+    "cause": "misread pricing/access gate"
+   },
+   {
+    "split": "dev",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "buildability.main_blocker",
+    "agent": "paid_plan_gate",
+    "gold": "none",
+    "pass1": "auth_complexity",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "buildability.verdict",
+    "agent": "BUILD_WITH_CAVEATS",
+    "gold": "BUILD_NOW",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "gold": "bearer_token|oauth2",
+    "pass1": "api_key|oauth2",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "gold": "self_serve_trial",
+    "pass1": "unknown",
+    "cause": "misread pricing/access gate"
+   },
+   {
+    "split": "dev",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "medium",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "dev",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "buildability.main_blocker",
+    "agent": "none",
+    "gold": "paid_plan_gate",
+    "pass1": "none",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "linkedin-ads",
+    "name": "LinkedIn Ads",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "gold": "broad",
+    "pass1": "unknown",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "dev",
+    "id": "mrscraper",
+    "name": "MrScraper",
+    "field": "auth_methods",
+    "agent": "api_key",
+    "gold": "api_key|bearer_token",
+    "pass1": "api_key",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "mrscraper",
+    "name": "MrScraper",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "gold": "none",
+    "pass1": "other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "mrscraper",
+    "name": "MrScraper",
+    "field": "buildability.verdict",
+    "agent": "BUILD_WITH_CAVEATS",
+    "gold": "BUILD_NOW",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "field": "auth_methods",
+    "agent": "oauth2",
+    "gold": "bearer_token|oauth2",
+    "pass1": "oauth2",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "field": "access",
+    "agent": "self_serve_free",
+    "gold": "self_serve_trial",
+    "pass1": "unknown",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "dev",
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "field": "mcp.exists",
+    "agent": "official",
+    "gold": "community",
+    "pass1": "unknown",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "field": "buildability.main_blocker",
+    "agent": "unstable_or_undocumented_api",
+    "gold": "enterprise_only",
+    "pass1": "unstable_or_undocumented_api",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "dev",
+    "id": "podio",
+    "name": "Podio",
+    "field": "mcp.exists",
+    "agent": "official",
+    "gold": "none_found",
+    "pass1": "official",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "quickbooks",
+    "name": "QuickBooks",
+    "field": "access",
+    "agent": "self_serve_free",
+    "gold": "app_review_required",
+    "pass1": "unknown",
+    "cause": "JS-rendered or blocked page"
+   },
+   {
+    "split": "dev",
+    "id": "quickbooks",
+    "name": "QuickBooks",
+    "field": "buildability.main_blocker",
+    "agent": "auth_complexity",
+    "gold": "app_review",
+    "pass1": "auth_complexity",
+    "cause": "JS-rendered or blocked page"
+   },
+   {
+    "split": "dev",
+    "id": "shopify",
+    "name": "Shopify",
+    "field": "auth_methods",
+    "agent": "oauth2|other",
+    "gold": "api_key|oauth2",
+    "pass1": "oauth2|other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "shopify",
+    "name": "Shopify",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "gold": "app_review",
+    "pass1": "other",
+    "cause": "misread docs"
+   },
+   {
+    "split": "dev",
+    "id": "twilio",
+    "name": "Twilio",
+    "field": "auth_methods",
+    "agent": "api_key|basic|oauth2",
+    "gold": "api_key|basic",
+    "pass1": "api_key|oauth2|other",
+    "cause": "misread docs"
+   }
+  ],
+  "fixed_by_loops": [
+   {
+    "split": "test",
+    "id": "amazon-selling-partner",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "fanbasis",
+    "field": "auth_methods",
+    "pass1": "bearer_token|other",
+    "final": "api_key"
+   },
+   {
+    "split": "test",
+    "id": "google-ads",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "lark-larksuite",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "admin_approval"
+   },
+   {
+    "split": "test",
+    "id": "lark-larksuite",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "linear",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "test",
+    "id": "linear",
+    "field": "mcp.exists",
+    "pass1": "unknown",
+    "final": "official"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "field": "auth_methods",
+    "pass1": "",
+    "final": "bearer_token|oauth2"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "app_review_required"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "field": "buildability.main_blocker",
+    "pass1": "other",
+    "final": "app_review"
+   },
+   {
+    "split": "test",
+    "id": "meta-ads",
+    "field": "buildability.verdict",
+    "pass1": "UNCLEAR",
+    "final": "BUILD_WITH_CAVEATS"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "narrow"
+   },
+   {
+    "split": "test",
+    "id": "otter-ai",
+    "field": "buildability.main_blocker",
+    "pass1": "ambiguous_product",
+    "final": "enterprise_only"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "partner_or_contact_sales"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "field": "buildability.main_blocker",
+    "pass1": "other",
+    "final": "enterprise_only"
+   },
+   {
+    "split": "test",
+    "id": "pitchbook",
+    "field": "buildability.verdict",
+    "pass1": "UNCLEAR",
+    "final": "BLOCKED_NEEDS_OUTREACH"
+   },
+   {
+    "split": "test",
+    "id": "plain",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_trial"
+   },
+   {
+    "split": "test",
+    "id": "plain",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "pylon",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "paid_plan_required"
+   },
+   {
+    "split": "test",
+    "id": "pylon",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "medium"
+   },
+   {
+    "split": "test",
+    "id": "pylon",
+    "field": "buildability.main_blocker",
+    "pass1": "none",
+    "final": "paid_plan_gate"
+   },
+   {
+    "split": "test",
+    "id": "pylon",
+    "field": "buildability.verdict",
+    "pass1": "BUILD_NOW",
+    "final": "BUILD_WITH_CAVEATS"
+   },
+   {
+    "split": "test",
+    "id": "sentry",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "test",
+    "id": "sentry",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "smartsheet",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "paid_plan_required"
+   },
+   {
+    "split": "test",
+    "id": "smartsheet",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "smartsheet",
+    "field": "buildability.main_blocker",
+    "pass1": "auth_complexity",
+    "final": "paid_plan_gate"
+   },
+   {
+    "split": "test",
+    "id": "supabase",
+    "field": "auth_methods",
+    "pass1": "bearer_token|oauth2",
+    "final": "api_key|bearer_token|oauth2"
+   },
+   {
+    "split": "test",
+    "id": "supabase",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "test",
+    "id": "supabase",
+    "field": "buildability.main_blocker",
+    "pass1": "other",
+    "final": "none"
+   },
+   {
+    "split": "test",
+    "id": "supabase",
+    "field": "buildability.verdict",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "final": "BUILD_NOW"
+   },
+   {
+    "split": "test",
+    "id": "telegram",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "test",
+    "id": "waterfall-io",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "partner_or_contact_sales"
+   },
+   {
+    "split": "test",
+    "id": "waterfall-io",
+    "field": "buildability.main_blocker",
+    "pass1": "other",
+    "final": "partner_gate"
+   },
+   {
+    "split": "test",
+    "id": "waterfall-io",
+    "field": "buildability.verdict",
+    "pass1": "UNCLEAR",
+    "final": "BLOCKED_NEEDS_OUTREACH"
+   },
+   {
+    "split": "dev",
+    "id": "datadog",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "dev",
+    "id": "help-scout",
+    "field": "buildability.verdict",
+    "pass1": "BUILD_NOW",
+    "final": "BUILD_WITH_CAVEATS"
+   },
+   {
+    "split": "dev",
+    "id": "linkedin-ads",
+    "field": "buildability.main_blocker",
+    "pass1": "partner_gate",
+    "final": "app_review"
+   },
+   {
+    "split": "dev",
+    "id": "linkedin-ads",
+    "field": "buildability.verdict",
+    "pass1": "BLOCKED_NEEDS_OUTREACH",
+    "final": "BUILD_WITH_CAVEATS"
+   },
+   {
+    "split": "dev",
+    "id": "mrscraper",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "medium"
+   },
+   {
+    "split": "dev",
+    "id": "mrscraper",
+    "field": "mcp.exists",
+    "pass1": "unknown",
+    "final": "official"
+   },
+   {
+    "split": "dev",
+    "id": "notion",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "dev",
+    "id": "notion",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "medium"
+   },
+   {
+    "split": "dev",
+    "id": "notion",
+    "field": "buildability.main_blocker",
+    "pass1": "other",
+    "final": "none"
+   },
+   {
+    "split": "dev",
+    "id": "notion",
+    "field": "buildability.verdict",
+    "pass1": "BUILD_WITH_CAVEATS",
+    "final": "BUILD_NOW"
+   },
+   {
+    "split": "dev",
+    "id": "podio",
+    "field": "access",
+    "pass1": "paid_plan_required",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "dev",
+    "id": "podio",
+    "field": "api_surface.breadth",
+    "pass1": "unknown",
+    "final": "broad"
+   },
+   {
+    "split": "dev",
+    "id": "shopify",
+    "field": "access",
+    "pass1": "unknown",
+    "final": "self_serve_free"
+   },
+   {
+    "split": "dev",
+    "id": "twilio",
+    "field": "access",
+    "pass1": "self_serve_free",
+    "final": "self_serve_trial"
+   }
+  ]
+ },
+ "human_vs_auditor": {
+  "n": 0,
+  "agree": 0
+ },
+ "evidence_support": {
+  "pass1": {
+   "items": 643,
+   "verified": 0,
+   "rate": 0.0
+  },
+  "L1": {
+   "items": 489,
+   "verified": 489,
+   "rate": 1.0
+  },
+  "L2": {
+   "items": 888,
+   "verified": 888,
+   "rate": 1.0
+  },
+  "L3": {
+   "items": 888,
+   "verified": 888,
+   "rate": 1.0
+  },
+  "L4": {
+   "items": 888,
+   "verified": 888,
+   "rate": 1.0
+  },
+  "final": {
+   "items": 932,
+   "verified": 932,
+   "rate": 1.0
+  }
+ },
+ "loop_stats": {
+  "L1": {
+   "exact": 641,
+   "fuzzy": 1,
+   "pending": 1,
+   "unfetchable": 0,
+   "entailed": 1,
+   "unsupported": 0,
+   "groups_reset": 20,
+   "claim_supports": 489,
+   "claim_irrelevant": 150,
+   "claim_contradicts": 4
+  },
+  "L2": {
+   "compared": 800,
+   "agree": 460,
+   "disagree": 340,
+   "adopted_l2": 287,
+   "missing_l2": 0
+  },
+  "L3": {
+   "records_with_violations": 51,
+   "by_rule": {
+    "r_mcp_official": 34,
+    "r_verdict_rubric": 13,
+    "r_docs_url": 12,
+    "r_oauth_has_endpoints": 1,
+    "r_breadth_vs_count": 1
+   }
+  },
+  "L4": {
+   "apps": 15,
+   "pages": 37,
+   "restored_evidence": 0,
+   "restored_groups": 0,
+   "cache_upgrades": 3,
+   "selected": [
+    "supabase",
+    "binance",
+    "gumroad",
+    "monday-com",
+    "pylon",
+    "quickbooks",
+    "twenty",
+    "xero",
+    "asana",
+    "gorgias",
+    "snowflake",
+    "cloudflare",
+    "freshdesk",
+    "ipayx",
+    "notion"
+   ],
+   "note": "First run upgraded 3 cached pages to rendered text and wrongly restored 38 quotes L1 had dropped as irrelevant; bug fixed (only not-on-page drops are restorable), rerun restores 0 because L1 found every quote verbatim."
+  },
+  "L5": {
+   "apps": 47,
+   "fields": 92,
+   "changed": 33,
+   "resolved": 66,
+   "unresolved": 26,
+   "evidence_rejected": 2,
+   "queue": 26
+  }
+ }
+}

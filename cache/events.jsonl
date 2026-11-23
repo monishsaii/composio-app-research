@@ -2675,3 +2675,45 @@
 {"t": "2026-11-23T16:35:20Z", "event": "browser", "url": "https://docs.twenty.com/developers/extend/oauth.md", "status": 200, "chars": 5516}
 {"t": "2026-11-23T16:35:28Z", "event": "browser", "url": "https://developer.xero.com/support", "status": 200, "chars": 2772}
 {"t": "2026-11-23T16:35:28Z", "event": "browser", "url": "https://developer.xero.com/support", "status": 200, "chars": 2772}
+{"t": "2026-11-23T16:36:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.supabase.com/guides/getting-started/mcp", "status": 200, "chars": 1610}
+{"t": "2026-11-23T16:36:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Binance official MCP server github binance", "n": 2}
+{"t": "2026-11-23T16:36:45Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:36:45Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks", "status": 400, "chars": 122}
+{"t": "2026-11-23T16:36:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Copper CRM MCP server official", "n": 1}
+{"t": "2026-11-23T16:36:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/search?q=pitchbook+mcp&type=repositories", "status": 200, "chars": 928}
+{"t": "2026-11-23T16:36:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk webhook automation rule trigger webhook", "n": 1}
+{"t": "2026-11-23T16:36:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "fanbasis API documentation", "n": 2}
+{"t": "2026-11-23T16:36:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.copper.com/mcp", "status": 200, "chars": 2863}
+{"t": "2026-11-23T16:36:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.freshdesk.com/support/solutions/articles/132589-using-webhooks-in-automation-rules", "status": 200, "chars": 16596}
+{"t": "2026-11-23T16:36:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "MrScraper MCP server", "n": 1}
+{"t": "2026-11-23T16:36:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mrscraper-com/mrscraper-mcp", "status": 200, "chars": 25806}
+{"t": "2026-11-23T16:36:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/trustxai/binance-mcp", "status": 200, "chars": 23440}
+{"t": "2026-11-23T16:36:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:36:53Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.zendesk.com/documentation/apps/app-developer-guide/mcp/", "status": 404, "chars": 716}
+{"t": "2026-11-23T16:36:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gladly official MCP server", "n": 1}
+{"t": "2026-11-23T16:36:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:36:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/FanBasis/fbnewapi", "status": 404, "chars": 1073}
+{"t": "2026-11-23T16:37:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://zoho.com/cliq/help/restapi/v3/introduction/", "status": 200, "chars": 5109}
+{"t": "2026-11-23T16:37:07Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:37:07Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md", "status": 404, "chars": 14}
+{"t": "2026-11-23T16:37:15Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:37:15Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.gorgias.com/docs/quickstart.md", "status": 404, "chars": 240}
+{"t": "2026-11-23T16:37:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WhatsApp Business Cloud API access token system user webhooks developers.facebook.com", "n": 2}
+{"t": "2026-11-23T16:37:15Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:37:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://commasdocs.com/", "status": 200, "chars": 33}
+{"t": "2026-11-23T16:37:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens", "status": 200, "chars": 10164}
+{"t": "2026-11-23T16:37:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/overview", "status": 200, "chars": 16916}
+{"t": "2026-11-23T16:37:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://registry.npmjs.org/@fanbasis/checkout-sdk", "status": 200, "chars": 42935}
+{"t": "2026-11-23T16:37:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:37:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.gorgias.com/docs/private-apps.md", "status": 404, "chars": 240}
+{"t": "2026-11-23T16:37:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md", "status": 200, "chars": 1363}
+{"t": "2026-11-23T16:37:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zendesk official MCP server remote", "n": 1}
+{"t": "2026-11-23T16:37:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://dataforseo.com/help-center/how-does-your-free-unlimited-trial-work", "status": 200, "chars": 1547}
+{"t": "2026-11-23T16:37:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Harvest time tracking official MCP server getharvest", "n": 1}
+{"t": "2026-11-23T16:37:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/fundamentals/api/get-started/keys/", "status": 200, "chars": 1712}
+{"t": "2026-11-23T16:37:54Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:37:54Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:38:39Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:38:39Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.ramp.com/mcp", "status": 401, "chars": 37}
+{"t": "2026-11-23T16:38:39Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.supabase.com/mcp", "status": 401, "chars": 38}
+{"t": "2026-11-23T16:38:40Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://transcriptapi.com/mcp", "status": 401, "chars": 301}

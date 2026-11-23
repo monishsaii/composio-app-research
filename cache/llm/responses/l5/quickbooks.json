@@ -1,0 +1,44 @@
+{
+ "fields": {
+  "sandbox_or_test_env": {
+   "value": true,
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "quote": "Sandbox supports http://localhost redirect URIs; production requires a public HTTPS callback for the initial authorization.",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Intuit repo documents sandbox environment setting and sandbox redirect URIs."
+  },
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "quote": "this is a local MCP server. It runs as a stdio subprocess on the developer's or partner's machine",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Published in the intuit GitHub org."
+  },
+  "mcp.url": {
+   "value": "https://github.com/intuit/quickbooks-online-mcp-server",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+     "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Official repo URL in intuit org."
+  }
+ },
+ "rationale": "Official local MCP and sandbox exist; OAuth app setup required."
+}

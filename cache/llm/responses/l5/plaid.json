@@ -1,0 +1,24 @@
+{
+ "fields": {
+  "access": {
+   "value": "app_review_required",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://plaid.com/docs/account/billing/",
+     "quote": "To view pricing, apply for Production access.",
+     "source_type": "official_docs"
+    },
+    {
+     "url": "https://plaid.com/docs/account/billing/",
+     "quote": "Free Trial plans are available to new Plaid teams (US/Canada only) created on or after April 15, 2026.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Sandbox is free self-serve, but production credentials require applying for Production access; EU/UK only Custom plans."
+  }
+ },
+ "access_notes": "Sandbox free via Dashboard signup; Production requires application and approval.",
+ "rationale": "Free sandbox, but production gated by application; fintech compliance review."
+}

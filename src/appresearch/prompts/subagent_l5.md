@@ -10,3 +10,6 @@ For EACH app id in your list:
 3. Write ONLY the JSON answer to `d:/Composio/cache/llm/responses/l5/<id>.json`.
 Never create accounts or try to bypass logins/paywalls. Do not edit other files.
 Finish with one line per id: `<id>: resolved X/Y fields`.
+
+Budget (strict): decide from the evidence already in the task whenever it is sufficient. At most 1 WebSearch and 3 page
+fetches per app (use `--show 8000`). Write each app's JSON as soon as it is decided. Write JSON with the Write tool.

@@ -1,0 +1,9 @@
+{"fields": {
+"auth_methods": {"value": ["oauth2"], "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://gumroad.com/api", "quote": "Gumroad's OAuth 2.0 API lets you see information about your products", "source_type": "official_docs"},
+  {"url": "https://gumroad.com/api", "quote": "To start using the API, you'll need to register your OAuth application.", "source_type": "official_docs"}],
+ "why": "Docs describe OAuth 2.0 only; access tokens (including self-generated ones) are sent as an access_token request parameter, not a distinct bearer scheme."}
+},
+"access_notes": "",
+"rationale": "Official docs describe an OAuth 2.0 API; access_token passed as a parameter. Client-credentials routes are for partner apps only."}

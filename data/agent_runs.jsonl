@@ -59,3 +59,9 @@
 {"stage":"l2","batch":20,"model":"sonnet","apps":["notebooklm","otter-ai","fathom","consensus","reducto","devin"],"tokens":108505,"tool_uses":28,"ms":299760}
 {"stage":"l2","batch":19,"model":"sonnet","apps":["ipayx","quickbooks","xero","brex","ramp","pitchbook"],"tokens":107736,"tool_uses":23,"ms":345695}
 {"stage":"l2","batch":17,"model":"sonnet","apps":["linear","jira","asana","monday-com","clickup","coda"],"tokens":95909,"tool_uses":28,"ms":377246}
+{"stage":"l5","batch":4,"model":"sonnet","apps":8,"tokens":62150,"tool_uses":7,"ms":39896}
+{"stage":"l5","batch":3,"model":"sonnet","apps":8,"tokens":52641,"tool_uses":8,"ms":44187}
+{"stage":"l5","batch":5,"model":"sonnet","apps":8,"tokens":56795,"tool_uses":9,"ms":48442}
+{"stage":"l5","batch":6,"model":"sonnet","apps":7,"tokens":62494,"tool_uses":15,"ms":81295}
+{"stage":"l5","batch":1,"model":"sonnet","apps":8,"tokens":69908,"tool_uses":22,"ms":108918}
+{"stage":"l5","batch":2,"model":"sonnet","apps":8,"tokens":66650,"tool_uses":27,"ms":112916}

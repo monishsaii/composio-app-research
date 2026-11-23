@@ -1,0 +1,14 @@
+{
+ "fields": {
+  "mcp.exists": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Search found only third-party servers; no vendor-published MCP verified."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Official MCP not verified.",
+ "needs_human_reason": "No official Zendesk MCP page fetched."
+}

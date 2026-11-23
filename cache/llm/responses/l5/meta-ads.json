@@ -1,0 +1,19 @@
+{
+ "fields": {
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://mcp.facebook.com/ads",
+     "quote": "MCP endpoints accept POST for JSON-RPC; GET is not supported.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Meta-domain endpoint mcp.facebook.com/ads responds as an MCP server; vendor-hosted."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Vendor-domain MCP endpoint responds with MCP JSON-RPC error."
+}

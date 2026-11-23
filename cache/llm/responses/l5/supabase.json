@@ -1,0 +1,44 @@
+{
+ "fields": {
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "The Management API is subject to our fair-use policy.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "PATs and OAuth self-serve, free plan exists; only fair-use rate limits."
+  },
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://supabase.com/docs/guides/getting-started/mcp",
+     "quote": "Connecting an LLM to your Supabase projects carries security risks.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Official Supabase docs document its hosted MCP server."
+  },
+  "mcp.url": {
+   "value": "https://mcp.supabase.com/mcp",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://supabase.com/docs/guides/getting-started/mcp",
+     "quote": "https://mcp.supabase.com/mcp",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Hosted MCP URL in official docs."
+  }
+ },
+ "rationale": "Self-serve tokens, free plan, official hosted MCP."
+}

@@ -1,0 +1,8 @@
+{"fields": {
+"buildability.main_blocker": {"value": "none", "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://developer.helpscout.com/mailbox-api/overview/authentication", "quote": "All credentials must be associated with an active, invited user in the Help Scout account", "source_type": "official_docs"}],
+ "why": "Free plan lacks API, but Standard/Plus have free trials and OAuth apps are self-created; a trial or paid seat is ordinary cost, not a hard gate."}
+},
+"access_notes": "",
+"rationale": "Self-created OAuth2 app on a trial or paid account; no approval or enterprise gate found. Free plan excludes API per support article (not re-fetched)."}

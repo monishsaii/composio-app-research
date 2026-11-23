@@ -1,0 +1,49 @@
+{
+ "fields": {
+  "auth_methods": {
+   "value": [
+    "bearer_token"
+   ],
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+     "quote": "use a [System User access token](#system-user-access-tokens).",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Direct developers use long-lived System User access tokens (Graph API bearer tokens)."
+  },
+  "api_surface.webhooks": {
+   "value": true,
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/overview",
+     "quote": "Webhooks are HTTP requests containing JSON payloads",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Official webhooks overview documents incoming message and status webhooks."
+  },
+  "buildability.main_blocker": {
+   "value": "other",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Meta docs mostly not fetchable; app review applies mainly to tech providers, direct developers can use test number."
+  },
+  "mcp.exists": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No evidence fetched."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Auth and webhooks confirmed from Meta docs; blocker and MCP unverified.",
+ "needs_human_reason": "Blocker (app review vs other) and MCP existence not verifiable from fetched pages."
+}

@@ -1,0 +1,18 @@
+{
+ "fields": {
+  "access": {
+   "value": "self_serve_free",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://docs.stripe.com/development/get-started",
+     "quote": "After you create a Stripe account, we generate two pairs of API keys for you",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Keys issued on account creation; sandbox works immediately."
+  }
+ },
+ "rationale": "Self-serve keys on signup."
+}

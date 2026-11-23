@@ -118,7 +118,7 @@ footer{padding:28px 0 60px;color:var(--ink-3);font-size:13px}
 </head>
 <body>
 <nav class="toc" aria-label="Sections"><div class="wrap">
-<a href="#patterns">Patterns</a><a href="#table">All 100 apps</a><a href="#agent">The agent</a><a href="#proof">Run it</a><a href="#verification">Verification</a><a href="#method">Method</a><a href="#data">Data</a>
+<a href="#patterns">Patterns</a><a href="#table">All 100 apps</a><a href="#agent">The agent</a><a href="#proof">Run it</a><a href="#verification">Verification</a><a href="#method">Method</a><a href="#machine">Data</a>
 </div></nav>
 <main>
 <header class="top wrap" id="top">
@@ -181,8 +181,8 @@ footer{padding:28px 0 60px;color:var(--ink-3);font-size:13px}
     <path d="M160,191H186" marker-end="url(#ar)"/><path d="M340,191H366" marker-end="url(#ar)"/><path d="M510,191H536" marker-end="url(#ar)"/><path d="M690,191H716" marker-end="url(#ar)"/><path d="M870,191H896" marker-end="url(#ar)"/>
   </svg><div class="note">Blue outline = LLM step (a Claude Code subagent). Everything else is deterministic Python.</div></div>
   <div class="grid2" style="margin-top:20px">
-    <div class="card"><h3>Models, tokens, time</h3><table class="mini" id="t-runs"></table><div class="note" id="runs-note"></div></div>
-    <div class="card"><h3>Tools and fallbacks</h3><table class="mini" id="t-tools"></table></div>
+    <div class="card"><h3>Models, tokens, time</h3><div class="scroll"><table class="mini" id="t-runs"></table></div><div class="note" id="runs-note"></div></div>
+    <div class="card"><h3>Tools and fallbacks</h3><div class="scroll"><table class="mini" id="t-tools"></table></div></div>
   </div>
   <div class="card" style="margin-top:20px"><h3>Automated vs human</h3><table class="mini" id="t-auto"></table></div>
 </div></section>
@@ -236,7 +236,7 @@ python -m appresearch research --app "Notion" --ingest-only</pre></div>
   <div class="card" style="margin-top:20px"><h3>Limitations</h3><ul id="lims"></ul></div>
 </div></section>
 
-<section id="data"><div class="wrap">
+<section id="machine"><div class="wrap">
   <h2>Machine-readable</h2>
   <p class="dl"><a href="findings.json" download>findings.json</a><a href="findings.csv" download>findings.csv</a><a href="human_check.csv" download>human_check.csv</a><a href="schema.json" download>schema.json</a><a href="llms.txt">llms.txt</a></p>
   <p class="sub">The same data is embedded in this page as <code>&lt;script type="application/json" id="data"&gt;</code>, with schema.org Dataset JSON-LD in the head.</p>
@@ -280,7 +280,7 @@ $('#tiles').innerHTML=tiles.map(t=>`<div class="tile"><div class="v">${esc(t[0])
 $('#meta').textContent=`Research date ${D.research_date}. Page built ${D.generated_at.slice(0,10)}. ${R.filter(r=>r.needs_human).length} records still flagged for a human.`;
 
 // ---------- findings
-$('#findings').innerHTML=(D.headlines||[]).map(h=>`<li>${h.html||esc(h.text)} ${h.filter?`<a href="#table" data-filter='${esc(JSON.stringify(h.filter))}'>See rows</a>`:''}</li>`).join('')||'<li class="muted">Headlines are generated after final.json exists.</li>';
+$('#findings').innerHTML=(D.headlines||[]).map(h=>`<li>${h.html||esc(h.text)} ${h.filter&&Object.keys(h.filter).length?`<a href="#table" data-filter='${esc(JSON.stringify(h.filter))}'>See rows</a>`:''}</li>`).join('')||'<li class="muted">Headlines are generated after final.json exists.</li>';
 document.querySelectorAll('[data-filter]').forEach(a=>a.addEventListener('click',()=>applyFilter(JSON.parse(a.dataset.filter))));
 
 // ---------- bars

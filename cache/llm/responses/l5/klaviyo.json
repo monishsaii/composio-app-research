@@ -1,0 +1,8 @@
+{"fields": {
+"sandbox_or_test_env": {"value": true, "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://developers.klaviyo.com/en/docs/create_a_test_account.md", "quote": "A test account is a regular Klaviyo account with a test label.", "source_type": "official_docs"}],
+ "why": "Klaviyo documents creating dedicated test accounts for development, though they are production-type accounts rather than an isolated sandbox."}
+},
+"access_notes": "",
+"rationale": "Official docs describe linked test accounts for experimentation; same environment as production, starting on free plan."}

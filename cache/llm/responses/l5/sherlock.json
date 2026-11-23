@@ -1,0 +1,40 @@
+{
+ "fields": {
+  "access": {
+   "value": "no_public_api",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://github.com/sherlock-project/sherlock",
+     "quote": "pip or uv may be used in place of pipx",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Local CLI installed via pipx/pip; no hosted API or credentials exist."
+  },
+  "buildability.main_blocker": {
+   "value": "cli_or_local_only",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://github.com/sherlock-project/sherlock",
+     "quote": "docker run -it --rm sherlock/sherlock",
+     "source_type": "official_repo"
+    }
+   ],
+   "why": "Only a local CLI/Docker image."
+  },
+  "mcp.exists": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No MCP evidence found in README; not searched further."
+  }
+ },
+ "access_notes": "No hosted API and no account or key for the CLI.",
+ "rationale": "Local OSS CLI with no hosted API.",
+ "needs_human_reason": "mcp.exists not verified."
+}

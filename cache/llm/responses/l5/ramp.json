@@ -1,0 +1,31 @@
+{
+ "fields": {
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+     "quote": "claude mcp add --transport http ramp https://mcp.ramp.com/mcp",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Hosted MCP on vendor domain documented in official docs."
+  },
+  "mcp.url": {
+   "value": "https://mcp.ramp.com/mcp",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+     "quote": "claude mcp add --transport http ramp https://mcp.ramp.com/mcp",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Endpoint from official docs."
+  }
+ },
+ "rationale": "Official hosted MCP at mcp.ramp.com."
+}

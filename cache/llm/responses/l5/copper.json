@@ -1,0 +1,2 @@
+{"fields":{"mcp.exists":{"value":"official","resolved":true,"confidence":"medium","evidence":[{"url":"https://www.copper.com/mcp","quote":"Copper is launching an official MCP server, built and hosted by Copper. The beta launches in November 2026.","source_type":"official_docs"}],"why":"Vendor page announces official hosted MCP in beta (early access/waitlist); not yet generally available."}},
+"rationale":"Vendor-built official MCP in beta by request; GA pending.","access_notes":""}

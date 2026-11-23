@@ -73,6 +73,21 @@ def run_loop(loop: str, backend: str | None = None, refetch: bool = True) -> boo
                 r2, _ = L3.check(r, web.fetch)
                 final.append(r2)
             out = final
+            queued = {}
+            for q in queue:
+                queued.setdefault(q["id"], []).append(q["field"])
+            for r in out:  # recompute from the FINAL state (pass-1 flags are stale by now)
+                why = []
+                if r["id"] in queued:
+                    why.append("unresolved after L5: " + ", ".join(queued[r["id"]]))
+                if r["access"] == "unknown":
+                    why.append("access unknown")
+                if r["buildability"]["verdict"] == "UNCLEAR":
+                    why.append("verdict UNCLEAR")
+                missing = [g for g in ("auth", "access") if (g == "auth" and r.get("auth_methods") or g == "access" and r["access"] != "unknown") and not (r.get("evidence") or {}).get(g)]
+                if missing:
+                    why.append("no evidence for: " + ", ".join(missing))
+                r["needs_human"], r["needs_human_reason"] = bool(why), "; ".join(why)
             L5.write_queue(queue, out)
             _stats("L5", {**s, "queue": len(queue)})
             research.save("final.json", out)

@@ -1,0 +1,16 @@
+{"fields": {
+"access": {"value": "admin_approval", "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://developer.gladly.com/rest/", "quote": "Gladly Administrators can set API permissions on an agent-by-agent basis.", "source_type": "official_docs"},
+  {"url": "https://developer.gladly.com/rest/", "quote": "To create and use an API token, your user must have the API User permission.", "source_type": "official_docs"}],
+ "why": "Tokens require an existing Gladly tenant where an administrator grants the API User permission; no self-serve signup or public pricing seen."},
+"buildability.main_blocker": {"value": "other", "resolved": true, "confidence": "low",
+ "evidence": [
+  {"url": "https://developer.gladly.com/rest/", "quote": "Your sandbox environment is accessible at https://{organization}.gladly.qa, where organization is your company name.", "source_type": "official_docs"}],
+ "why": "API is documented with a sandbox, but needs a customer tenant and admin grant; plan/price gating is not stated, so no listed blocker fits exactly."},
+"mcp.exists": {"value": "unknown", "resolved": false, "confidence": "low", "evidence": [],
+ "why": "Only a third-party StackOne MCP was seen; no official Gladly MCP verified."}
+},
+"access_notes": "Requires a Gladly customer account; an administrator grants API User permission, then user creates API token. Sandbox at {organization}.gladly.qa.",
+"rationale": "Documented REST API with Basic token auth and sandbox, but access requires being a Gladly customer with admin-granted permission.",
+"needs_human_reason": "mcp.exists not verified; pricing/plan gating not stated."}

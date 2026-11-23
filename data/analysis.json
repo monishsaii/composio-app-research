@@ -1,0 +1,2179 @@
+{
+ "generated_at": "2026-11-23T16:38:59Z",
+ "n": 100,
+ "verdicts": {
+  "BUILD_NOW": 35,
+  "BUILD_WITH_CAVEATS": 52,
+  "BLOCKED_NEEDS_OUTREACH": 7,
+  "BLOCKED_NO_PUBLIC_API": 0,
+  "NOT_APPLICABLE_NOT_A_SERVICE": 2,
+  "UNCLEAR": 4
+ },
+ "access": {
+  "self_serve_free": 45,
+  "self_serve_trial": 12,
+  "paid_plan_required": 18,
+  "admin_approval": 6,
+  "app_review_required": 11,
+  "partner_or_contact_sales": 4,
+  "no_public_api": 1,
+  "unknown": 3
+ },
+ "auth_single": {
+  "oauth2": 70,
+  "api_key": 48,
+  "bearer_token": 38,
+  "basic": 12,
+  "other": 11,
+  "jwt_service_account": 5,
+  "hmac_signature": 3,
+  "none": 2
+ },
+ "auth_combos": {
+  "api_key+oauth2": 17,
+  "bearer_token+oauth2": 17,
+  "oauth2": 13,
+  "api_key": 9,
+  "api_key+bearer_token+oauth2": 6,
+  "bearer_token": 5,
+  "api_key+bearer_token": 4,
+  "basic+oauth2": 3,
+  "api_key+other": 3,
+  "oauth2+other": 2,
+  "basic": 2,
+  "bearer_token+oauth2+other": 2
+ },
+ "blockers": {
+  "paid_plan_gate": 16,
+  "other": 14,
+  "app_review": 13,
+  "partner_gate": 4,
+  "enterprise_only": 3,
+  "ambiguous_product": 2,
+  "cli_or_local_only": 2,
+  "auth_complexity": 2,
+  "regulatory_or_pci": 1,
+  "unstable_or_undocumented_api": 1
+ },
+ "mcp": {
+  "official": 72,
+  "community": 15,
+  "none_found": 4,
+  "unknown": 9
+ },
+ "mcp_by_category": {
+  "crm": {
+   "official": 10
+  },
+  "support": {
+   "community": 1,
+   "official": 6,
+   "unknown": 3
+  },
+  "comms": {
+   "community": 3,
+   "official": 6,
+   "unknown": 1
+  },
+  "marketing": {
+   "community": 5,
+   "official": 3,
+   "none_found": 1,
+   "unknown": 1
+  },
+  "ecommerce": {
+   "official": 6,
+   "none_found": 1,
+   "unknown": 1,
+   "community": 2
+  },
+  "data": {
+   "official": 8,
+   "unknown": 1,
+   "none_found": 1
+  },
+  "dev": {
+   "official": 8,
+   "community": 2
+  },
+  "productivity": {
+   "official": 9,
+   "unknown": 1
+  },
+  "finance": {
+   "community": 1,
+   "official": 7,
+   "none_found": 1,
+   "unknown": 1
+  },
+  "ai": {
+   "official": 9,
+   "community": 1
+  }
+ },
+ "composio_existing": 80,
+ "self_serve": 57,
+ "gated": 40,
+ "known_access": 97,
+ "oauth": 70,
+ "category_access": {
+  "crm": {
+   "self_serve_free": 4,
+   "self_serve_trial": 1,
+   "paid_plan_required": 3,
+   "admin_approval": 1,
+   "app_review_required": 0,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 1
+  },
+  "support": {
+   "self_serve_free": 0,
+   "self_serve_trial": 5,
+   "paid_plan_required": 3,
+   "admin_approval": 1,
+   "app_review_required": 1,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 0
+  },
+  "comms": {
+   "self_serve_free": 6,
+   "self_serve_trial": 1,
+   "paid_plan_required": 0,
+   "admin_approval": 1,
+   "app_review_required": 1,
+   "partner_or_contact_sales": 1,
+   "no_public_api": 0,
+   "unknown": 0
+  },
+  "marketing": {
+   "self_serve_free": 3,
+   "self_serve_trial": 1,
+   "paid_plan_required": 1,
+   "admin_approval": 0,
+   "app_review_required": 5,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 0
+  },
+  "ecommerce": {
+   "self_serve_free": 3,
+   "self_serve_trial": 1,
+   "paid_plan_required": 2,
+   "admin_approval": 1,
+   "app_review_required": 2,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 1
+  },
+  "data": {
+   "self_serve_free": 4,
+   "self_serve_trial": 0,
+   "paid_plan_required": 4,
+   "admin_approval": 0,
+   "app_review_required": 0,
+   "partner_or_contact_sales": 1,
+   "no_public_api": 1,
+   "unknown": 0
+  },
+  "dev": {
+   "self_serve_free": 8,
+   "self_serve_trial": 1,
+   "paid_plan_required": 1,
+   "admin_approval": 0,
+   "app_review_required": 0,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 0
+  },
+  "productivity": {
+   "self_serve_free": 8,
+   "self_serve_trial": 1,
+   "paid_plan_required": 1,
+   "admin_approval": 0,
+   "app_review_required": 0,
+   "partner_or_contact_sales": 0,
+   "no_public_api": 0,
+   "unknown": 0
+  },
+  "finance": {
+   "self_serve_free": 4,
+   "self_serve_trial": 0,
+   "paid_plan_required": 1,
+   "admin_approval": 1,
+   "app_review_required": 2,
+   "partner_or_contact_sales": 1,
+   "no_public_api": 0,
+   "unknown": 1
+  },
+  "ai": {
+   "self_serve_free": 5,
+   "self_serve_trial": 1,
+   "paid_plan_required": 2,
+   "admin_approval": 1,
+   "app_review_required": 0,
+   "partner_or_contact_sales": 1,
+   "no_public_api": 0,
+   "unknown": 0
+  }
+ },
+ "category_verdict": {
+  "crm": {
+   "BUILD_NOW": 3,
+   "BUILD_WITH_CAVEATS": 6,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 1
+  },
+  "support": {
+   "BUILD_NOW": 4,
+   "BUILD_WITH_CAVEATS": 6,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 0
+  },
+  "comms": {
+   "BUILD_NOW": 5,
+   "BUILD_WITH_CAVEATS": 4,
+   "BLOCKED_NEEDS_OUTREACH": 1,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 0
+  },
+  "marketing": {
+   "BUILD_NOW": 3,
+   "BUILD_WITH_CAVEATS": 7,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 0
+  },
+  "ecommerce": {
+   "BUILD_NOW": 1,
+   "BUILD_WITH_CAVEATS": 7,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 2
+  },
+  "data": {
+   "BUILD_NOW": 3,
+   "BUILD_WITH_CAVEATS": 4,
+   "BLOCKED_NEEDS_OUTREACH": 2,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 1,
+   "UNCLEAR": 0
+  },
+  "dev": {
+   "BUILD_NOW": 6,
+   "BUILD_WITH_CAVEATS": 4,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 0
+  },
+  "productivity": {
+   "BUILD_NOW": 9,
+   "BUILD_WITH_CAVEATS": 1,
+   "BLOCKED_NEEDS_OUTREACH": 0,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 0
+  },
+  "finance": {
+   "BUILD_NOW": 1,
+   "BUILD_WITH_CAVEATS": 6,
+   "BLOCKED_NEEDS_OUTREACH": 2,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 0,
+   "UNCLEAR": 1
+  },
+  "ai": {
+   "BUILD_NOW": 0,
+   "BUILD_WITH_CAVEATS": 7,
+   "BLOCKED_NEEDS_OUTREACH": 2,
+   "BLOCKED_NO_PUBLIC_API": 0,
+   "NOT_APPLICABLE_NOT_A_SERVICE": 1,
+   "UNCLEAR": 0
+  }
+ },
+ "gating_by_category": {
+  "crm": {
+   "gated": 4,
+   "known": 9,
+   "pct": 44
+  },
+  "support": {
+   "gated": 5,
+   "known": 10,
+   "pct": 50
+  },
+  "comms": {
+   "gated": 3,
+   "known": 10,
+   "pct": 30
+  },
+  "marketing": {
+   "gated": 6,
+   "known": 10,
+   "pct": 60
+  },
+  "ecommerce": {
+   "gated": 5,
+   "known": 9,
+   "pct": 56
+  },
+  "data": {
+   "gated": 6,
+   "known": 10,
+   "pct": 60
+  },
+  "dev": {
+   "gated": 1,
+   "known": 10,
+   "pct": 10
+  },
+  "productivity": {
+   "gated": 1,
+   "known": 10,
+   "pct": 10
+  },
+  "finance": {
+   "gated": 5,
+   "known": 9,
+   "pct": 56
+  },
+  "ai": {
+   "gated": 4,
+   "known": 10,
+   "pct": 40
+  }
+ },
+ "regulated_vs_not": {
+  "regulated": {
+   "gated": 5,
+   "n": 9
+  },
+  "other": {
+   "gated": 35,
+   "n": 88
+  }
+ },
+ "easy_wins": [
+  {
+   "id": "liveagent",
+   "name": "LiveAgent",
+   "category": "Support & Helpdesk",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "unknown",
+   "notes": "Admin generates the v3 API key under Configuration > System > API, which is self-serve. Pages mention a free trial account for testing but do not state which plans include API access or any cost.",
+   "docs_url": "https://support.liveagent.com/567924-Documentation"
+  },
+  {
+   "id": "systeme-io",
+   "name": "systeme.io",
+   "category": "Marketing/Ads/Email/Social",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "official",
+   "notes": "Keys are generated by the account holder under Settings > MCP & API keys. A free plan exists (no credit card). No page states that API access is restricted to paid plans; the pricing page lists an 'API requests per minut",
+   "docs_url": "https://developer.systeme.io/reference/api"
+  },
+  {
+   "id": "vonage",
+   "name": "Vonage",
+   "category": "Comms & Messaging",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "official",
+   "notes": "Sign up at dashboard.vonage.com to get API key and secret immediately; free credit on signup, then pay-per-request. US A2P SMS needs 10DLC registration.",
+   "docs_url": "https://developer.vonage.com/en/documentation"
+  },
+  {
+   "id": "discord",
+   "name": "Discord",
+   "category": "Comms & Messaging",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": 73,
+   "composio": true,
+   "mcp": "community",
+   "notes": "Credentials are self-serve: a bot user is created in the Developer Portal and generates a bot token. Some OAuth2 scopes need approval from Discord. Cost is not stated on the fetched pages.",
+   "docs_url": "https://docs.discord.com/developers/reference.md"
+  },
+  {
+   "id": "airtable",
+   "name": "Airtable",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": 13,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Web API is available on all plan types with call limits: Free 1000 calls per workspace per month, Team 100,000, Business and Enterprise unlimited. Organization admins may need to allowlist a token for organization-owned ",
+   "docs_url": "https://airtable.com/developers/web/api"
+  },
+  {
+   "id": "bright-data",
+   "name": "Bright Data",
+   "category": "Data/SEO/Scraping",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": 12,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Self-serve signup with free tier of 5,000 credits/month, no card. API key is created in account settings by an admin. Scraper API pay-as-you-go $1.50 per 1,000 records as of Sept 2026; Scale plan $1.30 per 1,000 beyond i",
+   "docs_url": "https://docs.brightdata.com/api-reference/introduction"
+  },
+  {
+   "id": "firecrawl",
+   "name": "Firecrawl",
+   "category": "Data/SEO/Scraping",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": 10,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free plan: 1,000 credits/month, no card required, self-serve key. Paid: Hobby $19/mo monthly or $16/mo annual; Standard $99/$83; Growth $399/$333; Scale $749/$599. No wait or approval stated.",
+   "docs_url": "https://docs.firecrawl.dev/api-reference/"
+  },
+  {
+   "id": "apify",
+   "name": "Apify",
+   "category": "Data/SEO/Scraping",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Create a free Console account, then a personal API token on the Integrations page; the token is shown only once. Paid plans and pricing are not on the fetched pages.",
+   "docs_url": "https://docs.apify.com/api/v2"
+  },
+  {
+   "id": "asana",
+   "name": "Asana",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "PATs generated in developer console; API rate limits published for both Free and Paid domains, so API works on free plans. Service accounts are Enterprise-only.",
+   "docs_url": "https://developers.asana.com/reference/rest-api-reference.md"
+  },
+  {
+   "id": "attio",
+   "name": "Attio",
+   "category": "CRM & Sales",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free plan is $0 for up to 3 users; every new workspace gets a 14-day Pro trial. Pricing FAQ says every plan includes the MCP server. Workspace admin must authorize workspace-level tokens, which is ordinary install consen",
+   "docs_url": "https://docs.attio.com/rest-api/overview.md"
+  },
+  {
+   "id": "clickup",
+   "name": "ClickUp",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Rate limits apply to FreeForever plan (100/min), so API is available on free plans; Enterprise gets 10,000/min and user management API.",
+   "docs_url": "https://developer.clickup.com/docs/Getting%20Started"
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "API tokens created in dashboard on a free account; OAuth client creation needs admin-type role plus DNS verification for public clients. Client API limit 1200 req/5 min per token; some endpoints plan-gated by product.",
+   "docs_url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/"
+  },
+  {
+   "id": "coda",
+   "name": "Coda",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free of charge for all users in free and paid workspaces. Actions depend on the token owner's workspace role; createDoc requires a Doc Maker or Admin role.",
+   "docs_url": "https://coda.io/developers/apis/v1"
+  },
+  {
+   "id": "freshdesk",
+   "name": "Freshdesk",
+   "category": "Support & Helpdesk",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "community",
+   "notes": "API key is available to any agent in any account incl. trials (trial default limit 50 calls/min). Rate limit is plan based: Growth 100, Pro 400, Enterprise 700 per minute. No plan is stated to lack API access.",
+   "docs_url": "https://developer.freshdesk.com/api/"
+  },
+  {
+   "id": "github",
+   "name": "GitHub",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "community",
+   "notes": "Third-party listing: free with rate limits; GitHub subscription not required for API access. Official pricing page not in the pages.",
+   "docs_url": "https://docs.github.com/en/rest"
+  },
+  {
+   "id": "gorgias",
+   "name": "Gorgias",
+   "category": "Support & Helpdesk",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Pricing page: 'Start free trial No credit card required'; API rate limit 2 req/s listed on every plan. Distributable OAuth apps need partner-portal registration and tech partnership review; developer sandbox requires ema",
+   "docs_url": "https://developers.gorgias.com/reference"
+  },
+  {
+   "id": "gumroad",
+   "name": "Gumroad",
+   "category": "Ecommerce",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Applications and access tokens are created in any seller account's settings; no approval step or plan gate found. Gumroad charges per-sale fees, not API fees.",
+   "docs_url": "https://gumroad.com/api"
+  },
+  {
+   "id": "harvest",
+   "name": "Harvest",
+   "category": "Productivity/PM",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "unknown",
+   "notes": "Tokens and OAuth apps are created self-serve in Harvest ID. Harvest account needed; pricing page says free trial, no credit card, and the free plan is 1 seat. No plan gating of API found on the pricing page.",
+   "docs_url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/"
+  },
+  {
+   "id": "jira",
+   "name": "Jira",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Jira has a Free pricing tier; API tokens and 3LO apps are self-serve. Plan-level API gating not found. Rate limits are points-based per hour, enforced from 2 Mar 2026.",
+   "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/"
+  },
+  {
+   "id": "klaviyo",
+   "name": "Klaviyo",
+   "category": "Marketing/Ads/Email/Social",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "A free plan exists. Creating a private key needs an Owner, Admin or Manager role. A linked test account can be created (starts on the free plan). Marketplace listing requires OAuth. [sandbox_or_test_env: test account: a ",
+   "docs_url": "https://developers.klaviyo.com/en/docs/get_started"
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "API and webhook access is included on every plan including Free (pricing table). Rate limits: API key 2,500/hr, OAuth app 5,000/hr.",
+   "docs_url": "https://linear.app/developers/graphql"
+  },
+  {
+   "id": "mailchimp",
+   "name": "Mailchimp",
+   "category": "Marketing/Ads/Email/Social",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "none_found",
+   "notes": "API key and OAuth app registration are self-serve in a Mailchimp account; a Free plan exists. Whether specific features are plan-limited was not verified.",
+   "docs_url": "https://mailchimp.com/developer/marketing"
+  },
+  {
+   "id": "monday-com",
+   "name": "Monday.com",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "API is a free feature across all plans (daily call limit 200 on Free); viewers, guests (no key), student accounts cannot get tokens. Free developer account available for testing.",
+   "docs_url": "https://developer.monday.com/api-reference/reference"
+  },
+  {
+   "id": "netlify",
+   "name": "Netlify",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Tokens and OAuth apps are self-serve in user settings; a Free plan is offered. Rate limit 500 req/min for most requests, deploys 3/min and 100/day.",
+   "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "category": "Productivity/PM",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Quickstart needs only a Notion account and a PAT from the Developer portal; no plan tier required. Business/Enterprise admins may restrict PAT creation. [sandbox_or_test_env: Use a free personal workspace (no dedicated s",
+   "docs_url": "https://developers.notion.com/reference/intro"
+  },
+  {
+   "id": "plain",
+   "name": "Plain",
+   "category": "Support & Helpdesk",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Pricing page: 'Start today, no credit card required.' Paid plans Foundation $45-55 and Horizon $99 per user/month billed annually; no plan gate on API or machine users stated.",
+   "docs_url": "https://help.plain.com/article/developer"
+  },
+  {
+   "id": "podio",
+   "name": "Podio",
+   "category": "CRM & Sales",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free plan (up to 5 users) lists 1000 API calls per hour; higher limits need paid API add-ons (paid plans only). Some operations need Podio support approval per first pass.",
+   "docs_url": "https://developers.podio.com/doc"
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Internal integrations and tokens are self-created under Settings > Developer Settings. Free Developer plan ($0) exists; pricing page lists 'API & third-party integrations' under the Team plan, so free-plan API limits are",
+   "docs_url": "https://docs.sentry.io/api/"
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "category": "Finance/Fintech",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Keys are generated on account creation; sandbox keys work immediately. Live-mode money movement requires account activation (business verification). No per-call fee for API access.",
+   "docs_url": "https://docs.stripe.com/api"
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "PATs generated in account page; OAuth apps self-serve via building an integration. Free plan exists (2 active projects, paused after 1 week inactivity). Management API rate limited.",
+   "docs_url": "https://supabase.com/docs"
+  },
+  {
+   "id": "telegram",
+   "name": "Telegram",
+   "category": "Comms & Messaging",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "community",
+   "notes": "Overview page says both the Bot API and the client API are free of charge. Bot accounts need no extra phone number. Gateway API is paid at $0.01 per delivered code, with free testing.",
+   "docs_url": "https://core.telegram.org/api"
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "category": "Comms & Messaging",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free trial without credit card: 100 SMS, 75 voice minutes etc, expires after 30 days; trial messaging limited to verified numbers. Production is pay-as-you-go (US SMS $0.0083/segment); US A2P 10DLC registration requires ",
+   "docs_url": "https://www.twilio.com/docs"
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "category": "Dev/Infra/Data",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Access tokens are self-serve; a free Hobby plan exists. Some features are plan-gated (account webhooks are Pro/Enterprise). Rate limits apply per action.",
+   "docs_url": "https://vercel.com/docs/rest-api"
+  },
+  {
+   "id": "zoho-cliq",
+   "name": "Zoho Cliq",
+   "category": "Comms & Messaging",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "A Free Cliq plan exists (pricing page; paid Standard US$18/month up to 25 users, Professional US$2/user/month, Enterprise US$4/user/month). Apps are registered self-serve in the Zoho API console. No documented API plan g",
+   "docs_url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/"
+  },
+  {
+   "id": "zoho-crm",
+   "name": "Zoho CRM",
+   "category": "CRM & Sales",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Developer Console registration is open; API credit table includes a Free Edition (5000 credits/24h) and trial editions share paid-edition limits. Higher tiers get more credits. Per-region data center handling required.",
+   "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/"
+  }
+ ],
+ "composio_gap_build_now": [
+  {
+   "id": "liveagent",
+   "name": "LiveAgent",
+   "category": "Support & Helpdesk",
+   "access": "self_serve_trial",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "unknown",
+   "notes": "Admin generates the v3 API key under Configuration > System > API, which is self-serve. Pages mention a free trial account for testing but do not state which plans include API access or any cost.",
+   "docs_url": "https://support.liveagent.com/567924-Documentation"
+  },
+  {
+   "id": "systeme-io",
+   "name": "systeme.io",
+   "category": "Marketing/Ads/Email/Social",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "official",
+   "notes": "Keys are generated by the account holder under Settings > MCP & API keys. A free plan exists (no credit card). No page states that API access is restricted to paid plans; the pricing page lists an 'API requests per minut",
+   "docs_url": "https://developer.systeme.io/reference/api"
+  },
+  {
+   "id": "vonage",
+   "name": "Vonage",
+   "category": "Comms & Messaging",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": false,
+   "mcp": "official",
+   "notes": "Sign up at dashboard.vonage.com to get API key and secret immediately; free credit on signup, then pay-per-request. US A2P SMS needs 10DLC registration.",
+   "docs_url": "https://developer.vonage.com/en/documentation"
+  }
+ ],
+ "outreach": [
+  {
+   "id": "aircall",
+   "name": "Aircall",
+   "category": "Comms & Messaging",
+   "access": "partner_or_contact_sales",
+   "blocker": "partner_gate",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "community",
+   "notes": "Single-account use: any Aircall account admin can self-generate API keys (requires an existing Aircall account; plan/cost not stated). Multi-customer OAuth needs Technology Partner approval (~5 business days) before clie",
+   "docs_url": "https://developer.aircall.io/api-references/"
+  },
+  {
+   "id": "brex",
+   "name": "Brex",
+   "category": "Finance/Fintech",
+   "access": "admin_approval",
+   "blocker": "partner_gate",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Own account: account or card admin accepts the developer API agreement and creates a token. Third-party multi-tenant OAuth is partner-only.",
+   "docs_url": "https://developer.brex.com/"
+  },
+  {
+   "id": "clay",
+   "name": "Clay",
+   "category": "Data/SEO/Scraping",
+   "access": "paid_plan_required",
+   "blocker": "enterprise_only",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Pricing page lists Clay API access under the Enterprise plan (custom pricing, annual commitment); Growth lists HTTP API integrations (outbound) and webhooks. Developer docs do not state a plan gate; key creation is self-",
+   "docs_url": "https://developers.clay.com/index.md"
+  },
+  {
+   "id": "consensus",
+   "name": "Consensus",
+   "category": "AI/Research/Media",
+   "access": "admin_approval",
+   "blocker": "partner_gate",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "REST Search API is optional on Team and Enterprise plans 'available upon approval, rate limited' with pricing via consensus.app/home/api; Enterprise custom. MCP server with OAuth works with a free account (limited quotas",
+   "docs_url": "https://docs.consensus.app"
+  },
+  {
+   "id": "otter-ai",
+   "name": "Otter AI",
+   "category": "AI/Research/Media",
+   "access": "partner_or_contact_sales",
+   "blocker": "enterprise_only",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "community",
+   "notes": "Public API reportedly available to Enterprise workspaces only (Enterprise is contact sales). Official pricing lists the Otter MCP server as a feature of the free Basic plan. Official help articles were not fetchable.",
+   "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API-beta"
+  },
+  {
+   "id": "pitchbook",
+   "name": "PitchBook",
+   "category": "Finance/Fintech",
+   "access": "partner_or_contact_sales",
+   "blocker": "enterprise_only",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": null,
+   "composio": true,
+   "mcp": "unknown",
+   "notes": "Third-party guide: API/Direct Data priced by quote, separate from platform; no public key signup. Official pages unreadable (403).",
+   "docs_url": null
+  },
+  {
+   "id": "waterfall-io",
+   "name": "Waterfall.io",
+   "category": "Data/SEO/Scraping",
+   "access": "partner_or_contact_sales",
+   "blocker": "partner_gate",
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "tools": 23,
+   "composio": false,
+   "mcp": "none_found",
+   "notes": "Keys are not self-serve: docs say to contact the team for API access and pricing. No public rate card; pricing is quoted after a benchmark on your data. No free trial stated.",
+   "docs_url": "https://www.waterfall.io/"
+  }
+ ],
+ "changed_pass1_to_final": [
+  {
+   "id": "aircall",
+   "name": "Aircall",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "partner_or_contact_sales"
+    ],
+    "mcp": [
+     "unknown",
+     "community"
+    ]
+   }
+  },
+  {
+   "id": "airtable",
+   "name": "Airtable",
+   "changes": {
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "amazon-selling-partner",
+   "name": "Amazon Selling Partner",
+   "changes": {
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "asana",
+   "name": "Asana",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "paid_plan_gate",
+     "none"
+    ],
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "attio",
+   "name": "Attio",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "admin_approval",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "binance",
+   "name": "Binance",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "regulatory_or_pci"
+    ]
+   }
+  },
+  {
+   "id": "brex",
+   "name": "Brex",
+   "changes": {
+    "access": [
+     "partner_or_contact_sales",
+     "admin_approval"
+    ]
+   }
+  },
+  {
+   "id": "clay",
+   "name": "Clay",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "paid_plan_gate",
+     "enterprise_only"
+    ]
+   }
+  },
+  {
+   "id": "clickup",
+   "name": "ClickUp",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "paid_plan_gate",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "close",
+   "name": "Close",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "UNCLEAR"
+    ]
+   }
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "changes": {
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "consensus",
+   "name": "Consensus",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "admin_approval"
+    ],
+    "blocker": [
+     "ambiguous_product",
+     "partner_gate"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "copper",
+   "name": "Copper",
+   "changes": {
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "datadog",
+   "name": "Datadog",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "auth_complexity",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "dataforseo",
+   "name": "DataForSEO",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "devin",
+   "name": "Devin",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "other",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "discord",
+   "name": "Discord",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "ecwid",
+   "name": "Ecwid",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "app_review",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "fathom",
+   "name": "Fathom",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ]
+   }
+  },
+  {
+   "id": "freshdesk",
+   "name": "Freshdesk",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "front",
+   "name": "Front",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "github",
+   "name": "GitHub",
+   "changes": {
+    "mcp": [
+     "unknown",
+     "community"
+    ]
+   }
+  },
+  {
+   "id": "gladly",
+   "name": "Gladly",
+   "changes": {
+    "access": [
+     "unknown",
+     "admin_approval"
+    ]
+   }
+  },
+  {
+   "id": "gorgias",
+   "name": "Gorgias",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "gumroad",
+   "name": "Gumroad",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "harvest",
+   "name": "Harvest",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "help-scout",
+   "name": "Help Scout",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ]
+   }
+  },
+  {
+   "id": "higgsfield",
+   "name": "higgsfield",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "other",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "hubspot",
+   "name": "HubSpot",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "paid_plan_gate",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "intercom",
+   "name": "Intercom",
+   "changes": {
+    "access": [
+     "unknown",
+     "app_review_required"
+    ],
+    "blocker": [
+     "other",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "ipayx",
+   "name": "iPayX",
+   "changes": {
+    "verdict": [
+     "BLOCKED_NO_PUBLIC_API",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "partner_or_contact_sales",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "no_api",
+     "paid_plan_gate"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "jira",
+   "name": "Jira",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "klaviyo",
+   "name": "Klaviyo",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "lark-larksuite",
+   "name": "Lark (Larksuite)",
+   "changes": {
+    "access": [
+     "unknown",
+     "admin_approval"
+    ]
+   }
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "linkedin-ads",
+   "name": "LinkedIn Ads",
+   "changes": {
+    "verdict": [
+     "BLOCKED_NEEDS_OUTREACH",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "blocker": [
+     "partner_gate",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "liveagent",
+   "name": "LiveAgent",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ],
+    "mcp": [
+     "official",
+     "unknown"
+    ]
+   }
+  },
+  {
+   "id": "magento-adobe-commerce",
+   "name": "Magento (Adobe Commerce)",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "admin_approval"
+    ]
+   }
+  },
+  {
+   "id": "mailchimp",
+   "name": "Mailchimp",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
+    "mcp": [
+     "official",
+     "none_found"
+    ]
+   }
+  },
+  {
+   "id": "meta-ads",
+   "name": "Meta Ads",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "app_review_required"
+    ],
+    "blocker": [
+     "other",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "mongodb-atlas",
+   "name": "MongoDB Atlas",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "mrscraper",
+   "name": "MrScraper",
+   "changes": {
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "neo4j",
+   "name": "Neo4j",
+   "changes": {
+    "mcp": [
+     "official",
+     "community"
+    ]
+   }
+  },
+  {
+   "id": "netlify",
+   "name": "Netlify",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "notebooklm",
+   "name": "NotebookLM",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "otter-ai",
+   "name": "Otter AI",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "partner_or_contact_sales"
+    ],
+    "blocker": [
+     "ambiguous_product",
+     "enterprise_only"
+    ]
+   }
+  },
+  {
+   "id": "pipedrive",
+   "name": "Pipedrive",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "self_serve_free",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "none",
+     "paid_plan_gate"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "pitchbook",
+   "name": "PitchBook",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "partner_or_contact_sales"
+    ],
+    "blocker": [
+     "other",
+     "enterprise_only"
+    ]
+   }
+  },
+  {
+   "id": "plaid",
+   "name": "Plaid",
+   "changes": {
+    "access": [
+     "self_serve_free",
+     "app_review_required"
+    ],
+    "blocker": [
+     "other",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "plain",
+   "name": "Plain",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "podio",
+   "name": "Podio",
+   "changes": {
+    "access": [
+     "paid_plan_required",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "pumble",
+   "name": "Pumble",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "pylon",
+   "name": "Pylon",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "none",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "quickbooks",
+   "name": "QuickBooks",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "reducto",
+   "name": "Reducto",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "salesforce",
+   "name": "Salesforce",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "other",
+     "paid_plan_gate"
+    ],
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "salesforce-commerce-cloud",
+   "name": "Salesforce Commerce Cloud",
+   "changes": {
+    "mcp": [
+     "community",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "sendgrid",
+   "name": "SendGrid",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ],
+    "blocker": [
+     "other",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "shopify",
+   "name": "Shopify",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "slack",
+   "name": "Slack",
+   "changes": {
+    "blocker": [
+     "paid_plan_gate",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "smartsheet",
+   "name": "Smartsheet",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "auth_complexity",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "snowflake",
+   "name": "Snowflake",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "squarespace",
+   "name": "Squarespace",
+   "changes": {
+    "access": [
+     "paid_plan_required",
+     "app_review_required"
+    ],
+    "blocker": [
+     "paid_plan_gate",
+     "app_review"
+    ]
+   }
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "systeme-io",
+   "name": "systeme.io",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ]
+   }
+  },
+  {
+   "id": "twenty",
+   "name": "Twenty",
+   "changes": {
+    "access": [
+     "unknown",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "changes": {
+    "access": [
+     "self_serve_free",
+     "self_serve_trial"
+    ]
+   }
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "vonage",
+   "name": "Vonage",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "ambiguous_product",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "waterfall-io",
+   "name": "Waterfall.io",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BLOCKED_NEEDS_OUTREACH"
+    ],
+    "access": [
+     "unknown",
+     "partner_or_contact_sales"
+    ],
+    "blocker": [
+     "other",
+     "partner_gate"
+    ]
+   }
+  },
+  {
+   "id": "whatsapp-business",
+   "name": "WhatsApp Business",
+   "changes": {
+    "access": [
+     "self_serve_free",
+     "app_review_required"
+    ]
+   }
+  },
+  {
+   "id": "xero",
+   "name": "Xero",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "app_review"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
+    ]
+   }
+  },
+  {
+   "id": "youtube-transcript",
+   "name": "YouTube Transcript",
+   "changes": {
+    "verdict": [
+     "BUILD_NOW",
+     "BUILD_WITH_CAVEATS"
+    ]
+   }
+  },
+  {
+   "id": "zendesk",
+   "name": "Zendesk",
+   "changes": {
+    "access": [
+     "unknown",
+     "paid_plan_required"
+    ],
+    "blocker": [
+     "other",
+     "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "zoho-cliq",
+   "name": "Zoho Cliq",
+   "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  },
+  {
+   "id": "zoho-crm",
+   "name": "Zoho CRM",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_NOW"
+    ],
+    "access": [
+     "unknown",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ]
+   }
+  }
+ ],
+ "needs_human": [
+  "close",
+  "fanbasis",
+  "gladly",
+  "harvest",
+  "mermaid-cli",
+  "meta-ads",
+  "mrscraper",
+  "neo4j",
+  "notebooklm",
+  "paygent-connect",
+  "pitchbook",
+  "pumble",
+  "pylon",
+  "salesforce-commerce-cloud",
+  "sherlock",
+  "shopify",
+  "threads-meta",
+  "twenty",
+  "whatsapp-business",
+  "zendesk"
+ ],
+ "categories": {
+  "crm": "CRM & Sales",
+  "support": "Support & Helpdesk",
+  "comms": "Comms & Messaging",
+  "marketing": "Marketing/Ads/Email/Social",
+  "ecommerce": "Ecommerce",
+  "data": "Data/SEO/Scraping",
+  "dev": "Dev/Infra/Data",
+  "productivity": "Productivity/PM",
+  "finance": "Finance/Fintech",
+  "ai": "AI/Research/Media"
+ },
+ "pass1_unknown_access": 59,
+ "headlines": [
+  {
+   "text": "57 of 100 apps give a developer working API credentials free and self-serve (45 free, 12 via trial).",
+   "filter": {
+    "acc": "self_serve_free"
+   }
+  },
+  {
+   "text": "40 of 100 are gated. The most common gate is paid plan required (18 apps); only 4 require partner or sales contact.",
+   "filter": {
+    "acc": "paid_plan_required"
+   }
+  },
+  {
+   "text": "Auth is dominated by oauth2 (70 apps) and api_key (48); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.",
+   "filter": {
+    "auth": "oauth2"
+   }
+  },
+  {
+   "text": "72 of 100 vendors now publish an official MCP server; 15 more have only community servers.",
+   "filter": {}
+  },
+  {
+   "text": "35 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.",
+   "filter": {
+    "ver": "BUILD_NOW"
+   }
+  },
+  {
+   "text": "Finance apps: 5 of 9 gated vs 35 of 88 in other categories.",
+   "filter": {
+    "cat": "Finance/Fintech"
+   }
+  },
+  {
+   "text": "Verification changed the verdict for 34 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.",
+   "filter": {}
+  }
+ ],
+ "defeated": [
+  {
+   "id": "close",
+   "name": "Close",
+   "why": "unresolved after L5: access; access unknown; verdict UNCLEAR"
+  },
+  {
+   "id": "fanbasis",
+   "name": "fanbasis",
+   "why": "unresolved after L5: access, api_surface.webhooks, buildability.main_blocker, mcp.exists; verdict UNCLEAR"
+  },
+  {
+   "id": "paygent-connect",
+   "name": "Paygent Connect",
+   "why": "unresolved after L5: access, buildability.main_blocker; access unknown; verdict UNCLEAR"
+  },
+  {
+   "id": "salesforce-commerce-cloud",
+   "name": "Salesforce Commerce Cloud",
+   "why": "unresolved after L5: access, buildability.main_blocker; access unknown; verdict UNCLEAR"
+  }
+ ]
+}

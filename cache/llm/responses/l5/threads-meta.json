@@ -1,0 +1,13 @@
+{
+ "fields": {
+  "api_surface.webhooks": {
+   "value": true,
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Webhooks page fetch returned HTTP 400; no verified evidence either way."
+  }
+ },
+ "rationale": "Webhooks unverified.",
+ "needs_human_reason": "Meta docs page not fetchable; webhooks unverified."
+}

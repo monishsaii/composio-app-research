@@ -1,0 +1,32 @@
+{
+ "fields": {
+  "access": {
+   "value": "self_serve_free",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+     "quote": "maintains the API service as a free feature across all plans",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "API free across all plans; personal tokens self-serve."
+  },
+  "sandbox_or_test_env": {
+   "value": true,
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "quote": "For building and testing apps or API integrations without touching production data, use a free developer account.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Free developer account offered for testing."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Adopted L2; official docs verify free API and developer account."
+}

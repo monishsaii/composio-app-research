@@ -1,0 +1,20 @@
+{
+ "fields": {
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+     "quote": "The latest version, v3, is the recommended choice for all new workflows, automations, and integrations.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Documented REST API v3, self-serve OAuth app registration, free plan; no gate found."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Documented API, self-serve.",
+ "needs_human_reason": ""
+}

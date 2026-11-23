@@ -1,0 +1,8 @@
+{"fields": {
+"buildability.main_blocker": {"value": "none", "resolved": true, "confidence": "medium",
+ "evidence": [
+  {"url": "https://developers.gorgias.com/docs/5-submit-app-for-review.md", "quote": "Our tech partnership team will review your app to make sure it works properly and is aligned with our expectations.", "source_type": "official_docs"}],
+ "why": "Review applies only to publishing a public App Store listing; private apps use API key and trial accounts are self-serve, so credentials are not gated."}
+},
+"access_notes": "",
+"rationale": "App review is needed only to list a public app; API-key private apps on a free trial need no approval, so no blocker for integration."}

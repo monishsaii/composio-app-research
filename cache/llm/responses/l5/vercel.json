@@ -1,0 +1,20 @@
+{
+ "fields": {
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://vercel.com/docs/rest-api",
+     "quote": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Documented broad REST API with self-serve tokens and free Hobby plan; no gate found."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Public documented REST API, self-serve access.",
+ "needs_human_reason": ""
+}

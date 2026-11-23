@@ -1,0 +1,41 @@
+{
+ "fields": {
+  "auth_methods": {
+   "value": [
+    "oauth2"
+   ],
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://www.neo4j.com/docs/aura/api/authentication/",
+     "quote": "The Aura API uses OAuth 2.0 for API authentication.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Aura API is OAuth2 client credentials; Basic only used at token endpoint."
+  },
+  "sandbox_or_test_env": {
+   "value": true,
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://neo4j.com/docs/aura/api/overview/",
+     "quote": "AuraDB Free and AuraDB Professional trial accounts without a billing method attached, get a rate limit of 25 requests per minute.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "AuraDB Free and trial accounts can use the API."
+  },
+  "buildability.main_blocker": {
+   "value": "ambiguous_product",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [],
+   "why": "Drivers/Bolt/Query API vs Aura management API ambiguity; Aura API itself is self-serve."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Aura API OAuth2 client credentials; free tier available; product scope ambiguous."
+}

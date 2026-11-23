@@ -52,5 +52,14 @@
    "notion"
   ],
   "note": "First run upgraded 3 cached pages to rendered text and wrongly restored 38 quotes L1 had dropped as irrelevant; bug fixed (only not-on-page drops are restorable), rerun restores 0 because L1 found every quote verbatim."
+ },
+ "L5": {
+  "apps": 47,
+  "fields": 92,
+  "changed": 33,
+  "resolved": 66,
+  "unresolved": 26,
+  "evidence_rejected": 2,
+  "queue": 26
  }
 }

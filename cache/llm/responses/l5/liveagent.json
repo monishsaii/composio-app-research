@@ -1,0 +1,45 @@
+{
+ "fields": {
+  "access": {
+   "value": "self_serve_trial",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+     "quote": "Generate or manage your API v3 key here.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Admin self-generates v3 key in settings; trial account available for testing; plan requirements unstated."
+  },
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+     "quote": "Generate or manage your API v3 key here.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Self-serve API key, documented REST API; no gate evident."
+  },
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+     "quote": "LiveAgent exposes a built-in MCP server (Model Context Protocol) that lets you connect external AI tools",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Vendor support docs describe a built-in MCP server."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Self-serve admin-generated API key; official built-in MCP server; no blocker."
+}

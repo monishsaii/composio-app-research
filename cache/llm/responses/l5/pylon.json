@@ -1,0 +1,31 @@
+{
+ "fields": {
+  "sandbox_or_test_env": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No sandbox evidence found in fetched pages."
+  },
+  "buildability.main_blocker": {
+   "value": "paid_plan_gate",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://www.usepylon.com/pricing",
+     "quote": "REST API",
+     "source_type": "pricing_page"
+    },
+    {
+     "url": "https://www.usepylon.com/pricing",
+     "quote": "Webhooks",
+     "source_type": "pricing_page"
+    }
+   ],
+   "why": "REST API, MCP and Webhooks appear under Professional seat tier on pricing; trials via sales per earlier notes."
+  }
+ },
+ "rationale": "API usable with admin Bearer token but gated to paid Professional tier.",
+ "needs_human_reason": "Sandbox existence not verified."
+}

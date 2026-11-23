@@ -1,0 +1,29 @@
+{
+ "fields": {
+  "buildability.main_blocker": {
+   "value": "app_review",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Evidence lacks a verified quote; dev stores self-serve but some scopes and public apps need approval."
+  },
+  "auth_methods": {
+   "value": [
+    "oauth2",
+    "other"
+   ],
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+     "quote": "Your app sends the token in the X-Shopify-Access-Token header on every GraphQL Admin API request.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "OAuth-derived access token header; Storefront uses other tokens."
+  }
+ },
+ "rationale": "Self-serve dev access; approvals for protected data and public listing.",
+ "needs_human_reason": "main_blocker lacks verified evidence."
+}

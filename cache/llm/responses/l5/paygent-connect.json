@@ -1,0 +1,21 @@
+{
+ "fields": {
+  "access": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No Paygent Connect signup or credential docs found."
+  },
+  "buildability.main_blocker": {
+   "value": "ambiguous_product",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Product identity unclear (NMI-powered vs Japanese PSP)."
+  }
+ },
+ "access_notes": "",
+ "rationale": "No evidence found for this product.",
+ "needs_human_reason": "No Paygent Connect docs or signup located; product identity ambiguous."
+}

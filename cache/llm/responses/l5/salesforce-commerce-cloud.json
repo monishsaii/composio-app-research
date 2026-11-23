@@ -1,0 +1,20 @@
+{
+ "fields": {
+  "access": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Official docs return 403; only third-party repo says instance with OCAPI access needed."
+  },
+  "buildability.main_blocker": {
+   "value": "other",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "Requires licensed per-instance Commerce Cloud; gate type unverified."
+  }
+ },
+ "rationale": "Needs a licensed Commerce Cloud instance; official docs unreadable.",
+ "needs_human_reason": "Salesforce docs blocked with HTTP 403."
+}

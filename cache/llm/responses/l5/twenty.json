@@ -1,0 +1,42 @@
+{
+ "fields": {
+  "auth_methods": {
+   "value": [
+    "api_key",
+    "oauth2"
+   ],
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://docs.twenty.com/developers/extend/oauth.md",
+     "quote": "Twenty implements OAuth 2.0 with authorization code + PKCE for user-facing apps and client credentials for server-to-server access.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "hmac relates to webhook signing, not API auth; no evidence it is an auth method."
+  },
+  "sandbox_or_test_env": {
+   "value": "unknown",
+   "resolved": false,
+   "confidence": "low",
+   "evidence": [],
+   "why": "No verified sandbox evidence; trial and self-hosting exist but are not a documented sandbox."
+  },
+  "buildability.main_blocker": {
+   "value": "none",
+   "resolved": true,
+   "confidence": "medium",
+   "evidence": [
+    {
+     "url": "https://docs.twenty.com/developers/extend/oauth.md",
+     "quote": "Clients are registered dynamically via RFC 7591 \u2014 no manual setup in a dashboard.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "API not plan-gated, trial without card, self-hosting free, self-registering OAuth clients."
+  }
+ },
+ "rationale": "Open and self-serve.",
+ "needs_human_reason": "sandbox unverified."
+}

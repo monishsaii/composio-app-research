@@ -1,0 +1,7 @@
+{"fields": {
+"mcp.exists": {"value": "official", "resolved": false, "confidence": "medium", "evidence": [],
+ "why": "Search result snippet shows Harvest support article 'Harvest MCP' (endpoint api.harvestapp.com/mcp), but the page returned 403 so no verbatim quote could be fetched."}
+},
+"access_notes": "",
+"rationale": "Official Harvest MCP appears documented at support.getharvest.com but could not be fetched for verification.",
+"needs_human_reason": "Verify https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP (403 to fetcher)."}

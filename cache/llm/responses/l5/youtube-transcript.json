@@ -1,0 +1,33 @@
+{
+ "fields": {
+  "mcp.exists": {
+   "value": "official",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://transcriptapi.com/docs/mcp/",
+     "quote": "TranscriptAPI runs a hosted (remote) MCP server at https://transcriptapi.com/mcp.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "Vendor-hosted MCP on vendor domain."
+  },
+  "mcp.url": {
+   "value": "https://transcriptapi.com/mcp",
+   "resolved": true,
+   "confidence": "high",
+   "evidence": [
+    {
+     "url": "https://transcriptapi.com/docs/mcp/",
+     "quote": "TranscriptAPI runs a hosted (remote) MCP server at https://transcriptapi.com/mcp.",
+     "source_type": "official_docs"
+    }
+   ],
+   "why": "URL stated in vendor docs."
+  }
+ },
+ "access_notes": "",
+ "rationale": "Vendor-hosted MCP confirmed.",
+ "needs_human_reason": ""
+}
