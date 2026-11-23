@@ -1,0 +1,39 @@
+{
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "Email marketing platform with a Marketing API for audiences, contacts, segments, campaigns and e-commerce data.",
+  "docs_url": "https://mailchimp.com/developer/marketing",
+  "openapi_spec_url": null,
+  "auth_methods": ["api_key", "oauth2"],
+  "auth_notes": "Choose between an API key and an OAuth 2 access token. The key or token is attached to each request. OAuth 2 requires registering an app.",
+  "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+  "access": "unknown",
+  "access_notes": "Account creation and API key generation are self-serve per the docs index, but the docs say the plan level affects API access. Which plans include API access is not in the cached pages. Cost not stated.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": null},
+  "mcp": {"exists": "official", "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md"},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Self-serve API key or OAuth 2 and a documented REST Marketing API with webhooks. Plan level affects API access, and the plan tiers are not in the cached pages. The official MCP server only queries docs.", "est_tool_count_if_built": null, "est_effort": "M"},
+  "evidence": {
+    "identity": [
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Find all the Mailchimp API documentation and tools developers need to send marketing and transactional emails.", "source_type": "official_docs"}
+    ],
+    "auth": [
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Choose between an API key and an OAuth 2 access token, then attach it to a request.", "source_type": "official_docs"}
+    ],
+    "access": [
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Create a Mailchimp account and understand how your plan level affects API access.", "source_type": "official_docs"}
+    ],
+    "api_surface": [
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "How the Marketing API is organized—REST conventions and the root URL.", "source_type": "official_docs"},
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Connection limits, throttling, and the 120-second timeout on Marketing API calls.", "source_type": "official_docs"},
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Keep your data store in sync with your Mailchimp audience via webhooks.", "source_type": "official_docs"}
+    ],
+    "mcp": [
+      {"url": "https://mailchimp.com/developer/marketing/llms.txt", "quote": "Query these docs from an AI agent through the Model Context Protocol.", "source_type": "official_docs"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+  "needs_human": true,
+  "needs_human_reason": "Plan tiers that include API access are not in the cached pages. Also confirm whether any official MCP server can act on accounts; the cited page describes a docs-only server."
+}

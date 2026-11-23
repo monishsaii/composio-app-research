@@ -1,0 +1,22 @@
+{
+ "id": "whatsapp-business", "name": "WhatsApp Business", "category": "Comms & Messaging",
+ "one_liner": "Meta's WhatsApp messaging platform for businesses, billed per message through the Cloud API.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "Fetched pages do not describe authentication. Search snippets mention access tokens and system users, but these were not verified on a fetched page.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Platform access including the Cloud API is free with no subscription fee. Setup needs Meta Business verification and phone-number provisioning, which can take time. Each message template needs Meta approval. Usage is billed per message.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Platform access is free and self-serve, but needs Meta Business verification, phone number provisioning and per-template Meta approval. Endpoint documentation was not in the fetched pages.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://www.authgear.com/post/whatsapp-api-pricing", "quote": "Access to the WhatsApp Business Platform (including Meta’s Cloud API) is free.", "source_type": "third_party"}],
+  "access": [{"url": "https://www.authgear.com/post/whatsapp-api-pricing", "quote": "there is no subscription fee for the WhatsApp Business API.", "source_type": "third_party"}, {"url": "https://www.authgear.com/post/whatsapp-api-pricing", "quote": "Meta Business verification and phone-number provisioning take time and, occasionally, back-and-forth.", "source_type": "third_party"}],
+  "buildability": [{"url": "https://www.authgear.com/post/whatsapp-api-pricing", "quote": "Every template must be approved by Meta before use.", "source_type": "third_party"}]
+ },
+ "confidence": {"identity": "medium", "auth": "low", "access": "medium", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "Only one usable third-party pricing blog was fetched; the second page returned HTTP 403 and no official Meta docs were fetched. Auth, endpoints, webhooks, sandbox and MCP status are unverified, and the Cloud API vs BSP ambiguity is unresolved."
+}

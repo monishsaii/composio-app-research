@@ -1,0 +1,42 @@
+{
+  "id": "gohighlevel",
+  "name": "GoHighLevel",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "All-in-one CRM and marketing platform for agencies and businesses, with contacts, workflows, calendars and payments.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": ["oauth2", "other"],
+  "auth_notes": "Two supported methods: OAuth 2.0 for Marketplace or user-authorized apps, and Private Integration Tokens (PIT) for internal single-account integrations. Legacy API keys are being phased out.",
+  "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+  "access": "paid_plan_required",
+  "access_notes": "API access is included in Starter ($97/month), Unlimited ($297/month) and Founder ($497/month) plans. PITs are created in Settings with no review stated. Some endpoints, such as Create Sub-Account, need the Founder plan.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": null},
+  "mcp": {"exists": "community", "url": "https://github.com/hridayshah7/gohighlevel-mcp"},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "paid_plan_gate", "rationale": "Self-serve PIT or OAuth credentials on a paid plan, with a documented REST API and rate limits. Some endpoints need the Founder plan, and endpoint eligibility varies by plan.", "est_tool_count_if_built": null, "est_effort": "M"},
+  "evidence": {
+    "identity": [
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "HighLevel provides APIs that allow developers to build custom integrations, automate processes, and connect external applications with the HighLevel platform.", "source_type": "official_docs"}
+    ],
+    "auth": [
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "Private Integration Tokens allow developers to securely connect internal applications to HighLevel.", "source_type": "official_docs"},
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "OAuth 2.0 allows applications to request authorized access to HighLevel accounts.", "source_type": "official_docs"}
+    ],
+    "access": [
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "HighLevel provides API access across Starter ($97/month), Unlimited ($297/month), and Founder ($497/month) plans.", "source_type": "official_docs"}
+    ],
+    "api_surface": [
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "The APIs support contacts, conversations, calendars, workflows, payments, webhooks, and more.", "source_type": "official_docs"},
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "HighLevel applies rate limits to public API V2 requests using OAuth to maintain performance and stability.", "source_type": "official_docs"}
+    ],
+    "mcp": [
+      {"url": "https://github.com/hridayshah7/gohighlevel-mcp", "quote": "This is a BASE-LEVEL foundational project designed to connect the GoHighLevel community with AI automation through MCP (Model Context Protocol).", "source_type": "third_party"}
+    ],
+    "buildability": [
+      {"url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "quote": "The following endpoints are currently documented as requiring Founders plan access:", "source_type": "official_docs"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+  "needs_human": true,
+  "needs_human_reason": "Endpoint-level plan eligibility is not fully enumerated in the pages. Confirm which required endpoints a Starter or Unlimited plan can call."
+}

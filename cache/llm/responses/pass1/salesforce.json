@@ -1,0 +1,27 @@
+{
+  "id": "salesforce",
+  "name": "Salesforce",
+  "category": "CRM & Sales",
+  "one_liner": "unknown",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": ["oauth2", "other"],
+  "auth_notes": "Connected App with OAuth 2.0 Client Credentials Flow (client ID, client secret, instance URL) per third-party MCP README; README also lists username+password+security token, Salesforce CLI (sf) login, and a direct access token.",
+  "oauth_details": {"flows": ["client_credentials"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+  "access": "unknown",
+  "access_notes": "Credentials come from creating a Connected App in the org (per third-party MCP README). Edition gating, cost and wait time not confirmed: official Salesforce developer pages returned HTTP 403 when fetched.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["other"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+  "mcp": {"exists": "community", "url": "https://github.com/tsmztech/mcp-server-salesforce"},
+  "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "All official Salesforce docs fetched returned 403. Only a third-party MCP README confirms Connected App client-credentials auth and SOQL/SOSL/Apex coverage. Edition and licensing gating unverified.", "est_tool_count_if_built": null, "est_effort": "M"},
+  "evidence": {
+    "identity": [{"url": "https://github.com/tsmztech/mcp-server-salesforce", "quote": "An MCP (Model Context Protocol) server implementation that integrates Claude with Salesforce, enabling natural language interactions with your Salesforce data and metadata.", "source_type": "third_party"}],
+    "auth": [{"url": "https://github.com/tsmztech/mcp-server-salesforce", "quote": "Enable OAuth settings and select \"Client Credentials Flow\"", "source_type": "third_party"}],
+    "access": [{"url": "https://github.com/tsmztech/mcp-server-salesforce", "quote": "Create a Connected App in Salesforce", "source_type": "third_party"}],
+    "api_surface": [{"url": "https://github.com/tsmztech/mcp-server-salesforce", "quote": "Cross-Object Search: Search across multiple objects using SOSL", "source_type": "third_party"}],
+    "mcp": [{"url": "https://github.com/tsmztech/mcp-server-salesforce", "quote": "This server allows Claude to query, modify, and manage your Salesforce objects and records using everyday language.", "source_type": "third_party"}]
+  },
+  "confidence": {"identity": "medium", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "low"},
+  "needs_human": true,
+  "needs_human_reason": "Official Salesforce developer docs returned HTTP 403 during fetch. Edition/licensing gating, official MCP status and the one-liner are unverified from fetched pages."
+}

@@ -3,6 +3,7 @@ cache/fetch/
 cache/search/
 cache/browser/
 cache/llm/tasks/
+cache/composio_toolkits_raw.json
 __pycache__/
 *.egg-info/
 .pytest_cache/

@@ -1,0 +1,15 @@
+{"stage":"pass1","batch":1,"model":"haiku","apps":["podio","zoho-crm","close","copper","dealcloud"],"tokens":124497,"tool_uses":38,"ms":179296}
+{"stage":"pass1","batch":7,"model":"haiku","apps":["klaviyo","systeme-io","pinterest","threads-meta","sendgrid"],"tokens":113560,"tool_uses":40,"ms":207113}
+{"stage":"pass1","batch":6,"model":"haiku","apps":["google-ads","meta-ads","linkedin-ads","gohighlevel","mailchimp"],"tokens":137719,"tool_uses":36,"ms":210788}
+{"stage":"pass1","batch":3,"model":"haiku","apps":["liveagent","plain","help-scout","gorgias","gladly"],"tokens":125991,"tool_uses":39,"ms":211574}
+{"stage":"pass1","batch":4,"model":"haiku","apps":["slack","twilio","zoho-cliq","lark-larksuite","pumble"],"tokens":143357,"tool_uses":40,"ms":227875}
+{"stage":"pass1","batch":2,"model":"haiku","apps":["zendesk","intercom","freshdesk","front","pylon"],"tokens":135669,"tool_uses":41,"ms":230448}
+{"stage":"pass1","batch":5,"model":"haiku","apps":["discord","telegram","whatsapp-business","aircall","vonage"],"tokens":138458,"tool_uses":41,"ms":238595}
+{"stage":"pass1","batch":0,"model":"haiku","apps":["salesforce","hubspot","pipedrive","attio","twenty"],"tokens":149092,"tool_uses":44,"ms":250584}
+{"stage":"pass1","batch":13,"model":"haiku","apps":["neo4j","snowflake"],"tokens":81592,"tool_uses":26,"ms":127515,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":11,"model":"haiku","apps":["firecrawl","bright-data","sherlock"],"tokens":115218,"tool_uses":26,"ms":141348,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":8,"model":"haiku","apps":["shopify","woocommerce","bigcommerce","salesforce-commerce-cloud"],"tokens":125040,"tool_uses":32,"ms":184258,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":12,"model":"haiku","apps":["github","vercel","netlify"],"tokens":120602,"tool_uses":31,"ms":143323,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":14,"model":"haiku","apps":["notion","airtable"],"tokens":83625,"tool_uses":23,"ms":119443,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":9,"model":"haiku","apps":["squarespace","ecwid","gumroad","amazon-selling-partner"],"tokens":115037,"tool_uses":37,"ms":168918,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":15,"model":"haiku","apps":["monday-com","clickup"],"tokens":79892,"tool_uses":25,"ms":139689,"note":"websearch turn budget exhausted"}

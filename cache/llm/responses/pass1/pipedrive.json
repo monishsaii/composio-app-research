@@ -1,0 +1,27 @@
+{
+  "id": "pipedrive",
+  "name": "Pipedrive",
+  "category": "CRM & Sales",
+  "one_liner": "CRM platform offering a RESTful API, Marketplace apps and a Developer Platform.",
+  "docs_url": "https://developers.pipedrive.com/docs/api",
+  "openapi_spec_url": null,
+  "auth_methods": ["api_key", "oauth2"],
+  "auth_notes": "Personal API token obtained from the Pipedrive app, or an OAuth 2.0 access token for apps. Pages do not state the OAuth flow type or token lifetime.",
+  "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+  "access": "self_serve_free",
+  "access_notes": "Every Pipedrive plan includes an API token for free, per Pipedrive pages. Sandbox requires a separate account request. Plan prices not on fetched pages.",
+  "sandbox_or_test_env": true,
+  "api_surface": {"style": ["rest"], "breadth": "broad", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["nodejs", "php"]},
+  "mcp": {"exists": "unknown", "url": null},
+  "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Free API token on every plan, documented RESTful v1 API with OAuth 2.0 for apps, and a sandbox option. No app review or paid-tier gate is stated on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "L"},
+  "evidence": {
+    "identity": [{"url": "https://www.pipedrive.com/en/features/api", "quote": "Our open API (or Application Programming Interface) and Developer Platform give you the opportunity to integrate and optimize the tools you need", "source_type": "official_docs"}],
+    "auth": [{"url": "https://www.pipedrive.com/en/features/api", "quote": "Access to the Pipedrive API is only possible using the API key or an access token when using OAuth 2.0.", "source_type": "official_docs"}],
+    "access": [{"url": "https://www.pipedrive.com/en/features/api", "quote": "Every Pipedrive plan comes with an API token that gives you access to our RESTful API for free.", "source_type": "official_docs"}],
+    "sandbox": [{"url": "https://developers.pipedrive.com/docs/api", "quote": "To test your applications, we recommend creating a new, separate Pipedrive account for sandboxing purposes.", "source_type": "official_docs"}],
+    "api_surface": [{"url": "https://www.pipedrive.com/en/features/api", "quote": "Within our powerful and flexible API is our extensive API Reference with hundreds of endpoints.", "source_type": "official_docs"}]
+  },
+  "confidence": {"identity": "medium", "auth": "high", "access": "high", "sandbox": "high", "api_surface": "high", "mcp": "low", "buildability": "medium"},
+  "needs_human": false,
+  "needs_human_reason": "Official MCP server status is not verifiable from the fetched pages (the PyPI page did not render). Search results mention one, but it is unconfirmed."
+}

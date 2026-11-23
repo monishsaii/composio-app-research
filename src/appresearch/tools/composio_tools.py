@@ -129,31 +129,9 @@ def search(query: str, n: int = 8, allow_missing: bool = False) -> list[dict]:
     if results:
         record_search(query, results, via="fallback:duckduckgo_html")
         return results
-    if os.environ.get("ANTHROPIC_API_KEY") and os.environ.get("LLM_BACKEND") == "anthropic":
-        results = _anthropic_web_search(query, n)  # CI path; untested locally (no key, $0 budget)
-        if results:
-            record_search(query, results, via="fallback:anthropic_web_search")
-            return results
     if allow_missing:
         return []
     raise SearchNotRecorded(query)
-
-
-def _anthropic_web_search(query: str, n: int) -> list[dict]:
-    import anthropic
-
-    msg = anthropic.Anthropic().messages.create(
-        model="claude-haiku-5-5", max_tokens=1024,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 1}],
-        messages=[{"role": "user", "content": f"Search the web for: {query}"}])
-    out = []
-    for block in msg.content:
-        if getattr(block, "type", "") == "web_search_tool_result":
-            for r in getattr(block, "content", []) or []:
-                url = getattr(r, "url", None)
-                if url:
-                    out.append({"url": url, "title": getattr(r, "title", ""), "snippet": ""})
-    return out[:n]
 
 
 def fetch(url: str, force: bool = False) -> dict:
@@ -162,6 +140,8 @@ def fetch(url: str, force: bool = False) -> dict:
     hit = None if force else cache.get("fetch", k)
     if hit is not None:
         return hit
+    if os.environ.get("APPRESEARCH_OFFLINE"):
+        raise RuntimeError(f"offline replay attempted a network fetch: {url}")
     rec = None
     # Direct fetch first gives us HTTP status (needed by L3); Composio fetch for JS/blocked pages.
     direct = http_fetch.fetch(url)

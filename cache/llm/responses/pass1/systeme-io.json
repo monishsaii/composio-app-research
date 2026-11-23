@@ -1,0 +1,28 @@
+{
+ "id": "systeme-io",
+ "name": "systeme.io",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "All-in-one marketing platform for email, funnels, courses, and sales, with a public REST API and MCP server.",
+ "docs_url": "https://developer.systeme.io/reference/api",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Public API key sent in the X-API-Key header. Up to 3 API keys per account. A separate MCP key is used for the MCP server. OAuth is planned but not released.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Keys are generated in the dashboard profile settings under Public API keys. The pages do not state which plan tiers include API access or any cost.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://developer.systeme.io/docs/mcp-server"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Documented public REST API with API key auth and self-serve key creation. Plan tier that includes API access is not stated in the pages, so confidence is medium.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://developer.systeme.io/reference/api", "quote": "allowing you to manage contacts, tags, and a variety of other operations integral to our platform.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://developer.systeme.io/reference/api", "quote": "your only option right now is to attach your API key to the X-API-Key header of each request.", "source_type": "official_docs"}, {"url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp", "quote": "This is an initial release implementation and does not yet support the recommended authentication method (OAuth).", "source_type": "official_docs"}],
+  "access": [{"url": "https://developer.systeme.io/reference/api", "quote": "Simply navigate to the profile settings within your Systeme.io dashboard", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developer.systeme.io/reference/api", "quote": "Adhering to RESTful conventions, our API ensures an intuitive and consistent interaction pattern for all users.", "source_type": "official_docs"}, {"url": "https://developer.systeme.io/reference/api", "quote": "Our API employs a cursor-based pagination system for efficiently navigating through large collections of resources.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp", "quote": "For technical details, please refer to our official MCP documentation: https://developer.systeme.io/docs/mcp-server", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api", "quote": "Contacts: Create new contacts, update existing ones, list your audience with advanced filters, or delete contacts.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "high", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "The plan tier that includes public API access and the API cost are not stated in the cached pages."
+}

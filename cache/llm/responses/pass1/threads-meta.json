@@ -1,0 +1,28 @@
+{
+ "id": "threads-meta",
+ "name": "Threads (Meta)",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Meta's Threads social platform API for publishing posts, replies, insights, and keyword search.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth 2.0 authorization code flow. Short-lived token (1 hour) is exchanged for a 60-day long-lived token that can be refreshed. Scopes are granular, for example threads_basic and threads_content_publish.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "app_review_required",
+ "access_notes": "Free. A Meta app plus your own Threads account as a tester works the same day for your own account. Accessing other people's accounts in production needs Meta's App Review.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "community", "url": "https://github.com/tttn13/threads-mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "app_review", "rationale": "Free OAuth 2.0 API, testable on your own account. Serving other users in production requires App Review per permission, which the pages describe as needing a screencast. Official Meta docs were not fetched.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://thraads.com/api/", "quote": "The Threads API is Meta's official, free REST API for Threads.", "source_type": "third_party"}],
+  "auth": [{"url": "https://thraads.com/api/", "quote": "Users authorize your app, you swap the code for a short-lived token (1 hour)", "source_type": "third_party"}],
+  "access": [{"url": "https://thraads.com/api/", "quote": "You can build and test against your own account the same day. Accessing other people's accounts in production needs Meta's App Review.", "source_type": "third_party"}],
+  "api_surface": [{"url": "https://thraads.com/api/", "quote": "served from graph.threads.net (also graph.threads.com) at version v1.0, and secured with OAuth 2.0", "source_type": "third_party"}, {"url": "https://thraads.com/api/", "quote": "250API-published posts per profile per 24 hours", "source_type": "third_party"}],
+  "mcp": [{"url": "https://github.com/tttn13/threads-mcp", "quote": "This project is a TypeScript-based Node MCP (Model Context Protocol) Server that would create post to Threads", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://thraads.com/api/", "quote": "Accessing other people's accounts in production needs Meta's App Review.", "source_type": "third_party"}]
+ },
+ "confidence": {"identity": "medium", "auth": "medium", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "The cached pages are a third-party guide and a community repo. The official Meta developer docs were not fetched, so the canonical docs URL, rate limits, and App Review timing are unverified."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "meta-ads",
+  "name": "Meta Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "unknown",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": null,
+  "auth_notes": "unknown",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "unknown",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": null, "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": null},
+  "mcp": {"exists": "unknown", "url": null},
+  "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Cached pages were unusable: one returned HTTP 410 and the other was a JavaScript-only PyPI shell. No quotable evidence on access, auth, or API surface.", "est_tool_count_if_built": null, "est_effort": null},
+  "evidence": {},
+  "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "low"},
+  "needs_human": true,
+  "needs_human_reason": "Pass-1 cached pages contained no usable text (410 and JS-only shell); the search results were not fetched. Re-run research with a fetchable set of pages."
+}

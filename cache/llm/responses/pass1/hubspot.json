@@ -1,0 +1,28 @@
+{
+  "id": "hubspot",
+  "name": "HubSpot",
+  "category": "CRM & Sales",
+  "one_liner": "Developer platform for building custom CRM and data-driven website experiences on HubSpot.",
+  "docs_url": "https://developers.hubspot.com/docs/guides/api/overview",
+  "openapi_spec_url": null,
+  "auth_methods": ["oauth2", "bearer_token"],
+  "auth_notes": "OAuth 2.0 access tokens for public/marketplace apps, or private app access tokens for single-account use; both sent as a Bearer token in the Authorization header. Auth page covers legacy public apps; new Developer Platform auth is a separate article not fetched.",
+  "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+  "access": "unknown",
+  "access_notes": "OAuth apps need a HubSpot app created in the developer account; private app tokens are created within an account. The remote MCP server requires the new Developer Platform. Plan requirement and cost not stated on fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+  "mcp": {"exists": "official", "url": "https://developers.hubspot.com/mcp"},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "paid_plan_gate", "rationale": "Documented REST API with OAuth and private app tokens. Some OAuth scopes are tiered, so free accounts may not get all scopes. Marketplace or multi-customer apps must use OAuth. Plan and pricing not stated on fetched pages.", "est_tool_count_if_built": null, "est_effort": "L"},
+  "evidence": {
+    "identity": [{"url": "https://developers.hubspot.com/docs/index.md", "quote": "Build custom CRM and data-driven website experiences on HubSpot.", "source_type": "official_docs"}],
+    "auth": [{"url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth.md", "quote": "Integrations designed for multi-customer use or listing on the HubSpot Marketplace must be built as an app using HubSpot’s OAuth protocol", "source_type": "official_docs"}],
+    "access": [{"url": "https://developers.hubspot.com/mcp", "quote": "To use the HubSpot MCP Server, you must be on the new HubSpot Developer Platform.", "source_type": "official_docs"}],
+    "api_surface": [{"url": "https://developers.hubspot.com/docs/guides/api/overview", "quote": "All endpoints in this section follow the pattern: https://api.hubapi.com/.", "source_type": "official_docs"}],
+    "mcp": [{"url": "https://developers.hubspot.com/mcp", "quote": "The HubSpot MCP server enables you to give any MCP-compatible AI tool or agent secure read and write access", "source_type": "official_docs"}],
+    "buildability": [{"url": "https://developers.hubspot.com/docs/api/working-with-oauth", "quote": "This way, customers using HubSpot free accounts can still authorize your app, even if they can’t access all of its scopes.", "source_type": "official_docs"}]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+  "needs_human": true,
+  "needs_human_reason": "Plan requirement for API access, sandbox availability, endpoint count and rate limits are not stated on the fetched pages. The new Developer Platform auth article was not fetched."
+}

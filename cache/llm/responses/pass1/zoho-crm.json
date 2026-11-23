@@ -1,0 +1,22 @@
+{
+ "id": "zoho-crm", "name": "Zoho CRM", "category": "CRM & Sales",
+ "one_liner": "Zoho CRM is a customer relationship management product with APIs and built-in MCP servers.",
+ "docs_url": null, "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth 2.0 only, per the fetched OAuth overview. Access tokens are valid for one hour. Refresh tokens last until the end user revokes them.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Client ID and secret come from a connected application in the developer console. Cached pages do not state plan requirements, cost, or approval steps. The pricing and help pages failed to fetch.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html"},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "OAuth 2.0 connected-app credentials and official MCP servers are documented. Fetched pages do not confirm plan access, endpoint coverage, or rate limits, and 3 of 5 pages failed to fetch.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+   "identity": [{"url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "quote": "The Zoho CRM resources, such as Leads, Contacts, Deals, etc.", "source_type": "official_docs"}],
+   "auth": [{"url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication.", "source_type": "official_docs"}],
+   "mcp": [{"url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "quote": "Zoho CRM groups its MCP capabilities into four pre-built servers.", "source_type": "official_docs"}],
+   "buildability": [{"url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "quote": "These requests are subject to the existing API credit limits.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "medium", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "high", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "Only 2 of 5 cached pages fetched. REST endpoint docs, plan access, rate limits, webhooks, and sandbox are not verified. Check zoho.com/crm/developer before deciding."
+}

@@ -1,0 +1,24 @@
+{
+ "id": "dealcloud", "name": "DealCloud", "category": "CRM & Sales",
+ "one_liner": "DealCloud is a data platform for teams, with REST APIs and a Model Context Protocol server.",
+ "docs_url": "https://api.docs.dealcloud.com/docs", "openapi_spec_url": "https://{host}/swagger/current",
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "API key from the user profile is exchanged with client_id and scopes at /api/rest/v1/oauth/token for a bearer token. Tokens expire after 900 seconds. The user needs API permission in their user group.",
+ "oauth_details": {"flows": ["client_credentials"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "admin_approval",
+ "access_notes": "The API must be enabled for the user's group by a site admin (Admin > User Management). Customers without the Admin section go through their admin or DealCloud CSM. API pricing is not stated. MCP requires the Celeste license.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://api.docs.dealcloud.com/mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Documented OAuth2 client-credentials REST API, but each customer site must enable API access per user group through its admin. Pricing for API access and endpoint counts are not on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+   "identity": [{"url": "https://api.docs.dealcloud.com/docs", "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints.", "source_type": "official_docs"}],
+   "auth": [{"url": "https://api.docs.dealcloud.com/docs/token", "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token, which is then used in the HTTP Authentication header for API requests.", "source_type": "official_docs"}],
+   "access": [{"url": "https://api.docs.dealcloud.com/docs/apikeys", "quote": "If you do not see the Admin section, contact your organization's admin or DealCloud Customer Success Manager (CSM) for assistance.", "source_type": "official_docs"}],
+   "api_surface": [{"url": "https://api.docs.dealcloud.com/docs", "quote": "Our APIs are organized into functional areas.", "source_type": "official_docs"}],
+   "mcp": [{"url": "https://api.docs.dealcloud.com/releases", "quote": "DealCloud now provides a Model Context Protocol (MCP) server which gives AI agents read access to your DealCloud data.", "source_type": "official_docs"}],
+   "buildability": [{"url": "https://api.docs.dealcloud.com/releases", "quote": "This feature is available as part of the DealCloud with Celeste license.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "API access is enabled per customer site by an admin or CSM. API pricing, endpoint counts, rate limits, and sandbox are not on the fetched pages. Vendor ownership (Intapp) is not confirmed by the pages."
+}

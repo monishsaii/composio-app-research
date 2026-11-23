@@ -1,0 +1,43 @@
+{
+  "id": "linkedin-ads",
+  "name": "LinkedIn Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "Advertising API for programmatically managing LinkedIn ad accounts, campaigns, creatives and reporting.",
+  "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+  "openapi_spec_url": null,
+  "auth_methods": ["oauth2"],
+  "auth_notes": "3-legged member OAuth. Scopes are per product (for example r_ads, rw_ads, r_ads_reporting). The authenticating member needs an ad account role such as ACCOUNT_MANAGER or CAMPAIGN_MANAGER.",
+  "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+  "access": "app_review_required",
+  "access_notes": "Advertising API is a vetted product with Development and Standard tiers, applied for via the increasing-access link. Every app starts at Development; Standard requires a support ticket. Ad accounts must be Enterprise or Business. No price is stated in the cached pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": null},
+  "mcp": {"exists": "community", "url": "https://pypi.org/project/linkedin-ads-mcp/"},
+  "buildability": {"verdict": "BLOCKED_NEEDS_OUTREACH", "main_blocker": "partner_gate", "rationale": "Advertising API access is vetted and granted at LinkedIn's discretion, and the Standard tier needs a support ticket. Developers cannot self-serve production credentials. Member OAuth and REST endpoints are documented.", "est_tool_count_if_built": null, "est_effort": "L"},
+  "evidence": {
+    "identity": [
+      {"url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview", "quote": "The Advertising API enables developers to manage LinkedIn's campaign management platform on behalf of clients through APIs.", "source_type": "official_docs"}
+    ],
+    "auth": [
+      {"url": "https://learn.microsoft.com/linkedin/marketing/increasing-access", "quote": "All permissions listed are Member Permissions (3-legged OAuth), meaning they require an authenticated LinkedIn member to grant consent", "source_type": "official_docs"},
+      {"url": "https://pypi.org/project/linkedin-ads-mcp/", "quote": "Run any OAuth flow that grants the scopes r_ads, rw_ads, r_ads_reporting", "source_type": "third_party"}
+    ],
+    "access": [
+      {"url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview", "quote": "Vetted Product with development and standard tiers", "source_type": "official_docs"},
+      {"url": "https://learn.microsoft.com/linkedin/marketing/increasing-access", "quote": "The Standard API Access must be requested via a support ticket to be submitted on the Developer Support Portal.", "source_type": "official_docs"}
+    ],
+    "api_surface": [
+      {"url": "https://pypi.org/project/linkedin-ads-mcp/", "quote": "If you've tried calling LinkedIn's /rest/adAnalytics endpoint by hand", "source_type": "third_party"}
+    ],
+    "mcp": [
+      {"url": "https://pypi.org/project/linkedin-ads-mcp/", "quote": "There's no official LinkedIn MCP.", "source_type": "third_party"},
+      {"url": "https://pypi.org/project/linkedin-ads-mcp/", "quote": "Model Context Protocol (MCP) server for the LinkedIn Marketing API.", "source_type": "third_party"}
+    ],
+    "buildability": [
+      {"url": "https://learn.microsoft.com/linkedin/marketing/increasing-access", "quote": "LinkedIn reserves the right to review applications and select partners at its discretion", "source_type": "official_docs"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "high"},
+  "needs_human": true,
+  "needs_human_reason": "Whether LinkedIn approves Advertising API access is discretionary and not self-serve. Confirm with LinkedIn Developer Support before committing to a build."
+}

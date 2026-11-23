@@ -1,0 +1,26 @@
+{
+ "id": "telegram", "name": "Telegram", "category": "Comms & Messaging",
+ "one_liner": "Messaging app offering Bot API, MTProto client API, TDLib and Gateway API for verification codes.",
+ "docs_url": "https://core.telegram.org/api",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "other"],
+ "auth_notes": "Bot API bot token not covered by the fetched pages. MTProto client API uses API ID and API hash from the developer tools page. Gateway API uses a Bearer token from Gateway account settings.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Overview page says both the Bot API and the client API are free of charge. Bot accounts need no extra phone number. Gateway API is paid at $0.01 per delivered code, with free testing.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["other"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "community", "url": "https://github.com/sparfenyuk/mcp-telegram"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Free, self-serve bot accounts and an HTTPS Bot API with no approval gate seen. Bot API method reference and bot token steps are not in the fetched pages, so endpoint scope is unverified.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://core.telegram.org/api", "quote": "We offer three kinds of APIs for developers.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://core.telegram.org/gateway/verification-tutorial", "quote": "Before invoking API methods, you must obtain an access token in your Telegram Gateway account settings.", "source_type": "official_docs"}],
+  "access": [{"url": "https://core.telegram.org/api", "quote": "You are welcome to use both APIs free of charge.", "source_type": "official_docs"}, {"url": "https://core.telegram.org/gateway", "quote": "Verification via Telegram costs $0.01 per delivered code", "source_type": "pricing_page"}],
+  "sandbox": [{"url": "https://core.telegram.org/gateway", "quote": "Free testing environment — try it out before committing.", "source_type": "pricing_page"}],
+  "api_surface": [{"url": "https://core.telegram.org/api", "quote": "You communicate with this server via a simple HTTPS interface that offers a simplified version of the Telegram API.", "source_type": "official_docs"}, {"url": "https://core.telegram.org/gateway/verification-tutorial", "quote": "When you include a callback_url parameter in your sendVerificationMessage request, the Gateway API will send a POST request to that URL", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://github.com/sparfenyuk/mcp-telegram", "quote": "The server is a bridge between the Telegram API and the AI assistants and is based on the Model Context Protocol.", "source_type": "third_party"}],
+  "buildability": [{"url": "https://core.telegram.org/api", "quote": "Telegram Bots are special accounts that do not require an additional phone number to set up.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "high", "sandbox": "medium", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "Bot API vs MTProto ambiguity: the fetched pages do not include the Bot API method reference or bot token setup, so the intended API and its endpoint count need confirmation."
+}

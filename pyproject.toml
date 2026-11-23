@@ -5,7 +5,6 @@ requires-python = ">=3.11"
 dependencies = ["composio>=0.34", "pydantic>=2", "httpx", "rapidfuzz", "trafilatura", "python-dotenv"]
 [project.optional-dependencies]
 browser = ["playwright"]
-api = ["anthropic"]
 dev = ["pytest"]
 [project.scripts]
 appresearch = "appresearch.cli:main"

@@ -1,0 +1,25 @@
+{
+ "id": "discord", "name": "Discord", "category": "Comms & Messaging",
+ "one_liner": "Discord API: REST and Gateway APIs for building bots and apps that interact with Discord data.",
+ "docs_url": "https://docs.discord.com/developers/reference.md",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "other"],
+ "auth_notes": "Bot token from the Developer Portal sent as 'Authorization: Bot TOKEN'; OAuth2 user tokens for acting on behalf of a user; Basic auth with client ID and secret only for OAuth2 token endpoints.",
+ "oauth_details": {"flows": ["auth_code", "client_credentials"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Credentials are self-serve: a bot user is created in the Developer Portal and generates a bot token. Some OAuth2 scopes need approval from Discord. Cost is not stated on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest", "websocket"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "community", "url": "https://docsearch.algolia.com/mcp/docs/repo/saseq/discord-mcp"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve bot token, documented REST and Gateway API, standard token auth, no approval gate for basic bot use. Pricing and sandbox are not stated on the fetched pages.", "est_tool_count_if_built": 73, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://docs.discord.com/developers/reference.md", "quote": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.discord.com/developers/platform/oauth2-and-permissions", "quote": "When you create a bot user in the Developer Portal, Discord generates a bot token.", "source_type": "official_docs"}],
+  "access": [{"url": "https://docs.discord.com/developers/topics/oauth2", "quote": "Some scopes require approval from Discord to use.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.discord.com/developers/reference.md", "quote": "The Discord API is a REST API that allows you to interact with Discord data from your own applications.", "source_type": "official_docs"}, {"url": "https://docs.discord.com/developers/topics/community-resources", "quote": "if you are receiving Interactions via outgoing webhook", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docsearch.algolia.com/mcp/docs/repo/saseq/discord-mcp", "quote": "The discord-mcp server provides a wide range of tools for interacting with Discord servers (guilds).", "source_type": "third_party"}],
+  "buildability": [{"url": "https://docs.discord.com/developers/platform/oauth2-and-permissions", "quote": "When you create a bot user in the Developer Portal, Discord generates a bot token.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "medium", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": "Pricing and sandbox availability are not stated on the fetched pages; no blocker identified for building."
+}

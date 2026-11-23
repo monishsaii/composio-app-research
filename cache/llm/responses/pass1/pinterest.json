@@ -1,0 +1,28 @@
+{
+ "id": "pinterest",
+ "name": "Pinterest",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Pinterest developer API for building apps for creators, advertisers, and merchants.",
+ "docs_url": "https://developers.pinterest.com/docs/overview/welcome/",
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "The cached Pinterest pages do not describe the auth flow. The community MCP repo requires app credentials and a redirect URI.",
+ "oauth_details": null,
+ "access": "app_review_required",
+ "access_notes": "Create a developer account, describe your app, and submit it for review. The pages do not state review turnaround or cost.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": true, "rate_limits_documented": true, "official_sdks": ["python"]},
+ "mcp": {"exists": "community", "url": "https://github.com/collactivelabs/pinterest-mcp-server"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "app_review", "rationale": "Developer account and app review are required before the API is fully usable. Cached pages cover the review step, SDK, and sandbox, but not the auth flow, access tiers, or cost.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "The Pinterest API allows developers to build experiences and apps for creators, advertisers, and merchants.", "source_type": "official_docs"}],
+  "access": [{"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "Create a developer account, tell us about your app, then submit it for review.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "We offer several developer tools such as a Python SDK, sandbox environment, and test tokens", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "The Reference section contains details on rate limiting, pagination, and error codes.", "source_type": "official_docs"}, {"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "Refer to our API reference for a comprehensive look at available endpoints including query parameters and sample responses.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://github.com/collactivelabs/pinterest-mcp-server", "quote": "A Model Context Protocol (MCP) server for integrating the Pinterest API with AI agents and LLMs.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "Once you've connected your app to Pinterest, you'll get access to all of our most popular API features.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "low", "access": "medium", "sandbox": "medium", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "The auth flow, access tiers, review turnaround, and cost are not in the cached pages. The official Pinterest MCP server page was not among the fetched pages; the only MCP page fetched is a community repo."
+}

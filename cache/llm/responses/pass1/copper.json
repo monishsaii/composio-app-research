@@ -1,0 +1,23 @@
+{
+ "id": "copper", "name": "Copper", "category": "CRM & Sales",
+ "one_liner": "Copper is a CRM product with a RESTful Developer API for accessing Copper resources.",
+ "docs_url": "https://developer.copper.com/", "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "API keys are sent with a token header plus the email of the user who generated the token. OAuth 2.0 authorization code flow requires registering the app with Copper first.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": false, "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "API keys are generated in System settings > API Keys (self-serve). The API is available on trial, professional and business plans. OAuth requires contacting Copper to register the app. No prices on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "paid_plan_gate", "rationale": "Self-serve API keys on trial, professional and business plans, with a documented REST API. OAuth needs contacting Copper to register the app. Rate limits and endpoint coverage are not on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+   "identity": [{"url": "https://developer.copper.com/", "quote": "The Copper Developer API (\"Dev API\") provides a RESTful interface with JSON-formatted responses to access most Copper resources.", "source_type": "official_docs"}],
+   "auth": [{"url": "https://developer.copper.com/introduction/authentication.html", "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.", "source_type": "official_docs"}],
+   "access": [{"url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "quote": "Available on our trial, professional and business plan", "source_type": "official_docs"}],
+   "api_surface": [{"url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "quote": "The API provides a RESTful interface with JSON-formatted responses to use Copper entities.", "source_type": "official_docs"}],
+   "buildability": [{"url": "https://developer.copper.com/introduction/oauth/index.html", "quote": "To register your application, contact us.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": ""
+}

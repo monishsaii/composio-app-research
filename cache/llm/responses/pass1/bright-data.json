@@ -1,0 +1,41 @@
+{
+  "id": "bright-data",
+  "name": "Bright Data",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "Web data platform that turns websites into structured data via scrapers, SERP, unblocking and browser APIs.",
+  "docs_url": "https://docs.brightdata.com/api-reference/introduction",
+  "openapi_spec_url": null,
+  "auth_methods": ["api_key", "basic"],
+  "auth_notes": "Bearer API key in Authorization header for API access. Native access uses proxy username and password (basic). Keys are generated in account settings; generating keys requires an admin account.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Self-serve signup with free tier of 5,000 credits/month, no card. API key is created in account settings by an admin. Scraper API pay-as-you-go $1.50 per 1,000 records as of Sept 2026; Scale plan $1.30 per 1,000 beyond included volume. Agent registration via emailed code also documented.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["python", "node"]},
+  "mcp": {"exists": "official", "url": "https://github.com/brightdata/brightdata-mcp"},
+  "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve free account and key, documented REST API with bearer auth, official Python and JS SDKs and MCP server. Residential proxies need KYC, but they are not required for the API. Endpoint count and rate limits are not stated.", "est_tool_count_if_built": 12, "est_effort": "M"},
+  "evidence": {
+    "identity": [
+      {"url": "https://docs.brightdata.com/llms.txt", "quote": "Bright Data is a web data platform for AI agents and data teams: turn any website into structured data.", "source_type": "official_docs"}
+    ],
+    "auth": [
+      {"url": "https://docs.brightdata.com/api-reference/introduction", "quote": "<token> is your API key, which is required for every API request.", "source_type": "official_docs"}
+    ],
+    "access": [
+      {"url": "https://docs.brightdata.com/datasets/scrapers/scrapers-library/faqs", "quote": "Every new Bright Data account gets 5,000 free credits every month, with no credit card required.", "source_type": "pricing_page"},
+      {"url": "https://docs.brightdata.com/datasets/scrapers/scrapers-library/faqs", "quote": "Open a Bright Data account, create an API key in account settings, then follow the quickstart,", "source_type": "official_docs"}
+    ],
+    "api_surface": [
+      {"url": "https://docs.brightdata.com/datasets/scrapers/scrapers-library/faqs", "quote": "The Bright Data Scraper API extracts fresh data on demand from websites through thousands of pre-built scrapers.", "source_type": "official_docs"}
+    ],
+    "mcp": [
+      {"url": "https://docs.brightdata.com/llms.txt", "quote": "Bright Data provides a CLI, agent skills and an MCP server so coding agents have current context and live web access.", "source_type": "official_docs"}
+    ],
+    "buildability": [
+      {"url": "https://docs.brightdata.com/api-reference/introduction", "quote": "The Bright Data CLI, Python SDK and JavaScript SDK use the same API key.", "source_type": "official_docs"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+  "needs_human": false,
+  "needs_human_reason": ""
+}

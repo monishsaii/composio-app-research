@@ -1,0 +1,28 @@
+{
+  "id": "twenty",
+  "name": "Twenty",
+  "category": "CRM & Sales",
+  "one_liner": "CRM with Core and Metadata APIs, accessible via API keys and OAuth 2.0.",
+  "docs_url": "https://docs.twenty.com/developers/extend/api.md",
+  "openapi_spec_url": null,
+  "auth_methods": ["api_key", "oauth2"],
+  "auth_notes": "API keys generated in workspace Settings for scripts and internal tools. OAuth 2.0 with authorization code + PKCE for user-facing apps, and client credentials for server-to-server. Clients self-register via RFC 7591. Tokens sent as Bearer.",
+  "oauth_details": {"flows": ["auth_code", "PKCE", "client_credentials"], "scopes_granular": true, "app_review_required": "unknown"},
+  "access": "unknown",
+  "access_notes": "API keys are generated in Settings and OAuth clients are registered via /oauth/register, with no dashboard setup needed. Plan gating and pricing not verified: the billing and API overview pages returned 404.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest", "graphql"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+  "mcp": {"exists": "official", "url": null},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Documented REST and GraphQL APIs with API keys and OAuth 2.0, both self-serve. Official MCP server is behind the IS_AI_ENABLED feature flag and not confirmed on cloud. Plan gating and billing not verified.", "est_tool_count_if_built": null, "est_effort": "M"},
+  "evidence": {
+    "identity": [{"url": "https://github.com/twentyhq/twenty/issues/12953", "quote": "exposes Twenty CRM's GraphQL and REST APIs as MCP tools", "source_type": "official_repo"}],
+    "auth": [{"url": "https://docs.twenty.com/developers/extend/oauth.md", "quote": "Twenty implements OAuth 2.0 with authorization code + PKCE for user-facing apps and client credentials for server-to-server access.", "source_type": "official_docs"}],
+    "access": [{"url": "https://docs.twenty.com/developers/extend/oauth.md", "quote": "Generate in Settings", "source_type": "official_docs"}],
+    "api_surface": [{"url": "https://docs.twenty.com/developers/extend/oauth.md", "quote": "Full read/write access to the Core and Metadata APIs", "source_type": "official_docs"}],
+    "mcp": [{"url": "https://github.com/twentyhq/twenty/issues/12953", "quote": "We have built an official one in the codebase but it's still behing a feature flag (IS_AI_ENABLED).", "source_type": "official_repo"}],
+    "buildability": [{"url": "https://docs.twenty.com/developers/extend/oauth.md", "quote": "Clients are registered dynamically via RFC 7591 — no manual setup in a dashboard.", "source_type": "official_docs"}]
+  },
+  "confidence": {"identity": "medium", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+  "needs_human": true,
+  "needs_human_reason": "Billing and API overview pages returned 404, so plan gating and pricing are unverified. The official MCP is feature-flagged per a GitHub issue; cloud availability and the MCP URL are unconfirmed. Endpoint count, webhooks and rate limits are unknown."
+}

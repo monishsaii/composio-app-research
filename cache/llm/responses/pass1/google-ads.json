@@ -1,0 +1,50 @@
+{
+  "id": "google-ads",
+  "name": "Google Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "Programmatic API for managing Google Ads accounts, campaigns, budgets, assets and reporting.",
+  "docs_url": "https://developers.google.com/google-ads/api/docs/catalog",
+  "openapi_spec_url": null,
+  "auth_methods": ["oauth2", "other"],
+  "auth_notes": "OAuth 2.0 via Application Default Credentials (user credentials or service account) for the MCP server. Developer tokens are being sunset on September 9, 2026; access level is tied to the Cloud project that owns the OAuth client or service account.",
+  "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+  "access": "app_review_required",
+  "access_notes": "Enabling the API gives Test access automatically. Production access requires applying for Explorer (2,880 ops/day), Basic (15,000 ops/day) or Standard (unlimited) access; Standard needs a manual compliance audit, typically about 10 business days. Cost is not stated in the cached pages.",
+  "sandbox_or_test_env": true,
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": ["python", "java", "dotnet", "php", "ruby", "perl"]},
+  "mcp": {"exists": "official", "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server"},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "app_review", "rationale": "Documented public REST API with self-serve test access and OAuth2. Production use needs an access-level application, and Standard requires manual audit. Developer token sunset in Sept 2026 changes auth setup.", "est_tool_count_if_built": null, "est_effort": "L"},
+  "evidence": {
+    "identity": [
+      {"url": "https://developers.google.com/adwords/api/docs/?csw=1", "quote": "The Google Ads API is a programmatic interface for managing Google Ads accounts and campaigns, suitable for large or complex setups.", "source_type": "official_docs"}
+    ],
+    "auth": [
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "Application Default Credentials (OAuth 2.0 user credentials or service account) for local stdio", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "Google sunset developer tokens (GOOGLE_ADS_DEVELOPER_TOKEN) on September 9, 2026.", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "The Google Cloud project that owns your OAuth client or service account determines your API access level.", "source_type": "official_docs"}
+    ],
+    "access": [
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "apply for Explorer access on the Google Ads API Overview page to access production accounts.", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "The Standard access level is only granted to developers who require unlimited Google Ads API operations, such as large companies or tools that serve many users.", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "involves a detailed manual audit of your application.", "source_type": "official_docs"}
+    ],
+    "sandbox": [
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "After you've enabled Google Ads API, your Google Cloud project is granted Test access.", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "Enabling the API grants Test access for testing read and mutate workflows against test accounts.", "source_type": "official_docs"}
+    ],
+    "api_surface": [
+      {"url": "https://developers.google.com/adwords/api/docs/?csw=1", "quote": "Java, .NET, PHP, Python, Ruby, Perl, Code samples, REST interface", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "Regardless of the access level, all API operations are subject to system rate limits", "source_type": "official_docs"}
+    ],
+    "mcp": [
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "The Google Ads MCP server provides a standardized bridge to the Google Ads API.", "source_type": "official_docs"},
+      {"url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "quote": "Read and partial mutate (asset creation, video uploads, and label management with propose-and-confirm validation, or configurable read-only mode)", "source_type": "official_docs"}
+    ],
+    "buildability": [
+      {"url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "quote": "The Basic access level allows your Google Cloud project to execute up to 15,000 operations per day.", "source_type": "official_docs"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+  "needs_human": false,
+  "needs_human_reason": "Pricing and exact review timelines are not stated in the cached pages."
+}

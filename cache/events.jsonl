@@ -11,3 +11,550 @@
 {"t": "2026-11-23T13:46:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/page/changelog.md", "status": 200, "chars": 109780}
 {"t": "2026-11-23T13:46:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/docs/authorization", "status": 200, "chars": 12951}
 {"t": "2026-11-23T13:46:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/makenotion/notion-mcp-server", "status": 200, "chars": 1353}
+{"t": "2026-11-23T13:48:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Discord API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Discord API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Discord MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zendesk API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zendesk API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Klaviyo API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zendesk MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Klaviyo API authentication OAuth API key pricing plan access", "n": 9}
+{"t": "2026-11-23T13:48:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Klaviyo MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Slack API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Slack API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Slack MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:18Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LiveAgent API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:19Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LiveAgent API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:19Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LiveAgent MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/reference.md", "status": 200, "chars": 31424}
+{"t": "2026-11-23T13:48:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions", "status": 200, "chars": 2087}
+{"t": "2026-11-23T13:48:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/topics/oauth2", "status": 200, "chars": 12888}
+{"t": "2026-11-23T13:48:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.discord.com/developers/topics/community-resources", "status": 200, "chars": 2208}
+{"t": "2026-11-23T13:48:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Google Ads API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/saseq/discord-mcp", "status": 200, "chars": 6538}
+{"t": "2026-11-23T13:48:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Google Ads API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Google Ads MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/index.html", "status": 200, "chars": 1930}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.klaviyo.com/hc/en-us/articles/360045726811", "status": 200, "chars": 5715}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.klaviyo.com/hc/en-us/articles/52833598880923", "status": 200, "chars": 9747}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/", "status": 200, "chars": 5432}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://academy.klaviyo.com/en-us/learning-paths/api-fundamentals-for-marketers/courses/interpret-api-documentation/lessons/dissect-api-documentation", "status": 200, "chars": 3640}
+{"t": "2026-11-23T13:48:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/index.md", "status": 200, "chars": 60238}
+{"t": "2026-11-23T13:48:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/catalog", "status": 200, "chars": 468}
+{"t": "2026-11-23T13:48:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=5", "status": 200, "chars": 9024}
+{"t": "2026-11-23T13:48:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8", "status": 200, "chars": 9024}
+{"t": "2026-11-23T13:48:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/adwords/api/docs/?csw=1", "status": 200, "chars": 3977}
+{"t": "2026-11-23T13:48:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.zendesk.com/documentation/api-basics/authentication/creating-and-using-oauth-tokens-with-the-api", "status": 200, "chars": 8305}
+{"t": "2026-11-23T13:48:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/overview/", "status": 200, "chars": 6770}
+{"t": "2026-11-23T13:48:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server", "status": 200, "chars": 24018}
+{"t": "2026-11-23T13:48:26Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:26Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/zendesk-mcp", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:48:26Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:26Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-slack", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:48:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors", "status": 200, "chars": 2648}
+{"t": "2026-11-23T13:48:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/741982-API-key", "status": 200, "chars": 1437}
+{"t": "2026-11-23T13:48:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/567924-Documentation", "status": 200, "chars": 918}
+{"t": "2026-11-23T13:48:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/567924-Documentation?r=1", "status": 200, "chars": 918}
+{"t": "2026-11-23T13:48:29Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/atlas.en-us.240.0.bi_dev_guide_rest.meta/bi_dev_guide_rest/bi_rest_authentication.htm", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:48:29Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/en/docs", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:48:29Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/atlas.en-us.api_bulk_2.html", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:48:29Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:48:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/blogs/2015/05/integrating-salesforce-primer-isvs", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:48:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents", "status": 200, "chars": 4737}
+{"t": "2026-11-23T13:48:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/tsmztech/mcp-server-salesforce", "status": 200, "chars": 13887}
+{"t": "2026-11-23T13:48:38Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Podio API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Podio API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Podio MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho CRM API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho CRM API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho CRM MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Close API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Close API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Close MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Copper API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Copper API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Copper MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DealCloud API documentation developer", "n": 8}
+{"t": "2026-11-23T13:48:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DealCloud API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:48:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DealCloud MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:48:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/authentication", "status": 200, "chars": 4195}
+{"t": "2026-11-23T13:48:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/index/faq", "status": 200, "chars": 3797}
+{"t": "2026-11-23T13:48:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com", "status": 200, "chars": 1608}
+{"t": "2026-11-23T13:48:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.podio.com/doc", "status": 200, "chars": 3685}
+{"t": "2026-11-23T13:48:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server", "status": 200, "chars": 7026}
+{"t": "2026-11-23T13:49:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html", "status": 200, "chars": 2601}
+{"t": "2026-11-23T13:49:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html", "status": 200, "chars": 5568}
+{"t": "2026-11-23T13:49:02Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "systeme.io API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:02Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "systeme.io API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:02Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "systeme.io MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:04Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:04Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.zoho.com/portal/en/community/topic/zoho-crm-apis-the-ultimate-guide?page=38", "status": 200, "chars": 0}
+{"t": "2026-11-23T13:49:04Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:04Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.zoho.com/portal/en/community/topic/zoho-crm-apis-the-ultimate-guide?page=19", "status": 200, "chars": 0}
+{"t": "2026-11-23T13:49:04Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:04Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.zoho.com/portal/en/community/topic/what-is-the-price-for-zoho-remote-api-for-business?page=24", "status": 200, "chars": 0}
+{"t": "2026-11-23T13:49:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.systeme.io/reference/api", "status": 200, "chars": 5878}
+{"t": "2026-11-23T13:49:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp", "status": 200, "chars": 10581}
+{"t": "2026-11-23T13:49:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api", "status": 200, "chars": 8290}
+{"t": "2026-11-23T13:49:07Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Plain API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:07Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Plain API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:07Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Plain MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.plain.com/docs/graphql/authentication.md", "status": 200, "chars": 1714}
+{"t": "2026-11-23T13:49:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.plain.com/article/developer", "status": 200, "chars": 1610}
+{"t": "2026-11-23T13:49:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.plain.com/article/does-the-plain-mcp-server-support-api-key-authentication-h7d83qtfdzxo4h49x4oyklwx", "status": 200, "chars": 1341}
+{"t": "2026-11-23T13:49:09Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twilio API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/integrations.md", "status": 200, "chars": 3156}
+{"t": "2026-11-23T13:49:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/api/overview.md", "status": 200, "chars": 2647}
+{"t": "2026-11-23T13:49:09Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twilio API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/integrations", "status": 200, "chars": 2613}
+{"t": "2026-11-23T13:49:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.close.com/api", "status": 200, "chars": 1379}
+{"t": "2026-11-23T13:49:10Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twilio MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:10Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "HubSpot API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:10Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "HubSpot API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:10Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "HubSpot MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth", "status": 200, "chars": 3312}
+{"t": "2026-11-23T13:49:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.example-code.com/nodejs/mcpClose.asp", "status": 200, "chars": 1361}
+{"t": "2026-11-23T13:49:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs.md", "status": 200, "chars": 9890}
+{"t": "2026-11-23T13:49:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs/usage/api-security-reference-guide/secure-auth.md", "status": 200, "chars": 5049}
+{"t": "2026-11-23T13:49:11Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intercom API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://twilio.com/docs/api", "status": 200, "chars": 4378}
+{"t": "2026-11-23T13:49:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intercom API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Intercom MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:12Z", "event": "fetch", "via": "direct:httpx", "url": "https://twilio.com/en-us/blog/introducing-twilio-alpha-mcp-server", "status": 200, "chars": 12500}
+{"t": "2026-11-23T13:49:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Telegram API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Telegram API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:13Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:13Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/plain-mcp/", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:49:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Telegram MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/", "status": 200, "chars": 1774}
+{"t": "2026-11-23T13:49:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/introduction/oauth/index.html", "status": 200, "chars": 3289}
+{"t": "2026-11-23T13:49:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.copper.com/introduction/authentication.html", "status": 200, "chars": 784}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips", "status": 200, "chars": 514}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/building-apps/docs/authentication", "status": 200, "chars": 3004}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/", "status": 200, "chars": 3004}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/references/2.9/introduction", "status": 200, "chars": 691}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/api/working-with-oauth", "status": 200, "chars": 2767}
+{"t": "2026-11-23T13:49:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/references/2.8/introduction", "status": 200, "chars": 715}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth.md", "status": 200, "chars": 3829}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/index.md", "status": 200, "chars": 2406}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/gateway", "status": 200, "chars": 4097}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/api?roistat_visit=118507", "status": 200, "chars": 15984}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/gateway/verification-tutorial", "status": 200, "chars": 6672}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://core.telegram.org/api", "status": 200, "chars": 15984}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/docs/guides/api/overview", "status": 200, "chars": 800}
+{"t": "2026-11-23T13:49:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.hubspot.com/mcp", "status": 200, "chars": 7287}
+{"t": "2026-11-23T13:49:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Ads API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/sparfenyuk/mcp-telegram", "status": 200, "chars": 4677}
+{"t": "2026-11-23T13:49:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Ads API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Meta Ads MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.intercom.com/docs/guides/mcp", "status": 200, "chars": 28669}
+{"t": "2026-11-23T13:49:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.cdata.com/kb/tech/copper-mcp-cursor.rst", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:49:22Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:22Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/meta-ads-mcp/1.0.76/", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.mintlify.com/TheMattBerman/meta-ads-kit/configuration/authentication", "status": 410, "chars": 53}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs", "status": 200, "chars": 1690}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/releases", "status": 200, "chars": 14354}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs/token", "status": 200, "chars": 2132}
+{"t": "2026-11-23T13:49:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/docs/apikeys", "status": 200, "chars": 1283}
+{"t": "2026-11-23T13:49:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://api.docs.dealcloud.com/mcp", "status": 200, "chars": 963}
+{"t": "2026-11-23T13:49:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pinterest API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pinterest API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pinterest MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/collactivelabs/pinterest-mcp-server", "status": 200, "chars": 2011}
+{"t": "2026-11-23T13:49:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Help Scout API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Help Scout API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Help Scout MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/overview/welcome/", "status": 200, "chars": 1963}
+{"t": "2026-11-23T13:49:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LinkedIn Ads API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/llms.txt", "status": 200, "chars": 40456}
+{"t": "2026-11-23T13:49:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com/mailbox-api/overview/authentication", "status": 200, "chars": 4631}
+{"t": "2026-11-23T13:49:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LinkedIn Ads API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp/", "status": 200, "chars": 3563}
+{"t": "2026-11-23T13:49:45Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "LinkedIn Ads MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.pinterest.com/docs/api/v5/introduction/", "status": 200, "chars": 115}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access", "status": 200, "chars": 13552}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview", "status": 200, "chars": 5143}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/linkedin/marketing/increasing-access", "status": 200, "chars": 13552}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/advertising-usecase?view=li-lms-2025-04", "status": 200, "chars": 6634}
+{"t": "2026-11-23T13:49:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/linkedin-ads-mcp/", "status": 200, "chars": 8872}
+{"t": "2026-11-23T13:49:48Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho Cliq API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho Cliq API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Zoho Cliq MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pipedrive API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:50Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:50Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.helpscout.com/article/1141-docs-api", "status": 200, "chars": 302}
+{"t": "2026-11-23T13:49:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pipedrive API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pipedrive MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/developers.html", "status": 200, "chars": 1226}
+{"t": "2026-11-23T13:49:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/", "status": 200, "chars": 13506}
+{"t": "2026-11-23T13:49:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/", "status": 200, "chars": 5109}
+{"t": "2026-11-23T13:49:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/mcp-server.html", "status": 200, "chars": 3268}
+{"t": "2026-11-23T13:49:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.zoho.com/cliq/help/restapi/v2", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:49:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Freshdesk MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.pipedrive.com/en/features/api", "status": 200, "chars": 6524}
+{"t": "2026-11-23T13:49:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WhatsApp Business API documentation developer", "n": 8}
+{"t": "2026-11-23T13:49:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WhatsApp Business API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:49:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WhatsApp Business MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:49:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pipedrive.com/docs/api", "status": 200, "chars": 1559}
+{"t": "2026-11-23T13:49:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://pipedrive.com/features/api", "status": 200, "chars": 6524}
+{"t": "2026-11-23T13:49:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.freshdesk.com/en/support/solutions/articles/215517", "status": 200, "chars": 701}
+{"t": "2026-11-23T13:49:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/pipedrive-mcp/", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:49:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:49:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://devcommunity.pipedrive.com/t/core-api-concepts-docs/55", "status": 200, "chars": 388}
+{"t": "2026-11-23T13:49:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.authgear.com/post/whatsapp-api-pricing", "status": 200, "chars": 12676}
+{"t": "2026-11-23T13:50:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/Enreign/freshdeck-mcp", "status": 200, "chars": 4853}
+{"t": "2026-11-23T13:50:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:01Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://thenewstack.io/meta-mcp-whatsapp-business-claude/", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:50:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.freshdesk.com/api/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:50:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.freshdesk.com/api", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:50:09Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:09Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.freshdesk.com/support/solutions/articles/50000003346-api-key-based-authentication", "status": 200, "chars": 222}
+{"t": "2026-11-23T13:50:19Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GoHighLevel API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GoHighLevel API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:20Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GoHighLevel MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Threads (Meta) API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Threads (Meta) API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:21Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Threads (Meta) MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529?fp_ref=hlmax", "status": 200, "chars": 7126}
+{"t": "2026-11-23T13:50:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/hridayshah7/gohighlevel-mcp", "status": 200, "chars": 21860}
+{"t": "2026-11-23T13:50:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://thraads.com/api/", "status": 200, "chars": 13865}
+{"t": "2026-11-23T13:50:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/tttn13/threads-mcp", "status": 200, "chars": 3007}
+{"t": "2026-11-23T13:50:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gorgias API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gorgias API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gorgias MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/llms.txt", "status": 200, "chars": 20429}
+{"t": "2026-11-23T13:50:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/docs/access-tokens-api-keys", "status": 200, "chars": 1329}
+{"t": "2026-11-23T13:50:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.gorgias.com/reference", "status": 200, "chars": 1011}
+{"t": "2026-11-23T13:50:27Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Lark (Larksuite) API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:27Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Lark (Larksuite) API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Lark (Larksuite) MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.larksuite.com/llms.txt", "status": 200, "chars": 10752}
+{"t": "2026-11-23T13:50:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/advanced-configuration.md", "status": 200, "chars": 26446}
+{"t": "2026-11-23T13:50:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://stackone.com/connectors/gorgias/mcp/", "status": 200, "chars": 7101}
+{"t": "2026-11-23T13:50:31Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:31Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.gorgias.com/v1.1/reference/authentication", "status": 404, "chars": 138}
+{"t": "2026-11-23T13:50:33Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Aircall API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:33Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Aircall API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:34Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Aircall MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://npmjs.com/package/@larksuiteoapi/lark-mcp", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:50:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/authentication", "status": 200, "chars": 1964}
+{"t": "2026-11-23T13:50:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs/basic-authentication.md", "status": 200, "chars": 3255}
+{"t": "2026-11-23T13:50:36Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Attio API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:36Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Attio API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:37Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Attio MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/docs", "status": 200, "chars": 2301}
+{"t": "2026-11-23T13:50:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Front API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:39Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Front API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:40Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Front MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/guides/authentication.md", "status": 200, "chars": 7685}
+{"t": "2026-11-23T13:50:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/overview.md", "status": 200, "chars": 1451}
+{"t": "2026-11-23T13:50:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.cdata.com/kb/tech/aircall-mcp-claude-desktop.rst", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:50:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.aircall.io/api-references/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:50:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.attio.com/rest-api/endpoint-reference", "status": 200, "chars": 67963}
+{"t": "2026-11-23T13:50:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/authentication", "status": 200, "chars": 4139}
+{"t": "2026-11-23T13:50:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/reference/introduction", "status": 200, "chars": 2544}
+{"t": "2026-11-23T13:50:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/rest-api-reference", "status": 200, "chars": 2544}
+{"t": "2026-11-23T13:50:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.front.com/en/articles/4883136", "status": 200, "chars": 7029}
+{"t": "2026-11-23T13:50:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens", "status": 200, "chars": 5004}
+{"t": "2026-11-23T13:50:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/kesslerio/attio-mcp-server", "status": 200, "chars": 31774}
+{"t": "2026-11-23T13:50:45Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:45Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.attio.com/rest-api/how-to/authentication", "status": 404, "chars": 75712}
+{"t": "2026-11-23T13:50:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Mailchimp API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Mailchimp API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Mailchimp MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing/llms.txt", "status": 200, "chars": 53160}
+{"t": "2026-11-23T13:50:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SendGrid API documentation developer", "n": 8}
+{"t": "2026-11-23T13:50:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SendGrid API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:50:57Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SendGrid MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:50:57Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:57Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mailchimp.com/developer/guides/marketing-api-conventions/", "status": 404, "chars": 232}
+{"t": "2026-11-23T13:50:57Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:57Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mailchimp.com/developer/guides/get-started-with-mailchimp-api-3/", "status": 404, "chars": 232}
+{"t": "2026-11-23T13:50:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/mailchimp-mcp/1.0.0/", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:50:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:50:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mailchimp.com/developer/guides/an-introduction-to-rest/", "status": 404, "chars": 232}
+{"t": "2026-11-23T13:50:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/FINCH285/SendGrid-MCP-Server", "status": 200, "chars": 3775}
+{"t": "2026-11-23T13:50:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://sendgrid.com/docs/", "status": 200, "chars": 2367}
+{"t": "2026-11-23T13:51:00Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gladly API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:00Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gladly API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:00Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gladly MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/llms.txt", "status": 200, "chars": 3361}
+{"t": "2026-11-23T13:51:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.gladly.com/docs/migrating-to-new-auth.md", "status": 200, "chars": 4324}
+{"t": "2026-11-23T13:51:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.gladly.com/docs/migrating-to-new-auth", "status": 200, "chars": 2014}
+{"t": "2026-11-23T13:51:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.stackone.com/connectors/gladly/mcp/", "status": 200, "chars": 8015}
+{"t": "2026-11-23T13:51:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.gladly.com/rest/", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:51:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pumble API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pumble API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pumble MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/add-pumble-apps/api-keys-integration", "status": 200, "chars": 2186}
+{"t": "2026-11-23T13:51:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/", "status": 200, "chars": 2186}
+{"t": "2026-11-23T13:51:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/?p=7104", "status": 200, "chars": 2186}
+{"t": "2026-11-23T13:51:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://pumble.com/help/integrations/api-keys-integration", "status": 200, "chars": 2186}
+{"t": "2026-11-23T13:51:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pylon API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pylon API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Pylon MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://cake.com/updates/mcp-server", "status": 200, "chars": 1650}
+{"t": "2026-11-23T13:51:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication", "status": 200, "chars": 4575}
+{"t": "2026-11-23T13:51:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/developer/api", "status": 200, "chars": 933}
+{"t": "2026-11-23T13:51:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/integrations/mcp", "status": 200, "chars": 52855}
+{"t": "2026-11-23T13:51:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.usepylon.com/pylon-docs/developer", "status": 200, "chars": 933}
+{"t": "2026-11-23T13:51:22Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vonage API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:22Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vonage API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:22Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vonage MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:23Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:51:23Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.usepylon.com/developer/api-reference/authentication", "status": 404, "chars": 5}
+{"t": "2026-11-23T13:51:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/vonage-business-cloud/getting-started/create-an-access-token", "status": 200, "chars": 8610}
+{"t": "2026-11-23T13:51:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/documentation", "status": 200, "chars": 4099}
+{"t": "2026-11-23T13:51:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.vonage.com/en/proactive-connect/technical-details", "status": 200, "chars": 4099}
+{"t": "2026-11-23T13:51:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.uc.vonage.com/getting-started/create-an-access-token", "status": 200, "chars": 1854}
+{"t": "2026-11-23T13:51:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twenty API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.developer.telekom.com/en/mcp-server/conceptual-guides/introduction-to-vonage-mcp", "status": 200, "chars": 3324}
+{"t": "2026-11-23T13:51:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twenty API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:26Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Twenty MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Shopify API documentation developer", "n": 8}
+{"t": "2026-11-23T13:51:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/developers/extend/oauth.md", "status": 200, "chars": 5516}
+{"t": "2026-11-23T13:51:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Shopify API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:51:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.twenty.com/developers/extend/oauth", "status": 200, "chars": 735}
+{"t": "2026-11-23T13:51:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Shopify MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:51:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/docs/api/usage/authentication", "status": 200, "chars": 3697}
+{"t": "2026-11-23T13:51:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/twentyhq/twenty/issues/12953", "status": 200, "chars": 8630}
+{"t": "2026-11-23T13:51:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/api/usage/authentication", "status": 200, "chars": 3697}
+{"t": "2026-11-23T13:51:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://learn.engineering.vips.edu/mcp/mcp-shopify-server", "status": 200, "chars": 1668}
+{"t": "2026-11-23T13:51:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.shopify.dev/api", "status": 200, "chars": 6223}
+{"t": "2026-11-23T13:51:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://shopify.dev/apps/tools/api-libraries", "status": 200, "chars": 6223}
+{"t": "2026-11-23T13:51:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:51:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://twenty.com/user-guide/section/integrations-api/apis-overview", "status": 404, "chars": 47526}
+{"t": "2026-11-23T13:51:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:51:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.twenty.com/user-guide/integrations-api/apis-overview", "status": 404, "chars": 47526}
+{"t": "2026-11-23T13:52:02Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Squarespace API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:03Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Squarespace API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:03Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Squarespace MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/", "status": 200, "chars": 1660}
+{"t": "2026-11-23T13:52:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions", "status": 200, "chars": 3678}
+{"t": "2026-11-23T13:52:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.squarespace.com/developer-terms", "status": 200, "chars": 78541}
+{"t": "2026-11-23T13:52:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://stackone.com/connectors/squarespace/mcp/", "status": 200, "chars": 5634}
+{"t": "2026-11-23T13:52:08Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Firecrawl API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:08Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Firecrawl API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:08Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Firecrawl MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/oauth", "status": 200, "chars": 9607}
+{"t": "2026-11-23T13:52:09Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Neo4j API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:09Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.firecrawl.dev/pricing.md", "status": 200, "chars": 15015}
+{"t": "2026-11-23T13:52:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.firecrawl.dev/index.md", "status": 200, "chars": 16635}
+{"t": "2026-11-23T13:52:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.firecrawl.dev/api-reference/", "status": 200, "chars": 1900}
+{"t": "2026-11-23T13:52:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.firecrawl.dev/pricing?via=3Dadops", "status": 200, "chars": 14280}
+{"t": "2026-11-23T13:52:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mcp/firecrawl/firecrawl-mcp-server", "status": 200, "chars": 78386}
+{"t": "2026-11-23T13:52:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GitHub API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GitHub API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:14Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "GitHub MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WooCommerce API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:16Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WooCommerce API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:17Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "WooCommerce MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://requestly.com/api-explorer/github/", "status": 200, "chars": 1402}
+{"t": "2026-11-23T13:52:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/github/github-mcp-server", "status": 200, "chars": 766}
+{"t": "2026-11-23T13:52:18Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Neo4j API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://woocommerce.com/document/woocommerce-rest-api/", "status": 200, "chars": 3752}
+{"t": "2026-11-23T13:52:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/", "status": 200, "chars": 12621}
+{"t": "2026-11-23T13:52:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/features/mcp/", "status": 200, "chars": 15378}
+{"t": "2026-11-23T13:52:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/", "status": 200, "chars": 4196}
+{"t": "2026-11-23T13:52:23Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DataForSEO API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:23Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DataForSEO MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:24Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SE Ranking API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:24Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SE Ranking MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:24Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ahrefs API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:24Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ahrefs API authentication OAuth API key pricing plan access", "n": 6}
+{"t": "2026-11-23T13:52:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ahrefs MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "MrScraper API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:25Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "MrScraper MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:26Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Apify API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:26Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Apify API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:26Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Neo4j MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.neo4j.com/docs/aura/api/authentication/", "status": 200, "chars": 3900}
+{"t": "2026-11-23T13:52:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/docs/reference/resources/", "status": 200, "chars": 424}
+{"t": "2026-11-23T13:52:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://pypi.org/project/neo4j-mcp-server/", "status": 200, "chars": 8207}
+{"t": "2026-11-23T13:52:33Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://neo4j.com/api_docs", "status": 200, "chars": 354}
+{"t": "2026-11-23T13:52:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://neo4j.com/docs/aura/platform/api/authentication", "status": 404, "chars": 1376}
+{"t": "2026-11-23T13:52:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:42Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ecwid API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ecwid API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Ecwid MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ecwid.com/llms.txt", "status": 200, "chars": 67611}
+{"t": "2026-11-23T13:52:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://api-docs.ecwid.com", "status": 200, "chars": 1691}
+{"t": "2026-11-23T13:52:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://api-docs.ecwid.com/reference/get-access-token", "status": 200, "chars": 1691}
+{"t": "2026-11-23T13:52:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://api-docs.ecwid.com/reference/access-tokens", "status": 200, "chars": 1691}
+{"t": "2026-11-23T13:52:46Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Airtable API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/mcp/docs/introduction", "status": 200, "chars": 3275}
+{"t": "2026-11-23T13:52:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/ahrefs-connect/docs/api-guide", "status": 200, "chars": 1880}
+{"t": "2026-11-23T13:52:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/ahrefs-connect/docs/introduction", "status": 200, "chars": 1393}
+{"t": "2026-11-23T13:52:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ahrefs.com/api/docs/introduction", "status": 200, "chars": 3845}
+{"t": "2026-11-23T13:52:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/ahrefs/ahrefs-mcp-server", "status": 200, "chars": 7934}
+{"t": "2026-11-23T13:52:49Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Monday.com API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Monday.com API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Monday.com MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Bright Data API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:51Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Bright Data API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Bright Data MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "BigCommerce API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:52Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "BigCommerce API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "BigCommerce MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vercel API documentation developer", "n": 8}
+{"t": "2026-11-23T13:52:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/api-reference/authentication.md", "status": 200, "chars": 11264}
+{"t": "2026-11-23T13:52:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vercel API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:52:54Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:52:54Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Vercel MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/llms.txt", "status": 200, "chars": 17161}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/authentication.md", "status": 200, "chars": 4122}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/llms.txt", "status": 200, "chars": 60579}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/api-reference/introduction", "status": 200, "chars": 6665}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/reference", "status": 200, "chars": 1122}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.brightdata.com/datasets/scrapers/scrapers-library/faqs", "status": 200, "chars": 9377}
+{"t": "2026-11-23T13:52:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/brightdata/brightdata-mcp", "status": 200, "chars": 853}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/api/v2", "status": 200, "chars": 74228}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/rest-api/endpoints", "status": 200, "chars": 74228}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.bigcommerce.com/docs/start/authentication", "status": 200, "chars": 20143}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.bigcommerce.com/", "status": 200, "chars": 5139}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.bigcommerce.com/docs/start/authentication/api-accounts", "status": 200, "chars": 20143}
+{"t": "2026-11-23T13:52:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/ai-gateway/authentication-and-byok?from=graph", "status": 200, "chars": 13201}
+{"t": "2026-11-23T13:52:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Airtable API authentication OAuth API key pricing plan access", "n": 10}
+{"t": "2026-11-23T13:52:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.bigcommerce.com/docs/start/about", "status": 200, "chars": 20143}
+{"t": "2026-11-23T13:52:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/mcp", "status": 200, "chars": 13212}
+{"t": "2026-11-23T13:52:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Airtable MCP server model context protocol", "n": 10}
+{"t": "2026-11-23T13:52:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview", "status": 200, "chars": 4684}
+{"t": "2026-11-23T13:52:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/changelog/vercel-connect-ga", "status": 200, "chars": 5093}
+{"t": "2026-11-23T13:52:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/mondaycom/mcp", "status": 200, "chars": 1256}
+{"t": "2026-11-23T13:53:00Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Airtable API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:00Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.monday.com/apps/edit/choosing-auth", "status": 200, "chars": 362}
+{"t": "2026-11-23T13:53:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:02Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Airtable MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:03Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.airtable.com/articles/6292134965-getting-started-with-airtable-s-web-api", "status": 200, "chars": 6291}
+{"t": "2026-11-23T13:53:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "status": 200, "chars": 6291}
+{"t": "2026-11-23T13:53:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/felixrieseberg/airtable-mcp-server", "status": 200, "chars": 6174}
+{"t": "2026-11-23T13:53:08Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:08Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/api/authentication", "status": 200, "chars": 16}
+{"t": "2026-11-23T13:53:08Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:08Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/api", "status": 200, "chars": 16}
+{"t": "2026-11-23T13:53:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gumroad API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:12Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gumroad API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:13Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Gumroad MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://gumroad.com/help/article/280-create-application-api", "status": 200, "chars": 4974}
+{"t": "2026-11-23T13:53:14Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Snowflake API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Snowflake API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:15Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Snowflake MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:18Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:18Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://gumroad.com/api", "status": 200, "chars": 3}
+{"t": "2026-11-23T13:53:18Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:18Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://npmjs.com/package/gumroad-mcp", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:53:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.snowflake.com/llms.txt", "status": 200, "chars": 9746}
+{"t": "2026-11-23T13:53:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication", "status": 200, "chars": 7086}
+{"t": "2026-11-23T13:53:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.snowflake.com/developer-guide/snowflake-rest-api/authentication", "status": 200, "chars": 7086}
+{"t": "2026-11-23T13:53:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/IndexSeek/mcp", "status": 200, "chars": 8540}
+{"t": "2026-11-23T13:53:23Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:23Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.snowflake.com/developer-guide/snowflake-rest-api/reference", "status": 200, "chars": 382}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "DataForSEO API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "SE Ranking API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce Commerce Cloud API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "MrScraper API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce Commerce Cloud API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Apify MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:29Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Salesforce Commerce Cloud MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/v3.md", "status": 200, "chars": 9174}
+{"t": "2026-11-23T13:53:31Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Sherlock API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/v3/dataforseo_labs-overview/", "status": 200, "chars": 1078}
+{"t": "2026-11-23T13:53:31Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Sherlock API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:31Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Sherlock MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://apify.com/misceres/sherlock/api", "status": 200, "chars": 1542}
+{"t": "2026-11-23T13:53:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://apify.com/netmilk/sherlock/api", "status": 200, "chars": 1542}
+{"t": "2026-11-23T13:53:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/", "status": 200, "chars": 2758}
+{"t": "2026-11-23T13:53:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://dataforseo.com/update/pricing-update-in-dataforseo-apis", "status": 200, "chars": 2164}
+{"t": "2026-11-23T13:53:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/authorization-for-admin-apis.html", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:53:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:53:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/api-doc.html", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:53:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html", "status": 403, "chars": 70}
+{"t": "2026-11-23T13:53:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/sherlock-project/sherlock", "status": 200, "chars": 3446}
+{"t": "2026-11-23T13:53:35Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:35Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.npmjs.com/package/dataforseo-mcp-server", "status": 403, "chars": 16}
+{"t": "2026-11-23T13:53:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/brinzl/commercecloud-mcp-server", "status": 200, "chars": 3163}
+{"t": "2026-11-23T13:53:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://apify.com/misceres/sherlock/api/python", "status": 200, "chars": 381}
+{"t": "2026-11-23T13:53:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://apify.com/misceres/sherlock/api/cli", "status": 200, "chars": 381}
+{"t": "2026-11-23T13:53:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/project/getting-started/", "status": 200, "chars": 3551}
+{"t": "2026-11-23T13:53:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/data/getting-started/", "status": 200, "chars": 8607}
+{"t": "2026-11-23T13:53:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/how-to-get-api/", "status": 200, "chars": 4702}
+{"t": "2026-11-23T13:53:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api-beginning-of-work.html", "status": 200, "chars": 8607}
+{"t": "2026-11-23T13:53:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://seranking.com/api/integrations/mcp/", "status": 200, "chars": 7864}
+{"t": "2026-11-23T13:53:41Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Netlify API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:42Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Netlify API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:42Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Netlify MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://netlify.com/auth.md", "status": 200, "chars": 5270}
+{"t": "2026-11-23T13:53:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "ClickUp API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api.md", "status": 200, "chars": 30112}
+{"t": "2026-11-23T13:53:43Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "ClickUp API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.netlify.com/extend/building-code-agents/apis-for-code-agents/", "status": 200, "chars": 1866}
+{"t": "2026-11-23T13:53:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.netlify.com/guides/generating-personal-access-tokens-with-netlify-oauth/", "status": 200, "chars": 4089}
+{"t": "2026-11-23T13:53:44Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "ClickUp MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/netlify/netlify-mcp", "status": 200, "chars": 3911}
+{"t": "2026-11-23T13:53:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.mrscraper.com/docs/api/overview", "status": 200, "chars": 1175}
+{"t": "2026-11-23T13:53:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://mrscraper.com/blog/free-web-scraping-apis", "status": 200, "chars": 19521}
+{"t": "2026-11-23T13:53:46Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://pypi.org/project/universal-mcp-scraper/0.1.3/", "status": 200, "chars": 314}
+{"t": "2026-11-23T13:53:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/llms.txt", "status": 200, "chars": 38841}
+{"t": "2026-11-23T13:53:47Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/Getting%20Started", "status": 200, "chars": 1581}
+{"t": "2026-11-23T13:53:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:48Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mrscraper.com/docs/api/v1", "status": 404, "chars": 350}
+{"t": "2026-11-23T13:53:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/Getting%2520Started", "status": 200, "chars": 1581}
+{"t": "2026-11-23T13:53:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/TymoAI/clickup-mcp-server", "status": 200, "chars": 13329}
+{"t": "2026-11-23T13:53:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/integrations/api.md", "status": 200, "chars": 15730}
+{"t": "2026-11-23T13:53:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api.md", "status": 200, "chars": 7116}
+{"t": "2026-11-23T13:53:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api/v2.md", "status": 200, "chars": 30384}
+{"t": "2026-11-23T13:53:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/platform/integrations/api?fpr=cliqto", "status": 200, "chars": 12647}
+{"t": "2026-11-23T13:53:51Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:53:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.clickup.com", "status": 200, "chars": 261}
+{"t": "2026-11-23T13:53:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mcp/com.apify/apify-mcp-server", "status": 200, "chars": 30466}
+{"t": "2026-11-23T13:53:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Amazon Selling Partner API documentation developer", "n": 8}
+{"t": "2026-11-23T13:53:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Amazon Selling Partner API authentication OAuth API key pricing plan access", "n": 8}
+{"t": "2026-11-23T13:53:53Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Amazon Selling Partner MCP server model context protocol", "n": 8}
+{"t": "2026-11-23T13:53:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/llms.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T13:53:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview", "status": 200, "chars": 8417}
+{"t": "2026-11-23T13:53:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api/lang-US/docs/onboarding-overview", "status": 200, "chars": 525}
+{"t": "2026-11-23T13:53:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/jay-trivedi/amazon_sp_mcp", "status": 200, "chars": 13726}
+{"t": "2026-11-23T13:54:00Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer-docs.amazon.com/sp-api/lang-pt_BR/docs/faq", "status": 200, "chars": 311}
+{"t": "2026-11-23T13:54:23Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:33Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:40Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:54:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_DUCK_DUCK_GO", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "meta-ads", "field": "auth_methods", "change": "null->[]"}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "meta-ads", "field": "api_surface.style", "change": "null->[]"}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "meta-ads", "field": "api_surface.official_sdks", "change": "null->[]"}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "linkedin-ads", "field": "api_surface.official_sdks", "change": "null->[]"}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "gohighlevel", "field": "api_surface.official_sdks", "change": "null->[]"}
+{"t": "2026-11-23T13:55:01Z", "event": "normalize", "id": "mailchimp", "field": "api_surface.official_sdks", "change": "null->[]"}

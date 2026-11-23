@@ -1,0 +1,25 @@
+{
+ "id": "vonage", "name": "Vonage", "category": "Comms & Messaging",
+ "one_liner": "Communications platform offering SMS, Voice, Verify and Messages APIs plus identity and network APIs.",
+ "docs_url": "https://developer.vonage.com/en/documentation",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "Fetched pages document OAuth (authorization code and password grants) for the Business Communications APIs only. Core API key or JWT auth for SMS, Voice and Messages is not on the fetched pages.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Business Communications needs a developer account request, then an application with Consumer Key and Secret generated in the portal. Core API credential steps and cost are not on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "ambiguous_product", "rationale": "Broad communications suite, but the fetched pages do not give auth, credential gating or pricing for the core SMS, Voice and Messages APIs. Business Communications uses a separate OAuth product line.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://developer.vonage.com/en/documentation", "quote": "APIs to build connected experiences across any channel.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://developer.vonage.com/en/vonage-business-cloud/getting-started/create-an-access-token", "quote": "Vonage Business Communications APIs use OAuth for authentication.", "source_type": "official_docs"}],
+  "access": [{"url": "https://developer.uc.vonage.com/getting-started/create-an-access-token", "quote": "Learn how to request a developer account", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developer.vonage.com/en/documentation", "quote": "Programmatically send and receive SMS messages.", "source_type": "official_docs"}, {"url": "https://developer.uc.vonage.com/getting-started/create-an-access-token", "quote": "receive real-time call events via HTTP webhooks", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://developer.vonage.com/en/documentation", "quote": "Communicate with tools through a standardized interface that lets AI agents safely use external APIs and capabilities.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://developer.uc.vonage.com/getting-started/create-an-access-token", "quote": "Vonage Business Communications (VBC) APIs are a set of APIs that enable you to programmatically access data and manage features on your account.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "Core communications APIs (SMS, Voice, Verify, Messages) are listed, but their auth, credential gating, pricing and endpoint counts are not on the fetched pages. OAuth details apply only to Business Communications. Confirm which product line is meant."
+}

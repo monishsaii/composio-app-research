@@ -1,0 +1,28 @@
+{
+  "id": "attio",
+  "name": "Attio",
+  "category": "CRM & Sales",
+  "one_liner": "CRM platform that provides a public REST API and a developer platform.",
+  "docs_url": "https://docs.attio.com/rest-api/overview.md",
+  "openapi_spec_url": "https://api.attio.com/openapi/api",
+  "auth_methods": ["oauth2", "api_key", "basic"],
+  "auth_notes": "OAuth 2.0 authorization code flow for multi-workspace apps (PKCE required for user-level tokens, optional for workspace-level). Single-workspace API key generated in app developer settings. Tokens sent as Bearer header; HTTP Basic also accepted.",
+  "oauth_details": {"flows": ["auth_code", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+  "access": "admin_approval",
+  "access_notes": "Only workspace admins can grant workspace-level OAuth tokens, and admins approve user scopes at install. Unpublished apps install in up to 25 workspaces. Some list access settings are plan-gated per third-party MCP README. Cost not on fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+  "mcp": {"exists": "community", "url": "https://github.com/kesslerio/attio-mcp-server"},
+  "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Public REST API with OAuth 2.0 and API keys. Workspace admins must grant tokens and approve user scopes. Unpublished apps install in up to 25 workspaces. Some list access settings are plan-gated.", "est_tool_count_if_built": null, "est_effort": "L"},
+  "evidence": {
+    "identity": [{"url": "https://docs.attio.com/rest-api/overview.md", "quote": "Attio provides a public REST API which exchanges JSON over HTTPS.", "source_type": "official_docs"}],
+    "auth": [{"url": "https://docs.attio.com/rest-api/guides/authentication.md", "quote": "You should prefer the OAuth 2.0 flow if building an app for multiple workspaces.", "source_type": "official_docs"}],
+    "access": [{"url": "https://docs.attio.com/rest-api/guides/authentication.md", "quote": "Only workspace admins can grant a workspace-level token.", "source_type": "official_docs"}],
+    "api_surface": [{"url": "https://docs.attio.com/rest-api/overview.md", "quote": "Setting up and listening to webhooks", "source_type": "official_docs"}],
+    "mcp": [{"url": "https://github.com/kesslerio/attio-mcp-server", "quote": "A comprehensive Model Context Protocol (MCP) server for Attio, providing complete CRM surface coverage.", "source_type": "third_party"}],
+    "buildability": [{"url": "https://docs.attio.com/rest-api/guides/authentication.md", "quote": "A workspace admin approves your app's user scopes when they install it", "source_type": "official_docs"}, {"url": "https://github.com/kesslerio/attio-mcp-server", "quote": "Errors distinguish plan_gating (workspace plan does not support the requested access configuration)", "source_type": "third_party"}]
+  },
+  "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+  "needs_human": true,
+  "needs_human_reason": "The official hosted MCP server and plan pricing appeared only in search snippets, not fetched pages. Endpoint count and sandbox availability are unverified."
+}

@@ -1,0 +1,34 @@
+{
+  "id": "sherlock",
+  "name": "Sherlock",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "Open-source CLI that hunts down usernames across 400+ social networks.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": ["none"],
+  "auth_notes": "The CLI runs locally with no credentials. Third-party Apify-hosted wrappers need an Apify API token; those are not Sherlock Project offerings.",
+  "oauth_details": null,
+  "access": "no_public_api",
+  "access_notes": "No hosted API and no account or key for the CLI. Install locally with pipx, pip or uv, or run via Docker. Apify wrapper Actors are third-party, pay per usage.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {"style": ["cli_only"], "breadth": "none", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+  "mcp": {"exists": "unknown", "url": null},
+  "buildability": {"verdict": "NOT_APPLICABLE_NOT_A_SERVICE", "main_blocker": "cli_or_local_only", "rationale": "Local open-source CLI, not a hosted API. Wrap it as a skill or tool that shells out to sherlock with --json, --csv or --xlsx output, or run its Docker image.", "est_tool_count_if_built": 1, "est_effort": "S"},
+  "evidence": {
+    "identity": [
+      {"url": "https://github.com/sherlock-project/sherlock", "quote": "Hunt down social media accounts by username across 400+ social networks", "source_type": "official_repo"}
+    ],
+    "access": [
+      {"url": "https://github.com/sherlock-project/sherlock", "quote": "pip or uv may be used in place of pipx", "source_type": "official_repo"}
+    ],
+    "api_surface": [
+      {"url": "https://github.com/sherlock-project/sherlock", "quote": "Accounts found will be stored in an individual text file with the corresponding username", "source_type": "official_repo"}
+    ],
+    "buildability": [
+      {"url": "https://github.com/sherlock-project/sherlock", "quote": "docker run -it --rm sherlock/sherlock", "source_type": "official_repo"}
+    ]
+  },
+  "confidence": {"identity": "high", "auth": "medium", "access": "high", "sandbox": "low", "api_surface": "high", "mcp": "low", "buildability": "medium"},
+  "needs_human": false,
+  "needs_human_reason": ""
+}

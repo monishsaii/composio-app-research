@@ -21,9 +21,8 @@ def cmd_research(a):
     with cache.Timer(f"{a.stage}:discover"):
         if not a.ingest_only:
             research.run_discovery(a.stage, apps)
-    backend.answer(a.stage, a.backend)
-    if backend.pending(a.stage) and (a.backend or "session") == "session" and not a.ingest_only:
-        print("Run subagents on the task files, then: python -m appresearch research --ingest-only ...")
+    if backend.report_pending(a.stage) and not a.ingest_only:
+        print("Answer the task(s) with Claude Code subagents, then: python -m appresearch research --app ... --ingest-only")
         return
     with cache.Timer(f"{a.stage}:ingest"):
         good, bad = research.ingest(a.stage, apps)
@@ -103,7 +102,6 @@ def main(argv=None):
     g.add_argument("--app", action="append", help="app name (repeatable)")
     g.add_argument("--all", action="store_true")
     r.add_argument("--stage", default="pass1")
-    r.add_argument("--backend", choices=["session", "anthropic"], default=None)
     r.add_argument("--ingest-only", action="store_true")
     r.set_defaults(fn=cmd_research)
 

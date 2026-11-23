@@ -1,0 +1,28 @@
+{
+ "id": "klaviyo",
+ "name": "Klaviyo",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Marketing platform for campaigns, flows, and customer profiles, with REST APIs and an MCP server.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Private API key with read/write scopes per area of the account. Cost and plan requirements for key creation are not stated in the pages.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Private API keys are created in the account with the scopes the endpoints need. Pages do not state cost or plan gating. MCP connection requires an Owner, Admin, or Manager role.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": true, "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://mcp.klaviyo.com/mcp"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Documented REST API with pagination, private API key credentials, and an official remote MCP server. Plan gating and rate limits are not stated in the cached pages, so confidence is medium.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://help.klaviyo.com/hc/en-us/articles/360045726811", "quote": "Klaviyo's developer portal contains API guides and reference documentation to help you make the most out of our APIs.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://academy.klaviyo.com/en-us/learning-paths/api-fundamentals-for-marketers/courses/interpret-api-documentation/lessons/dissect-api-documentation", "quote": "When you create a private API key, you can select whether the key has read or write access to different aspects of Klaviyo.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://help.klaviyo.com/hc/en-us/articles/360045726811", "quote": "Use a Klaviyo test account for experimentation.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://help.klaviyo.com/hc/en-us/articles/360045726811", "quote": "Follow the next-page link in each response until there are no more pages.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://help.klaviyo.com/hc/en-us/articles/52833598880923", "quote": "The Klaviyo MCP (Model Context Protocol) server is a secure bridge that lets AI assistants like Claude and ChatGPT connect directly to Klaviyo.", "source_type": "official_docs"}, {"url": "https://help.klaviyo.com/hc/en-us/articles/52833598880923", "quote": "The remote MCP server URL: https://mcp.klaviyo.com/mcp", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://help.klaviyo.com/hc/en-us/articles/52833598880923", "quote": "Under the hood it is a wrapper on top of Klaviyo's APIs.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Cost of private API key access and rate limits are not stated in the cached pages."
+}

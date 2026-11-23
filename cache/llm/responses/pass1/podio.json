@@ -1,0 +1,24 @@
+{
+ "id": "podio", "name": "Podio", "category": "CRM & Sales",
+ "one_liner": "Podio is a work platform for organizing apps, items, and tasks, with a public API.",
+ "docs_url": "https://developers.podio.com/doc", "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth2 with server-side, client-side, username/password, and app authentication flows. Access tokens last 8 hours; refresh tokens last 28 days.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "API keys are created in account settings (API Keys tab). API is available on paid and free accounts within base rate limits. Higher limits need a paid API Add-on. Some operations need Podio Support approval.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": ["php", "ruby", "dotnet", "python", "java", "ios"]},
+ "mcp": {"exists": "official", "url": "https://mcp.podio.com/mcp"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve API keys and OAuth2 with a documented API and no extra charge within base limits. Some destructive operations need a trust-level increase from Podio support, and higher rate limits need a paid add-on.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+   "identity": [{"url": "https://developers.podio.com", "quote": "The Podio API lets you integrate with other services and build tools and applications on top of Podio", "source_type": "official_docs"}],
+   "auth": [{"url": "https://developers.podio.com/authentication", "quote": "The Podio API uses the OAuth2 protocol for authentication.", "source_type": "official_docs"}],
+   "access": [{"url": "https://developers.podio.com/index/faq", "quote": "The Podio API is available to use for both paid and free Podio accounts.", "source_type": "official_docs"}],
+   "api_surface": [{"url": "https://developers.podio.com/doc", "quote": "Our API is split up into different areas, that each contains a subset of methods grouped by functionality.", "source_type": "official_docs"}],
+   "mcp": [{"url": "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server", "quote": "The server is live at https://mcp.podio.com — just point your AI platform at it and log in with your Podio account.", "source_type": "official_docs"}],
+   "buildability": [{"url": "https://developers.podio.com/index/faq", "quote": "There is no extra charge for using the API as long as the usage is within these base rate limits.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": ""
+}

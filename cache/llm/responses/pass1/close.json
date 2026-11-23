@@ -1,0 +1,25 @@
+{
+ "id": "close", "name": "Close", "category": "CRM & Sales",
+ "one_liner": "Close is a sales CRM with a REST API for leads, contacts, opportunities, and activities.",
+ "docs_url": "https://developer.close.com/api", "openapi_spec_url": "https://api.close.com/api/openapi.json",
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "API key sent as HTTP Basic Auth with the key as username and an empty password. OAuth 2.0 is for user-facing apps.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "API keys are generated under Settings > Developer > API Keys. Keys follow the owner's access. Cost and plan requirements are not stated on the fetched pages. Non-Close users must email support@close.com for a free Dev organization.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://developer.close.com/mcp"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Documented REST API with self-serve API keys, OAuth 2.0, webhooks, and dev organizations for testing. Subscription cost and plan requirements are not stated on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+   "identity": [{"url": "https://developer.close.com/api", "quote": "Key concepts for working with the Close REST API.", "source_type": "official_docs"}],
+   "auth": [{"url": "https://developer.close.com/api", "quote": "Use HTTP Basic Auth with your API key as the username and an empty password.", "source_type": "official_docs"}],
+   "access": [{"url": "https://developer.close.com/integrations", "quote": "Generate one in Settings → Developer → API Keys and then follow API keys to authenticate your requests.", "source_type": "official_docs"}],
+   "sandbox": [{"url": "https://developer.close.com/integrations", "quote": "If you need a separate Close organization for development and testing:", "source_type": "official_docs"}],
+   "api_surface": [{"url": "https://developer.close.com/api", "quote": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies.", "source_type": "official_docs"}],
+   "mcp": [{"url": "https://developer.close.com/integrations", "quote": "If building AI Agent integrations, you may prefer to connect via the MCP server instead.", "source_type": "official_docs"}],
+   "buildability": [{"url": "https://developer.close.com/integrations", "quote": "Dev organizations work identically to standard Close organizations but have no subscription fees.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": ""
+}

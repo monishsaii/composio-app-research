@@ -148,6 +148,21 @@ def _parse_json(text: str) -> dict:
     return json.loads(text[s : e + 1])
 
 
+LIST_PATHS = [("auth_methods",), ("api_surface", "style"), ("api_surface", "official_sdks"), ("oauth_details", "flows")]
+
+
+def normalize(raw: dict, rid: str) -> dict:
+    """Type-only normalisation before strict validation: JSON null in a list field -> []. Logged; never adds values."""
+    for path in LIST_PATHS:
+        cur = raw
+        for k in path[:-1]:
+            cur = cur.get(k) if isinstance(cur, dict) else None
+        if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] is None:
+            cur[path[-1]] = []
+            cache.log_event("normalize", id=rid, field=".".join(path), change="null->[]")
+    return raw
+
+
 def attach_fetch_meta(rec: dict) -> dict:
     """fetched_at comes from OUR cache, never from the model. Uncached cited URLs are fetched now."""
     for group, evs in (rec.get("evidence") or {}).items():
@@ -169,6 +184,7 @@ def ingest(stage: str, apps: list[dict] | None = None) -> tuple[list[dict], list
         try:
             raw = _parse_json(p.read_text(encoding="utf-8"))
             raw.update(id=a["id"], name=a["name"], category=a["category"])
+            raw = normalize(raw, a["id"])
             raw = attach_fetch_meta(raw)
             has, ev = catalog.evidence_for(a)  # deterministic, from Composio SDK toolkit catalog
             raw["composio_existing_toolkit"] = has

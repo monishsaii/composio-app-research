@@ -1,0 +1,27 @@
+{
+ "id": "sendgrid",
+ "name": "SendGrid",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Twilio email platform for transactional and marketing email, with a Mail Send API and SDKs.",
+ "docs_url": "https://sendgrid.com/docs/",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "SDK examples read a SendGrid API key from the SENDGRID_API_KEY environment variable. The cached pages do not describe key scopes or any other auth method.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "The cached pages do not state how to obtain an API key, plan requirements, or cost.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["nodejs", "csharp"]},
+ "mcp": {"exists": "community", "url": "https://github.com/FINCH285/SendGrid-MCP-Server"},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "The pages show a Mail Send API with open-source SDKs and an API key. Key acquisition, plan gating, rate limits, and API breadth are not stated in the cached pages.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://sendgrid.com/docs/", "quote": "Build transactional and marketing email solutions with Twilio SendGrid.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://sendgrid.com/docs/", "quote": "sgMail.setApiKey(process.env.SENDGRID_API_KEY);", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://sendgrid.com/docs/", "quote": "Get started with the Twilio SendGrid Mail Send API and the open-source SDKs.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://github.com/FINCH285/SendGrid-MCP-Server", "quote": "A production-ready Model Context Protocol (MCP) Server for SendGrid email services, built with FastMCP 2.0.", "source_type": "third_party"}],
+  "buildability": [{"url": "https://sendgrid.com/docs/", "quote": "To send your first message, use the following sample code in your preferred programming language.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "The cached pages do not state how to obtain an API key, plan or cost gating, rate limits, or API breadth. The official v3 API reference was not among the fetched pages."
+}
