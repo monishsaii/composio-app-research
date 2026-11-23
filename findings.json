@@ -735,7 +735,7 @@
    "official_sdks": []
   },
   "mcp": {
-   "exists": "official",
+   "exists": "community",
    "url": "https://github.com/jay-trivedi/amazon_sp_mcp"
   },
   "buildability": {
@@ -838,6 +838,13 @@
      "support": "exact",
      "match_score": 100,
      "from": "L2"
+    },
+    {
+     "url": "https://developer-docs.amazon.com/sp-api",
+     "quote": "Human reviewer correction: official -> community. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "composio": [
@@ -861,7 +868,9 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
-  "flags": [],
+  "flags": [
+   "HUMAN mcp.exists: official -> community"
+  ],
   "l1_dropped_evidence": [
    {
     "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-overview",
@@ -964,6 +973,14 @@
       "from": "L2"
      }
     ]
+   }
+  ],
+  "human_overrides": [
+   {
+    "field": "mcp.exists",
+    "agent": "official",
+    "human": "community",
+    "note": ""
    }
   ]
  },
@@ -4682,14 +4699,14 @@
    "scopes_granular": false,
    "app_review_required": "unknown"
   },
-  "access": "paid_plan_required",
+  "access": "self_serve_trial",
   "access_notes": "API keys are generated in System settings > API Keys (self-serve). The API is available on trial, professional and business plans. OAuth requires contacting Copper to register the app. No prices on the fetched pages.",
   "sandbox_or_test_env": "unknown",
   "api_surface": {
    "style": [
     "rest"
    ],
-   "breadth": "unknown",
+   "breadth": "broad",
    "approx_endpoint_count": null,
    "webhooks": true,
    "pagination_documented": "unknown",
@@ -4740,6 +4757,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "https://developer.copper.com/",
+     "quote": "Human reviewer correction: paid_plan_required -> self_serve_trial. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "api_surface": [
@@ -4769,6 +4793,13 @@
      "support": "exact",
      "match_score": 100,
      "from": "L2"
+    },
+    {
+     "url": "https://developer.copper.com/",
+     "quote": "Human reviewer correction: unknown -> broad. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "buildability": [],
@@ -4806,7 +4837,9 @@
   "needs_human_reason": "",
   "flags": [
    "L5 mcp.exists: unknown -> official",
-   "L3 mcp official without url (kept: vendor-domain evidence)"
+   "L3 mcp official without url (kept: vendor-domain evidence)",
+   "HUMAN access: paid_plan_required -> self_serve_trial",
+   "HUMAN api_surface.breadth: unknown -> broad"
   ],
   "l1_dropped_evidence": [
    {
@@ -4853,7 +4886,21 @@
    "fields": [
     "mcp.exists"
    ]
-  }
+  },
+  "human_overrides": [
+   {
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_trial",
+    "note": ""
+   },
+   {
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": ""
+   }
+  ]
  },
  {
   "id": "datadog",
@@ -4873,7 +4920,7 @@
    "scopes_granular": true,
    "app_review_required": "unknown"
   },
-  "access": "paid_plan_required",
+  "access": "self_serve_trial",
   "access_notes": "Credentials are created in the customer's Datadog org; a free trial exists but pricing is paid per product. No self-serve free tier shown on fetched pages. Rate limits raised via support. [sandbox_or_test_env: Free Datadog trial account (duration not verified on fetched pages)] [api_surface.webhooks: outbound webhooks integration (Datadog calls your URL from monitor alerts)] [api_surface.rate_limits_documented: yes]",
   "sandbox_or_test_env": "unknown",
   "api_surface": {
@@ -4898,7 +4945,7 @@
   },
   "buildability": {
    "verdict": "BUILD_WITH_CAVEATS",
-   "main_blocker": "paid_plan_gate",
+   "main_blocker": "app_review",
    "rationale": "Documented REST API with API key auth, but the auth model is in transition: PATs and SATs are new, and OAuth clients for API access are planned later in 2026. Plan tier and access gating are not stated on the fetched pages.",
    "est_tool_count_if_built": null,
    "est_effort": "L"
@@ -4945,6 +4992,13 @@
      "support": "exact",
      "match_score": 100,
      "from": "L2"
+    },
+    {
+     "url": "https://docs.datadoghq.com/api/latest",
+     "quote": "Human reviewer correction: paid_plan_required -> self_serve_trial. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "api_surface": [
@@ -5005,6 +5059,13 @@
      "support": "exact",
      "match_score": 100,
      "from": "L2"
+    },
+    {
+     "url": "https://docs.datadoghq.com/api/latest",
+     "quote": "Human reviewer correction: paid_plan_gate -> app_review. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "composio": [
@@ -5029,7 +5090,9 @@
   "needs_human": false,
   "needs_human_reason": "",
   "flags": [
-   "L3 oauth2 claimed but no authorize/token evidence on cited auth pages"
+   "L3 oauth2 claimed but no authorize/token evidence on cited auth pages",
+   "HUMAN access: paid_plan_required -> self_serve_trial",
+   "HUMAN buildability.main_blocker: paid_plan_gate -> app_review"
   ],
   "l1_dropped_evidence": [
    {
@@ -5154,6 +5217,20 @@
       "from": "L2"
      }
     ]
+   }
+  ],
+  "human_overrides": [
+   {
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_trial",
+    "note": ""
+   },
+   {
+    "field": "buildability.main_blocker",
+    "agent": "paid_plan_gate",
+    "human": "app_review",
+    "note": ""
    }
   ]
  },
@@ -5485,7 +5562,6 @@
   "docs_url": "https://api.docs.dealcloud.com/docs",
   "openapi_spec_url": "https://{host}/swagger/current",
   "auth_methods": [
-   "api_key",
    "oauth2"
   ],
   "auth_notes": "API key from the user profile is exchanged with client_id and scopes at /api/rest/v1/oauth/token for a bearer token. Tokens expire after 900 seconds. The user needs API permission in their user group.",
@@ -5503,7 +5579,7 @@
    "style": [
     "rest"
    ],
-   "breadth": "unknown",
+   "breadth": "broad",
    "approx_endpoint_count": null,
    "webhooks": "unknown",
    "pagination_documented": "unknown",
@@ -5543,6 +5619,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Human reviewer correction: ['api_key', 'oauth2'] -> oauth2. [reviewer wrote 'outh2'; mapped to schema value 'oauth2']",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "access": [
@@ -5556,7 +5639,15 @@
      "claim_check": "supports"
     }
    ],
-   "api_surface": [],
+   "api_surface": [
+    {
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Human reviewer correction: unknown -> broad. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
+    }
+   ],
    "mcp": [
     {
      "url": "https://api.docs.dealcloud.com/releases",
@@ -5577,6 +5668,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "https://api.docs.dealcloud.com/docs",
+     "quote": "Human reviewer correction: other -> other. [reviewer wrote 'admin_approval'; mapped to schema value 'other']",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "composio": [
@@ -5600,7 +5698,11 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
-  "flags": [],
+  "flags": [
+   "HUMAN auth_methods: ['api_key', 'oauth2'] -> oauth2",
+   "HUMAN api_surface.breadth: unknown -> broad",
+   "HUMAN buildability.main_blocker: other -> other"
+  ],
   "l1_dropped_evidence": [
    {
     "url": "https://api.docs.dealcloud.com/docs",
@@ -5613,7 +5715,30 @@
     "group": "api_surface"
    }
   ],
-  "disputes": []
+  "disputes": [],
+  "human_overrides": [
+   {
+    "field": "auth_methods",
+    "agent": [
+     "api_key",
+     "oauth2"
+    ],
+    "human": "oauth2",
+    "note": "[reviewer wrote 'outh2'; mapped to schema value 'oauth2']"
+   },
+   {
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": ""
+   },
+   {
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "human": "other",
+    "note": "[reviewer wrote 'admin_approval'; mapped to schema value 'other']"
+   }
+  ]
  },
  {
   "id": "devin",
@@ -6506,14 +6631,14 @@
   ],
   "auth_notes": "Applies to the Openstage pages: Manager API uses an API key as a Bearer token; Fanbase API fans get an Access Token via signup or login. No page confirms these apply to fanbasis.",
   "oauth_details": null,
-  "access": "paid_plan_required",
+  "access": "self_serve_free",
   "access_notes": "Official Checkout API exists (npm SDK, sandbox env); docs not readable.",
   "sandbox_or_test_env": true,
   "api_surface": {
    "style": [
     "rest"
    ],
-   "breadth": "unknown",
+   "breadth": "broad",
    "approx_endpoint_count": null,
    "webhooks": true,
    "pagination_documented": "unknown",
@@ -6521,12 +6646,12 @@
    "official_sdks": []
   },
   "mcp": {
-   "exists": "unknown",
+   "exists": "official",
    "url": null
   },
   "buildability": {
-   "verdict": "UNCLEAR",
-   "main_blocker": "ambiguous_product",
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "app_review",
    "rationale": "Fanbasis has an official Checkout API with API key and sandbox; earlier Openstage evidence did not apply.",
    "est_tool_count_if_built": null,
    "est_effort": null
@@ -6573,6 +6698,20 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "",
+     "quote": "Human reviewer correction: paid_plan_required -> self_serve_free. [reviewer wrote 'sandbox_only'; mapped to schema value 'self_serve_free']",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
+    },
+    {
+     "url": "",
+     "quote": "Human reviewer correction: UNCLEAR -> BUILD_WITH_CAVEATS. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "sandbox": [
@@ -6604,6 +6743,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "",
+     "quote": "Human reviewer correction: unknown -> broad. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "composio": [
@@ -6613,6 +6759,24 @@
      "source_type": "official_docs",
      "fetched_at": "2026-11-23T13:46:15Z",
      "support": "sdk_catalog"
+    }
+   ],
+   "mcp": [
+    {
+     "url": "",
+     "quote": "Human reviewer correction: unknown -> official. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
+    }
+   ],
+   "buildability": [
+    {
+     "url": "",
+     "quote": "Human reviewer correction: ambiguous_product -> app_review. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ]
   },
@@ -6629,7 +6793,12 @@
   "needs_human_reason": "unresolved after L5: access, api_surface.webhooks, buildability.main_blocker, mcp.exists; verdict UNCLEAR",
   "flags": [
    "L3 docs_url missing",
-   "L5 auth_methods: ['bearer_token', 'other'] -> ['api_key']"
+   "L5 auth_methods: ['bearer_token', 'other'] -> ['api_key']",
+   "HUMAN access: paid_plan_required -> self_serve_free",
+   "HUMAN api_surface.breadth: unknown -> broad",
+   "HUMAN mcp.exists: unknown -> official",
+   "HUMAN buildability.main_blocker: ambiguous_product -> app_review",
+   "HUMAN buildability.verdict: UNCLEAR -> BUILD_WITH_CAVEATS"
   ],
   "disputes": [
    {
@@ -6695,7 +6864,39 @@
     "buildability.main_blocker",
     "mcp.exists"
    ]
-  }
+  },
+  "human_overrides": [
+   {
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_free",
+    "note": "[reviewer wrote 'sandbox_only'; mapped to schema value 'self_serve_free']"
+   },
+   {
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": ""
+   },
+   {
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "human": "official",
+    "note": ""
+   },
+   {
+    "field": "buildability.main_blocker",
+    "agent": "ambiguous_product",
+    "human": "app_review",
+    "note": ""
+   },
+   {
+    "field": "buildability.verdict",
+    "agent": "UNCLEAR",
+    "human": "BUILD_WITH_CAVEATS",
+    "note": ""
+   }
+  ]
  },
  {
   "id": "fathom",
@@ -8345,7 +8546,6 @@
   "docs_url": "https://developers.google.com/google-ads/api/docs/catalog",
   "openapi_spec_url": null,
   "auth_methods": [
-   "jwt_service_account",
    "oauth2"
   ],
   "auth_notes": "OAuth 2.0 via Application Default Credentials (user credentials or service account) for the MCP server. Developer tokens are being sunset on September 9, 2026; access level is tied to the Cloud project that owns the OAuth client or service account.",
@@ -8437,6 +8637,13 @@
      "support": "exact",
      "match_score": 100,
      "from": "L2"
+    },
+    {
+     "url": "https://developers.google.com/google-ads/api/docs/catalog",
+     "quote": "Human reviewer correction: ['jwt_service_account', 'oauth2'] -> oauth2. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "access": [
@@ -8541,7 +8748,9 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
-  "flags": [],
+  "flags": [
+   "HUMAN auth_methods: ['jwt_service_account', 'oauth2'] -> oauth2"
+  ],
   "l1_dropped_evidence": [
    {
     "url": "https://developers.google.com/google-ads/api/docs/access-levels?authuser=8",
@@ -8634,6 +8843,17 @@
       "from": "L2"
      }
     ]
+   }
+  ],
+  "human_overrides": [
+   {
+    "field": "auth_methods",
+    "agent": [
+     "jwt_service_account",
+     "oauth2"
+    ],
+    "human": "oauth2",
+    "note": ""
    }
   ]
  },
@@ -9929,7 +10149,7 @@
    "style": [
     "rest"
    ],
-   "breadth": "unknown",
+   "breadth": "broad",
    "approx_endpoint_count": null,
    "webhooks": true,
    "pagination_documented": true,
@@ -9942,7 +10162,7 @@
   },
   "buildability": {
    "verdict": "BUILD_WITH_CAVEATS",
-   "main_blocker": "none",
+   "main_blocker": "paid_plan_gate",
    "rationale": "Self-created OAuth2 app on a trial or paid account; no approval or enterprise gate found. Free plan excludes API per support article (not re-fetched).",
    "est_tool_count_if_built": null,
    "est_effort": "M"
@@ -10000,6 +10220,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "https://developer.helpscout.com",
+     "quote": "Human reviewer correction: unknown -> broad. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "mcp": [
@@ -10022,6 +10249,13 @@
      "match_score": 100,
      "fetched_at": "2026-11-23T14:02:33Z",
      "from": "L5"
+    },
+    {
+     "url": "https://developer.helpscout.com",
+     "quote": "Human reviewer correction: none -> paid_plan_gate. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "composio": [
@@ -10046,7 +10280,9 @@
   "needs_human_reason": "",
   "flags": [
    "L3 mcp official without url (kept: vendor-domain evidence)",
-   "L3 verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+   "L3 verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric",
+   "HUMAN api_surface.breadth: unknown -> broad",
+   "HUMAN buildability.main_blocker: none -> paid_plan_gate"
   ],
   "l1_dropped_evidence": [
    {
@@ -10100,7 +10336,21 @@
    "fields": [
     "buildability.main_blocker"
    ]
-  }
+  },
+  "human_overrides": [
+   {
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": ""
+   },
+   {
+    "field": "buildability.main_blocker",
+    "agent": "none",
+    "human": "paid_plan_gate",
+    "note": ""
+   }
+  ]
  },
  {
   "id": "higgsfield",
@@ -12477,7 +12727,7 @@
    "style": [
     "rest"
    ],
-   "breadth": "unknown",
+   "breadth": "broad",
    "approx_endpoint_count": null,
    "webhooks": "unknown",
    "pagination_documented": "unknown",
@@ -12557,6 +12807,13 @@
      "support": "exact",
      "match_score": 100,
      "claim_check": "supports"
+    },
+    {
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview",
+     "quote": "Human reviewer correction: unknown -> broad. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
     }
    ],
    "mcp": [
@@ -12620,7 +12877,9 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
-  "flags": [],
+  "flags": [
+   "HUMAN api_surface.breadth: unknown -> broad"
+  ],
   "disputes": [
    {
     "field": "buildability.main_blocker",
@@ -12657,6 +12916,14 @@
       "from": "L2"
      }
     ]
+   }
+  ],
+  "human_overrides": [
+   {
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": ""
    }
   ]
  },
@@ -14520,8 +14787,8 @@
    "url": null
   },
   "buildability": {
-   "verdict": "BUILD_WITH_CAVEATS",
-   "main_blocker": "other",
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
    "rationale": "Official MCP exists; no blocker.",
    "est_tool_count_if_built": null,
    "est_effort": "M"
@@ -14600,6 +14867,15 @@
      "fetched_at": "2026-11-23T16:36:51Z",
      "from": "L5"
     }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "quote": "Human reviewer correction: other -> none. ",
+     "source_type": "none",
+     "fetched_at": "2026-11-23",
+     "support": "human_review"
+    }
    ]
   },
   "confidence": {
@@ -14615,7 +14891,8 @@
   "needs_human_reason": "unresolved after L5: buildability.main_blocker",
   "flags": [
    "L5 mcp.exists: unknown -> official",
-   "L3 mcp official without url (kept: vendor-domain evidence)"
+   "L3 mcp official without url (kept: vendor-domain evidence)",
+   "HUMAN buildability.main_blocker: other -> none"
   ],
   "l1_dropped_evidence": [
    {
@@ -14680,7 +14957,15 @@
     "buildability.main_blocker",
     "mcp.exists"
    ]
-  }
+  },
+  "human_overrides": [
+   {
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "human": "none",
+    "note": ""
+   }
+  ]
  },
  {
   "id": "neo4j",

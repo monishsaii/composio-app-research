@@ -9,21 +9,21 @@
 - [human_check.csv](human_check.csv): gold-sample human audit sheet
 
 ## Verdict counts
-- BUILD_NOW: 35
+- BUILD_NOW: 36
 - BUILD_WITH_CAVEATS: 52
 - BLOCKED_NEEDS_OUTREACH: 7
 - BLOCKED_NO_PUBLIC_API: 0
 - NOT_APPLICABLE_NOT_A_SERVICE: 2
-- UNCLEAR: 4
+- UNCLEAR: 3
 
 ## Headline findings
-- 57 of 100 apps give a developer working API credentials free and self-serve (45 free, 12 via trial).
-- 40 of 100 are gated. The most common gate is paid plan required (18 apps); only 4 require partner or sales contact.
-- Auth is dominated by oauth2 (70 apps) and api_key (48); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.
-- 72 of 100 vendors now publish an official MCP server; 15 more have only community servers.
-- 35 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.
-- Finance apps: 5 of 9 gated vs 35 of 88 in other categories.
-- Verification changed the verdict for 34 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.
+- 60 of 100 apps give a developer working API credentials free and self-serve (46 free, 14 via trial).
+- 37 of 100 are gated. The most common gate is paid plan required (15 apps); only 4 require partner or sales contact.
+- Auth is dominated by oauth2 (70 apps) and api_key (47); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.
+- 72 of 100 vendors now publish an official MCP server; 16 more have only community servers.
+- 36 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.
+- Finance apps: 5 of 9 gated vs 32 of 88 in other categories.
+- Verification changed the verdict for 36 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.
 
 ## Apps
 - Ahrefs: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2)
@@ -43,14 +43,14 @@
 - Cloudflare: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+oauth2)
 - Coda: BUILD_NOW (access self_serve_free; auth bearer_token)
 - Consensus: BLOCKED_NEEDS_OUTREACH (access admin_approval; auth api_key+bearer_token+oauth2)
-- Copper: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2)
-- Datadog: BUILD_WITH_CAVEATS (access paid_plan_required; auth api_key+oauth2+other)
+- Copper: BUILD_WITH_CAVEATS (access self_serve_trial; auth api_key+oauth2)
+- Datadog: BUILD_WITH_CAVEATS (access self_serve_trial; auth api_key+oauth2+other)
 - DataForSEO: BUILD_WITH_CAVEATS (access paid_plan_required; auth basic)
-- DealCloud: BUILD_WITH_CAVEATS (access admin_approval; auth api_key+oauth2)
+- DealCloud: BUILD_WITH_CAVEATS (access admin_approval; auth oauth2)
 - Devin: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+api_key)
 - Discord: BUILD_NOW (access self_serve_free; auth bearer_token+oauth2+other)
 - Ecwid: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+oauth2)
-- fanbasis: UNCLEAR (access paid_plan_required; auth api_key)
+- fanbasis: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key)
 - Fathom: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+oauth2)
 - Firecrawl: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
 - Freshdesk: BUILD_NOW (access self_serve_trial; auth api_key+oauth2)
@@ -58,7 +58,7 @@
 - GitHub: BUILD_NOW (access self_serve_free; auth api_key+bearer_token+jwt_service_account+oauth2)
 - Gladly: BUILD_WITH_CAVEATS (access admin_approval; auth basic)
 - GoHighLevel: BUILD_WITH_CAVEATS (access paid_plan_required; auth bearer_token+oauth2)
-- Google Ads: BUILD_WITH_CAVEATS (access app_review_required; auth jwt_service_account+oauth2)
+- Google Ads: BUILD_WITH_CAVEATS (access app_review_required; auth oauth2)
 - Gorgias: BUILD_NOW (access self_serve_trial; auth api_key+basic+oauth2)
 - Grain: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key+bearer_token+oauth2)
 - Gumroad: BUILD_NOW (access self_serve_free; auth oauth2)
@@ -80,7 +80,7 @@
 - Meta Ads: BUILD_WITH_CAVEATS (access app_review_required; auth bearer_token+oauth2)
 - Monday.com: BUILD_NOW (access self_serve_free; auth api_key+oauth2)
 - MongoDB Atlas: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2+api_key)
-- MrScraper: BUILD_WITH_CAVEATS (access self_serve_free; auth api_key)
+- MrScraper: BUILD_NOW (access self_serve_free; auth api_key)
 - Neo4j: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
 - Netlify: BUILD_NOW (access self_serve_free; auth oauth2+bearer_token)
 - NotebookLM: BUILD_WITH_CAVEATS (access self_serve_free; auth oauth2)
