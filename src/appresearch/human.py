@@ -63,14 +63,19 @@ def main() -> None:
             md += ["", f"## {row['app']} ({row['split']})  [docs]({row['doc_link']})", "", "| field | agent value | evidence |", "|---|---|---|"]
         md.append(f"| {row['field']} | `{row['agent_value']}` | [{row['evidence_quote'][:80]}]({row['evidence_url']}) |")
     (cache.DATA / "human_check.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-    # blind auditor tasks
+    print(f"wrote {CSV} ({len(rows)} rows), human_check.md; auditor tasks: {emit_auditor()}")
+
+
+def emit_auditor() -> int:
+    """Blind auditor tasks: app name only, never the agent's answers."""
+    sp = split.load()
     AUD_TASKS.mkdir(parents=True, exist_ok=True)
     prompt = PROMPT.read_text(encoding="utf-8")
     for aid in sp["test"] + sp["dev"]:
         a = BY_ID[aid]
         (AUD_TASKS / f"{aid}.md").write_text(f"{prompt}\n## App\nid: {aid}\nname: {a['name']}\ncategory: {a['category']}\n"
                                               f"known ambiguity: {a.get('ambiguity')}\n", encoding="utf-8")
-    print(f"wrote {CSV} ({len(rows)} rows), human_check.md, {len(sp['test']) + len(sp['dev'])} auditor tasks")
+    return len(sp["test"]) + len(sp["dev"])
 
 
 def load_human() -> dict:

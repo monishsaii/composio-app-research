@@ -1,0 +1,27 @@
+{"id": "coda", "name": "Coda", "category": "Productivity/PM",
+ "one_liner": "Superhuman Docs (formerly Coda), a document platform with a REST API for docs, tables, and rows.",
+ "docs_url": "https://coda.io/developers/apis/v1",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token"],
+ "auth_notes": "Bearer API token sent in the Authorization header. Steps to create the token are not in the cached pages.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Free of charge for all users in free and paid workspaces. Actions depend on the token owner's workspace role; createDoc requires a Doc Maker or Admin role.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": true, "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Free, self-serve bearer token with a documented REST API and no approval gate. Per-endpoint role requirements and a 3-month deprecation policy apply. Endpoint count not stated.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://www.coda.io/api", "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):", "source_type": "official_docs"}],
+  "auth": [{"url": "https://coda.io/developers/apis/v1", "quote": "headers = {'Authorization': 'Bearer <your API token>'}", "source_type": "official_docs"}],
+  "access": [{"url": "https://www.coda.io/api", "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.", "source_type": "official_docs"}],
+  "api_surface": [
+   {"url": "https://www.coda.io/api", "quote": "To fetch a subsequent page of results, pass the pageToken parameter.", "source_type": "official_docs"},
+   {"url": "https://www.coda.io/api", "quote": "Reading data (with the exceptions below): 100 requests per 6 seconds", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://www.coda.io/api", "quote": "you may also want to consider using the Superhuman Docs MCP server.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": ""
+}

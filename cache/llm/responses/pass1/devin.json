@@ -1,0 +1,23 @@
+{"id": "devin", "name": "Devin", "category": "AI/Research/Media",
+ "one_liner": "Autonomous AI software engineer that writes, runs, and tests code.",
+ "docs_url": null, "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "api_key"],
+ "auth_notes": "Service user API keys (cog_ prefix) sent as Bearer tokens for the MCP server and models endpoint; Devin Desktop API takes service keys in the request body; legacy apk_ keys are rejected by MCP session tools.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Devin Desktop usage API is Enterprise-only. MCP server needs a Devin account and an API key generated from account settings. Pricing and plan gate for the core Devin API are not stated in the cached pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest", "other"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://mcp.devin.ai/mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Official MCP server (mcp.devin.ai/mcp) uses self-serve service user keys with Bearer auth and documents session, playbook, and schedule tools. Core REST API docs and plan gating are unverified in cached pages; the Desktop API is Enterprise-only.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://docs.devin.ai/", "quote": "Devin is an autonomous AI software engineer that can write, run and test code.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "quote": "Use a personal access token or a service user key as <API_KEY>.", "source_type": "official_docs"}, {"url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction", "quote": "Service keys must be included in the request body of all API calls.", "source_type": "official_docs"}],
+  "access": [{"url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction", "quote": "The API is available for Enterprise plans only", "source_type": "official_docs"}, {"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "quote": "Sign up for a Devin account at Devin.ai", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction", "quote": "The Devin Desktop API enables enterprise customers to programmatically access detailed usage analytics", "source_type": "official_docs"}, {"url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction", "quote": "API requests are subject to rate limiting to ensure service stability.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "quote": "The Devin MCP server is an authenticated service that provides access to both public and private repositories", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "quote": "Any Devin session or MCP-compatible client can create sessions, manage playbooks and knowledge, set up schedules, and more.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Core Devin v3 REST API docs (api-reference/overview) were not in the cached pages, so docs_url is null and endpoint breadth is unknown. Plan tier and pricing for the core API remain unresolved; only the Desktop API's Enterprise-only gate is documented."}

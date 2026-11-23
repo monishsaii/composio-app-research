@@ -27,7 +27,9 @@ def cmd_research(a):
     with cache.Timer(f"{a.stage}:ingest"):
         good, bad = research.ingest(a.stage, apps)
     for b in bad:
-        print("INVALID/MISSING:", b)
+        print("INVALID/MISSING:", b.splitlines()[0][:200])
+    if a.retry_invalid:
+        print(f"re-emitted {research.emit_retries(a.stage, bad)} retry task(s)")
     if a.all:
         research.save("pass1.json", good)
     else:
@@ -103,6 +105,7 @@ def main(argv=None):
     g.add_argument("--all", action="store_true")
     r.add_argument("--stage", default="pass1")
     r.add_argument("--ingest-only", action="store_true")
+    r.add_argument("--retry-invalid", action="store_true", help="move invalid responses aside and re-emit tasks with the error")
     r.set_defaults(fn=cmd_research)
 
     f = sub.add_parser("fetch", help="fetch+cache a URL (the only way subagents may add pages)")

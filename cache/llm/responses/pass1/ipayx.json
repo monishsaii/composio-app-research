@@ -1,0 +1,21 @@
+{
+ "id": "ipayx", "name": "iPayX", "category": "Finance/Fintech",
+ "one_liner": "Neutral FX verification layer that audits foreign-exchange transactions against mid-market rates.",
+ "docs_url": null, "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "No API authentication is documented on the page. The apidog article on a generic 'iPay' payment API describes a different company and was not used.",
+ "oauth_details": null,
+ "access": "partner_or_contact_sales",
+ "access_notes": "The page lists only a contact email. No sign-up, credential or pricing flow is described.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "none", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BLOCKED_NO_PUBLIC_API", "main_blocker": "no_api", "rationale": "The product page describes a web audit product with a contact email and documents no API, endpoints or credentials. No public developer surface appears on the pages read.", "est_tool_count_if_built": null, "est_effort": "S"},
+ "evidence": {
+  "identity": [{"url": "https://ipayx.ai/docs", "quote": "iPayX Protocol is the neutral FX verification layer for fintech sales teams and FX brokers.", "source_type": "official_docs"}],
+  "access": [{"url": "https://ipayx.ai/docs", "quote": "Contact: info@ipayx.ai", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://ipayx.ai/docs", "quote": "We audit foreign-exchange transactions, compare the rate a bank or card network applied against the real-time mid-market rate", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "medium", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "The pages show no API docs, so the verdict is provisional. Search results named an iPayX MCP server (iPAYX-Technologies), which suggests a hosted endpoint may exist. Verify before finalizing."
+}

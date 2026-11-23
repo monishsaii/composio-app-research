@@ -1,0 +1,35 @@
+{
+ "id": "mongodb-atlas",
+ "name": "MongoDB Atlas",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Managed cloud MongoDB database service with an Administration API for managing all components.",
+ "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "api_key"],
+ "auth_notes": "Service accounts (OAuth2 client credentials, recommended) issue a bearer token valid for 1 hour. API keys use HTTP Digest and are a legacy option. The Admin API does not grant access to cluster data. An IP access list can apply.",
+ "oauth_details": {"flows": ["client_credentials"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Service accounts belong to one Atlas organization and are granted project access there. Managing org-level service accounts needs the Organization Owner role. Cost or plan tier is not stated on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://github.com/mcp/mongodb-js/mongodb-mcp-server"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Admin API is documented with OAuth2 client-credentials service accounts and bearer tokens. IP access lists may restrict calls. Plan tier and credential gating are not stated on fetched pages. The Data API is not covered.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview", "quote": "The MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview", "quote": "The Atlas Administration API supports OAuth2 Service Accounts and HTTP Digest-based API keys.", "source_type": "official_docs"},
+   {"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview", "quote": "returns a Bearer token that is reusable and valid for 1 hour (3600 seconds).", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md", "quote": "Each service account belongs to exactly one organization, and you can grant it access to any number of projects within that organization.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://mongodb.com/docs/atlas/api/api-authentication/", "quote": "Many Atlas Administration API endpoint URLs follow the format of /api/atlas/<version>/groups/<GROUP-ID>/,", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://github.com/mcp/mongodb-js/mongodb-mcp-server", "quote": "A Model Context Protocol server for interacting with MongoDB Databases and MongoDB Atlas.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview", "quote": "the token can be created from any IP address, but the API call that uses the token must originate from an allowed IP.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Credential gating and plan tier are not stated on the fetched pages. The Atlas Data API (noted as deprecated in the ambiguity hint) is not covered, so the Admin API vs Data API choice is unresolved."
+}

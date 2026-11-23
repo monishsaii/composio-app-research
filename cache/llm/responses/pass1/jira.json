@@ -1,0 +1,29 @@
+{"id": "jira", "name": "Jira", "category": "Productivity/PM",
+ "one_liner": "Atlassian issue tracking and project management product with a REST API.",
+ "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "basic"],
+ "auth_notes": "Non-Forge/Connect integrations use OAuth 2.0 (3LO) authorization code grants; basic auth is documented for personal scripts and ad-hoc calls.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Cached pages do not say how API credentials are obtained, which plans include API access, or cost. Marketplace auth apps are third-party and do not state Jira's own access rules.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "community", "url": "https://github.com/MankowskiNick/jira-mcp"},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Public REST API with standard OAuth 2.0 and basic auth is documented. Credential access tier and rate limits are not stated in the cached pages, so buildability cannot be confirmed.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "quote": "The Jira REST API enables you to interact with Jira programmatically.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "quote": "For integrations that are not Forge or Connect apps, use OAuth 2.0 authorization code grants (3LO) for security", "source_type": "official_docs"},
+   {"url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "quote": "For personal scripts, bots, and ad-hoc execution of the REST APIs use basic authentication.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/", "quote": "The Jira REST API uses pagination to improve performance.", "source_type": "official_docs"},
+   {"url": "https://developer.atlassian.com/server/jira/platform/jira-apis-32344053.html", "quote": "Webhooks are user-defined callbacks over HTTP, which are specific to the JIRA REST API.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://github.com/MankowskiNick/jira-mcp", "quote": "A Model Context Protocol server for integrating JIRA with Claude.", "source_type": "third_party"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Credential acquisition, plan gating, sandbox availability and rate limits are not in the cached pages. Verify on Atlassian's pricing and developer pages before deciding."
+}

@@ -1,0 +1,28 @@
+{"id": "smartsheet", "name": "Smartsheet", "category": "Productivity/PM",
+ "one_liner": "Work management platform built on sheets, rows and columns, with a REST API and MCP server.",
+ "docs_url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Access tokens (personal access tokens) are sent as Bearer tokens. OAuth 2.0 is a three-legged authorization code flow with refresh tokens for multi-user integrations.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Access tokens are generated in the Smartsheet UI. Cached pages do not state which plans include API access, and the refresh-token lifetime depends on plan configuration. Cost is not stated.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "auth_complexity", "rationale": "Personal access tokens are self-serve in the UI and the REST API is documented. OAuth needs a three-legged flow with refresh-token expiry tracking. Plan eligibility for API access is not in the cached pages.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server", "quote": "It exposes read/write access to Smartsheet's core work management objects", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication", "quote": "The API authenticates using access tokens (API keys).", "source_type": "official_docs"},
+   {"url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api", "quote": "OAuth 2.0 is the right choice for multi-user integrations, SaaS products, or anything where you're acting on behalf of other people's Smartsheet accounts.", "source_type": "official_docs"},
+   {"url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api", "quote": "scopes let you request least-privilege access", "source_type": "official_docs"},
+   {"url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api", "quote": "expires after a set period that depends on your Smartsheet plan configuration.", "source_type": "official_docs"}
+  ],
+  "api_surface": [{"url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server", "quote": "The MCP Server routes the request through Smartsheet REST API, pulling structured data with rich metadata.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server", "quote": "The Smartsheet MCP Server is an open, protocol-based integration layer built on Anthropic's Model Context Protocol standard.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "medium", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Plan eligibility for API access and token costs are not in the cached pages. The OAuth details come from a Smartsheet blog post, so check the official OAuth guide."
+}

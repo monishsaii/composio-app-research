@@ -1,0 +1,23 @@
+{"id": "higgsfield", "name": "higgsfield", "category": "AI/Research/Media",
+ "one_liner": "Self-serve API and MCP server for generating image and video with 50+ AI models.",
+ "docs_url": "https://docs.higgsfield.ai/docs", "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Server-side Authorization: Key KEY_ID:KEY_SECRET header; key shown once at creation. MCP connects through a Higgsfield account sign-in with no API key.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Self-serve, no subscription: create an account, add a payment method, top up a USD balance (minimum $5), then create a key. Not a free tier; the enum has no pay-as-you-go value.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["python", "typescript"]},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Documented REST API with Python and TypeScript SDKs and key auth, but requires a payment method and funded USD balance before keys spend. Generation is async; output files are kept only 7 days.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://docs.higgsfield.ai/docs", "quote": "Higgsfield provides one integration point for generative media models.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.higgsfield.ai/docs/help/faq", "quote": "authenticate server-side with Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET.", "source_type": "official_docs"}, {"url": "https://docs.higgsfield.ai/docs/help/faq", "quote": "Do not use a Bearer token or expose the secret in browser or mobile code.", "source_type": "official_docs"}],
+  "access": [{"url": "https://higgsfield.ai/blog/higgsfield-api", "quote": "Add a payment method and top up your balance.", "source_type": "official_docs"}, {"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "quote": "Billing is pay-as-you-go from a US dollar balance, and the minimum top-up is $5.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "quote": "Connect through the Python or TypeScript SDK, or call the REST API directly from any language with an HTTP client", "source_type": "official_docs"}, {"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "quote": "track progress by polling the status or by receiving a webhook when the result is ready.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://higgsfield.ai/cli", "quote": "Higgsfield uses MCP (Model Context Protocol), an open standard that gives AI agents access to external tools.", "source_type": "official_docs"}, {"url": "https://higgsfield.ai/cli", "quote": "No. Add the Higgsfield MCP server URL in your agent's settings and authenticate through your Higgsfield account.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://higgsfield.ai/blog/higgsfield-api", "quote": "Spending stops at zero.", "source_type": "official_docs"}, {"url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api", "quote": "Generated output files stay available for at least 7 days after creation", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Access enum has no pay-as-you-go value, so access is unknown. The hosted MCP server URL is not in the cached pages (search results cite a URL, but it was not fetched). Free-tier and rate-limit answers are absent from the cached FAQ."}

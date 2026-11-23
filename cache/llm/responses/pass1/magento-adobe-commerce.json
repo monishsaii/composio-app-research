@@ -1,0 +1,25 @@
+{
+ "id": "magento-adobe-commerce",
+ "name": "Magento (Adobe Commerce)",
+ "category": "Ecommerce",
+ "one_liner": "Adobe Commerce (Magento) is an ecommerce platform offering GraphQL and REST APIs for storefront and third-party integrations.",
+ "docs_url": "https://devdocs.magento.com/guides/v2.4/graphql",
+ "openapi_spec_url": null,
+ "auth_methods": "unknown",
+ "auth_notes": "Fetched pages do not describe authentication.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Fetched pages do not describe how to obtain API credentials, cost, or waiting period.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["graphql", "rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": "unknown"},
+ "mcp": {"exists": "community", "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp"},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Fetched pages cover only the devdocs landing page and a third-party dev-tooling README; auth, access and sandbox details are not in the pages.", "est_tool_count_if_built": null, "est_effort": null},
+ "evidence": {
+  "identity": [{"url": "https://devdocs.magento.com/guides/v2.2/rest/catalog-notes.html", "quote": "Use our GraphQL APIs to send data to and from the storefront. Our REST APIs integrate with third-party software.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://devdocs.magento.com/guides/v2.2/rest/catalog-notes.html", "quote": "Use our GraphQL APIs to send data to and from the storefront. Our REST APIs integrate with third-party software.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp", "quote": "This project implements a Model Context Protocol (MCP) server that interacts with Adobe Commerce.", "source_type": "third_party"}]
+ },
+ "confidence": {"identity": "medium", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Auth, access and sandbox facts were not in the fetched pages; the search returned Adobe developer auth pages that were not fetched in pass 1."
+}

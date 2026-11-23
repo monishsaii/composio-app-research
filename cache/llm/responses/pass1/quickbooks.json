@@ -1,0 +1,25 @@
+{
+ "id": "quickbooks", "name": "QuickBooks", "category": "Finance/Fintech",
+ "one_liner": "Intuit's QuickBooks Online accounting product, exposed through an OAuth 2.0 accounting API.",
+ "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/learn/explore-the-quickbooks-online-api",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth 2.0 with client ID and secret; one-time browser authorization, then refresh token. Intuit does not offer per-user API keys.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Requires an app registered on the Intuit Developer Portal and a QBO company to connect. Sandbox company is available from the dev portal. Production needs a public HTTPS redirect. Cost and wait time are not stated in the fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": [], "breadth": "broad", "approx_endpoint_count": 145, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "auth_complexity", "rationale": "Sandbox setup is straightforward and the official MCP server runs locally over stdio, but production OAuth needs a public HTTPS redirect and a one-time browser handshake. Refresh tokens lapse after a 100-day window.", "est_tool_count_if_built": 145, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online", "source_type": "official_repo"}],
+  "auth": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company.", "source_type": "official_repo"}, {"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "Intuit does not offer per-user API keys.", "source_type": "official_repo"}],
+  "access": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "complete a one-time, browser-based OAuth handshake.", "source_type": "official_repo"}],
+  "sandbox": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "production requires a public HTTPS callback for the initial authorization.", "source_type": "official_repo"}],
+  "api_surface": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "It includes full CRUD operations for 29 entity types and 11 financial reports", "source_type": "official_repo"}],
+  "mcp": [{"url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md", "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.", "source_type": "official_repo"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "Access cost and approval wait are not stated in the fetched pages. The developer docs page returned only a loading placeholder, so the official API docs were not verified."
+}

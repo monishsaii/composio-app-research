@@ -1,0 +1,28 @@
+{
+ "id": "waterfall-io",
+ "name": "Waterfall.io",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Waterfall is a B2B data platform aggregating vendors into one API for contact details, phone numbers and enrichment.",
+ "docs_url": "https://www.waterfall.io/",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Sent in the x-api-key header. Key-management endpoints require a master API key. Pages are from a third-party connector (One), not Waterfall.io.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Pages say to obtain credentials from the platform documentation site, but state no plan, tier, cost, or approval wait. Account over quota returns 402.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "medium", "approx_endpoint_count": 23, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": "unknown"},
+ "mcp": {"exists": "none_found", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Pages document API-key auth and 23 actions via a third-party connector, but do not state how credentials are obtained or what tier is needed. Waterfall.io itself was not fetched.", "est_tool_count_if_built": 23, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://www.withone.ai/knowledge/waterfall/md", "quote": "Waterfall provides a unified B2B data platform that aggregates multiple vendors into one API", "source_type": "third_party"}],
+  "auth": [{"url": "https://www.withone.ai/knowledge/waterfall/md", "quote": "The API key is sent in the `x-api-key` header with each request.", "source_type": "third_party"}],
+  "api_surface": [
+   {"url": "https://www.withone.ai/knowledge/waterfall/md", "quote": "## Actions (23)", "source_type": "third_party"},
+   {"url": "https://www.withone.ai/knowledge/waterfall/conn_mod_def%3A%3AGJ8TOqyg9n0%3A%3AAaJGRR9iRt6B7PPO2f2VMw/md", "quote": "Too many requests. Rate limit exceeded.", "source_type": "third_party"}
+  ]
+ },
+ "confidence": {"identity": "medium", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Credential acquisition, plan tier, and sandbox are not stated in the fetched pages, which are a third-party connector and not waterfall.io. Verify on the vendor's own docs."
+}

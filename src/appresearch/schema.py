@@ -76,7 +76,7 @@ class Buildability(BaseModel):
     main_blocker: Blocker = "other"
     rationale: str = ""
     est_tool_count_if_built: Optional[int] = None
-    est_effort: Effort = "M"
+    est_effort: Optional[Effort] = None  # None = not estimated (no basis in evidence)
 
 
 class Record(BaseModel):

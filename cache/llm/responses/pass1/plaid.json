@@ -1,0 +1,25 @@
+{
+ "id": "plaid", "name": "Plaid", "category": "Finance/Fintech",
+ "one_liner": "Financial data API for connecting end-user bank accounts to apps via Plaid Link.",
+ "docs_url": "https://plaid.com/docs/auth/add-to-app/", "openapi_spec_url": null,
+ "auth_methods": ["other"],
+ "auth_notes": "Server requests carry client_id and secret (body or PLAID-CLIENT-ID / PLAID-SECRET headers). End-user bank links return a public token that is exchanged server-side for an access token.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Create a developer account, then find API keys in the Dashboard. Production needs a completed application and company profile. Cost is not stated on the pages read; the Trial plan page returned 403.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["javascript"]},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Self-serve sandbox keys and a documented API, but end users must complete Plaid Link. Production needs a completed application profile before some institutions work. Larger deployments route through sales.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://plaid.com/docs/auth/add-to-app/", "quote": "In this guide, we'll demonstrate how to add Auth to your app so that you can connect to your users' bank accounts", "source_type": "official_docs"}],
+  "auth": [{"url": "https://plaid.com/docs/auth/add-to-app/", "quote": "On your application server, exchange the public token for an access token and an Item ID by calling /item/public_token/exchange.", "source_type": "official_docs"}],
+  "access": [{"url": "https://plaid.com/docs/auth/add-to-app/", "quote": "If you don't already have one, you'll need to create a Plaid developer account.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://plaid.com/docs/resources/", "quote": "Sandbox Studio is a no-code way to explore Plaid products from the Dashboard, using Sandbox test data.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://plaid.com/docs/resources/", "quote": "The Plaid OpenAPI file is available on GitHub.", "source_type": "official_docs"}, {"url": "https://plaid.com/docs/auth/add-to-app/", "quote": "npm install --save plaid", "source_type": "official_docs"}, {"url": "https://pypi.org/project/mcp-server-plaid/", "quote": "Simulate a Plaid webhook event in the sandbox environment", "source_type": "third_party"}],
+  "mcp": [{"url": "https://plaid.com/docs/resources/", "quote": "The Plaid AI coding toolkit ships with a local MCP server that runs as a subprocess of your MCP client", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://plaid.com/docs/auth/add-to-app/", "quote": "Your application profile and company profile must be completed before connecting to certain institutions in Production.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": ""
+}

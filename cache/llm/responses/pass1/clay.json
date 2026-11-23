@@ -1,0 +1,30 @@
+{
+ "id": "clay",
+ "name": "Clay",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Clay is a GTM platform for enriching and searching company and people data, with CLI, API and agent access.",
+ "docs_url": "https://developers.clay.com/index.md",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Clay API key sent in the clay-api-key header. Keep keys server-side. Keys are created in the app under API and CLI, or with clay api-keys create.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Keys are self-serve (Clay app under API and CLI, or the clay CLI). Pages tie HTTP API features to the Growth plan and above and to a 14-day trial, but do not state a plan requirement for the Public API itself. No cost stated for keys.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["other"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": true, "official_sdks": "unknown"},
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "paid_plan_gate", "rationale": "Public API is documented with self-serve keys and a standard header, but pages do not say whether the Public API needs a paid plan. HTTP API features are tied to Growth and above and to a trial.", "est_tool_count_if_built": null, "est_effort": null},
+ "evidence": {
+  "identity": [{"url": "https://developers.clay.com/llms.txt", "quote": "Find companies and people in Clay's proprietary GTM database.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://developers.clay.com/quickstart.md", "quote": "Requests authenticate with a Clay API key in the `clay-api-key` header.", "source_type": "official_docs"}],
+  "access": [{"url": "https://university.clay.com/docs/workspace-administration-documentation", "quote": "Clay offers a 14-day free trial with 1,000 data credits", "source_type": "official_docs"}],
+  "api_surface": [
+   {"url": "https://developers.clay.com/llms.txt", "quote": "Get notified when a routine run finishes, then verify and handle the delivery.", "source_type": "official_docs"},
+   {"url": "https://developers.clay.com/llms.txt", "quote": "Understand Clay Public API rate limits and how to handle 429 responses.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://developers.clay.com/llms.txt", "quote": "Run your own reusable Clay logic from agents, the CLI, MCP, or the API.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Pages do not state whether the Public API itself requires a paid plan; HTTP API is tied to Growth and above. Verify plan gating on the pricing page or with Clay. The npm and community pages were not readable."
+}

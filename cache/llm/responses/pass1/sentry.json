@@ -1,0 +1,35 @@
+{
+ "id": "sentry",
+ "name": "Sentry",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Sentry platform whose web API manages organizations, teams and exports data programmatically.",
+ "docs_url": "https://docs.sentry.io/api/",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Auth tokens are sent as a Bearer token in the Authorization header. Tokens come from an internal integration (also on self-hosted) or a user Personal Token with scopes. Third-party apps use OAuth2 with authorization code plus PKCE, or the device flow. OAuth access tokens expire after 30 days and are bound to one organization.",
+ "oauth_details": {"flows": ["auth_code", "device", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Tokens are self-created in Sentry through an internal integration or User settings > Personal Tokens. Third-party OAuth needs a registered client. Plan tier and cost for API access are not stated on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://mcp.sentry.dev/mcp"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve internal-integration or user tokens plus standard OAuth2 (auth code with PKCE, device flow). REST v0 API is documented. Plan tier and rate limits are not stated on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://docs.sentry.io/hosted/api", "quote": "The Sentry web API is used to access the Sentry platform programmatically.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://docs.sentry.io/api/guides/oauth/", "quote": "For third-party applications that need to access Sentry on behalf of users, Sentry supports OAuth2 with the authorization code grant type.", "source_type": "official_docs"},
+   {"url": "https://docs.sentry.io/api/auth", "quote": "You can create authentication tokens within Sentry by creating an internal integration.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://docs.sentry.io/api/auth", "quote": "These auth tokens can be created within Sentry on the \"User settings\" page (User settings > Personal Tokens) and assigned specific scopes.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.sentry.io/hosted/api", "quote": "The current version of the Sentry's web API is considered v0.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://docsearch.algolia.com/mcp/docs/repo/getsentry/sentry-mcp", "quote": "The subagent connects to a remote MCP server and has access to Sentry tools.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://docs.sentry.io/api/guides/oauth/", "quote": "The access token only provides access to the specific organization the user selected during the OAuth flow.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "None. Plan tier and rate limits are not on the fetched pages, but they do not block the verdict."
+}

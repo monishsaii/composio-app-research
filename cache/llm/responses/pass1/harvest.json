@@ -1,0 +1,22 @@
+{"id": "harvest", "name": "Harvest", "category": "Productivity/PM",
+ "one_liner": "Time-tracking app whose V2 REST API covers time, expenses and projects.",
+ "docs_url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "Requests are authenticated with OAuth2 or Personal Access Tokens sent as a Bearer token, plus a Harvest-Account-Id header and a required User-Agent header.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Cached pages cover only the V2 overview. They do not say how tokens are obtained, which plans include API access, or cost.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "The V2 REST API and its auth options are documented. Credential access, plan gating and endpoint breadth are not in the cached pages, so buildability cannot be confirmed.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/", "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/", "quote": "Harvest requires applications to authenticate all requests with OAuth2 or Personal Access Tokens.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/", "quote": "The rate limit for general API requests is 100 requests per 15 seconds.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Only the V2 overview page was cached. Access tier, token creation, sandbox and MCP status are unverified. The app is getharvest.com time tracking, not Greenhouse Harvest."
+}

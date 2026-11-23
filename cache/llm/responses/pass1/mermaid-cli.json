@@ -1,0 +1,22 @@
+{"id": "mermaid-cli", "name": "Mermaid CLI", "category": "AI/Research/Media",
+ "one_liner": "Command-line tool that renders Mermaid diagram files to SVG, PNG, or PDF.",
+ "docs_url": "https://github.com/mermaid-js/mermaid-cli", "openapi_spec_url": null,
+ "auth_methods": ["none"],
+ "auth_notes": "No credentials for the local mmdc CLI or its Node.js run() API. Hosted Mermaid MCP and Mermaid API products are separate and do need an account or token.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Open-source package installed locally with npm install -g @mermaid-js/mermaid-cli. No account, key or cost stated for the CLI.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["cli_only"], "breadth": "none", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["javascript"]},
+ "mcp": {"exists": "official", "url": "https://mcp.mermaid.ai/mcp"},
+ "buildability": {"verdict": "NOT_APPLICABLE_NOT_A_SERVICE", "main_blocker": "cli_or_local_only", "rationale": "Local OSS CLI (mmdc), not a hosted API. Wrap it as a skill or tool that shells out to mmdc, or call the Node run() API. Hosted Mermaid API (api.mermaid.ai) is a separate product.", "est_tool_count_if_built": null, "est_effort": "S"},
+ "evidence": {
+  "identity": [{"url": "https://github.com/mermaid-js/mermaid-cli", "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.", "source_type": "official_repo"}],
+  "access": [{"url": "https://github.com/mermaid-js/mermaid-cli", "quote": "npm install -g @mermaid-js/mermaid-cli", "source_type": "official_repo"}],
+  "api_surface": [{"url": "https://github.com/mermaid-js/mermaid-cli", "quote": "Please be aware that the NodeJS API is not covered by semver, as mermaid-cli follows", "source_type": "official_repo"}],
+  "mcp": [{"url": "https://mermaid.ai/docs/ai/mcp-server", "quote": "The Mermaid MCP Server supports multiple transport modes, and every tool call requires authentication with a Mermaid account.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://github.com/mermaid-js/mermaid-cli", "quote": "The mermaid-cli will find the mermaid diagrams, create SVG files from them", "source_type": "official_repo"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "high", "sandbox": "low", "api_surface": "high", "mcp": "medium", "buildability": "high"},
+ "needs_human": true,
+ "needs_human_reason": "The Mermaid MCP server (mcp.mermaid.ai) and hosted Mermaid API (api.mermaid.ai) are separate Mermaid Chart products from the OSS CLI. Decide whether they count for this app; the verdict here covers only the local CLI."}

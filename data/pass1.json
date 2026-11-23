@@ -1,5 +1,147 @@
 [
  {
+  "id": "ahrefs",
+  "name": "Ahrefs",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "SEO data platform offering backlinks, keyword, SERP, rank tracking and site audit data via API v3.",
+  "docs_url": "https://docs.ahrefs.com/api/docs/introduction",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Direct API uses an API key created by workspace owners or admins in Account settings. Third-party apps use OAuth through Ahrefs Connect.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": "unknown",
+   "app_review_required": true
+  },
+  "access": "paid_plan_required",
+  "access_notes": "API keys are created by workspace owners or admins on eligible paid plans; other plans get limited free test queries. Not enterprise-only: Ahrefs Connect apps reach Lite, Standard, Advanced and Enterprise. Ahrefs Connect needs an application and review before going live. Paid requests cost at least 50 API units.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://api.ahrefs.com/mcp/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "paid_plan_gate",
+   "rationale": "Self-serve API keys on eligible paid plans and a documented API v3. OAuth for third-party apps needs Ahrefs Connect review. The hosted MCP endpoint may not be used for custom programmatic access.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.ahrefs.com/api/docs/introduction",
+     "quote": "With Ahrefs API, you can use data from your Ahrefs workspace to create custom integrations and automations.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.ahrefs.com/api/docs/introduction",
+     "quote": "To send requests to Ahrefs API, you'll need an API key.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.ahrefs.com/ahrefs-connect/docs/introduction",
+     "quote": "Users connect their Ahrefs account via OAuth, and your app can fetch data using their API units.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://docs.ahrefs.com/api/docs/introduction",
+     "quote": "Ahrefs API is available on eligible paid plans.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.ahrefs.com/ahrefs-connect/docs/introduction",
+     "quote": "becomes available to users on Ahrefs paid plans (Lite, Standard, Advanced, and Enterprise).",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://docs.ahrefs.com/api/docs/introduction",
+     "quote": "We strongly encourage the use of our complimentary test queries for all development and testing purposes",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.ahrefs.com/api/docs/introduction",
+     "quote": "Ahrefs API is limited to 60 requests per minute by default.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.ahrefs.com/mcp/docs/introduction",
+     "quote": "Ahrefs provides a hosted MCP server that allows users with a Lite plan or higher to connect their Ahrefs account to supported AI tools.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.ahrefs.com/mcp/docs/introduction",
+     "quote": "Using the external MCP endpoint via custom scripts, bridges, or standalone HTTP/JSON-RPC clients is unsupported and not permitted.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:52:46Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/ahrefs",
+     "quote": "Composio catalog entry 'ahrefs' (Ahrefs), 46 tools, auth ['API_KEY', 'OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "medium",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
+  "flags": []
+ },
+ {
   "id": "aircall",
   "name": "Aircall",
   "category": "Comms & Messaging",
@@ -378,6 +520,286 @@
   "flags": []
  },
  {
+  "id": "apify",
+  "name": "Apify",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "Platform for running web scraping and automation Actors, with REST API, client libraries, and MCP server.",
+  "docs_url": "https://docs.apify.com/api/v2",
+  "openapi_spec_url": "https://docs.apify.com/api/openapi.json",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "auth_notes": "Personal API token from the Console, sent as a Bearer Authorization header (recommended) or as a token URL parameter. Scoped and expiring tokens are supported. OAuth applies to the hosted MCP server only.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Create a free Console account, then a personal API token on the Integrations page; the token is shown only once. Paid plans and pricing are not on the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "javascript",
+    "python",
+    "go",
+    "php",
+    "java",
+    "dotnet",
+    "rust"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.apify.com"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve free account and personal token, a documented REST API with an OpenAPI schema, and standard bearer auth. Per-Actor pricing and rate limits were not verified on the fetched pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.apify.com/integrations/api.md",
+     "quote": "All aspects of the Apify platform can be controlled via a REST API",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.apify.com/platform/integrations/api?fpr=cliqto",
+     "quote": "You can either pass the token via the Authorization HTTP header or the URL token query parameter.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:51Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://github.com/mcp/com.apify/apify-mcp-server",
+     "quote": "If you don't have an account, you can create a free one there.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:53:51Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.apify.com/api.md",
+     "quote": "The Apify API is built around HTTP REST, uses predictable resource-oriented URLs, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.apify.com/api/v2.md",
+     "quote": "You can download the complete OpenAPI schema of Apify API in the",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.apify.com/api/v2.md",
+     "quote": "Webhook dispatches",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.apify.com/api.md",
+     "quote": "Clients for other languages are official Apify projects, but they are experimental:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/mcp/com.apify/apify-mcp-server",
+     "quote": "The hosted endpoint is https://mcp.apify.com.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:53:51Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.apify.com/integrations/api.md",
+     "quote": "the REST API works with any HTTP client",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:50Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/apify",
+     "quote": "Composio catalog entry 'apify' (Apify), 184 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "asana",
+  "name": "Asana",
+  "category": "Productivity/PM",
+  "one_liner": "Work management platform for tasks, projects, and workspaces, with a REST API.",
+  "docs_url": "https://developers.asana.com/reference/rest-api-reference.md",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens and service account tokens are sent as Bearer tokens. OAuth is for apps where multiple users sign in. OpenID Connect is also documented.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "PATs are generated by the user in the developer console and are persistent by default. Service accounts are Enterprise-only and created by super admins. Cost is not stated in the cached pages. The community MCP README says the plan must allow API access.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "community",
+   "url": "https://github.com/ampcome-mcps/asana-mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "paid_plan_gate",
+   "rationale": "PATs are self-serve and the REST API is documented. Cached pages do not confirm which plans allow API access. Service accounts are Enterprise-only, and multi-user apps need OAuth.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developers.asana.com/docs/asana",
+     "quote": "This is the interface for interacting with the Asana platform.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "quote": "A personal access token (PAT) is the quickest and simplest way to authenticate in the API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:25Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "quote": "This is the best choice if multiple users need to sign in to your app.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:25Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "quote": "PATs are generated in the developer console.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:25Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "quote": "Service Accounts are an Enterprise tier feature and can only be created by Asana super admins",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:25Z",
+     "support": null
+    },
+    {
+     "url": "https://github.com/ampcome-mcps/asana-mcp",
+     "quote": "Ensure the asana plan you have allows API access",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developers.asana.com/docs/asana",
+     "quote": "The Asana API is a RESTful interface with predictable resource-oriented URLs, accepts JSON or form-encoded requests, returns JSON, and uses standard HTTP features (verbs, response codes, etc.)",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/ampcome-mcps/asana-mcp",
+     "quote": "This Model Context Protocol server implementation of Asana allows you to talk to Asana API from MCP Client",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/asana",
+     "quote": "Composio catalog entry 'asana' (Asana), 247 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The cached pages do not state which plans include API access or what the API costs. Confirm plan eligibility before building.",
+  "flags": []
+ },
+ {
   "id": "attio",
   "name": "Attio",
   "category": "CRM & Sales",
@@ -642,6 +1064,267 @@
   "flags": []
  },
  {
+  "id": "binance",
+  "name": "Binance",
+  "category": "Finance/Fintech",
+  "one_liner": "Cryptocurrency exchange with public market-data REST and WebSocket APIs.",
+  "docs_url": "https://developers.binance.com/en",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "none"
+  ],
+  "auth_notes": "Public market data needs no key (per a community MCP page). Authentication for account endpoints is not on the pages read: the official Binance docs pages returned HTTP 202 with empty bodies.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Credentials and access rules for account endpoints are unverified. The official docs fetch returned no content.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest",
+    "websocket"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "community",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Official Binance docs did not load, so signed-endpoint auth, access and regional rules are unverified. Public market data is reachable without a key per a community MCP page.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/",
+     "quote": "A Model Context Protocol (MCP) server that exposes Binance cryptocurrency exchange data to Large Language Model (LLM) agents.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/",
+     "quote": "Read-only Operation: All data is fetched via Binance's public REST API (no API keys required)",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/",
+     "quote": "Real-time WebSocket Streams: Subscribe to real-time trade, ticker, and order book updates via WebSockets",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/",
+     "quote": "MCP Standard Compliant: Works with any MCP-compatible LLM client",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:26Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "medium",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Official Binance docs pages (developers.binance.com/en/docs and binance-pay/authentication) returned HTTP 202 with empty bodies. Auth, access and regional rules are unverified; re-fetch official docs before classifying.",
+  "flags": []
+ },
+ {
+  "id": "brex",
+  "name": "Brex",
+  "category": "Finance/Fintech",
+  "one_liner": "Brex is a spend platform with corporate cards, expense management, travel, and bill pay, plus a REST API.",
+  "docs_url": "https://developer.brex.com/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "auth_notes": "Admins create user tokens in the dashboard for their own account (bearer). Partner OAuth 2.0 needs a client ID and secret issued by Brex developer support. Access tokens expire after 1 hour and refresh tokens rotate.",
+  "oauth_details": {
+   "flows": [
+    "auth_code",
+    "PKCE",
+    "client_credentials"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "partner_or_contact_sales",
+  "access_notes": "Admin-generated user tokens are self-serve for the admin's own account, but only account or card admins can create them. Partner OAuth client credentials are issued by Brex developer support, and that section is for developer partners only. Cost is not stated in the fetched pages.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://developer.brex.com/docs/mcp"
+  },
+  "buildability": {
+   "verdict": "BLOCKED_NEEDS_OUTREACH",
+   "main_blocker": "partner_gate",
+   "rationale": "Third-party OAuth needs a client ID and secret issued by Brex developer support, and the partner section is for developer partners only. Admin-generated tokens cover only the admin's own account.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developer.brex.com/",
+     "quote": "Brex is the first fully unified spend platform — with global corporate cards, expense management, reimbursements, travel, and bill pay.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    },
+    {
+     "url": "https://www.brex.com/support/brex-api",
+     "quote": "generate a user token from your Brex dashboard following these instructions.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "quote": "Note: This section is only for Brex developer partners.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    },
+    {
+     "url": "https://www.brex.com/support/brex-api",
+     "quote": "Only account or card admins can create API tokens in the dashboard.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "quote": "Use staging for point-in-time testing only.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developer.brex.com/",
+     "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    },
+    {
+     "url": "https://developer.brex.com/",
+     "quote": "Webhooks API: Send real-time notifications based on events",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://developer.brex.com/docs/mcp",
+     "quote": "The Brex MCP server lets AI assistants interact directly with your Brex account",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:59Z",
+     "support": null
+    },
+    {
+     "url": "https://developer.brex.com/docs/mcp",
+     "quote": "Enable the beta.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:59Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:57Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/brex",
+     "quote": "Composio catalog entry 'brex' (Brex), 84 tools, auth ['OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "medium",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Partner OAuth requires Brex to issue credentials, and the approval outcome and timing are unknown. API pricing is not stated in the fetched pages. The API endpoint count is not given.",
+  "flags": []
+ },
+ {
   "id": "bright-data",
   "name": "Bright Data",
   "category": "Data/SEO/Scraping",
@@ -766,6 +1449,120 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "clay",
+  "name": "Clay",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "Clay is a GTM platform for enriching and searching company and people data, with CLI, API and agent access.",
+  "docs_url": "https://developers.clay.com/index.md",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Clay API key sent in the clay-api-key header. Keep keys server-side. Keys are created in the app under API and CLI, or with clay api-keys create.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Keys are self-serve (Clay app under API and CLI, or the clay CLI). Pages tie HTTP API features to the Growth plan and above and to a 14-day trial, but do not state a plan requirement for the Public API itself. No cost stated for keys.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "other"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": true,
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "paid_plan_gate",
+   "rationale": "Public API is documented with self-serve keys and a standard header, but pages do not say whether the Public API needs a paid plan. HTTP API features are tied to Growth and above and to a trial.",
+   "est_tool_count_if_built": null,
+   "est_effort": null
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Find companies and people in Clay's proprietary GTM database.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.clay.com/quickstart.md",
+     "quote": "Requests authenticate with a Clay API key in the `clay-api-key` header.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:47Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://university.clay.com/docs/workspace-administration-documentation",
+     "quote": "Clay offers a 14-day free trial with 1,000 data credits",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Get notified when a routine run finishes, then verify and handle the delivery.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Understand Clay Public API rate limits and how to handle 429 responses.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://developers.clay.com/llms.txt",
+     "quote": "Run your own reusable Clay logic from agents, the CLI, MCP, or the API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/clay",
+     "quote": "Composio catalog entry 'clay' (Clay), 15 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Pages do not state whether the Public API itself requires a paid plan; HTTP API is tied to Growth and above. Verify plan gating on the pricing page or with Clay. The npm and community pages were not readable.",
   "flags": []
  },
  {
@@ -1057,6 +1854,291 @@
   "flags": []
  },
  {
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "category": "Dev/Infra/Data",
+  "one_liner": "Cloudflare is an internet infrastructure platform with a REST API, OAuth clients, and MCP server hosting.",
+  "docs_url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "auth_notes": "API tokens created in the dashboard grant API access. OAuth clients are supported for third-party apps, using Authorization Code (with a client secret, or with PKCE for public clients).",
+  "oauth_details": {
+   "flows": [
+    "auth_code",
+    "PKCE"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "self_serve_free",
+  "access_notes": "API tokens are created in the dashboard. OAuth client creation requires the Super Administrator, Administrator, or OAuth Client Write role. Public OAuth clients need DNS-based domain verification. No cost is stated in the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve API tokens and a documented REST API with standard token auth. Endpoint breadth, rate limits, cost, and any official API MCP server are not in the fetched pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": null
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developers.cloudflare.com/support/cloudflare-client-api/",
+     "quote": "Use the following resources to learn more about Cloudflare's REST API:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/",
+     "quote": "Create an API token to grant access to the API to perform actions.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:30Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/",
+     "quote": "Cloudflare does not support Client Credentials, Implicit, Resource Owner Password Credentials, Device Authorization, or other OAuth grant types for self-managed third-party clients.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:30Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/",
+     "quote": "To create an OAuth client, you must have one of these roles for the associated account: Super Administrator, Administrator, or OAuth Client Write.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:30Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developers.cloudflare.com/support/cloudflare-client-api/",
+     "quote": "Use the following resources to learn more about Cloudflare's REST API:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/cloudflare",
+     "quote": "Composio catalog entry 'cloudflare' (Cloudflare), 171 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Fetched pages do not give endpoint counts, rate limits, SDK list, or an official Cloudflare API MCP server. Search surfaced the cloudflare/mcp-server-cloudflare repo, which was not fetched.",
+  "flags": []
+ },
+ {
+  "id": "coda",
+  "name": "Coda",
+  "category": "Productivity/PM",
+  "one_liner": "Superhuman Docs (formerly Coda), a document platform with a REST API for docs, tables, and rows.",
+  "docs_url": "https://coda.io/developers/apis/v1",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "auth_notes": "Bearer API token sent in the Authorization header. Steps to create the token are not in the cached pages.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Free of charge for all users in free and paid workspaces. Actions depend on the token owner's workspace role; createDoc requires a Doc Maker or Admin role.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": true,
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Free, self-serve bearer token with a documented REST API and no approval gate. Per-endpoint role requirements and a 3-month deprecation policy apply. Endpoint count not stated.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://www.coda.io/api",
+     "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:34Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://coda.io/developers/apis/v1",
+     "quote": "headers = {'Authorization': 'Bearer <your API token>'}",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:33Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://www.coda.io/api",
+     "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:34Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://www.coda.io/api",
+     "quote": "To fetch a subsequent page of results, pass the pageToken parameter.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:34Z",
+     "support": null
+    },
+    {
+     "url": "https://www.coda.io/api",
+     "quote": "Reading data (with the exceptions below): 100 requests per 6 seconds",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:34Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://www.coda.io/api",
+     "quote": "you may also want to consider using the Superhuman Docs MCP server.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:34Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/coda",
+     "quote": "Composio catalog entry 'coda' (Coda), 109 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "high",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "consensus",
+  "name": "Consensus",
+  "category": "AI/Research/Media",
+  "one_liner": "unknown",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "unknown. The Consensus OAuth guide PDF failed to fetch. The only fetched page is an unrelated community MCP package (@dakraid/mcp-consensus), not consensus.app.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "unknown. No cached page covers consensus.app API access, pricing, or credentials.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "ambiguous_product",
+   "rationale": "Cached pages do not cover consensus.app. The OAuth guide PDF fetch failed. The only fetched page is an unrelated advisor-consensus MCP package, so no product facts can be verified.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/consensus",
+     "quote": "Composio catalog entry 'consensus' (Consensus), 1 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "No cached page documents consensus.app. The Consensus V2 API OAuth guide PDF returned an empty fetch, and the only MCP page is an unrelated community package. Re-fetch support.goconsensus.com OAuth guide and consensus.app/home/api, and check mcp.consensus.app.",
+  "flags": []
+ },
+ {
   "id": "copper",
   "name": "Copper",
   "category": "CRM & Sales",
@@ -1168,6 +2250,261 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "datadog",
+  "name": "Datadog",
+  "category": "Dev/Infra/Data",
+  "one_liner": "Observability platform whose HTTP REST API gives programmatic access to the Datadog platform.",
+  "docs_url": "https://docs.datadoghq.com/api/latest",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key",
+   "oauth2",
+   "other"
+  ],
+  "auth_notes": "Classic auth is an API key header (DD-API-KEY) plus an Application key (DD-APPLICATION-KEY) for some endpoints. New models are Personal Access Tokens, Service Access Tokens, and workload identity federation (AWS GA). OAuth clients for API access are stated as planned for later in 2026. Application keys remain legacy after Q3 2026.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "PATs are tied to a user and need an expiration window. SATs are tied to a service account. Plan tier and cost for API access are not stated on the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "java",
+    "go",
+    "javascript",
+    "rust"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://docs.datadoghq.com/bits_ai/mcp_server"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "auth_complexity",
+   "rationale": "Documented REST API with API key auth, but the auth model is in transition: PATs and SATs are new, and OAuth clients for API access are planned later in 2026. Plan tier and access gating are not stated on the fetched pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.datadoghq.com/ko/api/latest",
+     "quote": "The Datadog API is an HTTP REST API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.datadoghq.com/ko/api/latest",
+     "quote": "Authenticate to the API with an API key using the header DD-API-KEY.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    },
+    {
+     "url": "https://www.datadoghq.com/blog/datadog-api-authentication.md",
+     "quote": "OAuth client support is planned for release later this year.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:46Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://www.datadoghq.com/blog/datadog-api-authentication.md",
+     "quote": "PATs are scoped to the permissions of the user who creates them and require an expiration window to avoid reliance on long-lived credentials.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:46Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.datadoghq.com/ko/api/latest",
+     "quote": "returns JSON from all requests, and uses standard HTTP response codes.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.datadoghq.com/ko/api/latest",
+     "quote": "Select one of our official client libraries languages in each endpoint to see code examples from that library.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.datadoghq.com/ja/bits_ai/mcp_server/",
+     "quote": "Datadog MCP サーバーは、Datadog のオブザーバビリティデータと Model Context Protocol (MCP) をサポートする AI エージェントとの間で橋渡しを行います。",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.datadoghq.com/ja/bits_ai/mcp_server/",
+     "quote": "MCP サーバーには、以下のフェアユース制限があります。",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:48Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/datadog",
+     "quote": "Composio catalog entry 'datadog' (Datadog), 255 tools, auth ['OAUTH2', 'API_KEY', 'BEARER_TOKEN']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The auth model is mid-transition: OAuth client support for API access is stated as planned for later in 2026, and application keys are being retired. Plan tier and access gating are not on the fetched pages.",
+  "flags": []
+ },
+ {
+  "id": "dataforseo",
+  "name": "DataForSEO",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "REST API suite for SEO and search data, including keywords, SERPs, backlinks, and on-page analysis.",
+  "docs_url": "https://docs.dataforseo.com/v3/",
+  "openapi_spec_url": "https://github.com/dataforseo/OpenApiDocumentation",
+  "auth_methods": [],
+  "auth_notes": "Credential mechanism is not stated on the fetched pages.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Fetched pages do not say how credentials are issued. A July 1, 2026 page says all endpoints moved to pay-as-you-go with monthly commitments cancelled.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": [
+    "php",
+    "csharp",
+    "java"
+   ]
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Documented public REST API with a sandbox and pay-as-you-go pricing. Credential issuance and auth scheme are not stated on the fetched pages, and the npm MCP page returned 403.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.dataforseo.com/",
+     "quote": "This is the starting point on your journey towards building powerful SEO software, data analysis pipelines, and robust no-code automations.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:33Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://dataforseo.com/update/pricing-update-in-dataforseo-apis",
+     "quote": "moving all endpoints to a pay-as-you-go model by cancelling monthly commitments.",
+     "source_type": "pricing_page",
+     "fetched_at": "2026-11-23T13:53:33Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://docs.dataforseo.com/v3/dataforseo_labs-overview/",
+     "quote": "You can test DataForSEO Labs API for free using DataForSEO Sandbox.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:31Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.dataforseo.com/",
+     "quote": "DataForSEO API is using the REST technology for interchanging data between your application and our service.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:33Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.dataforseo.com/",
+     "quote": "Each of DataForSEO APIs has a certain rate limit, which you can find in the HTTP header of every endpoint.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:33Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.dataforseo.com/v3.md",
+     "quote": "Recommended: officially supported C# Client.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:30Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/dataforseo",
+     "quote": "Composio catalog entry 'dataforseo' (DataForSEO), 354 tools, auth ['BASIC']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "low",
+   "access": "medium",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Credential mechanism, endpoint breadth, and MCP status are not on the fetched pages; the npm package page returned 403.",
   "flags": []
  },
  {
@@ -1291,6 +2628,145 @@
   },
   "needs_human": true,
   "needs_human_reason": "API access is enabled per customer site by an admin or CSM. API pricing, endpoint counts, rate limits, and sandbox are not on the fetched pages. Vendor ownership (Intapp) is not confirmed by the pages.",
+  "flags": []
+ },
+ {
+  "id": "devin",
+  "name": "Devin",
+  "category": "AI/Research/Media",
+  "one_liner": "Autonomous AI software engineer that writes, runs, and tests code.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "api_key"
+  ],
+  "auth_notes": "Service user API keys (cog_ prefix) sent as Bearer tokens for the MCP server and models endpoint; Devin Desktop API takes service keys in the request body; legacy apk_ keys are rejected by MCP session tools.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Devin Desktop usage API is Enterprise-only. MCP server needs a Devin account and an API key generated from account settings. Pricing and plan gate for the core Devin API are not stated in the cached pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest",
+    "other"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.devin.ai/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Official MCP server (mcp.devin.ai/mcp) uses self-serve service user keys with Bearer auth and documents session, playbook, and schedule tools. Core REST API docs and plan gating are unverified in cached pages; the Desktop API is Enterprise-only.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.devin.ai/",
+     "quote": "Devin is an autonomous AI software engineer that can write, run and test code.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:39Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "quote": "Use a personal access token or a service user key as <API_KEY>.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction",
+     "quote": "Service keys must be included in the request body of all API calls.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction",
+     "quote": "The API is available for Enterprise plans only",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "quote": "Sign up for a Devin account at Devin.ai",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction",
+     "quote": "The Devin Desktop API enables enterprise customers to programmatically access detailed usage analytics",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.devin.ai/desktop/accounts/api-reference/api-introduction",
+     "quote": "API requests are subject to rate limiting to ensure service stability.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "quote": "The Devin MCP server is an authenticated service that provides access to both public and private repositories",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "quote": "Any Devin session or MCP-compatible client can create sessions, manage playbooks and knowledge, set up schedules, and more.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/devin_mcp",
+     "quote": "Composio catalog entry 'devin_mcp' (Devin MCP), 23 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Core Devin v3 REST API docs (api-reference/overview) were not in the cached pages, so docs_url is null and endpoint breadth is unknown. Plan tier and pricing for the core API remain unresolved; only the Desktop API's Enterprise-only gate is documented.",
   "flags": []
  },
  {
@@ -1519,6 +2995,266 @@
   },
   "needs_human": true,
   "needs_human_reason": "Fetched pages are mostly navigation. Token flow, plan gating, credential wait and rate limits are not in the fetched content.; no evidence for: auth",
+  "flags": []
+ },
+ {
+  "id": "fanbasis",
+  "name": "fanbasis",
+  "category": "Ecommerce",
+  "one_liner": "unknown: pages describe Openstage Fanbase API, not confirmed as fanbasis.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "other"
+  ],
+  "auth_notes": "Applies to the Openstage pages: Manager API uses an API key as a Bearer token; Fanbase API fans get an Access Token via signup or login. No page confirms these apply to fanbasis.",
+  "oauth_details": null,
+  "access": "paid_plan_required",
+  "access_notes": "Fanbase API is limited to the Legendary plan and is arranged through an Account Manager. Manager API keys are generated in Artist Settings for all artists; no cost is stated. Applies to Openstage, not confirmed for fanbasis.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "ambiguous_product",
+   "rationale": "Fetched pages describe Openstage Fanbase and Manager APIs and never mention fanbasis. If they are the same product, Fanbase API needs a Legendary plan and Manager API needs an artist-scoped key.",
+   "est_tool_count_if_built": null,
+   "est_effort": null
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.openstage.live/fanbase/",
+     "quote": "Build your own Fan Experience, powered by the Openstage Fanbase API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:37Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.openstage.live/manager/guides",
+     "quote": "All requests to the Manager API must be authenticated using an API Key sent in the HTTP Authorization header as a Bearer token:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:39Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://fanbaseapi.openstage.live/guides.html",
+     "quote": "Fanbase API is available exclusively to artists on the Legendary plan.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:39Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://fanbaseapi.openstage.live/guides.html",
+     "quote": "No additional provisioning is required to access the staging environment.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:39Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.openstage.live/manager/guides",
+     "quote": "The response does not include the fan's ID. To get it, listen for the fan.created_updated",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:39Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Fetched pages describe Openstage's Fanbase and Manager APIs and never mention fanbasis; confirm the product identity before using these facts. Zapier's fanbasis MCP was found in search but not fetched.",
+  "flags": []
+ },
+ {
+  "id": "fathom",
+  "name": "Fathom",
+  "category": "AI/Research/Media",
+  "one_liner": "AI meeting recorder that provides summaries, transcripts and recordings via a REST API and webhooks.",
+  "docs_url": "https://developers.fathom.ai/api-overview",
+  "openapi_spec_url": "https://developers.fathom.ai/api-reference/openapi.yaml",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key per user from User Settings → API Access, sent as X-Api-Key. OAuth available for apps other users install; refresh tokens are single-use and rotate.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "self_serve_free",
+  "access_notes": "Generate an API key in User Settings → API Access. The FAQ says API access (keys and webhooks) is included on all plans. API keys are per user; there are no org-level keys.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "narrow",
+   "approx_endpoint_count": 11,
+   "webhooks": true,
+   "pagination_documented": true,
+   "rate_limits_documented": true,
+   "official_sdks": [
+    "python",
+    "typescript"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://api.fathom.ai/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve API key included on all plans, documented REST API with webhooks and OpenAPI spec, and standard auth. Rate limits apply (60 calls per minute globally).",
+   "est_tool_count_if_built": 11,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developers.fathom.ai/api-overview",
+     "quote": "This documentation describes Fathom’s REST API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.fathom.ai/api-overview",
+     "quote": "All REST API resources are authenticated with API keys generated via the Fathom website’s settings area.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.fathom.ai/faq",
+     "quote": "Refresh tokens are one-time-use and rotate on each refresh",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://developers.fathom.ai/faq",
+     "quote": "Yes. API access—keys and webhooks— are included on all plans.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.fathom.ai/faq",
+     "quote": "API keys are per user, not per org, and there are no org-level keys.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developers.fathom.ai/api-overview",
+     "quote": "Currently, you are able to make a maximum of 60 calls to the API in a 60 second window.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.fathom.ai/faq",
+     "quote": "There is no bulk endpoint; pagination is the way to retrieve large sets.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.fathom.ai/llms.txt",
+     "quote": "Create a webhook to receive new meeting content.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:00Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.fathom.ai/llms.txt",
+     "quote": "Get started with Fathom using our official TypeScript and Python SDKs",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:00Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://developers.fathom.ai/mcp-docs",
+     "quote": "Fathom now offers an official MCP (Model Context Protocol) server",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:01Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/fathom",
+     "quote": "Composio catalog entry 'fathom' (Fathom), 10 tools, auth ['OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "high",
+   "buildability": "high"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
   "flags": []
  },
  {
@@ -2613,6 +4349,166 @@
   "flags": []
  },
  {
+  "id": "grain",
+  "name": "Grain",
+  "category": "AI/Research/Media",
+  "one_liner": "Meeting recorder with transcripts, AI notes, recordings, and clips for your workspace.",
+  "docs_url": "https://developers.grain.com",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal Access Token for one user, Workspace Access Token for workspace-wide server use (admin only), and OAuth2 for integrations distributed to other Grain users.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "self_serve_free",
+  "access_notes": "Personal Access Token is generated in Account settings, Integrations, Personal API, and is available on every plan including Free. Workspace tokens need a workspace admin on Business or Enterprise.",
+  "sandbox_or_test_env": false,
+  "api_surface": {
+   "style": [
+    "graphql"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": [
+    "typescript"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "paid_plan_gate",
+   "rationale": "Documented API with webhooks and a 300 requests/minute limit. Personal tokens are self-serve on every plan, but workspace-wide tokens need admin access on Business or Enterprise. No sandbox, so tests run against a live workspace.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "The Grain API lets developers read meeting data, manage recordings, and receive real-time events from Grain programmatically.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "Personal Access Token (PAT): grants access on behalf of a single user.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    },
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "OAuth2: the standard flow for building integrations to be used by any Grain user.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "Not for personal API access, which is available on every plan, including Free.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    },
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "Requires admin access to generate and is available on Business and Enterprise plans.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "No sandbox is available at this time.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "The API allows 300 requests per minute per token.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    },
+    {
+     "url": "https://grain.com/contact",
+     "quote": "Learn how to use the GraphQL API and TypeScript SDK to extend Grain.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:03Z",
+     "support": null
+    },
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "Webhooks let Grain push data to your system when events occur, rather than requiring you to poll for changes.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://support.grain.com/en/articles/14811968-grain-mcp",
+     "quote": "Grain's MCP (Model Context Protocol) server gives AI assistants direct access to your meetings, transcripts, AI notes, and workspace data.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://support.grain.com/en/articles/15507288-grain-api",
+     "quote": "Workspace API access is available on Business and Enterprise plans and requires admin access to generate.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:04Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/grain",
+     "quote": "Composio catalog entry 'grain' (Grain), 17 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The developer reference (developers.grain.com) is not in the cached pages, so endpoint count, pagination, OAuth scopes and app review are unknown. The GraphQL style comes from a single grain.com/contact line. Search results also named unrelated products called Grain.",
+  "flags": []
+ },
+ {
   "id": "gumroad",
   "name": "Gumroad",
   "category": "Ecommerce",
@@ -2705,6 +4601,100 @@
   },
   "needs_human": true,
   "needs_human_reason": "Plan or cost requirements and the full endpoint list are not on the fetched pages. The npm MCP page returned 403 and the gumroad.com/api page has no content beyond its title.",
+  "flags": []
+ },
+ {
+  "id": "harvest",
+  "name": "Harvest",
+  "category": "Productivity/PM",
+  "one_liner": "Time-tracking app whose V2 REST API covers time, expenses and projects.",
+  "docs_url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "auth_notes": "Requests are authenticated with OAuth2 or Personal Access Tokens sent as a Bearer token, plus a Harvest-Account-Id header and a required User-Agent header.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Cached pages cover only the V2 overview. They do not say how tokens are obtained, which plans include API access, or cost.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "The V2 REST API and its auth options are documented. Credential access, plan gating and endpoint breadth are not in the cached pages, so buildability cannot be confirmed.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/",
+     "quote": "The Harvest V2 API is a REST API that allows you to interact with your Harvest account programmatically.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:46Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/",
+     "quote": "Harvest requires applications to authenticate all requests with OAuth2 or Personal Access Tokens.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:46Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://help.getharvest.com:443/api-v2/introduction/overview/general/",
+     "quote": "The rate limit for general API requests is 100 requests per 15 seconds.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:46Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/harvest",
+     "quote": "Composio catalog entry 'harvest' (Harvest), 57 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Only the V2 overview page was cached. Access tier, token creation, sandbox and MCP status are unverified. The app is getharvest.com time tracking, not Greenhouse Harvest.",
   "flags": []
  },
  {
@@ -2828,6 +4818,160 @@
   },
   "needs_human": true,
   "needs_human_reason": "Plan-level API access and pricing are not stated on the pages; confirm with Help Scout pricing.",
+  "flags": []
+ },
+ {
+  "id": "higgsfield",
+  "name": "higgsfield",
+  "category": "AI/Research/Media",
+  "one_liner": "Self-serve API and MCP server for generating image and video with 50+ AI models.",
+  "docs_url": "https://docs.higgsfield.ai/docs",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Server-side Authorization: Key KEY_ID:KEY_SECRET header; key shown once at creation. MCP connects through a Higgsfield account sign-in with no API key.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Self-serve, no subscription: create an account, add a payment method, top up a USD balance (minimum $5), then create a key. Not a free tier; the enum has no pay-as-you-go value.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "python",
+    "typescript"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Documented REST API with Python and TypeScript SDKs and key auth, but requires a payment method and funded USD balance before keys spend. Generation is async; output files are kept only 7 days.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.higgsfield.ai/docs",
+     "quote": "Higgsfield provides one integration point for generative media models.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:56Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.higgsfield.ai/docs/help/faq",
+     "quote": "authenticate server-side with Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:56Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.higgsfield.ai/docs/help/faq",
+     "quote": "Do not use a Bearer token or expose the secret in browser or mobile code.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:56Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://higgsfield.ai/blog/higgsfield-api",
+     "quote": "Add a payment method and top up your balance.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:59Z",
+     "support": null
+    },
+    {
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "quote": "Billing is pay-as-you-go from a US dollar balance, and the minimum top-up is $5.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:58Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "quote": "Connect through the Python or TypeScript SDK, or call the REST API directly from any language with an HTTP client",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:58Z",
+     "support": null
+    },
+    {
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "quote": "track progress by polling the status or by receiving a webhook when the result is ready.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:58Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://higgsfield.ai/cli",
+     "quote": "Higgsfield uses MCP (Model Context Protocol), an open standard that gives AI agents access to external tools.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:56Z",
+     "support": null
+    },
+    {
+     "url": "https://higgsfield.ai/cli",
+     "quote": "No. Add the Higgsfield MCP server URL in your agent's settings and authenticate through your Higgsfield account.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:56Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://higgsfield.ai/blog/higgsfield-api",
+     "quote": "Spending stops at zero.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:59Z",
+     "support": null
+    },
+    {
+     "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+     "quote": "Generated output files stay available for at least 7 days after creation",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:58Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/higgsfield",
+     "quote": "Composio catalog entry 'higgsfield' (Higgsfield), 13 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Access enum has no pay-as-you-go value, so access is unknown. The hosted MCP server URL is not in the cached pages (search results cite a URL, but it was not fetched). Free-tier and rate-limit answers are absent from the cached FAQ.",
   "flags": []
  },
  {
@@ -3075,6 +5219,210 @@
   },
   "needs_human": true,
   "needs_human_reason": "Plan or cost gating, sandbox availability, endpoint breadth and REST rate limits are not on the fetched pages.",
+  "flags": []
+ },
+ {
+  "id": "ipayx",
+  "name": "iPayX",
+  "category": "Finance/Fintech",
+  "one_liner": "Neutral FX verification layer that audits foreign-exchange transactions against mid-market rates.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "No API authentication is documented on the page. The apidog article on a generic 'iPay' payment API describes a different company and was not used.",
+  "oauth_details": null,
+  "access": "partner_or_contact_sales",
+  "access_notes": "The page lists only a contact email. No sign-up, credential or pricing flow is described.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "none",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BLOCKED_NO_PUBLIC_API",
+   "main_blocker": "no_api",
+   "rationale": "The product page describes a web audit product with a contact email and documents no API, endpoints or credentials. No public developer surface appears on the pages read.",
+   "est_tool_count_if_built": null,
+   "est_effort": "S"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://ipayx.ai/docs",
+     "quote": "iPayX Protocol is the neutral FX verification layer for fintech sales teams and FX brokers.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://ipayx.ai/docs",
+     "quote": "Contact: info@ipayx.ai",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://ipayx.ai/docs",
+     "quote": "We audit foreign-exchange transactions, compare the rate a bank or card network applied against the real-time mid-market rate",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The pages show no API docs, so the verdict is provisional. Search results named an iPayX MCP server (iPAYX-Technologies), which suggests a hosted endpoint may exist. Verify before finalizing.; no evidence for: api_surface",
+  "flags": []
+ },
+ {
+  "id": "jira",
+  "name": "Jira",
+  "category": "Productivity/PM",
+  "one_liner": "Atlassian issue tracking and project management product with a REST API.",
+  "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "auth_notes": "Non-Forge/Connect integrations use OAuth 2.0 (3LO) authorization code grants; basic auth is documented for personal scripts and ad-hoc calls.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Cached pages do not say how API credentials are obtained, which plans include API access, or cost. Marketplace auth apps are third-party and do not state Jira's own access rules.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": true,
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "community",
+   "url": "https://github.com/MankowskiNick/jira-mcp"
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Public REST API with standard OAuth 2.0 and basic auth is documented. Credential access tier and rate limits are not stated in the cached pages, so buildability cannot be confirmed.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "The Jira REST API enables you to interact with Jira programmatically.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:22Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "For integrations that are not Forge or Connect apps, use OAuth 2.0 authorization code grants (3LO) for security",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:22Z",
+     "support": null
+    },
+    {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "For personal scripts, bots, and ad-hoc execution of the REST APIs use basic authentication.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:22Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "quote": "The Jira REST API uses pagination to improve performance.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:22Z",
+     "support": null
+    },
+    {
+     "url": "https://developer.atlassian.com/server/jira/platform/jira-apis-32344053.html",
+     "quote": "Webhooks are user-defined callbacks over HTTP, which are specific to the JIRA REST API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:22Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/MankowskiNick/jira-mcp",
+     "quote": "A Model Context Protocol server for integrating JIRA with Claude.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:23Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/jira",
+     "quote": "Composio catalog entry 'jira' (Jira), 166 tools, auth ['OAUTH2', 'S2S_OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Credential acquisition, plan gating, sandbox availability and rate limits are not in the cached pages. Verify on Atlassian's pricing and developer pages before deciding.",
   "flags": []
  },
  {
@@ -3326,6 +5674,166 @@
   },
   "needs_human": true,
   "needs_human_reason": "Pricing and plan-tier API access are not in the fetched pages. The API style is recorded as other because the pages say OpenAPI and HTTP but not REST. The lark-mcp npm page returned 403, so the MCP url is left null. Feishu (CN) is a separate platform and was not checked.",
+  "flags": []
+ },
+ {
+  "id": "linear",
+  "name": "Linear",
+  "category": "Productivity/PM",
+  "one_liner": "Issue tracking product whose public GraphQL API covers issues, teams, projects and workflow states.",
+  "docs_url": "https://linear.app/developers/graphql",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Personal API keys are passed in the Authorization header for personal scripts. Apps for other users use OAuth2 with a Bearer token. Authorization-code access tokens last 24 hours and refresh tokens last 30 days. Client-credentials tokens last 30 days with no refresh token. PKCE is supported.",
+  "oauth_details": {
+   "flows": [
+    "auth_code",
+    "client_credentials",
+    "PKCE"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Personal API keys are created in Security & access settings. OAuth2 apps are registered by the developer. Cost or plan tier for API access is not stated on the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "graphql"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": true,
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "typescript"
+   ]
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Public GraphQL API with self-serve personal keys and standard OAuth2 (auth code, PKCE, client credentials), plus webhooks. Plan tier and rate limits are not stated on the fetched pages. The official MCP page was not fetched.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "Linear’s public API is built using GraphQL.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "The Linear API supports personal API keys and OAuth2 authentication.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/developers/oauth-2-0-authentication",
+     "quote": "Linear supports OAuth2 authentication, which is recommended if you’re building applications to integrate with Linear.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:21Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "For personal scripts API keys are the easiest way to access the API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "Visit Security & access settings to create and manage them.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "It supports introspection so you can query the whole schema.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "Register a programmatic webhook and get updates for all issues for the team.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "Archived resources are hidden by default from the paginated responses.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/docs/api/graphql",
+     "quote": "It is written in TypeScript, allowing all operations to be strongly typed.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:23Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://linear.app/developers/oauth-2-0-authentication",
+     "quote": "Specifically for CI and scheduled automation, refer to Client credentials token.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:21Z",
+     "support": null
+    },
+    {
+     "url": "https://linear.app/developers/oauth-2-0-authentication",
+     "quote": "Each refresh token expires 30 days after issuance.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:01:21Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/linear",
+     "quote": "Composio catalog entry 'linear' (Linear), 47 tools, auth ['OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "None blocking. The official MCP page (linear.app/docs/mcp) was not fetched, and the PyPI page returned no content, so MCP status is unverified.",
   "flags": []
  },
  {
@@ -3604,6 +6112,94 @@
   "flags": []
  },
  {
+  "id": "magento-adobe-commerce",
+  "name": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "one_liner": "Adobe Commerce (Magento) is an ecommerce platform offering GraphQL and REST APIs for storefront and third-party integrations.",
+  "docs_url": "https://devdocs.magento.com/guides/v2.4/graphql",
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "Fetched pages do not describe authentication.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Fetched pages do not describe how to obtain API credentials, cost, or waiting period.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "graphql",
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "community",
+   "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp"
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Fetched pages cover only the devdocs landing page and a third-party dev-tooling README; auth, access and sandbox details are not in the pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": null
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://devdocs.magento.com/guides/v2.2/rest/catalog-notes.html",
+     "quote": "Use our GraphQL APIs to send data to and from the storefront. Our REST APIs integrate with third-party software.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:02Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://devdocs.magento.com/guides/v2.2/rest/catalog-notes.html",
+     "quote": "Use our GraphQL APIs to send data to and from the storefront. Our REST APIs integrate with third-party software.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:02Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+     "quote": "This project implements a Model Context Protocol (MCP) server that interacts with Adobe Commerce.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:58:02Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Auth, access and sandbox facts were not in the fetched pages; the search returned Adobe developer auth pages that were not fetched in pass 1.",
+  "flags": []
+ },
+ {
   "id": "mailchimp",
   "name": "Mailchimp",
   "category": "Marketing/Ads/Email/Social",
@@ -3729,6 +6325,173 @@
   },
   "needs_human": true,
   "needs_human_reason": "Plan tiers that include API access are not in the cached pages. Also confirm whether any official MCP server can act on accounts; the cited page describes a docs-only server.",
+  "flags": []
+ },
+ {
+  "id": "mermaid-cli",
+  "name": "Mermaid CLI",
+  "category": "AI/Research/Media",
+  "one_liner": "Command-line tool that renders Mermaid diagram files to SVG, PNG, or PDF.",
+  "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "none"
+  ],
+  "auth_notes": "No credentials for the local mmdc CLI or its Node.js run() API. Hosted Mermaid MCP and Mermaid API products are separate and do need an account or token.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Open-source package installed locally with npm install -g @mermaid-js/mermaid-cli. No account, key or cost stated for the CLI.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "cli_only"
+   ],
+   "breadth": "none",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "javascript"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.mermaid.ai/mcp"
+  },
+  "buildability": {
+   "verdict": "NOT_APPLICABLE_NOT_A_SERVICE",
+   "main_blocker": "cli_or_local_only",
+   "rationale": "Local OSS CLI (mmdc), not a hosted API. Wrap it as a skill or tool that shells out to mmdc, or call the Node run() API. Hosted Mermaid API (api.mermaid.ai) is a separate product.",
+   "est_tool_count_if_built": null,
+   "est_effort": "S"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:59:40Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "quote": "npm install -g @mermaid-js/mermaid-cli",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:59:40Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "quote": "Please be aware that the NodeJS API is not covered by semver, as mermaid-cli follows",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:59:40Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://mermaid.ai/docs/ai/mcp-server",
+     "quote": "The Mermaid MCP Server supports multiple transport modes, and every tool call requires authentication with a Mermaid account.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:43Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "quote": "The mermaid-cli will find the mermaid diagrams, create SVG files from them",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:59:40Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "high",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "medium",
+   "buildability": "high"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The Mermaid MCP server (mcp.mermaid.ai) and hosted Mermaid API (api.mermaid.ai) are separate Mermaid Chart products from the OSS CLI. Decide whether they count for this app; the verdict here covers only the local CLI.; no evidence for: auth",
+  "flags": []
+ },
+ {
+  "id": "meta-ads",
+  "name": "Meta Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "one_liner": "unknown",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "unknown",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "unknown",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Cached pages were unusable: one returned HTTP 410 and the other was a JavaScript-only PyPI shell. No quotable evidence on access, auth, or API surface.",
+   "est_tool_count_if_built": null,
+   "est_effort": null
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/metaads",
+     "quote": "Composio catalog entry 'metaads' (Meta Ads), 99 tools, auth ['OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Pass-1 cached pages contained no usable text (410 and JS-only shell); the search results were not fetched. Re-run research with a fetchable set of pages.",
   "flags": []
  },
  {
@@ -3887,6 +6650,250 @@
   },
   "needs_human": true,
   "needs_human_reason": "Plan/tier gating for API access and OAuth app-review requirements are not confirmed by the fetched pages; the basics page was not fetched.",
+  "flags": []
+ },
+ {
+  "id": "mongodb-atlas",
+  "name": "MongoDB Atlas",
+  "category": "Dev/Infra/Data",
+  "one_liner": "Managed cloud MongoDB database service with an Administration API for managing all components.",
+  "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Service accounts (OAuth2 client credentials, recommended) issue a bearer token valid for 1 hour. API keys use HTTP Digest and are a legacy option. The Admin API does not grant access to cluster data. An IP access list can apply.",
+  "oauth_details": {
+   "flows": [
+    "client_credentials"
+   ],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Service accounts belong to one Atlas organization and are granted project access there. Managing org-level service accounts needs the Organization Owner role. Cost or plan tier is not stated on the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://github.com/mcp/mongodb-js/mongodb-mcp-server"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Admin API is documented with OAuth2 client-credentials service accounts and bearer tokens. IP access lists may restrict calls. Plan tier and credential gating are not stated on fetched pages. The Data API is not covered.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+     "quote": "The MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+     "quote": "The Atlas Administration API supports OAuth2 Service Accounts and HTTP Digest-based API keys.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    },
+    {
+     "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+     "quote": "returns a Bearer token that is reusable and valid for 1 hour (3600 seconds).",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication.md",
+     "quote": "Each service account belongs to exactly one organization, and you can grant it access to any number of projects within that organization.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:53Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://mongodb.com/docs/atlas/api/api-authentication/",
+     "quote": "Many Atlas Administration API endpoint URLs follow the format of /api/atlas/<version>/groups/<GROUP-ID>/,",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/mcp/mongodb-js/mongodb-mcp-server",
+     "quote": "A Model Context Protocol server for interacting with MongoDB Databases and MongoDB Atlas.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/preview",
+     "quote": "the token can be created from any IP address, but the API call that uses the token must originate from an allowed IP.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:54Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/mongodb",
+     "quote": "Composio catalog entry 'mongodb' (MongoDB), 496 tools, auth ['S2S_OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Credential gating and plan tier are not stated on the fetched pages. The Atlas Data API (noted as deprecated in the ambiguity hint) is not covered, so the Admin API vs Data API choice is unresolved.",
+  "flags": []
+ },
+ {
+  "id": "mrscraper",
+  "name": "MrScraper",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "AI-driven web scraping API that returns structured data from web pages, with a hosted scraping browser.",
+  "docs_url": "https://docs.mrscraper.com/docs/api/overview",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "API token sent in the x-api-token header. The vendor blog also shows the token as a query parameter on the scraping browser WebSocket URL.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Free API token from mrscraper.com per the vendor blog, which describes a free tier. Free-tier limits and paid pricing are not verified from the fetched pages, and some blog text is truncated.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": true,
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "python"
+   ]
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Self-serve token and a REST overview exist, but the endpoint reference, auth detail page, and pricing were not fetched. The blog code samples are the only endpoint detail.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "quote": "The MrScraper API provides a powerful and flexible way to programmatically scrape web pages and retrieve structured data.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:44Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "quote": "All API endpoints require authentication using an API token passed in the x-api-token header.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:44Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://mrscraper.com/blog/free-web-scraping-apis",
+     "quote": "Initialize with your free API token from mrscraper.com",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:53:45Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "quote": "Built on REST principles, our API offers predictable resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:44Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.mrscraper.com/docs/api/overview",
+     "quote": "List endpoints support pagination to handle large datasets efficiently.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:44Z",
+     "support": null
+    },
+    {
+     "url": "https://mrscraper.com/blog/free-web-scraping-apis",
+     "quote": "Here's a full working example using the Python SDK:",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:53:45Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/mrscraper",
+     "quote": "Composio catalog entry 'mrscraper' (MrScraper), 11 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Only the API overview page was fetched. The v1 docs page returned 404, and the endpoint reference, auth detail page, and pricing were not verified.",
   "flags": []
  },
  {
@@ -4136,6 +7143,133 @@
   "flags": []
  },
  {
+  "id": "notebooklm",
+  "name": "NotebookLM",
+  "category": "AI/Research/Media",
+  "one_liner": "AI tool that generates insights and summaries from the user's uploaded documents and sources.",
+  "docs_url": "https://developers.google.com/notebook/docs/authentication",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 bearer token required; API keys are not accepted. Personal Google Account during Public Preview; Workspace accounts fail with 403.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Personal API path: enable notebook.googleapis.com in own Cloud project, configure OAuth consent screen, create OAuth client, and sign in to Gemini Notebook once. Public Preview, personal accounts only. Enterprise REST API needs a Gemini Notebook Enterprise license. Cost of the personal API not stated on the pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "narrow",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "unstable_or_undocumented_api",
+   "rationale": "Personal OAuth API is in Public Preview and limited to personal Google Accounts; enterprise REST API requires a paid Gemini Notebook Enterprise license.",
+   "est_tool_count_if_built": 8,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/api-notebooks",
+     "quote": "Gemini Notebook Enterprise is a powerful tool for generating insights and summaries from your documents.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.google.com/notebook/docs/authentication",
+     "quote": "The Gemini Notebook API uses OAuth 2.0 to authenticate requests on behalf of a Google user.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:35Z",
+     "support": null
+    },
+    {
+     "url": "https://developers.google.com/notebook/docs/authentication",
+     "quote": "The API doesn't accept API keys.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:35Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://developers.google.com/notebook/docs/authentication",
+     "quote": "During the Public Preview, the Gemini Notebook API is only available for personal Google Accounts.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:35Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.cloud.google.com/agentspace/notebooklm-enterprise/docs/api-notebooks",
+     "quote": "The projects.locations.notebooks REST API methods on this page require an authenticated user account with an active Gemini Notebook Enterprise license.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:38Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://developers.google.com/notebook/docs/authentication",
+     "quote": "Read and write access to notebooks and sources",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:35Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://developers.google.com/notebook/docs/authentication",
+     "quote": "During the Public Preview, the Gemini Notebook API is only available for personal Google Accounts.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:35Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/notebook_lm",
+     "quote": "Composio catalog entry 'notebook_lm' (NotebookLM), 11 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Pages do not state cost or waitlist for the personal Public Preview API, and do not say whether the preview is GA. Confirm access and pricing, and whether the consumer app is distinct from the Enterprise API.",
+  "flags": []
+ },
+ {
   "id": "notion",
   "name": "Notion",
   "category": "Productivity/PM",
@@ -4286,6 +7420,140 @@
   },
   "needs_human": false,
   "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "otter-ai",
+  "name": "Otter AI",
+  "category": "AI/Research/Media",
+  "one_liner": "Meeting transcription and summary service that turns recordings into conversations with transcripts.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "unknown. The fetched pages do not document Otter's own API auth. The OtterlyAI page (a different product) uses Bearer tokens; do not apply it to Otter.ai.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "unknown. The fetched pages do not state how Otter.ai API credentials are obtained, their cost, or any wait.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "community",
+   "url": "https://www.stackone.com/connectors/otterai/mcp/"
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "ambiguous_product",
+   "rationale": "Fetched pages do not document an Otter.ai public API. The docs.otterly.ai page is for OtterlyAI, a different product. Only a third-party StackOne MCP connector is evidenced.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://www.stackone.com/connectors/otterai/mcp/",
+     "quote": "Import an externally recorded audio or video file into Otter from a URL, creating a conversation that Otter transcribes and summarises.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:58:31Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://www.stackone.com/connectors/otterai/mcp/",
+     "quote": "Agents can read and write in Otter.ai.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:58:31Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/otter_ai_mcp",
+     "quote": "Composio catalog entry 'otter_ai_mcp' (Otter.ai MCP), 3 tools, auth ['DCR_OAUTH']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "medium",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The fetched docs page (docs.otterly.ai) belongs to OtterlyAI, not Otter.ai, so Otter.ai's public API status is unresolved. The search queries returned no official Otter.ai API page in the cache. Needs a targeted fetch of Otter's own developer docs.",
+  "flags": []
+ },
+ {
+  "id": "paygent-connect",
+  "name": "Paygent Connect",
+  "category": "Finance/Fintech",
+  "one_liner": "Not established: the pages fetched describe unrelated Paygent products, not Paygent Connect.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "No Paygent Connect auth docs were found. The paygent.to pages use a pg_live_ key as a Bearer token, but that is a different product.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "No Paygent Connect sign-up, credential or pricing pages were found. The paygent.to pages mention a free beta, which belongs to a different product.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "none_found",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "ambiguous_product",
+   "rationale": "Fetched pages cover other Paygent products: an AI cost-control SDK and Playgent Studio. No Paygent Connect docs were found. The hint names an NMI-powered gateway, so confirm the vendor and product first.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The search and fetch results describe other products named Paygent (paygent.to AI cost SDK, Playgent Studio game MCP). Confirm the intended Paygent Connect vendor, such as the NMI-powered gateway from the hint, and provide its docs URL.",
   "flags": []
  },
  {
@@ -4522,6 +7790,205 @@
   },
   "needs_human": false,
   "needs_human_reason": "Official MCP server status is not verifiable from the fetched pages (the PyPI page did not render). Search results mention one, but it is unconfirmed.",
+  "flags": []
+ },
+ {
+  "id": "pitchbook",
+  "name": "PitchBook",
+  "category": "Finance/Fintech",
+  "one_liner": "unknown: all fetched PitchBook pages were blocked, so the product could not be described from page text.",
+  "docs_url": null,
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "unknown: no page text retrieved. Both PitchBook help pages returned 403.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "unknown: no page text retrieved. Both PitchBook help pages and the BusinessWire page returned 403.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "All three fetched pages were blocked (403), so auth, access, pricing, API scope, and MCP status cannot be verified from page text.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/pitchbook",
+     "quote": "Composio catalog entry 'pitchbook' (PitchBook), 130 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "low",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "PitchBook help pages returned 403 (Just a moment) and the BusinessWire page returned 403. Access terms, auth method, and API scope need a manual check.",
+  "flags": []
+ },
+ {
+  "id": "plaid",
+  "name": "Plaid",
+  "category": "Finance/Fintech",
+  "one_liner": "Financial data API for connecting end-user bank accounts to apps via Plaid Link.",
+  "docs_url": "https://plaid.com/docs/auth/add-to-app/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "other"
+  ],
+  "auth_notes": "Server requests carry client_id and secret (body or PLAID-CLIENT-ID / PLAID-SECRET headers). End-user bank links return a public token that is exchanged server-side for an access token.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Create a developer account, then find API keys in the Dashboard. Production needs a completed application and company profile. Cost is not stated on the pages read; the Trial plan page returned 403.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "javascript"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Self-serve sandbox keys and a documented API, but end users must complete Plaid Link. Production needs a completed application profile before some institutions work. Larger deployments route through sales.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://plaid.com/docs/auth/add-to-app/",
+     "quote": "In this guide, we'll demonstrate how to add Auth to your app so that you can connect to your users' bank accounts",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://plaid.com/docs/auth/add-to-app/",
+     "quote": "On your application server, exchange the public token for an access token and an Item ID by calling /item/public_token/exchange.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://plaid.com/docs/auth/add-to-app/",
+     "quote": "If you don't already have one, you'll need to create a Plaid developer account.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://plaid.com/docs/resources/",
+     "quote": "Sandbox Studio is a no-code way to explore Plaid products from the Dashboard, using Sandbox test data.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:40Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://plaid.com/docs/resources/",
+     "quote": "The Plaid OpenAPI file is available on GitHub.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:40Z",
+     "support": null
+    },
+    {
+     "url": "https://plaid.com/docs/auth/add-to-app/",
+     "quote": "npm install --save plaid",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    },
+    {
+     "url": "https://pypi.org/project/mcp-server-plaid/",
+     "quote": "Simulate a Plaid webhook event in the sandbox environment",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://plaid.com/docs/resources/",
+     "quote": "The Plaid AI coding toolkit ships with a local MCP server that runs as a subprocess of your MCP client",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:40Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://plaid.com/docs/auth/add-to-app/",
+     "quote": "Your application profile and company profile must be completed before connecting to certain institutions in Production.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:58:41Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/plaid",
+     "quote": "Composio catalog entry 'plaid' (Plaid), 70 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
   "flags": []
  },
  {
@@ -5004,6 +8471,387 @@
   "flags": []
  },
  {
+  "id": "quickbooks",
+  "name": "QuickBooks",
+  "category": "Finance/Fintech",
+  "one_liner": "Intuit's QuickBooks Online accounting product, exposed through an OAuth 2.0 accounting API.",
+  "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/learn/explore-the-quickbooks-online-api",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 with client ID and secret; one-time browser authorization, then refresh token. Intuit does not offer per-user API keys.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Requires an app registered on the Intuit Developer Portal and a QBO company to connect. Sandbox company is available from the dev portal. Production needs a public HTTPS redirect. Cost and wait time are not stated in the fetched pages.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [],
+   "breadth": "broad",
+   "approx_endpoint_count": 145,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "auth_complexity",
+   "rationale": "Sandbox setup is straightforward and the official MCP server runs locally over stdio, but production OAuth needs a public HTTPS redirect and a one-time browser handshake. Refresh tokens lapse after a 100-day window.",
+   "est_tool_count_if_built": 145,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "A comprehensive Model Context Protocol (MCP) server for QuickBooks Online",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "This server uses OAuth 2.0 to authenticate to a QuickBooks Online company.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    },
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "Intuit does not offer per-user API keys.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "complete a one-time, browser-based OAuth handshake.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "production requires a public HTTPS callback for the initial authorization.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "It includes full CRUD operations for 29 entity types and 11 financial reports",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "quote": "This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:56Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/quickbooks",
+     "quote": "Composio catalog entry 'quickbooks' (QuickBooks), 119 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "low",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Access cost and approval wait are not stated in the fetched pages. The developer docs page returned only a loading placeholder, so the official API docs were not verified.",
+  "flags": []
+ },
+ {
+  "id": "ramp",
+  "name": "Ramp",
+  "category": "Finance/Fintech",
+  "one_liner": "Ramp's Developer API gives scoped programmatic access to transactions, cards, users, and other finance data.",
+  "docs_url": "https://docs.ramp.com",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0. Client credentials for your own business, and authorization code with refresh tokens for apps used by other businesses. Client credentials tokens last 10 days, and authorization code tokens default to 1 hour.",
+  "oauth_details": {
+   "flows": [
+    "client_credentials",
+    "auth_code"
+   ],
+   "scopes_granular": true,
+   "app_review_required": true
+  },
+  "access": "app_review_required",
+  "access_notes": "Create a developer app as a business admin, with client credentials and scopes, for your own business. Sandbox is requested through an access form and is ready in about one minute. Publishing for other businesses needs a partner application and a production access application. Cost is not stated in the fetched pages.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://docs.ramp.com/developer-api/v1/ramp-mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "app_review",
+   "rationale": "Your own business gets self-serve sandbox and client credentials. Multi-tenant use needs Ramp's partner approval and a production access review before customers can connect through OAuth.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+     "quote": "It provides secure, scoped access to objects like transactions, cards, users, and more.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "quote": "Ramp uses OAuth 2.0.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+     "quote": "Publishing an app for other Ramp businesses takes two approvals: a partner application",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    },
+    {
+     "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+     "quote": "Request access using the sandbox access form. Your sandbox should be ready in about one minute.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API",
+     "quote": "Ramp provides a sandbox environment where you can build and test your API integration before connecting to production.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.ramp.com/llms-full.txt",
+     "quote": "Get overall AI adoption metrics and vendor breakdowns as monthly records.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "quote": "Ramp MCP doesn't list tools that make changes.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:50Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/ramp",
+     "quote": "Composio catalog entry 'ramp' (Ramp), 186 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "medium",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Production use for other businesses requires Ramp's partner and production-access approval, and the approval timing is not stated. Pricing is not stated. The PyPI MCP page failed to load, so MCP tool details are unverified.",
+  "flags": []
+ },
+ {
+  "id": "reducto",
+  "name": "Reducto",
+  "category": "AI/Research/Media",
+  "one_liner": "Agentic document platform to parse, extract, split, classify and edit documents via API, SDKs and MCP.",
+  "docs_url": "https://docs.reducto.ai",
+  "openapi_spec_url": "https://reducto.ai/openapi.json",
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "API key from Studio API Keys, sent as Authorization: Bearer; SDKs read REDUCTO_API_KEY. Keys are shown once and revoked on delete. The OAuth device-code flow applies only to the local MCP and CLI login, not the REST API.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Self-serve: sign up at Studio and create an API key. Pages state plans exist (monthly and yearly) but do not give the cost of API usage. The pricing page was not in the cache.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "python",
+    "node"
+   ]
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.reducto.ai/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve API key, documented REST API with parse, extract, split, classify and edit, plus an official MCP server and standard bearer auth. Usage cost is not verified from the cached pages.",
+   "est_tool_count_if_built": 9,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://reducto.ai/developers.md",
+     "quote": "Reducto is the agentic document platform for leading AI teams.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:03Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://reducto.ai/developers.md",
+     "quote": "Send requests to `https://platform.reducto.ai` with `Authorization: Bearer $REDUCTO_API_KEY`.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:03Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.reducto.ai/studio-account",
+     "quote": "API keys authenticate your requests to Reducto. Navigate to API Keys in the sidebar to manage them.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:04Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://reducto.ai/developers.md",
+     "quote": "Sign up at https://studio.reducto.ai/ and create an API key in **API Keys**.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:03Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.reducto.ai/studio-account",
+     "quote": "Configure webhooks to receive notifications when jobs complete.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:04Z",
+     "support": null
+    },
+    {
+     "url": "https://reducto.ai/developers.md",
+     "quote": "SDKs are available for Python and Node.js",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:03Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.reducto.ai/mcp-server",
+     "quote": "The hosted server runs at https://mcp.reducto.ai/mcp.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:05Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "The pricing page (reducto.ai/pricing) was not in the cache, so API cost and plan gating are unverified. Pricing matters for the BUILD_NOW verdict.",
+  "flags": []
+ },
+ {
   "id": "salesforce",
   "name": "Salesforce",
   "category": "CRM & Sales",
@@ -5203,6 +9051,134 @@
   "flags": []
  },
  {
+  "id": "se-ranking",
+  "name": "SE Ranking",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "SEO platform with Data API for keywords, backlinks and SERP data, plus Project API for automation.",
+  "docs_url": "https://seranking.com/api/data/getting-started/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "One API key for Project and Data APIs, sent as an Authorization Token header or an apikey query parameter. The MCP server uses OAuth 2.1 per its own page.",
+  "oauth_details": null,
+  "access": "paid_plan_required",
+  "access_notes": "Key is generated in the API Dashboard. Data API calls draw on credits included with paid plans or bought as pay-as-you-go packs. Project API uses subscription limits on every current plan. Practically, API access needs a paid subscription or PAYG purchase.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "medium",
+   "approx_endpoint_count": 63,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://api.seranking.com/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "paid_plan_gate",
+   "rationale": "Self-serve key and documented REST API. Data API calls consume paid-plan or PAYG credits, and Project API is capped by subscription limits. Endpoint count covers the Data API table only.",
+   "est_tool_count_if_built": 63,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://seranking.com/api/how-to-get-api/",
+     "quote": "SE Ranking offers two powerful APIs to integrate our data and platform management capabilities into your workflows and applications:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://seranking.com/api/project/getting-started/",
+     "quote": "The API key must be transferred via the token parameter for each invoked method or via the Authorization HTTP header.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    },
+    {
+     "url": "https://seranking.com/api/integrations/mcp/",
+     "quote": "This transport uses OAuth 2.1 with dynamic client registration for authentication at the following address:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:41Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://seranking.com/api/how-to-get-api/",
+     "quote": "The Project API is available on every current subscription plan: Essential, Pro, Business, Core, Growth, and Enterprise.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    },
+    {
+     "url": "https://seranking.com/api/how-to-get-api/",
+     "quote": "From $50 for 250,000 credits, with no limit on how many you buy.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://seranking.com/api/project/getting-started/",
+     "quote": "All API method invocations are HTTP GET/POST/PUT/DELETE requests to the URL:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    },
+    {
+     "url": "https://seranking.com/api/project/getting-started/",
+     "quote": "Any API method can be invoked no more than 5 times per second.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:40Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://seranking.com/api/integrations/mcp/",
+     "quote": "Our MCP server supports Streamable HTTP transports.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:53:41Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
+  "flags": []
+ },
+ {
   "id": "sendgrid",
   "name": "SendGrid",
   "category": "Marketing/Ads/Email/Social",
@@ -5308,6 +9284,138 @@
   },
   "needs_human": true,
   "needs_human_reason": "The cached pages do not state how to obtain an API key, plan or cost gating, rate limits, or API breadth. The official v3 API reference was not among the fetched pages.",
+  "flags": []
+ },
+ {
+  "id": "sentry",
+  "name": "Sentry",
+  "category": "Dev/Infra/Data",
+  "one_liner": "Sentry platform whose web API manages organizations, teams and exports data programmatically.",
+  "docs_url": "https://docs.sentry.io/api/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "auth_notes": "Auth tokens are sent as a Bearer token in the Authorization header. Tokens come from an internal integration (also on self-hosted) or a user Personal Token with scopes. Third-party apps use OAuth2 with authorization code plus PKCE, or the device flow. OAuth access tokens expire after 30 days and are bound to one organization.",
+  "oauth_details": {
+   "flows": [
+    "auth_code",
+    "device",
+    "PKCE"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Tokens are self-created in Sentry through an internal integration or User settings > Personal Tokens. Third-party OAuth needs a registered client. Plan tier and cost for API access are not stated on the fetched pages.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.sentry.dev/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve internal-integration or user tokens plus standard OAuth2 (auth code with PKCE, device flow). REST v0 API is documented. Plan tier and rate limits are not stated on the fetched pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": "L"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.sentry.io/hosted/api",
+     "quote": "The Sentry web API is used to access the Sentry platform programmatically.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.sentry.io/api/guides/oauth/",
+     "quote": "For third-party applications that need to access Sentry on behalf of users, Sentry supports OAuth2 with the authorization code grant type.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:36Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.sentry.io/api/auth",
+     "quote": "You can create authentication tokens within Sentry by creating an internal integration.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:36Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://docs.sentry.io/api/auth",
+     "quote": "These auth tokens can be created within Sentry on the \"User settings\" page (User settings > Personal Tokens) and assigned specific scopes.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:36Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.sentry.io/hosted/api",
+     "quote": "The current version of the Sentry's web API is considered v0.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:35Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docsearch.algolia.com/mcp/docs/repo/getsentry/sentry-mcp",
+     "quote": "The subagent connects to a remote MCP server and has access to Sentry tools.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T14:00:36Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.sentry.io/api/guides/oauth/",
+     "quote": "The access token only provides access to the specific organization the user selected during the OAuth flow.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:36Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/sentry",
+     "quote": "Composio catalog entry 'sentry' (Sentry), 210 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "None. Plan tier and rate limits are not on the fetched pages, but they do not block the verdict.",
   "flags": []
  },
  {
@@ -5666,6 +9774,132 @@
   "flags": []
  },
  {
+  "id": "smartsheet",
+  "name": "Smartsheet",
+  "category": "Productivity/PM",
+  "one_liner": "Work management platform built on sheets, rows and columns, with a REST API and MCP server.",
+  "docs_url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "auth_notes": "Access tokens (personal access tokens) are sent as Bearer tokens. OAuth 2.0 is a three-legged authorization code flow with refresh tokens for multi-user integrations.",
+  "oauth_details": {
+   "flows": [
+    "auth_code"
+   ],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Access tokens are generated in the Smartsheet UI. Cached pages do not state which plans include API access, and the refresh-token lifetime depends on plan configuration. Cost is not stated.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "auth_complexity",
+   "rationale": "Personal access tokens are self-serve in the UI and the REST API is documented. OAuth needs a three-legged flow with refresh-token expiry tracking. Plan eligibility for API access is not in the cached pages.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server",
+     "quote": "It exposes read/write access to Smartsheet's core work management objects",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:38Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "quote": "The API authenticates using access tokens (API keys).",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:37Z",
+     "support": null
+    },
+    {
+     "url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api",
+     "quote": "OAuth 2.0 is the right choice for multi-user integrations, SaaS products, or anything where you're acting on behalf of other people's Smartsheet accounts.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:36Z",
+     "support": null
+    },
+    {
+     "url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api",
+     "quote": "scopes let you request least-privilege access",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:36Z",
+     "support": null
+    },
+    {
+     "url": "https://www.smartsheet.com/content-center/managing-work/it-management/authentication-mastery-smartsheet-api",
+     "quote": "expires after a set period that depends on your Smartsheet plan configuration.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:36Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server",
+     "quote": "The MCP Server routes the request through Smartsheet REST API, pulling structured data with rich metadata.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:38Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server",
+     "quote": "The Smartsheet MCP Server is an open, protocol-based integration layer built on Anthropic's Model Context Protocol standard.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:38Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/smartsheet",
+     "quote": "Composio catalog entry 'smartsheet' (Smartsheet), 180 tools, auth ['OAUTH2', 'BEARER_TOKEN']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Plan eligibility for API access and token costs are not in the cached pages. The OAuth details come from a Smartsheet blog post, so check the official OAuth guide.",
+  "flags": []
+ },
+ {
   "id": "snowflake",
   "name": "Snowflake",
   "category": "Dev/Infra/Data",
@@ -5896,6 +10130,286 @@
   },
   "needs_human": true,
   "needs_human_reason": "Commerce Advanced plan price and OAuth client review timeline are not stated on the fetched pages; no official MCP server found.",
+  "flags": []
+ },
+ {
+  "id": "stripe",
+  "name": "Stripe",
+  "category": "Finance/Fintech",
+  "one_liner": "Developer API and dashboard for accepting payments, billing, and managing Stripe accounts.",
+  "docs_url": "https://docs.stripe.com/api",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key",
+   "bearer_token",
+   "oauth2"
+  ],
+  "auth_notes": "API keys sent as HTTP Basic Auth username (or Bearer header). Restricted keys recommended for live mode. OAuth is documented for MCP clients acting on a user's account; flows not stated on the pages read.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": "unknown",
+   "app_review_required": "unknown"
+  },
+  "access": "self_serve_free",
+  "access_notes": "Keys are managed in the Stripe Dashboard. Sandbox keys (sk_test_) work without touching live data. Cost and live-mode activation requirements are not stated on the pages read.",
+  "sandbox_or_test_env": true,
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": true,
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.stripe.com"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve sandbox and live keys, documented REST API with Basic/Bearer auth. Stripe MCP is public preview and will stop accepting full-access secret keys on 2027-01-11, so use an agent key or OAuth there.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://docs.stripe.com/mcp",
+     "quote": "Guides the user through Stripe products to help users accept payments, sell products online, set up billing, or build any Stripe integration",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:37Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:36Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://docs.stripe.com/api/authentication",
+     "quote": "You can view and manage your API keys in the Stripe Dashboard.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:36Z",
+     "support": null
+    }
+   ],
+   "sandbox": [
+    {
+     "url": "https://docs.stripe.com/api",
+     "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:36Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://docs.stripe.com/api",
+     "quote": "The Stripe API is organized around REST.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:36Z",
+     "support": null
+    },
+    {
+     "url": "https://docs.stripe.com/api",
+     "quote": "Too many requests hit the API too quickly.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:36Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://docs.stripe.com/mcp",
+     "quote": "Let your AI agents interact with the Stripe API by using our MCP server.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:37Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://docs.stripe.com/mcp",
+     "quote": "Starting January 11, 2027, Stripe MCP will no longer accept full-access secret keys or non-agent restricted API keys.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:37Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/stripe",
+     "quote": "Composio catalog entry 'stripe' (Stripe), 428 tools, auth ['API_KEY', 'OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "high",
+   "access": "medium",
+   "sandbox": "high",
+   "api_surface": "medium",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": false,
+  "needs_human_reason": "",
+  "flags": []
+ },
+ {
+  "id": "supabase",
+  "name": "Supabase",
+  "category": "Dev/Infra/Data",
+  "one_liner": "Postgres backend platform with database, auth, storage, realtime and edge functions.",
+  "docs_url": "https://supabase.com/docs",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "bearer_token",
+   "oauth2"
+  ],
+  "auth_notes": "Management API takes a bearer access token: a personal access token with custom expiry, or OAuth2 to act on a user's behalf. OAuth2 flow type is not stated on the fetched pages.",
+  "oauth_details": {
+   "flows": [],
+   "scopes_granular": true,
+   "app_review_required": "unknown"
+  },
+  "access": "unknown",
+  "access_notes": "Personal access tokens are generated from the account page. OAuth2 requires building a Supabase integration. Cost is not stated on the fetched pages beyond a general pricing statement.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://mcp.supabase.com/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_WITH_CAVEATS",
+   "main_blocker": "other",
+   "rationale": "Management API is documented with PAT and OAuth2 bearer auth and rate limits. Tier and cost are not stated on fetched pages, and the per-project PostgREST data API docs are absent.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://supabase.com/docs",
+     "quote": "Learn how to get up and running with Supabase through tutorials, APIs and platform resources.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:49Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "All API requests require an access token to be included in the Authorization header:",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    },
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "To generate or manage your personal access tokens, visit your account page.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    },
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "POST /v1/projects is organization-scoped, using the organization_slug in the request body.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    },
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "Rate limits are applied to prevent abuse and ensure fair usage of the Management API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://github.com/supabase/mcp",
+     "quote": "The Model Context Protocol (MCP) standardizes how Large Language Models (LLMs) talk to external services like Supabase.",
+     "source_type": "official_repo",
+     "fetched_at": "2026-11-23T13:57:50Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://supabase.com/docs/guides/platform/management-api",
+     "quote": "The Management API is subject to our fair-use policy.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:57:48Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/supabase",
+     "quote": "Composio catalog entry 'supabase' (Supabase), 230 tools, auth ['OAUTH2', 'API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Cost and tier for API access are not on the fetched pages. The per-project PostgREST data API is not covered by these pages, so the Management API vs per-project ambiguity is unresolved.",
   "flags": []
  },
  {
@@ -6772,6 +11286,102 @@
   "flags": []
  },
  {
+  "id": "waterfall-io",
+  "name": "Waterfall.io",
+  "category": "Data/SEO/Scraping",
+  "one_liner": "Waterfall is a B2B data platform aggregating vendors into one API for contact details, phone numbers and enrichment.",
+  "docs_url": "https://www.waterfall.io/",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key"
+  ],
+  "auth_notes": "Sent in the x-api-key header. Key-management endpoints require a master API key. Pages are from a third-party connector (One), not Waterfall.io.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Pages say to obtain credentials from the platform documentation site, but state no plan, tier, cost, or approval wait. Account over quota returns 402.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest"
+   ],
+   "breadth": "medium",
+   "approx_endpoint_count": 23,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "none_found",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Pages document API-key auth and 23 actions via a third-party connector, but do not state how credentials are obtained or what tier is needed. Waterfall.io itself was not fetched.",
+   "est_tool_count_if_built": 23,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": false,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://www.withone.ai/knowledge/waterfall/md",
+     "quote": "Waterfall provides a unified B2B data platform that aggregates multiple vendors into one API",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:14Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://www.withone.ai/knowledge/waterfall/md",
+     "quote": "The API key is sent in the `x-api-key` header with each request.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:14Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://www.withone.ai/knowledge/waterfall/md",
+     "quote": "## Actions (23)",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:14Z",
+     "support": null
+    },
+    {
+     "url": "https://www.withone.ai/knowledge/waterfall/conn_mod_def%3A%3AGJ8TOqyg9n0%3A%3AAaJGRR9iRt6B7PPO2f2VMw/md",
+     "quote": "Too many requests. Rate limit exceeded.",
+     "source_type": "third_party",
+     "fetched_at": "2026-11-23T13:59:15Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits",
+     "quote": "No matching slug among 1842 toolkits returned by Composio SDK toolkits.list",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "medium",
+   "auth": "medium",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Credential acquisition, plan tier, and sandbox are not stated in the fetched pages, which are a third-party connector and not waterfall.io. Verify on the vendor's own docs.",
+  "flags": []
+ },
+ {
   "id": "whatsapp-business",
   "name": "WhatsApp Business",
   "category": "Comms & Messaging",
@@ -6989,6 +11599,233 @@
   },
   "needs_human": true,
   "needs_human_reason": "Self-hosted per-store REST API: each merchant must generate keys in their own admin; no sandbox, endpoint count, or rate limits documented on fetched pages; MCP integration is developer preview.",
+  "flags": []
+ },
+ {
+  "id": "xero",
+  "name": "Xero",
+  "category": "Finance/Fintech",
+  "one_liner": "Xero developer support page describing API documentation, status, and official SDKs.",
+  "docs_url": "https://developer.xero.com/support",
+  "openapi_spec_url": null,
+  "auth_methods": [],
+  "auth_notes": "Not stated in fetched pages. The announcement page returned 404, so auth details are unverified.",
+  "oauth_details": null,
+  "access": "unknown",
+  "access_notes": "Fetched pages do not describe how to obtain credentials, cost, or wait time.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [],
+   "breadth": "unknown",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": "unknown",
+   "official_sdks": [
+    "csharp",
+    "java",
+    "nodejs",
+    "php",
+    "python",
+    "ruby"
+   ]
+  },
+  "mcp": {
+   "exists": "unknown",
+   "url": null
+  },
+  "buildability": {
+   "verdict": "UNCLEAR",
+   "main_blocker": "other",
+   "rationale": "Only the Xero support page loaded. Auth, credential access, API breadth, and MCP status could not be verified from the cached text.",
+   "est_tool_count_if_built": null,
+   "est_effort": "M"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "api_surface": [
+    {
+     "url": "https://developer.xero.com/support",
+     "quote": "We provide SDKS for C#, Java, NodeJS, PHP, Python and Ruby.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:07Z",
+     "support": null
+    },
+    {
+     "url": "https://developer.xero.com/support",
+     "quote": "If specific functions or features are not documented, you can assume that they are not supported within the API.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:59:07Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/xero",
+     "quote": "Composio catalog entry 'xero' (Xero), 109 tools, auth ['OAUTH2']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "low",
+   "auth": "low",
+   "access": "low",
+   "sandbox": "low",
+   "api_surface": "medium",
+   "mcp": "low",
+   "buildability": "low"
+  },
+  "needs_human": true,
+  "needs_human_reason": "Only the support page loaded. The announcement page returned 404 and the socket.dev page returned 403, so auth, access, pricing, and MCP status are unverified.",
+  "flags": []
+ },
+ {
+  "id": "youtube-transcript",
+  "name": "YouTube Transcript",
+  "category": "AI/Research/Media",
+  "one_liner": "Third-party REST API and MCP server that returns YouTube video transcripts and search results.",
+  "docs_url": "https://transcriptapi.com",
+  "openapi_spec_url": null,
+  "auth_methods": [
+   "api_key",
+   "bearer_token"
+  ],
+  "auth_notes": "Bearer API key in the Authorization header. OAuth is offered for some MCP clients. No Google or YouTube Data API key is needed.",
+  "oauth_details": null,
+  "access": "self_serve_free",
+  "access_notes": "Free signup with 100 credits and no card required. Paid plans start at $5/month for 1,000 credits, with top-ups at $2.50 per 1K. One credit per successful request.",
+  "sandbox_or_test_env": "unknown",
+  "api_surface": {
+   "style": [
+    "rest",
+    "other"
+   ],
+   "breadth": "narrow",
+   "approx_endpoint_count": null,
+   "webhooks": "unknown",
+   "pagination_documented": "unknown",
+   "rate_limits_documented": true,
+   "official_sdks": []
+  },
+  "mcp": {
+   "exists": "official",
+   "url": "https://transcriptapi.com/mcp"
+  },
+  "buildability": {
+   "verdict": "BUILD_NOW",
+   "main_blocker": "none",
+   "rationale": "Self-serve free key, documented REST endpoints for transcript, search, channel, and playlist, and standard Bearer auth. Vendor works around YouTube access blocks, so terms and reliability need review.",
+   "est_tool_count_if_built": 8,
+   "est_effort": "S"
+  },
+  "composio_existing_toolkit": true,
+  "evidence": {
+   "identity": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "Get transcripts, search videos, browse channels, and extract playlists via REST API or YouTube MCP",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "auth": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "Authorization: Bearer API_KEY",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    },
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "You sign in with your own TranscriptAPI credentials: an API key, or OAuth for some MCP clients.",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "access": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "You can start for free: new accounts get 100 free credits, no card required,",
+     "source_type": "pricing_page",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    },
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "Transcripts, search, channels, playlists — all endpoints, one credit each.",
+     "source_type": "pricing_page",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "api_surface": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "200 RPM Rate Limit",
+     "source_type": "pricing_page",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    },
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "Get transcripts, search results, channel data",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "mcp": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "claude mcp add --transport http transcript-api https://transcriptapi.com/mcp",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "buildability": [
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "1 Credit = 1 Successful Request",
+     "source_type": "pricing_page",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    },
+    {
+     "url": "https://transcriptapi.com",
+     "quote": "Get a free API key at transcriptapi.com/signup",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T14:00:29Z",
+     "support": null
+    }
+   ],
+   "composio": [
+    {
+     "url": "https://composio.dev/toolkits/youtube_transcript",
+     "quote": "Composio catalog entry 'youtube_transcript' (YouTube Transcript), 9 tools, auth ['API_KEY']",
+     "source_type": "official_docs",
+     "fetched_at": "2026-11-23T13:46:15Z",
+     "support": null
+    }
+   ]
+  },
+  "confidence": {
+   "identity": "high",
+   "auth": "high",
+   "access": "high",
+   "sandbox": "low",
+   "api_surface": "high",
+   "mcp": "high",
+   "buildability": "medium"
+  },
+  "needs_human": true,
+  "needs_human_reason": "This is a third-party service that the vendor says works around YouTube blocks, not YouTube's own API. Terms and legal review are needed before listing it. The vendor blog's claim that the official YouTube Data API cannot return auto-generated captions is unverified.",
   "flags": []
  },
  {

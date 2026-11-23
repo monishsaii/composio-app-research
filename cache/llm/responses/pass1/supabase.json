@@ -1,0 +1,37 @@
+{
+ "id": "supabase",
+ "name": "Supabase",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Postgres backend platform with database, auth, storage, realtime and edge functions.",
+ "docs_url": "https://supabase.com/docs",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Management API takes a bearer access token: a personal access token with custom expiry, or OAuth2 to act on a user's behalf. OAuth2 flow type is not stated on the fetched pages.",
+ "oauth_details": {"flows": [], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Personal access tokens are generated from the account page. OAuth2 requires building a Supabase integration. Cost is not stated on the fetched pages beyond a general pricing statement.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://mcp.supabase.com/mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "other", "rationale": "Management API is documented with PAT and OAuth2 bearer auth and rate limits. Tier and cost are not stated on fetched pages, and the per-project PostgREST data API docs are absent.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://supabase.com/docs", "quote": "Learn how to get up and running with Supabase through tutorials, APIs and platform resources.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "All API requests require an access token to be included in the Authorization header:", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "OAuth2 allows your application to generate tokens on behalf of a Supabase user, providing secure and limited access", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "To generate or manage your personal access tokens, visit your account page.", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "All resources created via the API are subject to the pricing detailed on our Pricing pages.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "POST /v1/projects is organization-scoped, using the organization_slug in the request body.", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "Rate limits are applied to prevent abuse and ensure fair usage of the Management API.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://github.com/supabase/mcp", "quote": "The Model Context Protocol (MCP) standardizes how Large Language Models (LLMs) talk to external services like Supabase.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://supabase.com/docs/guides/platform/management-api", "quote": "The Management API is subject to our fair-use policy.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "low", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Cost and tier for API access are not on the fetched pages. The per-project PostgREST data API is not covered by these pages, so the Management API vs per-project ambiguity is unresolved."
+}

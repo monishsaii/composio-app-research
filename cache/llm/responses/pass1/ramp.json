@@ -1,0 +1,25 @@
+{
+ "id": "ramp", "name": "Ramp", "category": "Finance/Fintech",
+ "one_liner": "Ramp's Developer API gives scoped programmatic access to transactions, cards, users, and other finance data.",
+ "docs_url": "https://docs.ramp.com",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth 2.0. Client credentials for your own business, and authorization code with refresh tokens for apps used by other businesses. Client credentials tokens last 10 days, and authorization code tokens default to 1 hour.",
+ "oauth_details": {"flows": ["client_credentials", "auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "app_review_required",
+ "access_notes": "Create a developer app as a business admin, with client credentials and scopes, for your own business. Sandbox is requested through an access form and is ready in about one minute. Publishing for other businesses needs a partner application and a production access application. Cost is not stated in the fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://docs.ramp.com/developer-api/v1/ramp-mcp"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "app_review", "rationale": "Your own business gets self-serve sandbox and client credentials. Multi-tenant use needs Ramp's partner approval and a production access review before customers can connect through OAuth.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API", "quote": "It provides secure, scoped access to objects like transactions, cards, users, and more.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.ramp.com/llms-guides/authorization.txt", "quote": "Ramp uses OAuth 2.0.", "source_type": "official_docs"}],
+  "access": [{"url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API", "quote": "Publishing an app for other Ramp businesses takes two approvals: a partner application", "source_type": "official_docs"}, {"url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API", "quote": "Request access using the sandbox access form. Your sandbox should be ready in about one minute.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://support.ramp.com/hc/en-us/articles/46681939909907-Accessing-the-Developer-API", "quote": "Ramp provides a sandbox environment where you can build and test your API integration before connecting to production.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.ramp.com/llms-full.txt", "quote": "Get overall AI adoption metrics and vendor breakdowns as monthly records.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.ramp.com/llms-guides/authorization.txt", "quote": "Ramp MCP doesn't list tools that make changes.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "Production use for other businesses requires Ramp's partner and production-access approval, and the approval timing is not stated. Pricing is not stated. The PyPI MCP page failed to load, so MCP tool details are unverified."
+}

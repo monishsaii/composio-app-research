@@ -148,6 +148,9 @@ def _parse_json(text: str) -> dict:
     return json.loads(text[s : e + 1])
 
 
+TRI_PATHS = [("sandbox_or_test_env",), ("api_surface", "webhooks"), ("api_surface", "pagination_documented"),
+             ("api_surface", "rate_limits_documented"), ("api_surface", "breadth"), ("access",), ("mcp", "exists"),
+             ("oauth_details", "scopes_granular"), ("oauth_details", "app_review_required")]
 LIST_PATHS = [("auth_methods",), ("api_surface", "style"), ("api_surface", "official_sdks"), ("oauth_details", "flows")]
 
 
@@ -157,9 +160,16 @@ def normalize(raw: dict, rid: str) -> dict:
         cur = raw
         for k in path[:-1]:
             cur = cur.get(k) if isinstance(cur, dict) else None
-        if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] is None:
+        if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] in (None, "unknown", "none_found"):
+            cache.log_event("normalize", id=rid, field=".".join(path), change=f"{cur[path[-1]]!r}->[]")
             cur[path[-1]] = []
-            cache.log_event("normalize", id=rid, field=".".join(path), change="null->[]")
+    for path in TRI_PATHS:
+        cur = raw
+        for k in path[:-1]:
+            cur = cur.get(k) if isinstance(cur, dict) else None
+        if isinstance(cur, dict) and path[-1] in cur and cur[path[-1]] is None:
+            cur[path[-1]] = "unknown"
+            cache.log_event("normalize", id=rid, field=".".join(path), change="null->'unknown'")
     return raw
 
 
@@ -194,6 +204,32 @@ def ingest(stage: str, apps: list[dict] | None = None) -> tuple[list[dict], list
         except (ValidationError, ValueError, KeyError) as e:
             bad.append(f"{a['id']}: {str(e)[:300]}")
     return good, bad
+
+
+RETRY_MARK = "\n\n## RETRY"
+
+
+def emit_retries(stage: str, bad: list[str]) -> int:
+    """Reject-and-retry: keep the invalid attempt (<id>.attemptN.json) and re-emit the task with the validation error."""
+    n = 0
+    for b in bad:
+        aid, _, err = b.partition(": ")
+        if err == "missing response":
+            continue
+        resp, task = RESP / stage / f"{aid}.json", TASKS / stage / f"{aid}.md"
+        k = 1
+        while (RESP / stage / f"{aid}.attempt{k}.json").exists():
+            k += 1
+        if k > 2:  # max 2 retries -> leave invalid, flagged
+            continue
+        resp.rename(RESP / stage / f"{aid}.attempt{k}.json")
+        body = task.read_text(encoding="utf-8").split(RETRY_MARK)[0]
+        task.write_text(body + f"{RETRY_MARK} {k}\nYour previous JSON failed schema validation:\n{err[:800]}\n"
+                        "Return the corrected full JSON object. Lists must be JSON arrays (use [] if none); "
+                        "enums exactly as listed.\n", encoding="utf-8")
+        cache.log_event("retry", stage=stage, id=aid, attempt=k, error=err[:300])
+        n += 1
+    return n
 
 
 def save(name: str, records: list[dict]) -> Path:

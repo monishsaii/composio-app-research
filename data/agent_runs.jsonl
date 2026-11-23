@@ -13,3 +13,11 @@
 {"stage":"pass1","batch":14,"model":"haiku","apps":["notion","airtable"],"tokens":83625,"tool_uses":23,"ms":119443,"note":"websearch turn budget exhausted"}
 {"stage":"pass1","batch":9,"model":"haiku","apps":["squarespace","ecwid","gumroad","amazon-selling-partner"],"tokens":115037,"tool_uses":37,"ms":168918,"note":"websearch turn budget exhausted"}
 {"stage":"pass1","batch":15,"model":"haiku","apps":["monday-com","clickup"],"tokens":79892,"tool_uses":25,"ms":139689,"note":"websearch turn budget exhausted"}
+{"stage":"pass1","batch":10,"model":"haiku","apps":["dataforseo","se-ranking","ahrefs","mrscraper","apify"],"tokens":174915,"tool_uses":36,"ms":264528}
+{"stage":"pass1","batch":"G1","model":"haiku","apps":["devin"],"tokens":64741,"tool_uses":15,"ms":77191,"note":"stopped on transient research.py syntax error (orchestrator mid-edit); resumed"}
+{"stage":"pass1","batch":"F","model":"haiku","apps":["notebooklm","otter-ai","fathom","consensus","reducto"],"tokens":121737,"tool_uses":46,"ms":201719}
+{"stage":"pass1","batch":"D","model":"haiku","apps":["stripe","plaid","binance","paygent-connect","ipayx"],"tokens":133770,"tool_uses":46,"ms":224268}
+{"stage":"pass1","batch":"A","model":"haiku","apps":["magento-adobe-commerce","fanbasis","waterfall-io","clay","cloudflare"],"tokens":130111,"tool_uses":40,"ms":233498}
+{"stage":"pass1","batch":"G2","model":"haiku","apps":["higgsfield","mermaid-cli","youtube-transcript","grain"],"tokens":141750,"tool_uses":47,"ms":255399}
+{"stage":"pass1","batch":"C","model":"haiku","apps":["jira","asana","coda","smartsheet","harvest"],"tokens":142815,"tool_uses":43,"ms":257500}
+{"stage":"pass1","batch":"B","model":"haiku","apps":["supabase","mongodb-atlas","datadog","sentry","linear"],"tokens":160929,"tool_uses":43,"ms":280719}

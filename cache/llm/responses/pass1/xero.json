@@ -1,0 +1,20 @@
+{
+ "id": "xero", "name": "Xero", "category": "Finance/Fintech",
+ "one_liner": "Xero developer support page describing API documentation, status, and official SDKs.",
+ "docs_url": "https://developer.xero.com/support",
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "Not stated in fetched pages. The announcement page returned 404, so auth details are unverified.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Fetched pages do not describe how to obtain credentials, cost, or wait time.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["csharp", "java", "nodejs", "php", "python", "ruby"]},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Only the Xero support page loaded. Auth, credential access, API breadth, and MCP status could not be verified from the cached text.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "api_surface": [{"url": "https://developer.xero.com/support", "quote": "We provide SDKS for C#, Java, NodeJS, PHP, Python and Ruby.", "source_type": "official_docs"}, {"url": "https://developer.xero.com/support", "quote": "If specific functions or features are not documented, you can assume that they are not supported within the API.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "Only the support page loaded. The announcement page returned 404 and the socket.dev page returned 403, so auth, access, pricing, and MCP status are unverified."
+}

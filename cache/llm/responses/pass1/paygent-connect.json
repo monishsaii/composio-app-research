@@ -1,0 +1,17 @@
+{
+ "id": "paygent-connect", "name": "Paygent Connect", "category": "Finance/Fintech",
+ "one_liner": "Not established: the pages fetched describe unrelated Paygent products, not Paygent Connect.",
+ "docs_url": null, "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "No Paygent Connect auth docs were found. The paygent.to pages use a pg_live_ key as a Bearer token, but that is a different product.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "No Paygent Connect sign-up, credential or pricing pages were found. The paygent.to pages mention a free beta, which belongs to a different product.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "none_found", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "ambiguous_product", "rationale": "Fetched pages cover other Paygent products: an AI cost-control SDK and Playgent Studio. No Paygent Connect docs were found. The hint names an NMI-powered gateway, so confirm the vendor and product first.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {},
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "The search and fetch results describe other products named Paygent (paygent.to AI cost SDK, Playgent Studio game MCP). Confirm the intended Paygent Connect vendor, such as the NMI-powered gateway from the hint, and provide its docs URL."
+}

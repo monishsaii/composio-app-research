@@ -1,0 +1,22 @@
+{
+ "id": "binance", "name": "Binance", "category": "Finance/Fintech",
+ "one_liner": "Cryptocurrency exchange with public market-data REST and WebSocket APIs.",
+ "docs_url": "https://developers.binance.com/en", "openapi_spec_url": null,
+ "auth_methods": ["none"],
+ "auth_notes": "Public market data needs no key (per a community MCP page). Authentication for account endpoints is not on the pages read: the official Binance docs pages returned HTTP 202 with empty bodies.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Credentials and access rules for account endpoints are unverified. The official docs fetch returned no content.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest", "websocket"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "community", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "Official Binance docs did not load, so signed-endpoint auth, access and regional rules are unverified. Public market data is reachable without a key per a community MCP page.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/", "quote": "A Model Context Protocol (MCP) server that exposes Binance cryptocurrency exchange data to Large Language Model (LLM) agents.", "source_type": "third_party"}],
+  "auth": [{"url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/", "quote": "Read-only Operation: All data is fetched via Binance's public REST API (no API keys required)", "source_type": "third_party"}],
+  "api_surface": [{"url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/", "quote": "Real-time WebSocket Streams: Subscribe to real-time trade, ticker, and order book updates via WebSockets", "source_type": "third_party"}],
+  "mcp": [{"url": "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e/", "quote": "MCP Standard Compliant: Works with any MCP-compatible LLM client", "source_type": "third_party"}]
+ },
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "medium", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "Official Binance docs pages (developers.binance.com/en/docs and binance-pay/authentication) returned HTTP 202 with empty bodies. Auth, access and regional rules are unverified; re-fetch official docs before classifying."
+}

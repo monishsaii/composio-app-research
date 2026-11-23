@@ -1,0 +1,36 @@
+{
+ "id": "datadog",
+ "name": "Datadog",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Observability platform whose HTTP REST API gives programmatic access to the Datadog platform.",
+ "docs_url": "https://docs.datadoghq.com/api/latest",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2", "other"],
+ "auth_notes": "Classic auth is an API key header (DD-API-KEY) plus an Application key (DD-APPLICATION-KEY) for some endpoints. New models are Personal Access Tokens, Service Access Tokens, and workload identity federation (AWS GA). OAuth clients for API access are stated as planned for later in 2026. Application keys remain legacy after Q3 2026.",
+ "oauth_details": {"flows": [], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "PATs are tied to a user and need an expiration window. SATs are tied to a service account. Plan tier and cost for API access are not stated on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": ["java", "go", "javascript", "rust"]},
+ "mcp": {"exists": "official", "url": "https://docs.datadoghq.com/bits_ai/mcp_server"},
+ "buildability": {"verdict": "BUILD_WITH_CAVEATS", "main_blocker": "auth_complexity", "rationale": "Documented REST API with API key auth, but the auth model is in transition: PATs and SATs are new, and OAuth clients for API access are planned later in 2026. Plan tier and access gating are not stated on the fetched pages.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://docs.datadoghq.com/ko/api/latest", "quote": "The Datadog API is an HTTP REST API.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://docs.datadoghq.com/ko/api/latest", "quote": "Authenticate to the API with an API key using the header DD-API-KEY.", "source_type": "official_docs"},
+   {"url": "https://www.datadoghq.com/blog/datadog-api-authentication.md", "quote": "OAuth client support is planned for release later this year.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.datadoghq.com/blog/datadog-api-authentication.md", "quote": "PATs are scoped to the permissions of the user who creates them and require an expiration window to avoid reliance on long-lived credentials.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.datadoghq.com/ko/api/latest", "quote": "returns JSON from all requests, and uses standard HTTP response codes.", "source_type": "official_docs"},
+   {"url": "https://docs.datadoghq.com/ko/api/latest", "quote": "Select one of our official client libraries languages in each endpoint to see code examples from that library.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://docs.datadoghq.com/ja/bits_ai/mcp_server/", "quote": "Datadog MCP サーバーは、Datadog のオブザーバビリティデータと Model Context Protocol (MCP) をサポートする AI エージェントとの間で橋渡しを行います。", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://docs.datadoghq.com/ja/bits_ai/mcp_server/", "quote": "MCP サーバーには、以下のフェアユース制限があります。", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "The auth model is mid-transition: OAuth client support for API access is stated as planned for later in 2026, and application keys are being retired. Plan tier and access gating are not on the fetched pages."
+}

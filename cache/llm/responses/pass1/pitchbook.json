@@ -1,0 +1,18 @@
+{
+ "id": "pitchbook", "name": "PitchBook", "category": "Finance/Fintech",
+ "one_liner": "unknown: all fetched PitchBook pages were blocked, so the product could not be described from page text.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "unknown: no page text retrieved. Both PitchBook help pages returned 403.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "unknown: no page text retrieved. Both PitchBook help pages and the BusinessWire page returned 403.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": [], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "other", "rationale": "All three fetched pages were blocked (403), so auth, access, pricing, API scope, and MCP status cannot be verified from page text.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {},
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "low"},
+ "needs_human": true, "needs_human_reason": "PitchBook help pages returned 403 (Just a moment) and the BusinessWire page returned 403. Access terms, auth method, and API scope need a manual check."
+}

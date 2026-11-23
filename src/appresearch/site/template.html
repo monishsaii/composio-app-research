@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Integration Readiness</title>
+<meta name="description" content="100 SaaS apps researched for agent tool-calling readiness: auth, credential gates, API surface, MCP, buildability verdict. Every value cites a source.">
+<script type="application/ld+json">/*__JSONLD__*/</script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#fcfcfb;--surface:#ffffff;--surface-2:#f4f3f0;--border:#e3e2dd;--grid:#ecebe7;
+  --ink:#0b0b0b;--ink-2:#52514e;--ink-3:#77766f;
+  --accent:#2a78d6;--accent-ink:#1c5cab;
+  --s100:#cde2fb;--s200:#9ec5f4;--s300:#6da7ec;--s400:#3987e5;--s500:#256abf;--s600:#184f95;--s700:#0d366b;
+  --good:#0ca30c;--warn:#fab219;--serious:#ec835a;--critical:#d03b3b;--neutral:#9a9993;
+  --chip-bg:#f4f3f0;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#141413;--surface:#1a1a19;--surface-2:#232321;--border:#33332f;--grid:#2a2a27;
+  --ink:#f0efec;--ink-2:#c3c2b7;--ink-3:#9a998f;
+  --accent:#3987e5;--accent-ink:#86b6ef;
+  --s100:#1d2c40;--s200:#184f95;--s300:#1c5cab;--s400:#256abf;--s500:#3987e5;--s600:#6da7ec;--s700:#9ec5f4;
+  --neutral:#77766f;--chip-bg:#232321;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#141413;--surface:#1a1a19;--surface-2:#232321;--border:#33332f;--grid:#2a2a27;
+  --ink:#f0efec;--ink-2:#c3c2b7;--ink-3:#9a998f;
+  --accent:#3987e5;--accent-ink:#86b6ef;
+  --s100:#1d2c40;--s200:#184f95;--s300:#1c5cab;--s400:#256abf;--s500:#3987e5;--s600:#6da7ec;--s700:#9ec5f4;
+  --neutral:#77766f;--chip-bg:#232321;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent-ink)}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,tr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header.top{padding:40px 0 8px}
+h1{font-size:clamp(24px,3.4vw,34px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+h2{font-size:22px;margin:0 0 4px}
+h3{font-size:15px;margin:0 0 8px}
+.lede{font-size:17px;color:var(--ink-2);max-width:820px;margin:0}
+.meta{color:var(--ink-3);font-size:13px;margin-top:8px}
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+nav.toc .wrap{display:flex;gap:16px;overflow-x:auto;padding:10px 16px;white-space:nowrap;font-size:13px}
+nav.toc a{color:var(--ink-2);text-decoration:none}
+nav.toc a:hover{color:var(--ink)}
+section{padding:36px 0;border-bottom:1px solid var(--border)}
+.sub{color:var(--ink-2);margin:0 0 18px;max-width:800px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0 6px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.tile .v{font-size:30px;font-weight:650;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile .l{font-size:13px;color:var(--ink-2);margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-width:0}
+.card .note{font-size:12px;color:var(--ink-3);margin-top:8px}
+ol.find{padding-left:20px;margin:0}
+ol.find li{margin:0 0 10px;max-width:900px}
+ol.find b{font-variant-numeric:tabular-nums}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:2px 8px;border-radius:999px;background:var(--chip-bg);border:1px solid var(--border);white-space:nowrap;color:var(--ink)}
+.chip i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.dot-BUILD_NOW{background:var(--good)} .dot-BUILD_WITH_CAVEATS{background:var(--warn)}
+.dot-BLOCKED_NEEDS_OUTREACH{background:var(--serious)} .dot-BLOCKED_NO_PUBLIC_API{background:var(--critical)}
+.dot-NOT_APPLICABLE_NOT_A_SERVICE{background:var(--neutral)} .dot-UNCLEAR{background:transparent;border:1.5px dashed var(--ink-3)}
+.bars .row{display:grid;grid-template-columns:minmax(90px,160px) 1fr 40px;align-items:center;gap:8px;font-size:13px;padding:3px 0}
+.bars .lab{color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bars .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.bars .track{height:14px;position:relative}
+.bars .bar{height:14px;background:var(--accent);border-radius:0 4px 4px 0;min-width:2px}
+.heat{border-collapse:separate;border-spacing:2px;width:100%;font-size:12px}
+.heat th{font-weight:500;color:var(--ink-2);text-align:left;padding:2px 4px}
+.heat thead th{writing-mode:vertical-rl;transform:rotate(180deg);height:120px;vertical-align:bottom;text-align:left;white-space:nowrap}
+.heat td{text-align:center;padding:6px 2px;border-radius:4px;font-variant-numeric:tabular-nums;min-width:28px}
+.scroll{overflow-x:auto}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.lists{grid-template-columns:1fr}}
+.mini{width:100%;border-collapse:collapse;font-size:13px}
+.mini td,.mini th{padding:6px 6px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
+.mini th{color:var(--ink-2);font-weight:500}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filters select,.filters input{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);max-width:100%}
+.filters input{flex:1 1 200px}
+.count{font-size:13px;color:var(--ink-2);margin:0 0 8px}
+.tbl-wrap{max-height:72vh;overflow:auto;border:1px solid var(--border);border-radius:10px;background:var(--surface)}
+table.main{border-collapse:collapse;width:100%;font-size:13px;min-width:900px}
+table.main th{position:sticky;top:0;background:var(--surface-2);text-align:left;padding:8px;font-weight:600;cursor:pointer;user-select:none;z-index:2;border-bottom:1px solid var(--border);white-space:nowrap}
+table.main th[aria-sort="ascending"]::after{content:" \25B2";font-size:9px}
+table.main th[aria-sort="descending"]::after{content:" \25BC";font-size:9px}
+table.main td{padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+table.main tr.r{cursor:pointer}
+table.main tr.r:hover td{background:var(--surface-2)}
+table.main td a{text-decoration:none}
+table.main td a:hover{text-decoration:underline}
+.muted{color:var(--ink-3)}
+.exp td{background:var(--surface-2);padding:12px 16px}
+.exp .ev{margin:4px 0 10px;padding-left:12px;border-left:2px solid var(--border)}
+.exp .ev q{color:var(--ink)}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 12px;font-size:13px;margin-bottom:10px}
+.kv dt{color:var(--ink-2)}
+.kv dd{margin:0}
+.box{border:1px solid var(--serious);border-radius:10px;padding:14px 16px;background:color-mix(in srgb,var(--serious) 7%,var(--surface))}
+pre,code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px}
+pre{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px;overflow-x:auto;white-space:pre}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 8px;border-radius:6px;max-width:280px;z-index:50;opacity:0;transition:opacity .1s}
+svg text{fill:var(--ink-2);font:12px system-ui,sans-serif}
+.arch rect{fill:var(--surface);stroke:var(--border)}
+.arch .hl rect{stroke:var(--accent)}
+.arch text.t{fill:var(--ink);font-weight:600}
+.arch path{stroke:var(--ink-3);fill:none;stroke-width:1.5}
+.dl a{display:inline-block;margin:0 12px 8px 0}
+footer{padding:28px 0 60px;color:var(--ink-3);font-size:13px}
+@media (forced-colors:active){.bars .bar{background:CanvasText}.chip i{border:1px solid CanvasText}}
+</style>
+</head>
+<body>
+<nav class="toc" aria-label="Sections"><div class="wrap">
+<a href="#patterns">Patterns</a><a href="#table">All 100 apps</a><a href="#agent">The agent</a><a href="#proof">Run it</a><a href="#verification">Verification</a><a href="#method">Method</a><a href="#data">Data</a>
+</div></nav>
+<main>
+<header class="top wrap" id="top">
+  <h1 id="h1">Which of 100 apps can an agent call today?</h1>
+  <p class="lede" id="lede"></p>
+  <div class="tiles" id="tiles"></div>
+  <p class="meta" id="meta"></p>
+</header>
+
+<section id="patterns"><div class="wrap">
+  <h2>Patterns</h2>
+  <p class="sub">Computed from the 100 final records. Each finding links to the rows behind it.</p>
+  <ol class="find" id="findings"></ol>
+  <div class="grid2" style="margin-top:24px">
+    <div class="card"><h3>How apps authenticate</h3><div class="bars" id="c-auth" role="img" aria-label="Auth method counts"></div><div class="note">Count of apps supporting each method. Apps can support several.</div></div>
+    <div class="card"><h3>Main blocker (apps with one)</h3><div class="bars" id="c-block" role="img" aria-label="Blocker counts"></div><div class="note">Apps whose blocker is "none" are left out.</div></div>
+  </div>
+  <div class="card" style="margin-top:20px"><h3>Category × credential access</h3><div class="scroll"><table class="heat" id="c-heat"></table></div><div class="note">Cell = number of apps. Darker = more.</div></div>
+  <div class="card" style="margin-top:20px"><h3>Category × verdict</h3><div class="scroll"><table class="heat" id="c-verdict"></table></div></div>
+  <div class="lists" style="margin-top:20px">
+    <div class="card"><h3>Easy wins: BUILD_NOW</h3><p class="note" style="margin-top:0">Apps without a Composio toolkit first (new coverage), then by estimated tool count.</p><div class="scroll"><table class="mini" id="l-easy"></table></div></div>
+    <div class="card"><h3>Needs outreach</h3><p class="note" style="margin-top:0">The gate, from the evidence, and what to apply for.</p><div class="scroll"><table class="mini" id="l-out"></table></div></div>
+  </div>
+</div></section>
+
+<section id="table"><div class="wrap">
+  <h2>All 100 apps</h2>
+  <p class="sub">Click a row for the evidence quotes, confidence and flags. Links open the cited source.</p>
+  <div class="filters" role="search">
+    <input id="q" type="search" placeholder="Search name, notes…" aria-label="Search">
+    <select id="f-cat" aria-label="Category"></select><select id="f-auth" aria-label="Auth"></select>
+    <select id="f-acc" aria-label="Access"></select><select id="f-ver" aria-label="Verdict"></select><select id="f-blk" aria-label="Blocker"></select>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="tbl-wrap"><table class="main" id="tbl"><thead><tr>
+    <th data-k="name" scope="col">App</th><th data-k="category" scope="col">Category</th><th data-k="verdict" scope="col">Verdict</th>
+    <th data-k="blocker" scope="col">Blocker</th><th data-k="access" scope="col">Access</th><th data-k="auth" scope="col">Auth</th>
+    <th data-k="breadth" scope="col">API</th><th data-k="mcp" scope="col">MCP</th><th data-k="composio" scope="col">Composio</th>
+  </tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<section id="agent"><div class="wrap">
+  <h2>The agent</h2>
+  <p class="sub" id="agent-sub"></p>
+  <div class="card scroll"><svg class="arch" viewBox="0 0 1100 250" width="100%" style="min-width:760px" role="img" aria-label="Pipeline architecture">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" style="fill:var(--ink-3);stroke:none"/></marker></defs>
+    <g><rect x="10" y="20" width="150" height="62" rx="8"/><text class="t" x="22" y="44">100 apps</text><text x="22" y="64">apps.py + hints</text></g>
+    <g class="hl"><rect x="190" y="20" width="200" height="62" rx="8"/><text class="t" x="202" y="44">Search</text><text x="202" y="64">Composio → WebSearch fallback</text></g>
+    <g><rect x="420" y="20" width="170" height="62" rx="8"/><text class="t" x="432" y="44">Fetch + cache</text><text x="432" y="64">httpx, sha256 disk cache</text></g>
+    <g class="hl"><rect x="620" y="20" width="200" height="62" rx="8"/><text class="t" x="632" y="44">Pass 1 extract</text><text x="632" y="64">Haiku subagents → JSON</text></g>
+    <g><rect x="850" y="20" width="230" height="62" rx="8"/><text class="t" x="862" y="44">Validate (pydantic)</text><text x="862" y="64">reject + retry → pass1.json</text></g>
+    <g><rect x="10" y="160" width="150" height="62" rx="8"/><text class="t" x="22" y="184">L1 evidence</text><text x="22" y="204">re-fetch, fuzzy, entail</text></g>
+    <g class="hl"><rect x="190" y="160" width="150" height="62" rx="8"/><text class="t" x="202" y="184">L2 adversarial</text><text x="202" y="204">Sonnet, new pages</text></g>
+    <g><rect x="370" y="160" width="140" height="62" rx="8"/><text class="t" x="382" y="184">L3 rules</text><text x="382" y="204">rubric, unit-tested</text></g>
+    <g><rect x="540" y="160" width="150" height="62" rx="8"/><text class="t" x="552" y="184">L4 browser</text><text x="552" y="204">Playwright, 15 apps</text></g>
+    <g class="hl"><rect x="720" y="160" width="150" height="62" rx="8"/><text class="t" x="732" y="184">L5 adjudicate</text><text x="732" y="204">Opus + re-research</text></g>
+    <g><rect x="900" y="160" width="180" height="62" rx="8"/><text class="t" x="912" y="184">final.json</text><text x="912" y="204">human check → accuracy</text></g>
+    <path d="M160,51H186" marker-end="url(#ar)"/><path d="M390,51H416" marker-end="url(#ar)"/><path d="M590,51H616" marker-end="url(#ar)"/><path d="M820,51H846" marker-end="url(#ar)"/>
+    <path d="M965,82V120H85V156" marker-end="url(#ar)"/>
+    <path d="M160,191H186" marker-end="url(#ar)"/><path d="M340,191H366" marker-end="url(#ar)"/><path d="M510,191H536" marker-end="url(#ar)"/><path d="M690,191H716" marker-end="url(#ar)"/><path d="M870,191H896" marker-end="url(#ar)"/>
+  </svg><div class="note">Blue outline = LLM step (a Claude Code subagent). Everything else is deterministic Python.</div></div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Models, tokens, time</h3><table class="mini" id="t-runs"></table><div class="note" id="runs-note"></div></div>
+    <div class="card"><h3>Tools and fallbacks</h3><table class="mini" id="t-tools"></table></div>
+  </div>
+  <div class="card" style="margin-top:20px"><h3>Automated vs human</h3><table class="mini" id="t-auto"></table></div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <h2>Run it</h2>
+  <p class="sub">Two modes. <b>Offline replay</b> rebuilds every number and this page from committed data: no keys, no network. <b>Fresh research</b> needs a Claude Code session: Python emits a task file, a subagent answers it, Python validates it. The agent does not run on its own outside Claude Code.</p>
+  <div class="grid2">
+    <div class="card"><h3>Offline replay (reviewer)</h3><pre>pip install -e .
+python -m appresearch replay
+# -> data/accuracy.json, data/analysis.json, site/index.html
+python -m pytest -q   # rule checks</pre></div>
+    <div class="card"><h3>Fresh research for one app</h3><pre># needs COMPOSIO_API_KEY in .env + Claude Code
+python -m appresearch queries --app "Notion"
+# in Claude Code: run WebSearch per query, then
+python -m appresearch record-search "&lt;query&gt;" URL...
+python -m appresearch research --app "Notion" --stage pass1
+# subagent answers cache/llm/tasks/pass1/notion.md
+#   (instructions: prompts/subagent_pass1.md)
+python -m appresearch research --app "Notion" --ingest-only</pre></div>
+  </div>
+  <p class="note" id="trace-note" style="margin-top:12px"></p>
+</div></section>
+
+<section id="verification"><div class="wrap">
+  <h2>Verification</h2>
+  <p class="sub" id="ver-sub"></p>
+  <div class="grid2">
+    <div class="card"><h3>Field-level accuracy, TEST (locked)</h3><div class="bars" id="c-acc-test"></div><div class="note" id="n-acc-test"></div></div>
+    <div class="card"><h3>Field-level accuracy, DEV (used for tuning)</h3><div class="bars" id="c-acc-dev"></div><div class="note" id="n-acc-dev"></div></div>
+  </div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Per-field accuracy, final, TEST + DEV</h3><table class="mini" id="t-field"></table></div>
+    <div class="card"><h3>What each loop did</h3><table class="mini" id="t-loops"></table></div>
+  </div>
+  <div class="card" style="margin-top:20px"><h3>Verdict confusion (final vs gold, TEST + DEV)</h3><div class="scroll"><table class="heat" id="c-conf"></table></div></div>
+  <div class="box" style="margin-top:20px"><h3>Where the agent was wrong, and apps that defeated it</h3><div id="wrong"></div></div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Fixed by the loops</h3><div class="scroll"><table class="mini" id="t-hits"></table></div></div>
+    <div class="card"><h3>Still wrong after the loops</h3><div class="scroll"><table class="mini" id="t-miss"></table></div></div>
+  </div>
+  <p class="note" id="limits" style="margin-top:14px"></p>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <h2>Method and rubric</h2>
+  <div class="grid2">
+    <div class="card"><h3>Verdict rubric (applied by code, first match wins)</h3><table class="mini" id="t-rubric"></table></div>
+    <div class="card"><h3>Definitions</h3><dl class="kv" id="defs"></dl></div>
+  </div>
+  <div class="card" style="margin-top:20px"><h3>Limitations</h3><ul id="lims"></ul></div>
+</div></section>
+
+<section id="data"><div class="wrap">
+  <h2>Machine-readable</h2>
+  <p class="dl"><a href="findings.json" download>findings.json</a><a href="findings.csv" download>findings.csv</a><a href="human_check.csv" download>human_check.csv</a><a href="schema.json" download>schema.json</a><a href="llms.txt">llms.txt</a></p>
+  <p class="sub">The same data is embedded in this page as <code>&lt;script type="application/json" id="data"&gt;</code>, with schema.org Dataset JSON-LD in the head.</p>
+</div></section>
+</main>
+<footer class="wrap" id="foot"></footer>
+<div class="tip" id="tip" role="tooltip"></div>
+<script type="application/json" id="data">/*__DATA__*/</script>
+<script>
+(function(){
+"use strict";
+const D=JSON.parse(document.getElementById('data').textContent);
+const R=D.records, A=D.analysis||{}, ACC=D.accuracy||{};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=(k,n)=>n?Math.round(100*k/n):0;
+const VLAB={BUILD_NOW:'Build now',BUILD_WITH_CAVEATS:'Build w/ caveats',BLOCKED_NEEDS_OUTREACH:'Needs outreach',BLOCKED_NO_PUBLIC_API:'No public API',NOT_APPLICABLE_NOT_A_SERVICE:'Not a service',UNCLEAR:'Unclear'};
+const chip=v=>`<span class="chip"><i class="dot-${v}"></i>${esc(VLAB[v]||v)}</span>`;
+const CATS=A.categories||{};
+const catKey=name=>Object.keys(CATS).find(k=>CATS[k]===name);
+const tip=$('#tip');
+function hover(el,text){el.addEventListener('mousemove',e=>{tip.textContent=text;tip.style.opacity=1;tip.style.left=Math.min(e.clientX+12,innerWidth-290)+'px';tip.style.top=(e.clientY+12)+'px'});el.addEventListener('mouseleave',()=>tip.style.opacity=0)}
+
+// ---------- header
+const n=R.length, v=A.verdicts||{}, ac=A.access||{};
+const known=A.known_access||0, ss=A.self_serve||0;
+const topAuth=Object.entries(A.auth_single||{})[0]||['?',0];
+const fin=ACC.human&&ACC.human.test&&ACC.human.test.final;
+const aud=ACC.auditor_NOT_ground_truth&&ACC.auditor_NOT_ground_truth.test&&ACC.auditor_NOT_ground_truth.test.final;
+$('#lede').textContent=`We researched ${n} apps for one question: can a developer get credentials and wrap the API as agent tools today? ${v.BUILD_NOW||0} can be built now, ${v.BUILD_WITH_CAVEATS||0} with caveats, ${v.BLOCKED_NEEDS_OUTREACH||0} need outreach first, and ${(v.BLOCKED_NO_PUBLIC_API||0)+(v.NOT_APPLICABLE_NOT_A_SERVICE||0)} have no hosted API.`;
+const tiles=[
+ [`${pct(ss,n)}%`,`self-serve credentials (${ss}/${n})`],
+ [topAuth[0],`most common auth (${topAuth[1]}/${n} apps)`],
+ [v.BUILD_NOW||0,'BUILD_NOW verdicts'],
+ [v.BLOCKED_NEEDS_OUTREACH||0,'need partner/sales outreach'],
+ [A.composio_existing??'–',`already have a Composio toolkit`],
+ fin?[`${Math.round(100*fin.field_level.acc)}%`,`final field accuracy vs human, TEST (n=${fin.field_level.n})`]:
+ (aud?[`${Math.round(100*aud.field_level.acc)}%`,`agreement with LLM auditor, TEST (not human; n=${aud.field_level.n})`]:['pending','human check pending'])
+];
+$('#tiles').innerHTML=tiles.map(t=>`<div class="tile"><div class="v">${esc(t[0])}</div><div class="l">${esc(t[1])}</div></div>`).join('');
+$('#meta').textContent=`Research date ${D.research_date}. Page built ${D.generated_at.slice(0,10)}. ${R.filter(r=>r.needs_human).length} records still flagged for a human.`;
+
+// ---------- findings
+$('#findings').innerHTML=(D.headlines||[]).map(h=>`<li>${h.html||esc(h.text)} ${h.filter?`<a href="#table" data-filter='${esc(JSON.stringify(h.filter))}'>See rows</a>`:''}</li>`).join('')||'<li class="muted">Headlines are generated after final.json exists.</li>';
+document.querySelectorAll('[data-filter]').forEach(a=>a.addEventListener('click',()=>applyFilter(JSON.parse(a.dataset.filter))));
+
+// ---------- bars
+function bars(sel,entries,total,fmt){
+  const max=Math.max(1,...entries.map(e=>e[1]));
+  const el=$(sel);
+  el.innerHTML=entries.map(([k,c])=>`<div class="row"><span class="lab" title="${esc(k)}">${esc(k)}</span><span class="track"><span class="bar" style="display:block;width:${100*c/max}%"></span></span><span class="val">${fmt?fmt(c):c}</span></div>`).join('');
+  [...el.querySelectorAll('.row')].forEach((r,i)=>hover(r,`${entries[i][0]}: ${fmt?fmt(entries[i][1]):entries[i][1]}${total?` of ${total}`:''}`));
+}
+bars('#c-auth',Object.entries(A.auth_single||{}),n);
+bars('#c-block',Object.entries(A.blockers||{}),n);
+
+// ---------- heatmaps (sequential single hue)
+const steps=['--s100','--s200','--s300','--s400','--s500','--s600','--s700'];
+function heat(sel,m,cols,rowLab,colLab){
+  const max=Math.max(1,...Object.values(m).flatMap(r=>Object.values(r)));
+  const t=$(sel);
+  t.innerHTML=`<thead><tr><th></th>${cols.map(c=>`<th scope="col">${esc(colLab(c))}</th>`).join('')}</tr></thead><tbody>`+
+   Object.keys(m).map(rk=>`<tr><th scope="row">${esc(rowLab(rk))}</th>${cols.map(c=>{const x=m[rk][c]||0;const s=x?steps[Math.min(6,Math.ceil(6*x/max))]:'';const dark=x&&Math.ceil(6*x/max)>=3;
+   return `<td data-t="${esc(rowLab(rk))} · ${esc(colLab(c))}: ${x}" style="${x?`background:var(${s});color:${dark?'#fff':'var(--ink)'}`:'color:var(--ink-3)'}">${x||'·'}</td>`}).join('')}</tr>`).join('')+'</tbody>';
+  t.querySelectorAll('td').forEach(td=>hover(td,td.dataset.t));
+}
+const ACCESS=['self_serve_free','self_serve_trial','paid_plan_required','admin_approval','app_review_required','partner_or_contact_sales','no_public_api','unknown'];
+const VERD=Object.keys(VLAB);
+if(A.category_access)heat('#c-heat',A.category_access,ACCESS,k=>CATS[k]||k,c=>c.replace(/_/g,' '));
+if(A.category_verdict)heat('#c-verdict',A.category_verdict,VERD,k=>CATS[k]||k,c=>VLAB[c]);
+
+// ---------- lists
+const byId=Object.fromEntries(R.map(r=>[r.id,r]));
+const link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`:esc(t);
+$('#l-easy').innerHTML='<tr><th>App</th><th>Est. tools</th><th>Composio today</th></tr>'+(A.easy_wins||[]).map(x=>`<tr><td>${link(x.docs_url,x.name)}</td><td>${x.tools??'–'}</td><td>${x.composio===true?'yes':'<b>no</b>'}</td></tr>`).join('');
+$('#l-out').innerHTML='<tr><th>App</th><th>Gate</th></tr>'+(A.outreach||[]).map(x=>`<tr><td>${link(x.docs_url,x.name)}</td><td>${esc(x.notes||x.blocker)}</td></tr>`).join('');
+
+// ---------- table
+const rows=R.map(r=>({r,name:r.name,category:r.category,verdict:r.b.verdict,blocker:r.b.main_blocker,access:r.access,auth:(r.auth_methods||[]).join(', ')||'unknown',breadth:(r.api||{}).breadth||'unknown',mcp:(r.mcp||{}).exists||'unknown',composio:r.composio===true?'yes':r.composio===false?'no':'unknown'}));
+const F={cat:'',auth:'',acc:'',ver:'',blk:'',q:''};let sortK='name',sortD=1;
+function opts(sel,label,vals){$(sel).innerHTML=`<option value="">${label}: all</option>`+vals.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('')}
+opts('#f-cat','Category',[...new Set(R.map(r=>r.category))]);
+opts('#f-auth','Auth',[...new Set(R.flatMap(r=>r.auth_methods||[]))].sort());
+opts('#f-acc','Access',ACCESS);opts('#f-ver','Verdict',VERD);
+opts('#f-blk','Blocker',[...new Set(R.map(r=>r.b.main_blocker))].sort());
+[['#f-cat','cat'],['#f-auth','auth'],['#f-acc','acc'],['#f-ver','ver'],['#f-blk','blk']].forEach(([s,k])=>$(s).addEventListener('change',e=>{F[k]=e.target.value;draw()}));
+$('#q').addEventListener('input',e=>{F.q=e.target.value.toLowerCase();draw()});
+function applyFilter(f){Object.assign(F,{cat:'',auth:'',acc:'',ver:'',blk:'',q:''},f);$('#f-cat').value=F.cat;$('#f-auth').value=F.auth;$('#f-acc').value=F.acc;$('#f-ver').value=F.ver;$('#f-blk').value=F.blk;$('#q').value=F.q;draw()}
+document.querySelectorAll('#tbl th').forEach(th=>{th.tabIndex=0;const go=()=>{const k=th.dataset.k;sortD=sortK===k?-sortD:1;sortK=k;draw()};th.addEventListener('click',go);th.addEventListener('keydown',e=>{if(e.key==='Enter')go()})});
+const ev1=(r,g)=>((r.evidence||{})[g]||[])[0];
+const cell=(r,g,txt)=>{const e=ev1(r,g);return e?`<a href="${esc(e.url)}" target="_blank" rel="noopener" title="${esc(e.quote)}">${esc(txt)}</a>`:`<span class="muted">${esc(txt)}</span>`};
+let open=null;
+function draw(){
+  let xs=rows.filter(x=>(!F.cat||x.category===F.cat)&&(!F.auth||(x.r.auth_methods||[]).includes(F.auth))&&(!F.acc||x.access===F.acc)&&(!F.ver||x.verdict===F.ver)&&(!F.blk||x.blocker===F.blk)&&
+    (!F.q||(x.name+' '+(x.r.access_notes||'')+' '+(x.r.auth_notes||'')+' '+(x.r.one_liner||'')).toLowerCase().includes(F.q)));
+  xs.sort((a,b)=>String(a[sortK]).localeCompare(String(b[sortK]))*sortD);
+  document.querySelectorAll('#tbl th').forEach(th=>th.setAttribute('aria-sort',th.dataset.k===sortK?(sortD>0?'ascending':'descending'):'none'));
+  $('#count').textContent=`${xs.length} of ${rows.length} apps`;
+  $('#tbl tbody').innerHTML=xs.map(x=>{const r=x.r;return `<tr class="r" tabindex="0" data-id="${r.id}" aria-expanded="${open===r.id}"><td><b>${esc(r.name)}</b>${r.needs_human?' <span class="muted" title="needs human">⚑</span>':''}<div class="muted">${esc(r.one_liner||'')}</div></td><td>${esc(r.category)}</td><td>${chip(x.verdict)}</td><td>${cell(r,'buildability',x.blocker)}</td><td>${cell(r,'access',x.access)}</td><td>${cell(r,'auth',x.auth)}</td><td>${cell(r,'api_surface',x.breadth)}</td><td>${(r.mcp||{}).url?`<a href="${esc(r.mcp.url)}" target="_blank" rel="noopener">${esc(x.mcp)}</a>`:cell(r,'mcp',x.mcp)}</td><td>${cell(r,'composio',x.composio)}</td></tr>`+(open===r.id?detail(r):'')}).join('');
+  document.querySelectorAll('#tbl tr.r').forEach(tr=>{const t=()=>{open=open===tr.dataset.id?null:tr.dataset.id;draw()};tr.addEventListener('click',e=>{if(e.target.tagName!=='A')t()});tr.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})});
+}
+function detail(r){
+  const ev=Object.entries(r.evidence||{}).map(([g,es])=>`<div><b>${esc(g)}</b> <span class="muted">confidence: ${esc((r.confidence||{})[g]||'–')}</span>${es.map(e=>`<div class="ev"><q>${esc(e.quote)}</q><br><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a> <span class="muted">${esc(e.source_type)} · ${esc((e.fetched_at||'').slice(0,10))}${e.support?' · '+esc(e.support):''}</span></div>`).join('')}</div>`).join('');
+  return `<tr class="exp"><td colspan="9"><dl class="kv"><dt>Docs</dt><dd>${r.docs_url?link(r.docs_url,r.docs_url):'–'}</dd><dt>Access notes</dt><dd>${esc(r.access_notes||'–')}</dd><dt>Auth notes</dt><dd>${esc(r.auth_notes||'–')}</dd><dt>Rationale</dt><dd>${esc(r.b.rationale||'–')}</dd><dt>Est. tools / effort</dt><dd>${esc(r.b.est_tool_count_if_built??'–')} / ${esc(r.b.est_effort||'–')}</dd><dt>Sandbox</dt><dd>${esc(r.sandbox)}</dd><dt>Webhooks</dt><dd>${esc((r.api||{}).webhooks)}</dd>${r.needs_human?`<dt>Needs human</dt><dd>${esc(r.needs_human_reason)}</dd>`:''}${r.flags.length?`<dt>Loop flags</dt><dd>${r.flags.map(esc).join('<br>')}</dd>`:''}</dl>${ev}</td></tr>`;
+}
+draw();
+
+// ---------- agent
+const RS=D.runs||{}, st=RS.by_stage||{}, E=RS.events||{};
+$('#agent-sub').textContent=`A Python pipeline does search, fetch, caching, validation, rule checks, analysis and this page. Claude Code subagents do the LLM steps (${RS.agents||0} subagent runs, ${(RS.total_tokens||0).toLocaleString()} tokens, $0 API spend). Composio's SDK supplies the toolkit catalog (${D.composio_catalog_count||'?'} toolkits) and is tried first for search.`;
+const MOD={pass1:'Haiku',l1_entail:'Sonnet',l2:'Sonnet',l5:'Opus',auditor:'Opus',retry:'Haiku'};
+$('#t-runs').innerHTML='<tr><th>Stage</th><th>Model</th><th>Subagents</th><th>Tokens</th><th>Agent-min</th></tr>'+Object.entries(st).map(([k,s])=>`<tr><td>${esc(k)}</td><td>${esc(MOD[k]||s.model)}</td><td>${s.agents}</td><td>${s.tokens.toLocaleString()}</td><td>${s.minutes}</td></tr>`).join('');
+$('#runs-note').textContent='Tokens are what the subagent tool reported. They ran inside a Claude Code session, so no per-call API bill. Agent-minutes add up parallel runs.';
+$('#t-tools').innerHTML=`<tr><th>Tool</th><th>Used for</th><th>Calls</th></tr>
+<tr><td>Composio SDK <code>toolkits.list</code></td><td>composio_existing_toolkit (deterministic)</td><td>1 sweep, ${D.composio_catalog_count||'?'} toolkits</td></tr>
+<tr><td>Composio <code>COMPOSIO_SEARCH_*</code></td><td>web search + page fetch</td><td>${E.composio_errors||0} attempts → HTTP 410 “toolkit retired”</td></tr>
+<tr><td>Claude Code WebSearch (fallback)</td><td>search results, recorded to cache</td><td>${E.search_fallback||0}</td></tr>
+<tr><td>httpx + trafilatura</td><td>page fetch</td><td>${E.fetch_direct||0}</td></tr>
+<tr><td>Playwright (Chromium)</td><td>L4 JS-rendered pages, screenshots</td><td>${E.browser||0}</td></tr>
+<tr><td>pydantic schema</td><td>reject + retry invalid output</td><td>${E.retry||0} retries, ${E.normalize||0} null→[] fixes</td></tr>`;
+$('#t-auto').innerHTML=`<tr><th>Step</th><th>Who</th></tr>
+<tr><td>Search, fetch, cache, schema validation, rule checks, verdict rubric, accuracy math, charts</td><td>Automated (Python)</td></tr>
+<tr><td>Extraction, adversarial pass, entailment, adjudication</td><td>Automated (Claude Code subagents), started by the operator in a Claude Code session</td></tr>
+<tr><td>Choosing the gold sample</td><td>Seeded script, committed before any results</td></tr>
+<tr><td>Judging correctness on the 30-app gold sample</td><td><b>Human</b> (human_check.csv)</td></tr>
+<tr><td>${R.filter(r=>r.needs_human).length} records with unresolved fields</td><td><b>Human queue</b> (data/human_queue.md)</td></tr>`;
+
+// ---------- verification
+const SN=['pass1','L1','L2','L3','L4','final'];
+const G=ACC.human?'human':'auditor_NOT_ground_truth';const GA=ACC[G];
+const gl=G==='human'?'human gold':'LLM auditor (NOT ground truth)';
+const sp=D.split||{};
+$('#ver-sub').textContent=`Gold sample: ${(sp.dev||[]).length+(sp.test||[]).length} apps, 3 per category, forced to include the known hard cases. Split 10 DEV (loops could be tuned on these) and 20 TEST (locked, never used for tuning; the split was committed before any results existed). 6 key fields per app. Accuracy below is measured against the ${gl}.`;
+function accBars(sel,note,part){if(!GA||!GA[part]){$(sel).innerHTML='<p class="muted">Pending human check.</p>';return}
+  const e=SN.filter(s=>GA[part][s]).map(s=>[s,GA[part][s].field_level.acc]);bars(sel,e,null,x=>Math.round(100*x)+'%');
+  const f=GA[part].final.field_level;$(note).textContent=`n = ${f.n} field judgements; final 95% CI ${Math.round(100*f.ci95[0])}–${Math.round(100*f.ci95[1])}%. Bars: pass 1, then after each loop.`}
+accBars('#c-acc-test','#n-acc-test','test');accBars('#c-acc-dev','#n-acc-dev','dev');
+if(GA&&GA.test){const pf=(p)=>GA[p].final.per_field;
+  $('#t-field').innerHTML='<tr><th>Field</th><th>TEST</th><th>DEV</th><th>Pass 1 TEST</th></tr>'+Object.keys(pf('test')).map(f=>`<tr><td>${esc(f)}</td><td>${pf('test')[f].k}/${pf('test')[f].n}</td><td>${pf('dev')[f].k}/${pf('dev')[f].n}</td><td>${GA.test.pass1.per_field[f].k}/${GA.test.pass1.per_field[f].n}</td></tr>`).join('');
+  const conf={};['test','dev'].forEach(p=>Object.entries(GA[p].verdict_confusion_final||{}).forEach(([g,row])=>Object.entries(row).forEach(([q,c])=>{conf[g]=conf[g]||{};conf[g][q]=(conf[g][q]||0)+c})));
+  VERD.forEach(g=>{conf[g]=conf[g]||{}});heat('#c-conf',conf,VERD,k=>'gold: '+VLAB[k],c=>'agent: '+VLAB[c]);
+  $('#t-hits').innerHTML='<tr><th>App</th><th>Field</th><th>Pass 1</th><th>Final</th></tr>'+(GA.fixed_by_loops||[]).map(h=>`<tr><td>${esc((byId[h.id]||{}).name||h.id)}</td><td>${esc(h.field)}</td><td>${esc(h.pass1)}</td><td>${esc(h.final)}</td></tr>`).join('');
+  $('#t-miss').innerHTML='<tr><th>App</th><th>Field</th><th>Agent</th><th>Gold</th><th>Cause</th></tr>'+(GA.misses_final||[]).map(m=>`<tr><td>${esc(m.name)}</td><td>${esc(m.field)}</td><td>${esc(m.agent)}</td><td>${esc(m.gold)}</td><td>${esc(m.cause)}</td></tr>`).join('');
+}
+const LS=ACC.loop_stats||{};
+$('#t-loops').innerHTML='<tr><th>Loop</th><th>Result</th></tr>'+
+ `<tr><td>L1 evidence</td><td>${LS.L1?`${LS.L1.exact} exact, ${LS.L1.fuzzy} fuzzy, ${LS.L1.entailed} entailed, ${LS.L1.unsupported} unsupported quotes; ${LS.L1.groups_reset} field groups reset to unknown`:'–'}</td></tr>`+
+ `<tr><td>L2 adversarial</td><td>${LS.L2?`${LS.L2.disagree} of ${LS.L2.compared} field comparisons disagreed; ${LS.L2.adopted_l2} adopted (verified evidence)`:'–'}</td></tr>`+
+ `<tr><td>L3 rules</td><td>${LS.L3?`${LS.L3.records_with_violations} records hit a rule: `+Object.entries(LS.L3.by_rule||{}).map(([k,c])=>`${k.replace('r_','')} ${c}`).join(', '):'–'}</td></tr>`+
+ `<tr><td>L4 browser</td><td>${LS.L4?`${LS.L4.apps} apps, ${LS.L4.pages} pages rendered; ${LS.L4.restored_evidence} quotes restored, ${LS.L4.cache_upgrades} pages upgraded to rendered text`:'–'}</td></tr>`+
+ `<tr><td>L5 adjudication</td><td>${LS.L5?`${LS.L5.fields} fields across ${LS.L5.apps} apps; ${LS.L5.changed} changed, ${LS.L5.unresolved} unresolved → human queue; ${LS.L5.evidence_rejected} adjudicator quotes rejected by the string check`:'–'}</td></tr>`;
+const W=D.analysis.defeated||[];
+$('#wrong').innerHTML=(W.length?'<ul>'+W.map(w=>`<li><b>${esc(w.name)}</b>: ${esc(w.why)}</li>`).join('')+'</ul>':'')+((GA&&GA.misses_final)?`<p>${GA.misses_final.length} gold field judgements were still wrong after all loops (table below).</p>`:'');
+$('#limits').textContent=`Limits: the gold sample has ${(sp.test||[]).length} TEST apps × 6 fields. Intervals are wide, so read differences of a few points as noise. Human reviewers saw the agent's answer next to the source, which can anchor them. The LLM auditor is a second model, not ground truth.`;
+
+// ---------- method
+const RB=[['1','NOT_APPLICABLE_NOT_A_SERVICE','blocker = cli_or_local_only, or CLI/SDK-only with no public API'],['2','BLOCKED_NO_PUBLIC_API','access = no_public_api, or blocker = no_api'],['3','BLOCKED_NEEDS_OUTREACH','access = partner_or_contact_sales, or blocker ∈ {partner_gate, enterprise_only}'],['4','UNCLEAR','access = unknown, or blocker = ambiguous_product'],['5','BUILD_NOW','access ∈ {self_serve_free, self_serve_trial} and blocker = none and breadth ≠ narrow'],['6','BUILD_WITH_CAVEATS','everything else: paid tier, app review, admin approval, narrow API, auth complexity']];
+$('#t-rubric').innerHTML='<tr><th>#</th><th>Verdict</th><th>Condition</th></tr>'+RB.map(r=>`<tr><td>${r[0]}</td><td>${chip(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('');
+$('#defs').innerHTML=[['Access','What a developer must do to obtain working API credentials.'],['Gated','Access is paid plan, admin approval, app review, partner/sales, or no public API.'],['Breadth','broad >100 endpoints, medium 20–100, narrow <20.'],['MCP official','Published by the vendor on a vendor domain or GitHub org.'],['Evidence','URL + ≤25-word quote + source type + fetch time. Quotes are re-fetched and string-matched (L1).'],['Unknown','No verified evidence. Preferred over a guess.']].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('');
+$('#lims').innerHTML=['Composio’s no-auth search toolkit (COMPOSIO_SEARCH) returned HTTP 410 “retired” on every version on 2026-11-23. Search fell back to Claude Code WebSearch, logged per call.','Pass 1 is a deliberately thin single shot (≤5 pages). Many pass-1 unknowns come from JS-rendered or 403/404 pages.','Facts reflect public pages on the research date. Pricing and access programs change often.','Tool-count and effort estimates are heuristics, not measurements.','Company size is not in the data, so gating vs company size is not reported.','The agent runs inside a Claude Code session. It is not an autonomous hosted service.'].map(x=>`<li>${esc(x)}</li>`).join('');
+$('#foot').textContent=`Generated ${D.generated_at}. Every number on this page comes from data/*.json via python -m appresearch replay.`;
+const tr=$('#trace-note');tr.innerHTML='Saved single-app execution trace: <code>data/traces/</code> (queries → sources → extraction → validation → final).';
+})();
+</script>
+</body>
+</html>

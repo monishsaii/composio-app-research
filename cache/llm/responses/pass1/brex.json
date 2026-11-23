@@ -1,0 +1,26 @@
+{
+ "id": "brex", "name": "Brex", "category": "Finance/Fintech",
+ "one_liner": "Brex is a spend platform with corporate cards, expense management, travel, and bill pay, plus a REST API.",
+ "docs_url": "https://developer.brex.com/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "Admins create user tokens in the dashboard for their own account (bearer). Partner OAuth 2.0 needs a client ID and secret issued by Brex developer support. Access tokens expire after 1 hour and refresh tokens rotate.",
+ "oauth_details": {"flows": ["auth_code", "PKCE", "client_credentials"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "partner_or_contact_sales",
+ "access_notes": "Admin-generated user tokens are self-serve for the admin's own account, but only account or card admins can create them. Partner OAuth client credentials are issued by Brex developer support, and that section is for developer partners only. Cost is not stated in the fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://developer.brex.com/docs/mcp"},
+ "buildability": {"verdict": "BLOCKED_NEEDS_OUTREACH", "main_blocker": "partner_gate", "rationale": "Third-party OAuth needs a client ID and secret issued by Brex developer support, and the partner section is for developer partners only. Admin-generated tokens cover only the admin's own account.", "est_tool_count_if_built": null, "est_effort": "L"},
+ "evidence": {
+  "identity": [{"url": "https://developer.brex.com/", "quote": "Brex is the first fully unified spend platform — with global corporate cards, expense management, reimbursements, travel, and bill pay.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://developer.brex.com/guides/partner_authentication", "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.", "source_type": "official_docs"}, {"url": "https://www.brex.com/support/brex-api", "quote": "generate a user token from your Brex dashboard following these instructions.", "source_type": "official_docs"}],
+  "access": [{"url": "https://developer.brex.com/guides/partner_authentication", "quote": "Note: This section is only for Brex developer partners.", "source_type": "official_docs"}, {"url": "https://www.brex.com/support/brex-api", "quote": "Only account or card admins can create API tokens in the dashboard.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://developer.brex.com/guides/partner_authentication", "quote": "Use staging for point-in-time testing only.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developer.brex.com/", "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs.", "source_type": "official_docs"}, {"url": "https://developer.brex.com/", "quote": "Webhooks API: Send real-time notifications based on events", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://developer.brex.com/docs/mcp", "quote": "The Brex MCP server lets AI assistants interact directly with your Brex account", "source_type": "official_docs"}, {"url": "https://developer.brex.com/docs/mcp", "quote": "Enable the beta.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://developer.brex.com/guides/partner_authentication", "quote": "Please contact our developer support team to be issued a client ID and client secret for partner authentication.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true, "needs_human_reason": "Partner OAuth requires Brex to issue credentials, and the approval outcome and timing are unknown. API pricing is not stated in the fetched pages. The API endpoint count is not given."
+}

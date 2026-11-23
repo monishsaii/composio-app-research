@@ -1,0 +1,41 @@
+{
+ "id": "linear",
+ "name": "Linear",
+ "category": "Productivity/PM",
+ "one_liner": "Issue tracking product whose public GraphQL API covers issues, teams, projects and workflow states.",
+ "docs_url": "https://linear.app/developers/graphql",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "api_key"],
+ "auth_notes": "Personal API keys are passed in the Authorization header for personal scripts. Apps for other users use OAuth2 with a Bearer token. Authorization-code access tokens last 24 hours and refresh tokens last 30 days. Client-credentials tokens last 30 days with no refresh token. PKCE is supported.",
+ "oauth_details": {"flows": ["auth_code", "client_credentials", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "unknown",
+ "access_notes": "Personal API keys are created in Security & access settings. OAuth2 apps are registered by the developer. Cost or plan tier for API access is not stated on the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["graphql"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": true, "rate_limits_documented": "unknown", "official_sdks": ["typescript"]},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Public GraphQL API with self-serve personal keys and standard OAuth2 (auth code, PKCE, client credentials), plus webhooks. Plan tier and rate limits are not stated on the fetched pages. The official MCP page was not fetched.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://linear.app/docs/api/graphql", "quote": "Linear’s public API is built using GraphQL.", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://linear.app/docs/api/graphql", "quote": "The Linear API supports personal API keys and OAuth2 authentication.", "source_type": "official_docs"},
+   {"url": "https://linear.app/developers/oauth-2-0-authentication", "quote": "Linear supports OAuth2 authentication, which is recommended if you’re building applications to integrate with Linear.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://linear.app/docs/api/graphql", "quote": "For personal scripts API keys are the easiest way to access the API.", "source_type": "official_docs"},
+   {"url": "https://linear.app/docs/api/graphql", "quote": "Visit Security & access settings to create and manage them.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://linear.app/docs/api/graphql", "quote": "It supports introspection so you can query the whole schema.", "source_type": "official_docs"},
+   {"url": "https://linear.app/docs/api/graphql", "quote": "Register a programmatic webhook and get updates for all issues for the team.", "source_type": "official_docs"},
+   {"url": "https://linear.app/docs/api/graphql", "quote": "Archived resources are hidden by default from the paginated responses.", "source_type": "official_docs"},
+   {"url": "https://linear.app/docs/api/graphql", "quote": "It is written in TypeScript, allowing all operations to be strongly typed.", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://linear.app/developers/oauth-2-0-authentication", "quote": "Specifically for CI and scheduled automation, refer to Client credentials token.", "source_type": "official_docs"},
+   {"url": "https://linear.app/developers/oauth-2-0-authentication", "quote": "Each refresh token expires 30 days after issuance.", "source_type": "official_docs"}
+  ]
+ },
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "low", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "None blocking. The official MCP page (linear.app/docs/mcp) was not fetched, and the PyPI page returned no content, so MCP status is unverified."
+}

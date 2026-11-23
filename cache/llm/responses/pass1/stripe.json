@@ -1,0 +1,25 @@
+{
+ "id": "stripe", "name": "Stripe", "category": "Finance/Fintech",
+ "one_liner": "Developer API and dashboard for accepting payments, billing, and managing Stripe accounts.",
+ "docs_url": "https://docs.stripe.com/api", "openapi_spec_url": null,
+ "auth_methods": ["api_key", "bearer_token", "oauth2"],
+ "auth_notes": "API keys sent as HTTP Basic Auth username (or Bearer header). Restricted keys recommended for live mode. OAuth is documented for MCP clients acting on a user's account; flows not stated on the pages read.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Keys are managed in the Stripe Dashboard. Sandbox keys (sk_test_) work without touching live data. Cost and live-mode activation requirements are not stated on the pages read.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": []},
+ "mcp": {"exists": "official", "url": "https://mcp.stripe.com"},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve sandbox and live keys, documented REST API with Basic/Bearer auth. Stripe MCP is public preview and will stop accepting full-access secret keys on 2027-01-11, so use an agent key or OAuth there.", "est_tool_count_if_built": null, "est_effort": "M"},
+ "evidence": {
+  "identity": [{"url": "https://docs.stripe.com/mcp", "quote": "Guides the user through Stripe products to help users accept payments, sell products online, set up billing, or build any Stripe integration", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.stripe.com/api/authentication", "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value.", "source_type": "official_docs"}],
+  "access": [{"url": "https://docs.stripe.com/api/authentication", "quote": "You can view and manage your API keys in the Stripe Dashboard.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://docs.stripe.com/api", "quote": "You can use the Stripe API in sandboxes without affecting your live data or interacting with banking networks.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.stripe.com/api", "quote": "The Stripe API is organized around REST.", "source_type": "official_docs"}, {"url": "https://docs.stripe.com/api", "quote": "Too many requests hit the API too quickly.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.stripe.com/mcp", "quote": "Let your AI agents interact with the Stripe API by using our MCP server.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://docs.stripe.com/mcp", "quote": "Starting January 11, 2027, Stripe MCP will no longer accept full-access secret keys or non-agent restricted API keys.", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "medium", "auth": "high", "access": "medium", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false, "needs_human_reason": ""
+}

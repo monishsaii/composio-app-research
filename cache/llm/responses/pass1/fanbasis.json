@@ -1,0 +1,27 @@
+{
+ "id": "fanbasis",
+ "name": "fanbasis",
+ "category": "Ecommerce",
+ "one_liner": "unknown: pages describe Openstage Fanbase API, not confirmed as fanbasis.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "other"],
+ "auth_notes": "Applies to the Openstage pages: Manager API uses an API key as a Bearer token; Fanbase API fans get an Access Token via signup or login. No page confirms these apply to fanbasis.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "Fanbase API is limited to the Legendary plan and is arranged through an Account Manager. Manager API keys are generated in Artist Settings for all artists; no cost is stated. Applies to Openstage, not confirmed for fanbasis.",
+ "sandbox_or_test_env": true,
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": true, "pagination_documented": "unknown", "rate_limits_documented": true, "official_sdks": "unknown"},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "UNCLEAR", "main_blocker": "ambiguous_product", "rationale": "Fetched pages describe Openstage Fanbase and Manager APIs and never mention fanbasis. If they are the same product, Fanbase API needs a Legendary plan and Manager API needs an artist-scoped key.", "est_tool_count_if_built": null, "est_effort": null},
+ "evidence": {
+  "identity": [{"url": "https://docs.openstage.live/fanbase/", "quote": "Build your own Fan Experience, powered by the Openstage Fanbase API.", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.openstage.live/manager/guides", "quote": "All requests to the Manager API must be authenticated using an API Key sent in the HTTP Authorization header as a Bearer token:", "source_type": "official_docs"}],
+  "access": [{"url": "https://fanbaseapi.openstage.live/guides.html", "quote": "Fanbase API is available exclusively to artists on the Legendary plan.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://fanbaseapi.openstage.live/guides.html", "quote": "No additional provisioning is required to access the staging environment.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.openstage.live/manager/guides", "quote": "The response does not include the fan's ID. To get it, listen for the fan.created_updated", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Fetched pages describe Openstage's Fanbase and Manager APIs and never mention fanbasis; confirm the product identity before using these facts. Zapier's fanbasis MCP was found in search but not fetched."
+}

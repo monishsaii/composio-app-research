@@ -1,0 +1,29 @@
+{
+ "id": "cloudflare",
+ "name": "Cloudflare",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Cloudflare is an internet infrastructure platform with a REST API, OAuth clients, and MCP server hosting.",
+ "docs_url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "API tokens created in the dashboard grant API access. OAuth clients are supported for third-party apps, using Authorization Code (with a client secret, or with PKCE for public clients).",
+ "oauth_details": {"flows": ["auth_code", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "API tokens are created in the dashboard. OAuth client creation requires the Super Administrator, Administrator, or OAuth Client Write role. Public OAuth clients need DNS-based domain verification. No cost is stated in the fetched pages.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {"style": ["rest"], "breadth": "unknown", "approx_endpoint_count": null, "webhooks": "unknown", "pagination_documented": "unknown", "rate_limits_documented": "unknown", "official_sdks": "unknown"},
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {"verdict": "BUILD_NOW", "main_blocker": "none", "rationale": "Self-serve API tokens and a documented REST API with standard token auth. Endpoint breadth, rate limits, cost, and any official API MCP server are not in the fetched pages.", "est_tool_count_if_built": null, "est_effort": null},
+ "evidence": {
+  "identity": [{"url": "https://developers.cloudflare.com/support/cloudflare-client-api/", "quote": "Use the following resources to learn more about Cloudflare's REST API:", "source_type": "official_docs"}],
+  "auth": [
+   {"url": "https://developers.cloudflare.com/fundamentals/api/get-started/index/", "quote": "Create an API token to grant access to the API to perform actions.", "source_type": "official_docs"},
+   {"url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/", "quote": "Cloudflare does not support Client Credentials, Implicit, Resource Owner Password Credentials, Device Authorization, or other OAuth grant types for self-managed third-party clients.", "source_type": "official_docs"}
+  ],
+  "access": [{"url": "https://developers.cloudflare.com/fundamentals/oauth/create-an-oauth-client/", "quote": "To create an OAuth client, you must have one of these roles for the associated account: Super Administrator, Administrator, or OAuth Client Write.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developers.cloudflare.com/support/cloudflare-client-api/", "quote": "Use the following resources to learn more about Cloudflare's REST API:", "source_type": "official_docs"}]
+ },
+ "confidence": {"identity": "medium", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Fetched pages do not give endpoint counts, rate limits, SDK list, or an official Cloudflare API MCP server. Search surfaced the cloudflare/mcp-server-cloudflare repo, which was not fetched."
+}
