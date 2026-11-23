@@ -17,5 +17,15 @@
   "disagree": 340,
   "adopted_l2": 287,
   "missing_l2": 0
+ },
+ "L3": {
+  "records_with_violations": 51,
+  "by_rule": {
+   "r_mcp_official": 34,
+   "r_verdict_rubric": 13,
+   "r_docs_url": 12,
+   "r_oauth_has_endpoints": 1,
+   "r_breadth_vs_count": 1
+  }
  }
 }

@@ -89,24 +89,33 @@ def r_mcp_official(rec: dict, fetch: Fetch) -> list[str]:
             return ["mcp community claimed without url"]
         return []
     url = m.get("url")
+    roots = official_roots(rec)
     if not url:
+        ev_official = [e for e in _ev(rec, "mcp") if _root(e["url"]) in roots or _vendor_github(e["url"], rec)]
+        if ev_official:
+            return ["mcp official without url (kept: vendor-domain evidence)"]
         rec["mcp"]["exists"] = "unknown"
-        return ["mcp official without url -> unknown"]
+        return ["mcp official without url or vendor-domain evidence -> unknown"]
     r = fetch(url)
-    if r.get("status") not in (200, 401, 403):  # 401/403: protected MCP endpoints legitimately reject GET
+    st = r.get("status") or 0
+    if not (0 < st < 500) or st in (404, 410):  # MCP endpoints often answer GET with 400/401/403/405/406: host resolves
         rec["mcp"]["exists"] = "unknown"
-        return [f"mcp url does not resolve (status {r.get('status')}) -> unknown"]
-    host, roots = _host(url), official_roots(rec)
-    on_official = _root(url) in roots
-    if not on_official and host in ("github.com", "www.github.com"):
-        org = urlparse(url).path.strip("/").split("/")[0].lower()
-        on_official = any(t in org for t in name_tokens(rec))
+        return [f"mcp url does not resolve (status {st}) -> unknown"]
+    host = _host(url)
+    on_official = _root(url) in roots or _vendor_github(url, rec)
     if not on_official and any(t in host.replace("-", "") for t in name_tokens(rec)):
         on_official = True
     if not on_official:
         rec["mcp"]["exists"] = "community"
         return [f"mcp 'official' but {host} not an official domain -> community"]
     return []
+
+
+def _vendor_github(url: str, rec: dict) -> bool:
+    if _host(url) not in ("github.com", "raw.githubusercontent.com"):
+        return False
+    segs = [x.lower() for x in urlparse(url).path.strip("/").split("/")[:2]]
+    return any(t in seg for seg in segs for t in name_tokens(rec))
 
 
 def r_docs_url(rec: dict, fetch: Fetch) -> list[str]:

@@ -2593,3 +2593,39 @@
 {"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
 {"t": "2026-11-23T16:30:17Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
 {"t": "2026-11-23T16:30:17Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:30:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.ahrefs.com/mcp/mcp", "status": 405, "chars": 25}
+{"t": "2026-11-23T16:30:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer-docs.amazon.com/sp-api", "status": 200, "chars": 734}
+{"t": "2026-11-23T16:30:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.apify.com", "status": 401, "chars": 297}
+{"t": "2026-11-23T16:30:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.apify.com/api/v2", "status": 200, "chars": 15586}
+{"t": "2026-11-23T16:30:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.clay.com/index.md", "status": 200, "chars": 3108}
+{"t": "2026-11-23T16:30:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/bits_ai/mcp_server", "status": 200, "chars": 6753}
+{"t": "2026-11-23T16:30:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/api/latest", "status": 200, "chars": 4092}
+{"t": "2026-11-23T16:30:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.dataforseo.com/v3/", "status": 200, "chars": 2758}
+{"t": "2026-11-23T16:30:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.devin.ai/mcp", "status": 401, "chars": 70}
+{"t": "2026-11-23T16:30:35Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.fathom.ai/mcp", "status": 200, "chars": 98}
+{"t": "2026-11-23T16:30:36Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.firecrawl.dev/v2/mcp", "status": 405, "chars": 18}
+{"t": "2026-11-23T16:30:36Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.frontapp.com/mcp", "status": 405, "chars": 0}
+{"t": "2026-11-23T16:30:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.helpscout.com", "status": 200, "chars": 1007}
+{"t": "2026-11-23T16:30:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.intercom.com/mcp", "status": 401, "chars": 79}
+{"t": "2026-11-23T16:30:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.klaviyo.com/mcp", "status": 401, "chars": 0}
+{"t": "2026-11-23T16:30:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.klaviyo.com/en/docs/get_started", "status": 200, "chars": 3409}
+{"t": "2026-11-23T16:30:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://<your-liveagent-domain>/api/mcp", "status": 0, "chars": 0}
+{"t": "2026-11-23T16:30:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://mailchimp.com/developer/marketing", "status": 200, "chars": 1751}
+{"t": "2026-11-23T16:30:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.mermaid.ai/mcp", "status": 401, "chars": 257}
+{"t": "2026-11-23T16:30:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.notion.com/mcp", "status": 401, "chars": 0}
+{"t": "2026-11-23T16:30:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/reference/intro", "status": 200, "chars": 1120}
+{"t": "2026-11-23T16:30:42Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.plain.com/mcp", "status": 405, "chars": 18}
+{"t": "2026-11-23T16:30:43Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.podio.com/mcp", "status": 401, "chars": 109}
+{"t": "2026-11-23T16:30:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.usepylon.com", "status": 401, "chars": 13}
+{"t": "2026-11-23T16:30:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com", "status": 200, "chars": 1217}
+{"t": "2026-11-23T16:30:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.reducto.ai/mcp", "status": 401, "chars": 79}
+{"t": "2026-11-23T16:30:46Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.reducto.ai", "status": 200, "chars": 350}
+{"t": "2026-11-23T16:30:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.seranking.com/mcp", "status": 401, "chars": 114}
+{"t": "2026-11-23T16:30:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.sentry.dev/mcp", "status": 401, "chars": 0}
+{"t": "2026-11-23T16:30:48Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.slack.com/mcp", "status": 401, "chars": 92}
+{"t": "2026-11-23T16:30:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.slack.dev/", "status": 200, "chars": 27512}
+{"t": "2026-11-23T16:30:50Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://mcp.stripe.com", "status": 401, "chars": 161}
+{"t": "2026-11-23T16:30:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/docs", "status": 200, "chars": 4378}
+{"t": "2026-11-23T16:30:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://vercel.com/docs/agent-resources/vercel-mcp", "status": 200, "chars": 17692}
+{"t": "2026-11-23T16:30:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.facebook.com/docs/whatsapp", "status": 400, "chars": 122}

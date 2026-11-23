@@ -1,0 +1,165 @@
+{
+ "aircall": [
+  "r_mcp_official: mcp community claimed without url",
+  "r_verdict_rubric: verdict BUILD_WITH_CAVEATS -> BLOCKED_NEEDS_OUTREACH per rubric"
+ ],
+ "clay": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_verdict_rubric: verdict BUILD_WITH_CAVEATS -> BLOCKED_NEEDS_OUTREACH per rubric"
+ ],
+ "close": [
+  "r_verdict_rubric: verdict BUILD_NOW -> UNCLEAR per rubric"
+ ],
+ "cloudflare": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "coda": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "consensus": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_docs_url: docs_url status 403"
+ ],
+ "datadog": [
+  "r_oauth_has_endpoints: oauth2 claimed but no authorize/token evidence on cited auth pages"
+ ],
+ "dataforseo": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "discord": [
+  "r_verdict_rubric: verdict BUILD_NOW -> UNCLEAR per rubric"
+ ],
+ "fanbasis": [
+  "r_docs_url: docs_url missing"
+ ],
+ "fathom": [
+  "r_verdict_rubric: verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+ ],
+ "freshdesk": [
+  "r_mcp_official: mcp 'official' but github.com not an official domain -> community"
+ ],
+ "github": [
+  "r_mcp_official: mcp 'official' but docsearch.algolia.com not an official domain -> community"
+ ],
+ "gladly": [
+  "r_verdict_rubric: verdict BUILD_WITH_CAVEATS -> UNCLEAR per rubric"
+ ],
+ "gorgias": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "grain": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "gumroad": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "help-scout": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_verdict_rubric: verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+ ],
+ "higgsfield": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_verdict_rubric: verdict BUILD_WITH_CAVEATS -> UNCLEAR per rubric"
+ ],
+ "ipayx": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_docs_url: docs_url looks like a marketing page"
+ ],
+ "lark-larksuite": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "linear": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "liveagent": [
+  "r_mcp_official: mcp url does not resolve (status 0) -> unknown",
+  "r_verdict_rubric: verdict BUILD_NOW -> UNCLEAR per rubric"
+ ],
+ "meta-ads": [
+  "r_docs_url: docs_url status 400"
+ ],
+ "neo4j": [
+  "r_mcp_official: mcp 'official' but pypi.org not an official domain -> community"
+ ],
+ "notebooklm": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "otter-ai": [
+  "r_mcp_official: mcp 'official' but stackone.com not an official domain -> community",
+  "r_docs_url: docs_url status 403"
+ ],
+ "pipedrive": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "pitchbook": [
+  "r_docs_url: docs_url missing"
+ ],
+ "plaid": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "pumble": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "pylon": [
+  "r_verdict_rubric: verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+ ],
+ "quickbooks": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "ramp": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "reducto": [
+  "r_verdict_rubric: verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+ ],
+ "salesforce": [
+  "r_docs_url: docs_url status 403"
+ ],
+ "salesforce-commerce-cloud": [
+  "r_docs_url: docs_url status 403"
+ ],
+ "se-ranking": [
+  "r_breadth_vs_count: breadth broad inconsistent with ~63 endpoints -> medium"
+ ],
+ "shopify": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "smartsheet": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "supabase": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "threads-meta": [
+  "r_docs_url: docs_url status 400"
+ ],
+ "twenty": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "twilio": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "vonage": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "waterfall-io": [
+  "r_docs_url: docs_url looks like a marketing page"
+ ],
+ "whatsapp-business": [
+  "r_docs_url: docs_url status 400"
+ ],
+ "xero": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "youtube-transcript": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)",
+  "r_docs_url: docs_url looks like a marketing page",
+  "r_verdict_rubric: verdict BUILD_NOW -> BUILD_WITH_CAVEATS per rubric"
+ ],
+ "zoho-cliq": [
+  "r_mcp_official: mcp official without url (kept: vendor-domain evidence)"
+ ],
+ "zoho-crm": [
+  "r_verdict_rubric: verdict UNCLEAR -> BUILD_WITH_CAVEATS per rubric"
+ ]
+}

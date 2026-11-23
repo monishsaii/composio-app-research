@@ -136,3 +136,16 @@ def test_schema_rejects_bad_enum():
     import pytest
     with pytest.raises(Exception):
         Record.model_validate({"id": "x", "name": "A", "category": "c", "access": "free_forever"})
+
+
+def test_official_mcp_405_counts_as_resolving():
+    rec = base(mcp={"exists": "official", "url": "https://mcp.acme.com/mcp"})
+    r, _ = L3.check(rec, lambda u: {"status": 405, "final_url": u, "text": ""})
+    assert r["mcp"]["exists"] == "official"
+
+
+def test_official_mcp_without_url_kept_with_vendor_evidence():
+    rec = base(mcp={"exists": "official", "url": None})
+    rec["evidence"]["mcp"] = [{"url": "https://developers.acme.com/mcp", "quote": "Acme MCP server", "source_type": "official_docs", "fetched_at": "t"}]
+    r, _ = L3.check(rec, ok_fetch)
+    assert r["mcp"]["exists"] == "official"
