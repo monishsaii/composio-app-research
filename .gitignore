@@ -1,0 +1,8 @@
+.env
+cache/fetch/
+cache/search/
+cache/browser/
+cache/llm/tasks/
+__pycache__/
+*.egg-info/
+.pytest_cache/

@@ -1,0 +1,13 @@
+{"t": "2026-11-23T13:40:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "403 This API key does not have the permissions required for POST /api/v3.1/tools/execute/COMPOSIO_SEARCH_TAVILY. This route requires \"tool_execution\" write access, but the key has no access for \"tool_execution\"."}
+{"t": "2026-11-23T13:40:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "403 This API key does not have the permissions required for POST /api/v3.1/tools/execute/COMPOSIO_SEARCH_FETCH_URL_CONTENT. This route requires \"tool_execution\" write access, but the key has no access for \"tool_execution\"."}
+{"t": "2026-11-23T13:41:57Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_TAVILY", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:41:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T13:46:15Z", "event": "composio_catalog", "count": 1842}
+{"t": "2026-11-23T13:46:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Notion API documentation developer", "n": 8}
+{"t": "2026-11-23T13:46:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Notion API authentication OAuth API key pricing plan access", "n": 6}
+{"t": "2026-11-23T13:46:50Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Notion MCP server model context protocol", "n": 4}
+{"t": "2026-11-23T13:46:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/reference/intro.md", "status": 200, "chars": 2290}
+{"t": "2026-11-23T13:46:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/guides/authorization/overview.md", "status": 200, "chars": 26900}
+{"t": "2026-11-23T13:46:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/page/changelog.md", "status": 200, "chars": 109780}
+{"t": "2026-11-23T13:46:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/docs/authorization", "status": 200, "chars": 12951}
+{"t": "2026-11-23T13:46:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://docsearch.algolia.com/mcp/docs/repo/makenotion/notion-mcp-server", "status": 200, "chars": 1353}

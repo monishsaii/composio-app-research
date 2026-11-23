@@ -1,0 +1,802 @@
+[
+ {
+  "id": "salesforce",
+  "name": "Salesforce",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "hubspot",
+  "name": "HubSpot",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "pipedrive",
+  "name": "Pipedrive",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "attio",
+  "name": "Attio",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "twenty",
+  "name": "Twenty",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": "Open-source CRM (twenty.com); self-host vs cloud API."
+ },
+ {
+  "id": "podio",
+  "name": "Podio",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "zoho-crm",
+  "name": "Zoho CRM",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "close",
+  "name": "Close",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": "close.com CRM; generic name."
+ },
+ {
+  "id": "copper",
+  "name": "Copper",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "dealcloud",
+  "name": "DealCloud",
+  "category": "CRM & Sales",
+  "category_key": "crm",
+  "hint_url": null,
+  "ambiguity": "Intapp DealCloud; API existence/tier unclear."
+ },
+ {
+  "id": "zendesk",
+  "name": "Zendesk",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "intercom",
+  "name": "Intercom",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "freshdesk",
+  "name": "Freshdesk",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "front",
+  "name": "Front",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "pylon",
+  "name": "Pylon",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": "usepylon.com B2B support; API tier unclear."
+ },
+ {
+  "id": "liveagent",
+  "name": "LiveAgent",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "plain",
+  "name": "Plain",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": "plain.com support; GraphQL API."
+ },
+ {
+  "id": "help-scout",
+  "name": "Help Scout",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "gorgias",
+  "name": "Gorgias",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "gladly",
+  "name": "Gladly",
+  "category": "Support & Helpdesk",
+  "category_key": "support",
+  "hint_url": null,
+  "ambiguity": "API existence/tier unclear."
+ },
+ {
+  "id": "slack",
+  "name": "Slack",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "twilio",
+  "name": "Twilio",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "zoho-cliq",
+  "name": "Zoho Cliq",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "lark-larksuite",
+  "name": "Lark (Larksuite)",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": "Lark (intl) vs Feishu (CN) open platforms."
+ },
+ {
+  "id": "pumble",
+  "name": "Pumble",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "discord",
+  "name": "Discord",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "telegram",
+  "name": "Telegram",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": "Bot API vs MTProto client API."
+ },
+ {
+  "id": "whatsapp-business",
+  "name": "WhatsApp Business",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": "Cloud API vs on-prem (sunset) vs BSP; Meta app review."
+ },
+ {
+  "id": "aircall",
+  "name": "Aircall",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "vonage",
+  "name": "Vonage",
+  "category": "Comms & Messaging",
+  "category_key": "comms",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "google-ads",
+  "name": "Google Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "Developer token access levels."
+ },
+ {
+  "id": "meta-ads",
+  "name": "Meta Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "Marketing API; app review / access tiers."
+ },
+ {
+  "id": "linkedin-ads",
+  "name": "LinkedIn Ads",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "Advertising API requires partner/access application."
+ },
+ {
+  "id": "gohighlevel",
+  "name": "GoHighLevel",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "API v2 / marketplace app; plan tiers."
+ },
+ {
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "Marketing vs Transactional (Mandrill) APIs."
+ },
+ {
+  "id": "klaviyo",
+  "name": "Klaviyo",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "systeme-io",
+  "name": "systeme.io",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "API existence/tier."
+ },
+ {
+  "id": "pinterest",
+  "name": "Pinterest",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "API v5; trial vs standard access."
+ },
+ {
+  "id": "threads-meta",
+  "name": "Threads (Meta)",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": "Threads API; Meta app review."
+ },
+ {
+  "id": "sendgrid",
+  "name": "SendGrid",
+  "category": "Marketing/Ads/Email/Social",
+  "category_key": "marketing",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "shopify",
+  "name": "Shopify",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "woocommerce",
+  "name": "WooCommerce",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": "Self-hosted WordPress plugin; per-store REST API."
+ },
+ {
+  "id": "bigcommerce",
+  "name": "BigCommerce",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "salesforce-commerce-cloud",
+  "name": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": "B2C Commerce SCAPI/OCAPI; per-instance auth."
+ },
+ {
+  "id": "magento-adobe-commerce",
+  "name": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": "Per-instance REST/GraphQL; self-hosted vs Adobe Commerce cloud."
+ },
+ {
+  "id": "squarespace",
+  "name": "Squarespace",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "ecwid",
+  "name": "Ecwid",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "gumroad",
+  "name": "Gumroad",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "amazon-selling-partner",
+  "name": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": "SP-API developer registration; restricted roles."
+ },
+ {
+  "id": "fanbasis",
+  "name": "fanbasis",
+  "category": "Ecommerce",
+  "category_key": "ecommerce",
+  "hint_url": null,
+  "ambiguity": "Small creator-commerce platform; API existence unclear."
+ },
+ {
+  "id": "dataforseo",
+  "name": "DataForSEO",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "se-ranking",
+  "name": "SE Ranking",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": "API on paid plans only?"
+ },
+ {
+  "id": "ahrefs",
+  "name": "Ahrefs",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": "API on enterprise plan only?"
+ },
+ {
+  "id": "mrscraper",
+  "name": "MrScraper",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "apify",
+  "name": "Apify",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "firecrawl",
+  "name": "Firecrawl",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "bright-data",
+  "name": "Bright Data",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "sherlock",
+  "name": "Sherlock",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": "https://github.com/sherlock-project/sherlock",
+  "ambiguity": "Local OSS CLI, not a hosted API."
+ },
+ {
+  "id": "waterfall-io",
+  "name": "Waterfall.io",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": "Contact-enrichment API; existence/tier unclear."
+ },
+ {
+  "id": "clay",
+  "name": "Clay",
+  "category": "Data/SEO/Scraping",
+  "category_key": "data",
+  "hint_url": null,
+  "ambiguity": "clay.com; public API existence unclear."
+ },
+ {
+  "id": "github",
+  "name": "GitHub",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "vercel",
+  "name": "Vercel",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "netlify",
+  "name": "Netlify",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "supabase",
+  "name": "Supabase",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": "Management API vs per-project API (PostgREST)."
+ },
+ {
+  "id": "neo4j",
+  "name": "Neo4j",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": "Drivers/Query API vs Aura management API."
+ },
+ {
+  "id": "snowflake",
+  "name": "Snowflake",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": "SQL API vs drivers; key-pair JWT."
+ },
+ {
+  "id": "mongodb-atlas",
+  "name": "MongoDB Atlas",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": "Atlas Admin API vs Data API (deprecated)."
+ },
+ {
+  "id": "datadog",
+  "name": "Datadog",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "sentry",
+  "name": "Sentry",
+  "category": "Dev/Infra/Data",
+  "category_key": "dev",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "notion",
+  "name": "Notion",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "airtable",
+  "name": "Airtable",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "linear",
+  "name": "Linear",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "jira",
+  "name": "Jira",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "asana",
+  "name": "Asana",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "monday-com",
+  "name": "Monday.com",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "clickup",
+  "name": "ClickUp",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "coda",
+  "name": "Coda",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "smartsheet",
+  "name": "Smartsheet",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "harvest",
+  "name": "Harvest",
+  "category": "Productivity/PM",
+  "category_key": "productivity",
+  "hint_url": null,
+  "ambiguity": "getharvest.com time tracking."
+ },
+ {
+  "id": "stripe",
+  "name": "Stripe",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "plaid",
+  "name": "Plaid",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "binance",
+  "name": "Binance",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": "API key + HMAC; regional restrictions."
+ },
+ {
+  "id": "paygent-connect",
+  "name": "Paygent Connect",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": "NMI-powered gateway; verify which 'Paygent' (also a Japanese PSP)."
+ },
+ {
+  "id": "ipayx",
+  "name": "iPayX",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": "https://ipayx.ai/docs",
+  "ambiguity": "Unknown small product; verify."
+ },
+ {
+  "id": "quickbooks",
+  "name": "QuickBooks",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "xero",
+  "name": "Xero",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "brex",
+  "name": "Brex",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "ramp",
+  "name": "Ramp",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "pitchbook",
+  "name": "PitchBook",
+  "category": "Finance/Fintech",
+  "category_key": "finance",
+  "hint_url": null,
+  "ambiguity": "API is enterprise add-on?"
+ },
+ {
+  "id": "notebooklm",
+  "name": "NotebookLM",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": "https://cloud.google.com/gemini",
+  "ambiguity": "Consumer app vs NotebookLM Enterprise API."
+ },
+ {
+  "id": "otter-ai",
+  "name": "Otter AI",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": "Public API existence unclear."
+ },
+ {
+  "id": "fathom",
+  "name": "Fathom",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": "fathom.video meeting notes; API existence unclear."
+ },
+ {
+  "id": "consensus",
+  "name": "Consensus",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": "consensus.app research search; API tier unclear."
+ },
+ {
+  "id": "reducto",
+  "name": "Reducto",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": null
+ },
+ {
+  "id": "devin",
+  "name": "Devin",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": "Cognition Devin API; plan tier."
+ },
+ {
+  "id": "higgsfield",
+  "name": "higgsfield",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": "https://higgsfield.ai/cli",
+  "ambiguity": "Gen-media; CLI vs API."
+ },
+ {
+  "id": "mermaid-cli",
+  "name": "Mermaid CLI",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": "https://github.com/mermaid-js/mermaid-cli",
+  "ambiguity": "Local OSS CLI, not a hosted API."
+ },
+ {
+  "id": "youtube-transcript",
+  "name": "YouTube Transcript",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": "https://transcriptapi.com",
+  "ambiguity": "Third-party transcript API (transcriptapi.com), not YouTube itself."
+ },
+ {
+  "id": "grain",
+  "name": "Grain",
+  "category": "AI/Research/Media",
+  "category_key": "ai",
+  "hint_url": null,
+  "ambiguity": "grain.com meeting recorder; API tier unclear."
+ }
+]

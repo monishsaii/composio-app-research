@@ -1,0 +1,32 @@
+name: research-one-app
+# Runnable trigger: research a single app end-to-end with the API backend.
+# Requires repo secrets COMPOSIO_API_KEY and ANTHROPIC_API_KEY (not executed by the author: $0 budget, no remote).
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: "App name, e.g. Notion"
+        required: true
+        default: "Notion"
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_BACKEND: anthropic
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[api,dev]"
+      - run: pytest -q
+      - run: python -m appresearch research --app "${{ inputs.app }}" --stage pass1 --backend anthropic | tee result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-${{ inputs.app }}
+          path: |
+            result.json
+            cache/llm/responses/
