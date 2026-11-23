@@ -2,7 +2,7 @@
 
 For each of 100 apps, the pipeline records how it authenticates and what gates API credentials. It also records how big the API is, whether an MCP server exists, and a rubric verdict (BUILD_NOW … BLOCKED_NO_PUBLIC_API). Every non-unknown value carries `{url, ≤25-word quote, source_type, fetched_at}`. The output is `site/index.html`, a self-contained case study, plus `data/final.json`.
 
-**How it runs (no hidden autonomy).** Python handles search plumbing, fetch, cache, validation, rule checks, analysis and the site. The LLM steps are done by **Claude Code subagents** inside a Claude Code session: Haiku extracts and labels claim support (L1; the shipped L1 run used Sonnet), Sonnet runs the adversarial pass, and Opus adjudicates. Python writes a task file, a subagent answers it, and Python validates the answer with pydantic and retries invalid output. There is no Anthropic API key and no API spend. Composio's SDK supplies the toolkit catalog, and Composio search is tried first; see Limitations.
+**How it runs (no hidden autonomy).** Python handles search plumbing, fetch, cache, validation, rule checks, analysis and the site. The LLM steps are done by **Claude Code subagents** inside a Claude Code session: Haiku extracts and labels claim support (L1; the shipped L1 run used Sonnet), Sonnet runs the adversarial pass and L5 adjudication, Haiku handles format retries, and Opus was used only for the blind auditor. Python writes a task file, a subagent answers it, and Python validates the answer with pydantic and retries invalid output. There is no Anthropic API key and no API spend. Composio's SDK supplies the toolkit catalog, and Composio search is tried first; see Limitations.
 
 ## Two modes
 
@@ -37,7 +37,7 @@ A saved real trace of one app: [`data/traces/`](data/traces/) (queries → sourc
 - **L2 adversarial.** A Sonnet pass told to prove pass 1 wrong, using different queries and different pages. Field-level diff. An L2 value is adopted only if its quote string-matches its page.
 - **L3 rules** (unit-tested, `tests/test_rules.py`). The deterministic rubric verdict. oauth2 ⇒ authorize/token evidence. paid ⇒ pricing evidence. Official MCP ⇒ resolves on a vendor domain. docs_url is 200 and not a marketing page. Breadth matches the endpoint count.
 - **L4 browser.** Playwright renders the 15 hardest apps (screenshots in `data/screenshots/`) to recover JS-rendered evidence. Observe only.
-- **L5 adjudication.** Opus takes each disputed or low-confidence field, with the conflicting evidence plus targeted re-research. Its quotes must string-match too. Anything unresolved goes to `data/human_queue.md`.
+- **L5 adjudication.** Sonnet (lowered from Opus to cut usage) takes each disputed or low-confidence field, with the conflicting evidence plus targeted re-research. Its quotes must string-match too. Anything unresolved goes to `data/human_queue.md`.
 - **Human check.** `data/human_check.csv` (30 apps × 6 fields) is filled by a human. A blind Opus "auditor" also answers the same fields without seeing the agent's answers. It is reported separately and is **not** ground truth.
 
 ## Verdict rubric (code: `src/appresearch/rubric.py`, first match wins)

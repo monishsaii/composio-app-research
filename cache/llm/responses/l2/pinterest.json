@@ -1,0 +1,64 @@
+{
+ "id": "pinterest",
+ "name": "Pinterest",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Pinterest API v5 for building apps for creators, advertisers, and merchants (pins, boards, ads, catalogs, analytics).",
+ "docs_url": "https://developers.pinterest.com/docs/overview/welcome/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "OAuth 2.0 authorization code flow with access token and refresh; exact redirect URI matching. Trial-approved apps can generate test tokens (24h expiry) without the OAuth flow.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "app_review_required",
+ "access_notes": "Business account required. Trial access request is reviewed by Pinterest; Standard access needs a second review with a demo video of the OAuth flow. Trial: 1000 requests/day per app and pins/boards visible only to creator. Free, no cost stated.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["python"]
+ },
+ "mcp": {"exists": "community", "url": "https://github.com/collactivelabs/pinterest-mcp-server"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Standard OAuth2, documented API with sandbox and test tokens, but every app needs Pinterest review for Trial and a second video-demo review for Standard (production) access.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "high", "api_surface": "medium", "mcp": "low", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://developers.pinterest.com/docs/getting-started/connect-app/", "quote": "Exchange the authorization code for an access token", "source_type": "official_docs"},
+   {"url": "https://developers.pinterest.com/docs/getting-started/connect-app/", "quote": "Test tokens expire after 24 hours", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://developers.pinterest.com/docs/getting-started/connect-app/", "quote": "Application requests are reviewed by Pinterest.", "source_type": "official_docs"},
+   {"url": "https://developers.pinterest.com/docs/getting-started/access-tiers/", "quote": "Prepare a video recording of your app completing an action using the Pinterest API.", "source_type": "official_docs"}
+  ],
+  "sandbox": [
+   {"url": "https://developers.pinterest.com/docs/getting-started/access-tiers/", "quote": "all Pins and Boards created with Trial access are only visible to their creator as Sandbox entities.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developers.pinterest.com/docs/reference/rate-limits/", "quote": "Trial access: 1000 requests per day for all API requests", "source_type": "official_docs"},
+   {"url": "https://developers.pinterest.com/docs/getting-started/connect-app/", "quote": "Our SDK currently offers a Python library that supports campaign management", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://developers.pinterest.com/docs/getting-started/access-tiers/", "quote": "If you want to offer Pinterest capabilities to your users, we recommend upgrading to Standard access", "source_type": "official_docs"}
+  ],
+  "identity": [
+   {"url": "https://developers.pinterest.com/docs/overview/welcome/", "quote": "The Pinterest API allows developers to build experiences and apps for creators, advertisers, and merchants.", "source_type": "official_docs"}
+  ]
+ },
+ "disputes": [
+  {"field": "auth_methods", "first_pass": [], "yours": ["oauth2", "bearer_token"], "why": "Official connect-app page documents OAuth auth code flow and 24h test tokens."},
+  {"field": "api_surface.style", "first_pass": [], "yours": ["rest"], "why": "API v5 reference with rate-limit categories per endpoint; REST implied, though no page states the word."},
+  {"field": "oauth_details", "first_pass": null, "yours": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true}, "why": "Auth code flow and trial/standard review documented; scopes are referenced by guide name only."},
+  {"field": "confidence.auth", "first_pass": "low", "yours": "high", "why": "Official pages fetched now cover auth flow, tiers and rate limits."}
+ ]
+}

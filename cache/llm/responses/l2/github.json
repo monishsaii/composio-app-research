@@ -1,0 +1,60 @@
+{
+ "id": "github",
+ "name": "GitHub",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Code hosting platform exposing repositories, pull requests, issues, and Actions through REST and GraphQL APIs.",
+ "docs_url": "https://docs.github.com/en/rest",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "bearer_token", "jwt_service_account", "api_key"],
+ "auth_notes": "Personal access tokens (fine-grained or classic) and GitHub App tokens sent as Authorization: Bearer; OAuth apps use authorization code and device flow; GitHub Apps authenticate with JWT then installation tokens; GITHUB_TOKEN in Actions.",
+ "oauth_details": {"flows": ["auth_code", "device_code"], "scopes_granular": true, "app_review_required": false},
+ "access": "self_serve_free",
+ "access_notes": "Any account can create a PAT, OAuth app or GitHub App self-serve; authenticated limit is 5,000 req/h (15,000 on Enterprise Cloud-owned apps). Marketplace listing review is optional, not required for API use.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest", "graphql"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://api.githubcopilot.com/mcp/"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve PATs, OAuth apps and GitHub Apps, documented REST and GraphQL APIs, webhooks, and an official hosted MCP server. Endpoint count not verified but surface is plainly large.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api", "quote": "You can create a personal access token, generate a token with a GitHub App, or use the built-in GITHUB_TOKEN in a GitHub Actions workflow.", "source_type": "official_docs"},
+   {"url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps", "quote": "GitHub's OAuth implementation supports the standard authorization code grant type and the OAuth 2.0 Device Authorization Grant", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api", "quote": "All of these requests count towards your personal rate limit of 5,000 requests per hour.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api", "quote": "The primary rate limit for unauthenticated requests is 60 requests per hour.", "source_type": "official_docs"},
+   {"url": "https://docs.github.com/en/webhooks/about-webhooks", "quote": "Webhooks let you subscribe to events happening in a software system and automatically receive a delivery of data to your server", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://github.com/github/github-mcp-server", "quote": "The remote GitHub MCP Server is hosted by GitHub and provides the easiest method for getting up and running.", "source_type": "official_repo"}
+  ]
+ },
+ "disputes": [
+  {"field": "auth_methods", "first_pass": ["oauth2"], "yours": ["oauth2", "bearer_token", "jwt_service_account", "api_key"], "why": "Docs show PATs and GitHub App tokens as Bearer, plus App JWT and OAuth code/device flows."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Official webhooks docs exist."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Large REST and GraphQL surface across repos, issues, PRs, Actions; exact count not verified."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "github/github-mcp-server is vendor org repo; remote server hosted by GitHub. First-pass URL was a third-party Algolia link."},
+  {"field": "mcp.url", "first_pass": "https://docsearch.algolia.com/mcp/docs/repo/github/github-mcp-server", "yours": "https://api.githubcopilot.com/mcp/", "why": "Official remote MCP endpoint per vendor repo README."},
+  {"field": "docs_url", "first_pass": null, "yours": "https://docs.github.com/en/rest", "why": "Official REST docs fetched."},
+  {"field": "oauth_details.app_review_required", "first_pass": "unknown", "yours": false, "why": "No app review needed to create OAuth apps or GitHub Apps; none found in docs."}
+ ]
+}

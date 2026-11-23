@@ -63,24 +63,61 @@
  },
  "needs_human": false,
  "needs_human_reason": "Confirm product line wanted (core Communications APIs vs Business Communications); endpoint count and rate limits not verified.",
- "evidence": [
-  {
-   "url": "https://developer.vonage.com/en/getting-started/overview",
-   "quote": "To work with our APIs, you will need to sign up for an account. This will give you an API key and secret"
-  },
-  {
-   "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
-   "quote": "When you create a Vonage account, an API key and secret will be created for you."
-  },
-  {
-   "url": "https://developer.vonage.com/llms.txt",
-   "quote": "US A2P SMS requires 10 DLC registration before sending application-to-person messages to US numbers."
-  },
-  {
-   "url": "https://developer.vonage.com/en/mcp-server/overview",
-   "quote": "The Vonage MCP Server enables AI agents and developer tools to discover, describe, and use Vonage capabilities via the Model Context Protocol."
-  }
- ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "Authorization: Basic base64(API_KEY:API_SECRET)",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "quote": "To work with our APIs, you will need to sign up for an account. This will give you an API key and secret",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "quote": "When you create a Vonage account, an API key and secret will be created for you.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.vonage.com/llms.txt",
+    "quote": "US A2P SMS requires 10 DLC registration before sending application-to-person messages to US numbers.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://developer.vonage.com/en/getting-started/concepts/webhooks",
+    "quote": "Webhooks are an extension of an API, but instead of your code requesting data from our API platform, Vonage sends the data to you.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developer.vonage.com/en/mcp-server/overview",
+    "quote": "The Vonage MCP Server enables AI agents and developer tools to discover, describe, and use Vonage capabilities via the Model Context Protocol.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "quote": "Access to our APIs is charged on a per-request basis.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.vonage.com/llms.txt",
+    "quote": "Vonage Communication APIs enable developers to embed messaging, voice, video, verification, identity, and network intelligence into applications.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
  "disputes": [
   {
    "field": "auth_methods",

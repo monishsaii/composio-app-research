@@ -1,0 +1,56 @@
+{
+ "id": "threads-meta",
+ "name": "Threads (Meta)",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Meta's Threads API for publishing posts, replies, insights, and search on Threads accounts.",
+ "docs_url": "https://developers.facebook.com/docs/threads",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "Threads OAuth flow with short-lived tokens exchanged for long-lived tokens (Meta official sample repo). Uses a separate Threads app ID and secret, not the regular Meta app credentials. Redirect URLs cannot be localhost.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": true},
+ "access": "app_review_required",
+ "access_notes": "Free; no price published. Developers use own account/testers in development; users without a role on the app require per-permission Meta App Review (screencast). Review specifics come from third-party blogs only; Meta docs returned HTTP 400 to the fetcher.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "community", "url": "https://github.com/tttn13/threads-mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Free OAuth2 API with publishing, replies, search, insights and quotas; production use for other users needs Meta App Review per permission. Official docs not fetchable, so review details rely on third-party sources.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "medium", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "developers.facebook.com/docs/threads pages return HTTP 400 to the fetcher, so app review requirements, webhooks and rate limits are not confirmed from Meta docs.",
+ "evidence": {
+  "auth": [
+   {"url": "https://github.com/fbsamples/threads_api", "quote": "Sign in through the Threads oAuth flow and exchange short-lived tokens for long-lived tokens.", "source_type": "official_repo"},
+   {"url": "https://github.com/fbsamples/threads_api", "quote": "Make sure that you are using the APP ID and Secret defined for the Threads API of your app.", "source_type": "official_repo"}
+  ],
+  "access": [
+   {"url": "https://www.blotato.com/blog/threads-api-pricing", "quote": "unknown", "source_type": "third_party"}
+  ],
+  "api_surface": [
+   {"url": "https://github.com/fbsamples/threads_api", "quote": "Quotas: View API usage for publishing, replies, deletion, and location search.", "source_type": "official_repo"},
+   {"url": "https://github.com/fbsamples/threads_api", "quote": "Search by keyword or topic tag with Top or Recent results.", "source_type": "official_repo"}
+  ],
+  "identity": [
+   {"url": "https://github.com/fbsamples/threads_api", "quote": "You can use this Sample App to test the Threads API.", "source_type": "official_repo"}
+  ]
+ },
+ "disputes": [
+  {"field": "api_surface.webhooks", "first_pass": true, "yours": "unknown", "why": "No fetched official source mentions Threads webhooks; Meta docs were unreachable."},
+  {"field": "docs_url", "first_pass": null, "yours": "https://developers.facebook.com/docs/threads", "why": "Official Meta sample repo points to developer documentation; URL itself returned HTTP 400 to fetcher."},
+  {"field": "mcp.exists", "first_pass": "community", "yours": "community", "why": "Unchanged; no official Meta MCP found in fetched pages. Confidence lowered."}
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "ahrefs",
+ "name": "Ahrefs",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "SEO data platform offering backlinks, keyword, SERP, rank tracking and site audit data via API v3.",
+ "docs_url": "https://docs.ahrefs.com/api/docs/introduction",
+ "openapi_spec_url": "https://docs.ahrefs.com/openapi.json",
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Direct API uses an API key created by workspace owners or admins in Account settings. Third-party apps use OAuth through Ahrefs Connect.",
+ "oauth_details": {
+  "flows": [],
+  "scopes_granular": "unknown",
+  "app_review_required": true
+ },
+ "access": "paid_plan_required",
+ "access_notes": "API keys are created by workspace owners or admins on eligible paid plans; other plans get limited free test queries. Not enterprise-only: Ahrefs Connect apps reach Lite, Standard, Advanced and Enterprise. Ahrefs Connect needs an application and review before going live. Paid requests cost at least 50 API units.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://api.ahrefs.com/mcp/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve API keys on eligible paid plans and a documented API v3. OAuth for third-party apps needs Ahrefs Connect review. The hosted MCP endpoint may not be used for custom programmatic access.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "access": [
+   {
+    "url": "https://docs.ahrefs.com/api/docs/limits-consumption.md",
+    "quote": "Ahrefs API is available on eligible paid plans."
+   },
+   {
+    "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management.md",
+    "quote": "only workspace owners and admins have access to this section."
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://docs.ahrefs.com/llms.txt",
+    "quote": "send your API key as a bearer token in the `Authorization: Bearer <API_KEY>` header."
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://docs.ahrefs.com/api/docs/free-test-queries.md",
+    "quote": "Users on any paid plan can test Ahrefs API by running a limited set of free test queries."
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.ahrefs.com/llms.txt",
+    "quote": "The complete OpenAPI specification for every tool is at [/openapi.json](/openapi.json)."
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://docs.ahrefs.com/api/docs/limits-consumption.md",
+    "quote": "The `base_cost` of each request is **50 units**."
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "openapi_spec_url",
+   "first_pass": null,
+   "yours": "https://docs.ahrefs.com/openapi.json",
+   "why": "llms.txt lists a complete OpenAPI spec plus per-tool specs."
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "id": "netlify",
+ "name": "Netlify",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Web hosting and deployment platform for sites and apps, with a REST API, OpenAPI spec and official MCP server.",
+ "docs_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+ "openapi_spec_url": "https://open-api.netlify.com/swagger.json",
+ "auth_methods": ["oauth2", "bearer_token"],
+ "auth_notes": "Personal access tokens and OAuth2 access tokens both sent as Authorization: Bearer; OAuth apps registered in user settings with client key and secret.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Tokens and OAuth apps are self-serve in user settings; a Free plan is offered. Rate limit 500 req/min for most requests, deploys 3/min and 100/day.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["go", "javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://github.com/netlify/netlify-mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve tokens and OAuth apps, documented REST API with OpenAPI spec, rate limits, outgoing webhooks and an official MCP server. Endpoint count not verified.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api.md", "quote": "Netlify uses OAuth2 for authentication. All requests must use HTTPS.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.netlify.com/pricing/", "quote": "Build and deploy free forever.", "source_type": "pricing_page"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/", "quote": "You can make up to 500 requests per minute for most requests.", "source_type": "official_docs"},
+   {"url": "https://docs.netlify.com/manage/monitoring/notifications/", "quote": "Netlify can trigger webhooks, send email notifications, or send Slack messages on certain events.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://github.com/netlify/netlify-mcp", "quote": "Netlify MCP Server follows the Model Context Protocol (MCP) to enable code agents to use the Netlify API and CLI", "source_type": "official_repo"}
+  ]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Free plan 'free forever' on pricing page; tokens and OAuth apps self-serve."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Outgoing webhooks documented in notifications docs."}
+ ]
+}

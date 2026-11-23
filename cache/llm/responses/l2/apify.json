@@ -1,0 +1,89 @@
+{
+ "id": "apify",
+ "name": "Apify",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Platform for running web scraping and automation Actors, with REST API, client libraries, and MCP server.",
+ "docs_url": "https://docs.apify.com/api/v2",
+ "openapi_spec_url": "https://docs.apify.com/api/openapi.json",
+ "auth_methods": [
+  "bearer_token"
+ ],
+ "auth_notes": "Personal API token from the Console, sent as a Bearer Authorization header (recommended) or as a token URL parameter. Scoped and expiring tokens are supported. OAuth applies to the hosted MCP server only.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Free plan $0 with $5 prepaid usage, no credit card; paid Starter $19, Scale $199, Business $999. Free plan access blocked once prepaid usage is exhausted until next cycle.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "javascript",
+   "python",
+   "go",
+   "php",
+   "java",
+   "dotnet",
+   "rust"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.apify.com"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve free account and personal token, a documented REST API with an OpenAPI schema, and standard bearer auth. Per-Actor pricing and rate limits were not verified on the fetched pages.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "access": [
+   {
+    "url": "https://apify.com/pricing",
+    "quote": "No credit card required."
+   },
+   {
+    "url": "https://apify.com/pricing",
+    "quote": "If you're on the free plan, your access to Apify's services will be blocked until the beginning of the next monthly cycle."
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://docs.apify.com/api/v2/getting-started.md",
+    "quote": "An Apify account with an API token."
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.apify.com/llms.txt",
+    "quote": "Endpoints to manage Actors, runs, builds, tasks, datasets, key-value stores, request queues, schedules, webhooks, and your account."
+   }
+  ],
+  "sdks": [
+   {
+    "url": "https://docs.apify.com/llms.txt",
+    "quote": "The official JavaScript library to access the Apify API"
+   }
+  ]
+ },
+ "disputes": []
+}

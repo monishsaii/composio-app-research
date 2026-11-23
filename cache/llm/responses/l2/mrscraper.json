@@ -1,0 +1,112 @@
+{
+ "id": "mrscraper",
+ "name": "MrScraper",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "AI-driven web scraping API that returns structured data from web pages, with a hosted scraping browser.",
+ "docs_url": "https://docs.mrscraper.com/docs/api/overview",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key"
+ ],
+ "auth_notes": "API token created in dashboard (app.mrscraper.com/api-tokens, name and expiry), sent in x-api-token header; Marketplace endpoints use Authorization Bearer.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Free plan with no credit card; token self-serve from dashboard. Paid: Essential plan, extra usage $1 per 1,000 tokens; Enterprise by booking a call.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "python"
+  ]
+ },
+ "mcp": {
+  "exists": "unknown",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve free token, documented REST endpoints (AI scraper, scrape JSON/markdown, results, bulk, analytics) with simple header auth. Free-tier limits unverified.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "Include your API token in the x-api-token HTTP header on every request"
+   },
+   {
+    "url": "https://docs.mrscraper.com/docs/api/authentication",
+    "quote": "authenticate using the standard RFC 6750 Authorization header with a Bearer token"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://mrscraper.com/pricing",
+    "quote": "Free costs nothing - no credit card required."
+   },
+   {
+    "url": "https://mrscraper.com/pricing",
+    "quote": "Sign in to the dashboard, open your account settings, and copy the token from the API Token page."
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.mrscraper.com/llms.txt",
+    "quote": "Create and run a new AI Scraper from natural language instructions using the MrScraper API"
+   }
+  ],
+  "webhooks": [
+   {
+    "url": "https://mrscraper.com/pricing",
+    "quote": "Results can go straight to webhooks, SQL databases, AWS S3, Zapier, n8n, or email"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_WITH_CAVEATS",
+   "yours": "BUILD_NOW",
+   "why": "Docs show token creation self-serve, many documented endpoints, free plan without card; first pass lacked these pages."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "none",
+   "why": "No gate found on auth, plan or approval."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "llms.txt lists roughly two dozen or more documented endpoints; exact count unverified."
+  },
+  {
+   "field": "needs_human",
+   "first_pass": true,
+   "yours": false,
+   "why": "Auth page and pricing page now verified."
+  }
+ ]
+}

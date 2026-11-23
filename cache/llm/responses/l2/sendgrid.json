@@ -1,0 +1,68 @@
+{
+ "id": "sendgrid",
+ "name": "SendGrid",
+ "category": "Marketing/Ads/Email/Social",
+ "one_liner": "Twilio SendGrid email platform: v3 REST API for transactional and marketing email, with event webhooks and SDKs.",
+ "docs_url": "https://www.twilio.com/docs/sendgrid/api-reference",
+ "openapi_spec_url": "https://github.com/twilio/sendgrid-oai",
+ "auth_methods": ["api_key", "bearer_token"],
+ "auth_notes": "API keys sent as 'Authorization: Bearer <key>'. Keys are created in Settings > API Keys with full, custom, billing or email-validation permissions; max 100 keys per account. Billing APIs need a separate key.",
+ "oauth_details": null,
+ "access": "self_serve_trial",
+ "access_notes": "Free plan retired from May 27, 2025: sending paused on free plans after 60 days. New accounts get a free trial, no credit card; paid plans required afterwards (Essentials about $19.95/mo per third-party search summary).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": ["seven languages (list not verified)"]
+ },
+ "mcp": {"exists": "community", "url": "https://github.com/FINCH285/SendGrid-MCP-Server"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve API key and documented v3 REST API with OpenAPI spec, but the free plan is retired; only a time-limited trial exists and sustained sending requires a paid plan.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication", "quote": "include an Authorization header with the value Bearer <YOUR_API_KEY_HERE> in your request", "source_type": "official_docs"},
+   {"url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys", "quote": "Twilio limits accounts to 100 API keys.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan", "quote": "Email sending will be paused for accounts on all free plans", "source_type": "official_docs"},
+   {"url": "https://www.twilio.com/en-us/products/email-api/pricing", "quote": "Sign up for a free trial—no credit card required", "source_type": "pricing_page"}
+  ],
+  "api_surface": [
+   {"url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits", "quote": "If you exceed that limit, the API returns an HTTP 429 (Too Many Requests) status code.", "source_type": "official_docs"},
+   {"url": "https://www.twilio.com/docs/sendgrid/for-developers/tracking-events/event", "quote": "To secure the Event Webhook data, use the Signed Event Webhook, OAuth 2.0, or both.", "source_type": "official_docs"},
+   {"url": "https://www.twilio.com/docs/sendgrid/api-reference", "quote": "The SendGrid v3 Web API provides a REST interface to send email at scale", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://github.com/FINCH285/SendGrid-MCP-Server", "quote": "unknown", "source_type": "third_party"}
+  ],
+  "buildability": [
+   {"url": "https://github.com/twilio/sendgrid-oai", "quote": "This repository contains OpenAPI documents", "source_type": "official_repo"}
+  ],
+  "identity": [
+   {"url": "https://www.twilio.com/en-us/sendgrid", "quote": "We merged our websites to make things simpler.", "source_type": "official_docs"}
+  ]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Twilio pricing page offers no-card free trial; changelog shows free plan retired, so paid plan needed long term."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BUILD_WITH_CAVEATS", "why": "Self-serve key and documented API; free tier retired, paid plan gate."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "paid_plan_gate", "why": "Changelog: free plan sending paused after transition; paid plan required."},
+  {"field": "auth_methods", "first_pass": ["api_key"], "yours": ["api_key", "bearer_token"], "why": "Auth docs specify Bearer header with the API key."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Event Webhook Reference documents delivery, engagement and account events."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Official rate limits page documents headers and 429 behavior."},
+  {"field": "openapi_spec_url", "first_pass": null, "yours": "https://github.com/twilio/sendgrid-oai", "why": "Official twilio GitHub repo holds SendGrid OpenAPI documents (beta)."}
+ ]
+}

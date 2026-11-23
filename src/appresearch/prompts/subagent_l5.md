@@ -1,4 +1,4 @@
-# Claude Code subagent runner: L5 adjudication (strongest model)
+# Claude Code subagent runner: L5 adjudication (Sonnet tier)
 
 Work in `d:/Composio` via the Bash tool (`cd /d/Composio && ...`); ignore Python DependencyWarning lines.
 For EACH app id in your list:

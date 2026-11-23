@@ -174,7 +174,7 @@ footer{padding:28px 0 60px;color:var(--ink-3);font-size:13px}
     <g class="hl"><rect x="190" y="160" width="150" height="62" rx="8"/><text class="t" x="202" y="184">L2 adversarial</text><text x="202" y="204">Sonnet, new pages</text></g>
     <g><rect x="370" y="160" width="140" height="62" rx="8"/><text class="t" x="382" y="184">L3 rules</text><text x="382" y="204">rubric, unit-tested</text></g>
     <g><rect x="540" y="160" width="150" height="62" rx="8"/><text class="t" x="552" y="184">L4 browser</text><text x="552" y="204">Playwright, 15 apps</text></g>
-    <g class="hl"><rect x="720" y="160" width="150" height="62" rx="8"/><text class="t" x="732" y="184">L5 adjudicate</text><text x="732" y="204">Opus + re-research</text></g>
+    <g class="hl"><rect x="720" y="160" width="150" height="62" rx="8"/><text class="t" x="732" y="184">L5 adjudicate</text><text x="732" y="204">Sonnet + re-research</text></g>
     <g><rect x="900" y="160" width="180" height="62" rx="8"/><text class="t" x="912" y="184">final.json</text><text x="912" y="204">human check → accuracy</text></g>
     <path d="M160,51H186" marker-end="url(#ar)"/><path d="M390,51H416" marker-end="url(#ar)"/><path d="M590,51H616" marker-end="url(#ar)"/><path d="M820,51H846" marker-end="url(#ar)"/>
     <path d="M965,82V120H85V156" marker-end="url(#ar)"/>
@@ -347,7 +347,7 @@ draw();
 // ---------- agent
 const RS=D.runs||{}, st=RS.by_stage||{}, E=RS.events||{};
 $('#agent-sub').textContent=`A Python pipeline does search, fetch, caching, validation, rule checks, analysis and this page. Claude Code subagents do the LLM steps (${RS.agents||0} subagent runs, ${(RS.total_tokens||0).toLocaleString()} tokens, $0 API spend). Composio's SDK supplies the toolkit catalog (${D.composio_catalog_count||'?'} toolkits) and is tried first for search.`;
-const MOD={pass1:'Haiku',l1_entail:'Sonnet',l2:'Sonnet',l5:'Opus',auditor:'Opus',retry:'Haiku'};
+const MOD={pass1:'Haiku',l1_entail:'Sonnet',l2:'Sonnet',l5:'Sonnet',auditor:'Opus',retry:'Haiku',l2_retry:'Sonnet'};
 $('#t-runs').innerHTML='<tr><th>Stage</th><th>Model</th><th>Subagents</th><th>Tokens</th><th>Agent-min</th></tr>'+Object.entries(st).map(([k,s])=>`<tr><td>${esc(k)}</td><td>${esc(MOD[k]||s.model)}</td><td>${s.agents}</td><td>${s.tokens.toLocaleString()}</td><td>${s.minutes}</td></tr>`).join('');
 $('#runs-note').textContent='Tokens are what the subagent tool reported. They ran inside a Claude Code session, so no per-call API bill. Agent-minutes add up parallel runs.';
 $('#t-tools').innerHTML=`<tr><th>Tool</th><th>Used for</th><th>Calls</th></tr>

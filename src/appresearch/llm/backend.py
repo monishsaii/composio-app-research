@@ -14,7 +14,8 @@ MODEL_TIER = {
     "pass1": "haiku (cheap extraction)",
     "l1_entail": "haiku (claim-support labelling)",
     "l2": "sonnet (adversarial second pass)",
-    "l5": "opus (adjudication)",
+    "l5": "sonnet (adjudication; lowered from opus to cut usage)",
+    "retry": "haiku (format retries)",
     "auditor": "opus (independent LLM auditor; NOT ground truth)",
 }
 TASKS = cache.CACHE / "llm" / "tasks"

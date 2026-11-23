@@ -1,0 +1,31 @@
+{
+"id":"gohighlevel","name":"GoHighLevel","category":"Marketing/Ads/Email/Social",
+"one_liner":"All-in-one CRM and marketing platform (HighLevel) for agencies and businesses, with contacts, conversations, calendars, opportunities and payments.",
+"docs_url":"https://marketplace.gohighlevel.com/docs/","openapi_spec_url":null,
+"auth_methods":["oauth2","bearer_token"],
+"auth_notes":"API v2 at services.leadconnectorhq.com. OAuth 2.0 for Marketplace apps; Private Integration tokens (static scoped bearer tokens generated in the UI) for single-account use. Legacy v1 API keys are end-of-life.",
+"oauth_details":{"flows":["auth_code"],"scopes_granular":true,"app_review_required":"unknown"},
+"access":"paid_plan_required",
+"access_notes":"A HighLevel account is required (pricing page offers a 14-day free trial). Pricing page lists 'Basic API access' under Unlimited and 'API Access' in features; which plan includes which endpoints is not clear. Marketplace listing review not verified.",
+"sandbox_or_test_env":"unknown",
+"api_surface":{"style":["rest"],"breadth":"broad","approx_endpoint_count":null,"webhooks":true,"pagination_documented":"unknown","rate_limits_documented":true,"official_sdks":[]},
+"mcp":{"exists":"community","url":"https://github.com/hridayshah7/gohighlevel-mcp"},
+"buildability":{"verdict":"BUILD_WITH_CAVEATS","main_blocker":"paid_plan_gate","rationale":"Self-serve tokens on a paid account or trial; documented v2 REST API across many modules with webhooks and published rate limits (100 per 10s, 200k per day). Plan gating of API features and per-account install are caveats.","est_tool_count_if_built":null,"est_effort":"M"},
+"composio_existing_toolkit":true,
+"confidence":{"identity":"high","auth":"high","access":"medium","sandbox":"low","api_surface":"medium","mcp":"medium","buildability":"medium"},
+"needs_human":true,"needs_human_reason":"Confirm which plan tier includes API access; the pricing page and first-pass sources differ.",
+"evidence":{
+"identity":[{"url":"https://marketplace.gohighlevel.com/docs/","quote":"Complete REST API documentation for the HighLevel CRM platform.","source_type":"official_docs"}],
+"auth":[{"url":"https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken","quote":"Private Integrations, to put it simply, are static/fixed OAuth2 Access Tokens.","source_type":"official_docs"}],
+"access":[{"url":"https://www.gohighlevel.com/pricing","quote":"Experience it for 14 Days FREE","source_type":"pricing_page"},
+ {"url":"https://www.gohighlevel.com/pricing","quote":"Basic API access","source_type":"pricing_page"}],
+"api_surface":[{"url":"https://marketplace.gohighlevel.com/docs/","quote":"Real-time notifications for 50+ events.","source_type":"official_docs"},
+ {"url":"https://marketplace.gohighlevel.com/docs/other/rate-limits","quote":"Burst | 100 API requests | per 10 seconds","source_type":"official_docs"}],
+"mcp":[{"url":"https://github.com/hridayshah7/gohighlevel-mcp","quote":"gohighlevel mcp","source_type":"third_party"}],
+"buildability":[{"url":"https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken","quote":"Private Integrations are available for both Agencies and Sub-Accounts.","source_type":"official_docs"}]},
+"disputes":[
+{"field":"docs_url","first_pass":null,"yours":"https://marketplace.gohighlevel.com/docs/","why":"Official API v2 docs root exists."},
+{"field":"auth_methods","first_pass":["oauth2","other"],"yours":["oauth2","bearer_token"],"why":"Private Integration tokens are sent as Bearer tokens, matching enum bearer_token."},
+{"field":"api_surface.breadth","first_pass":"unknown","yours":"broad","why":"Docs list many modules (contacts, conversations, calendars, opportunities, payments); endpoints not counted, so inferred."},
+{"field":"access_notes","first_pass":"Starter ($97/month) includes API","yours":"Pricing page shows Basic API access under Unlimited; trial offered","why":"Starter-plan API eligibility not supported by the pricing page fetched; unresolved."}]
+}

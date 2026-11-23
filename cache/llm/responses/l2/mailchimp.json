@@ -1,0 +1,33 @@
+{
+"id":"mailchimp","name":"Mailchimp","category":"Marketing/Ads/Email/Social",
+"one_liner":"Email marketing platform with a Marketing API (v3.0) for audiences, contacts, campaigns, reports and e-commerce data. Transactional (Mandrill) is a separate API.",
+"docs_url":"https://mailchimp.com/developer/marketing","openapi_spec_url":null,
+"auth_methods":["api_key","oauth2"],
+"auth_notes":"API key with full account access (no scoping, no expiry); OAuth 2 via Registered Apps (client_id and client_secret) for multi-user apps.",
+"oauth_details":{"flows":["auth_code"],"scopes_granular":false,"app_review_required":"unknown"},
+"access":"self_serve_free",
+"access_notes":"API key and OAuth app registration are self-serve in a Mailchimp account; a Free plan exists. Whether specific features are plan-limited was not verified.",
+"sandbox_or_test_env":"unknown",
+"api_surface":{"style":["rest"],"breadth":"broad","approx_endpoint_count":311,"webhooks":true,"pagination_documented":"unknown","rate_limits_documented":true,"official_sdks":["Go","Rust","Java"]},
+"mcp":{"exists":"none","url":null},
+"buildability":{"verdict":"BUILD_NOW","main_blocker":"none","rationale":"Self-serve API key and OAuth 2 registration, broad documented REST API (about 311 reference pages), webhooks, batch operations, documented limits (10 simultaneous connections). The official MCP only searches docs.","est_tool_count_if_built":null,"est_effort":"M"},
+"composio_existing_toolkit":true,
+"confidence":{"identity":"high","auth":"high","access":"medium","sandbox":"low","api_surface":"high","mcp":"medium","buildability":"medium"},
+"needs_human":false,"needs_human_reason":null,
+"evidence":{
+"identity":[{"url":"https://mailchimp.com/developer/llms.txt","quote":"Mailchimp Transactional (formerly Mandrill) sends targeted and event-driven messages via the API or SMTP","source_type":"official_docs"}],
+"auth":[{"url":"https://mailchimp.com/developer/marketing/api-concepts/authentication/api-keys.md","quote":"There is no way to issue a read-only key or restrict one to particular endpoints","source_type":"official_docs"},
+ {"url":"https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/","quote":"Navigate to the Registered Apps page in your Mailchimp account","source_type":"official_docs"}],
+"access":[{"url":"https://mailchimp.com/pricing/marketing/","quote":"Under 250 contacts? It's free.","source_type":"pricing_page"}],
+"api_surface":[{"url":"https://mailchimp.com/developer/marketing/api-concepts/rate-limits-and-timeouts.md","quote":"The Marketing API has a limit of 10 simultaneous connections.","source_type":"official_docs"},
+ {"url":"https://mailchimp.com/developer/marketing/api-concepts/llms.txt","quote":"Keep your data store in sync with your Mailchimp audience via webhooks.","source_type":"official_docs"},
+ {"url":"https://github.com/mailchimp","quote":"mailchimp-marketing-go-sdk","source_type":"official_repo"}],
+"mcp":[{"url":"https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server.md","quote":"This searches documentation, not your Mailchimp account.","source_type":"official_docs"}],
+"buildability":[{"url":"https://mailchimp.com/developer/marketing/docs/fundamentals/","quote":"The root url for the API is https://api.mailchimp.com/3.0/.","source_type":"official_docs"}]},
+"disputes":[
+{"field":"access","first_pass":"unknown","yours":"self_serve_free","why":"API key and OAuth app registration are self-serve in any account, and a Free plan exists."},
+{"field":"api_surface.breadth","first_pass":"unknown","yours":"broad","why":"API reference llms.txt index lists about 311 endpoint pages."},
+{"field":"mcp.exists","first_pass":"official","yours":"none","why":"The official MCP server only searches docs and cannot act on an account; no account-level MCP found."},
+{"field":"buildability.verdict","first_pass":"BUILD_WITH_CAVEATS","yours":"BUILD_NOW","why":"No evidence of plan gating on the API; self-serve credentials and broad documented API."},
+{"field":"api_surface.official_sdks","first_pass":[],"yours":["Go","Rust","Java"],"why":"Official GitHub org has marketing SDK repos for Go, Rust and Java."}]
+}

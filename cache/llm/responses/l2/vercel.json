@@ -1,0 +1,62 @@
+{
+ "id": "vercel",
+ "name": "Vercel",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Frontend cloud platform for deploying web apps, with a REST API, TypeScript SDK and official MCP server.",
+ "docs_url": "https://vercel.com/docs/rest-api",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "REST API and @vercel/sdk authenticate with a Vercel access token. Sign in with Vercel is an OAuth 2.0/OIDC identity provider; Vercel MCP authorizes clients with OAuth.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Access tokens are self-serve; a free Hobby plan exists. Some features are plan-gated (account webhooks are Pro/Enterprise). Rate limits apply per action.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": 255,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": ["javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.vercel.com"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve access tokens, a large documented REST reference (~255 operations), SDK, rate limits and an official MCP. Only account webhooks are paid-plan gated.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "medium", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://vercel.com/docs/rest-api/sdk", "quote": "authenticate](https://vercel.com/docs/rest-api/sdk#authentication) with a Vercel access token.", "source_type": "official_docs"},
+   {"url": "https://vercel.com/docs/sign-in-with-vercel", "quote": "Vercel's IdP uses the [OAuth 2.0]", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://vercel.com/pricing", "quote": "Our Hobby plan is free and a great way to get started.", "source_type": "pricing_page"},
+   {"url": "https://vercel.com/docs/webhooks", "quote": "Account Webhooks are available on Enterprise and Pro plans", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://vercel.com/docs/limits", "quote": "The following table lists all API rate limits that apply when using the [Vercel REST API]", "source_type": "official_docs"},
+   {"url": "https://vercel.com/docs/rest-api/sdk", "quote": "is a type-safe Typescript SDK that allows you to access the resources and meth", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://vercel.com/docs/mcp", "quote": "Vercel MCP is Vercel's official remote MCP server at `https://mcp.vercel.com`, and it authorizes clients with OAuth.", "source_type": "official_docs"}
+  ]
+ },
+ "disputes": [
+  {"field": "auth_methods", "first_pass": ["api_key", "other"], "yours": ["bearer_token", "oauth2"], "why": "REST API uses Vercel access token; OAuth 2.0 via Sign in with Vercel and MCP. AI Gateway key was a different product."},
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Hobby plan free; tokens self-serve."},
+  {"field": "api_surface.approx_endpoint_count", "first_pass": null, "yours": 255, "why": "REST reference index lists about 255 operations."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Webhooks doc exists; account webhooks need Pro/Enterprise."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Limits page lists REST API rate limits."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["javascript"], "why": "@vercel/sdk TypeScript SDK documented."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_WITH_CAVEATS", "yours": "BUILD_NOW", "why": "Credentials self-serve, broad documented API, official MCP; no blocker found."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "none", "why": "Nothing blocking; only webhooks are plan-gated."}
+ ]
+}

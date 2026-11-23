@@ -1,0 +1,96 @@
+{
+ "id": "firecrawl",
+ "name": "Firecrawl",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Web search, scrape, interact and crawl API that returns LLM-ready markdown or structured data for AI agents.",
+ "docs_url": "https://docs.firecrawl.dev/api-reference/",
+ "openapi_spec_url": "https://docs.firecrawl.dev/api-reference/v2-openapi.json",
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Bearer API key in Authorization header. /v2/scrape, /v2/search and /v2/parse work keylessly with limits. OAuth for apps lets users connect their own Firecrawl account.",
+ "oauth_details": {
+  "flows": [],
+  "scopes_granular": "unknown",
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Free plan: 1,000 credits/month, no card required, self-serve key. Paid: Hobby $19/mo monthly or $16/mo annual; Standard $99/$83; Growth $399/$333; Scale $749/$599. No wait or approval stated.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "python",
+   "node"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.firecrawl.dev/v2/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve free key, documented REST API with bearer auth, official SDKs and MCP server. Free tier rate limits are low but not a gate. Scrape, search, map, crawl, interact and agent are all documented.",
+  "est_tool_count_if_built": 10,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "access": [
+   {
+    "url": "https://docs.firecrawl.dev/rate-limits",
+    "quote": "Sign up for a free API key to get 1,000 credits and higher rate limits at no cost"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.firecrawl.dev/llms.txt",
+    "quote": "[v2-openapi](/api-reference/v2-openapi.json)"
+   },
+   {
+    "url": "https://docs.firecrawl.dev/rate-limits",
+    "quote": "Rate limits are measured in requests per minute"
+   }
+  ],
+  "webhooks": [
+   {
+    "url": "https://docs.firecrawl.dev/webhooks/overview",
+    "quote": "Get notified the moment a crawl, batch scrape, extract, agent job, or monitor check starts, progresses, or finishes."
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://docs.firecrawl.dev/rate-limits",
+    "quote": "The hosted Firecrawl MCP keyless endpoint exposes exactly Search, Scrape, and Parse without an API key."
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "openapi_spec_url",
+   "first_pass": null,
+   "yours": "https://docs.firecrawl.dev/api-reference/v2-openapi.json",
+   "why": "llms.txt lists v2 and webhooks OpenAPI specs."
+  }
+ ]
+}

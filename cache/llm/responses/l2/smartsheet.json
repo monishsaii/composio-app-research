@@ -1,0 +1,68 @@
+{
+ "id": "smartsheet",
+ "name": "Smartsheet",
+ "category": "Productivity/PM",
+ "one_liner": "Work management platform built on sheets, rows and columns, with a REST API, SDKs, webhooks and an official MCP server.",
+ "docs_url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+ "openapi_spec_url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Personal API access tokens (Bearer) or OAuth 2.0 auth code flow. OAuth apps are registered in Developer Tools, which requires registering a user account with Smartsheet and may be denied.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "API and MCP require Business, Enterprise or Advanced Work Management plan. OAuth Developer Tools registration requires Smartsheet to accept a request; denial is escalated via Customer Success Manager.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["JavaScript", "Python", "Java", "C#"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.smartsheet.com"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented broad REST API with tokens and OAuth, but a Business-or-higher paid plan is required, and OAuth app registration needs Smartsheet acceptance.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Official API intro states required plan Business, Enterprise, or Advanced Work Management."},
+  {"field": "buildability.main_blocker", "first_pass": "auth_complexity", "yours": "paid_plan_gate", "why": "Paid plan requirement is the gate; OAuth flow itself is standard."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Official webhooks guide documents sheet and plan-level webhooks."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Scalability page states 300 requests/min per token."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["JavaScript", "Python", "Java", "C#"], "why": "API introduction lists four official SDK repos."},
+  {"field": "mcp.url", "first_pass": null, "yours": "https://mcp.smartsheet.com", "why": "Install page lists regional MCP URLs."}
+ ],
+ "evidence": {
+  "auth": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth.md", "quote": "If Smartsheet denies your request, consult with your Customer Success Manager.", "source_type": "official_docs"},
+   {"url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth.md", "quote": "A window appears, confirming your newly created app registration and the App client ID and App secret.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/introduction.md", "quote": "Required plan: Business, Enterprise, or Advanced Work Management", "source_type": "official_docs"}
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/scalability-options.md", "quote": "The general limit for most API requests is 300 requests per minute per API token.", "source_type": "official_docs"},
+   {"url": "https://developers.smartsheet.com/api/smartsheet/guides/webhooks", "quote": "Smartsheet webhooks send events for plans, sheets, and several sheet components.", "source_type": "official_docs"},
+   {"url": "https://developers.smartsheet.com/api/smartsheet/introduction.md", "quote": "Smartsheet provides client libraries that make it easy to call the API from your preferred language.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server.md", "quote": "United States | US production | https://mcp.smartsheet.com", "source_type": "official_docs"},
+   {"url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server.md", "quote": "Interact with your project data in Smartsheet using the Smartsheet MCP server connected to Claude, ChatGPT, and other AI clients.", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/introduction.md", "quote": "Required plan: Business, Enterprise, or Advanced Work Management", "source_type": "official_docs"}
+  ],
+  "identity": [
+   {"url": "https://developers.smartsheet.com/api/smartsheet/introduction.md", "quote": "The Smartsheet API enables you to programmatically access and manage your organization's Smartsheet resources.", "source_type": "official_docs"}
+  ]
+ }
+}

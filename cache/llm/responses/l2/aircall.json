@@ -54,28 +54,61 @@
  },
  "needs_human": true,
  "needs_human_reason": "Which Aircall plans include API access, and sandbox details, are not stated on fetched pages.",
- "evidence": [
-  {
-   "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md",
-   "quote": "Before you start building a public app, you need to be approved as an Aircall Technology Partner."
-  },
-  {
-   "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md",
-   "quote": "We'll review your application and get back to you within 5 business days."
-  },
-  {
-   "url": "https://developer.aircall.io/docs/basic-authentication.md",
-   "quote": "You must have an Aircall account."
-  },
-  {
-   "url": "https://developer.aircall.io/api-references/",
-   "quote": "Aircall limits the number of requests to its Public API to 120 requests per minute per company."
-  },
-  {
-   "url": "https://github.com/CassiaResearch/aircall-mcp-server",
-   "quote": "Not an official Aircall product. This is a community server built and maintained by Cassia Research."
-  }
- ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.aircall.io/api-references/",
+    "quote": "Aircall implemented the OAuth 2.0 authentication protocol so you can easily build an app on top of Aircall",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md",
+    "quote": "Before you start building a public app, you need to be approved as an Aircall Technology Partner.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md",
+    "quote": "We'll review your application and get back to you within 5 business days.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.aircall.io/docs/basic-authentication.md",
+    "quote": "You must have an Aircall account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://developer.aircall.io/api-references/",
+    "quote": "Aircall limits the number of requests to its Public API to 120 requests per minute per company.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/CassiaResearch/aircall-mcp-server",
+    "quote": "Not an official Aircall product. This is a community server built and maintained by Cassia Research.",
+    "source_type": "third_party"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.aircall.io/docs/how-to-publish-an-app.md",
+    "quote": "Before you start building a public app, you need to be approved as an Aircall Technology Partner.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.aircall.io/",
+    "quote": "Build the next generation of AI communication",
+    "source_type": "official_docs"
+   }
+  ]
+ },
  "disputes": [
   {
    "field": "api_surface.breadth",

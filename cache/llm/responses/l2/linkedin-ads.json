@@ -1,0 +1,31 @@
+{
+"id":"linkedin-ads","name":"LinkedIn Ads","category":"Marketing/Ads/Email/Social",
+"one_liner":"Advertising API for programmatically managing LinkedIn ad accounts, campaigns, creatives and reporting.",
+"docs_url":"https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview","openapi_spec_url":null,
+"auth_methods":["oauth2"],
+"auth_notes":"3-legged member OAuth with per-product scopes; member needs an ad account role. Daily app and member rate limits exist but numbers are not published; visible per endpoint in the Developer Portal Analytics tab.",
+"oauth_details":{"flows":["auth_code"],"scopes_granular":true,"app_review_required":true},
+"access":"app_review_required",
+"access_notes":"Create an app, add the Advertising API product, apply for Development tier. LinkedIn reviews applications and may select partners at its discretion; Standard tier is a further upgrade. No fee stated. Private APIs (Matched Audiences etc.) need additional approval.",
+"sandbox_or_test_env":"partial: Development tier can create 1 test ad account via API, but all calls hit production data",
+"api_surface":{"style":["rest"],"breadth":"unknown","approx_endpoint_count":null,"webhooks":"unknown","pagination_documented":"unknown","rate_limits_documented":true,"official_sdks":[]},
+"mcp":{"exists":"community","url":"https://pypi.org/project/linkedin-ads-mcp/"},
+"buildability":{"verdict":"BUILD_WITH_CAVEATS","main_blocker":"app_review","rationale":"Development tier is applied for through the self-serve Developer Portal form (established business and use case required), no sales contact, up to 5 editable ad accounts. Approval is discretionary; Standard tier needed for scale.","est_tool_count_if_built":null,"est_effort":"L"},
+"composio_existing_toolkit":true,
+"confidence":{"identity":"high","auth":"high","access":"high","sandbox":"medium","api_surface":"low","mcp":"medium","buildability":"medium"},
+"needs_human":true,"needs_human_reason":"Approval is discretionary; confirm Standard tier criteria and approval outcome with LinkedIn Developer Support.",
+"evidence":{
+"identity":[{"url":"https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers","quote":"LinkedIn has two tiers of access to our Advertising API: Development and Standard.","source_type":"official_docs"}],
+"auth":[{"url":"https://learn.microsoft.com/en-us/linkedin/marketing/getting-started","quote":"CAMPAIGN_MANAGER | View campaign data and reports; Create/Edit campaigns and ads","source_type":"official_docs"}],
+"access":[{"url":"https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers","quote":"LinkedIn reserves the right to review applications and select partners at its discretion","source_type":"official_docs"},
+ {"url":"https://developer.linkedin.com/product-catalog/marketing/advertising-api","quote":"Do you have an established business?","source_type":"official_docs"},
+ {"url":"https://developer.linkedin.com/product-catalog/marketing/advertising-api","quote":"Create an app, add Advertising API, and complete the access form under My Apps > select your app > Products.","source_type":"official_docs"}],
+"sandbox":[{"url":"https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers","quote":"Access to create 1 test Ad Account through the API.","source_type":"official_docs"}],
+"api_surface":[{"url":"https://learn.microsoft.com/en-us/linkedin/shared/api-guide/concepts/rate-limits","quote":"Standard rate limits are not published in documentation.","source_type":"official_docs"}],
+"buildability":[{"url":"https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers","quote":"Open to qualified developers, so you can build end-to-end workflows before obtaining full permissions.","source_type":"official_docs"}]},
+"disputes":[
+{"field":"buildability.verdict","first_pass":"BLOCKED_NEEDS_OUTREACH","yours":"BUILD_WITH_CAVEATS","why":"Development tier is a self-serve Developer Portal application, no sales or partnership contact; rubric maps app review to caveats. Discretionary approval remains a risk."},
+{"field":"buildability.main_blocker","first_pass":"partner_gate","yours":"app_review","why":"Access comes via an application on the app's Products tab, not a partner program."},
+{"field":"api_surface.rate_limits_documented","first_pass":"unknown","yours":true,"why":"Daily app and member limits with 429 are documented, though numbers are not published."},
+{"field":"sandbox_or_test_env","first_pass":"unknown","yours":"partial: 1 test ad account","why":"Tiers page says Development tier can create 1 test ad account; calls still hit production."}]
+}

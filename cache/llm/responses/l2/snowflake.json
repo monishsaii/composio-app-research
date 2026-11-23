@@ -1,0 +1,54 @@
+{
+ "id": "snowflake",
+ "name": "Snowflake",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Cloud data platform; REST APIs (SQL API, resource-management REST APIs) per customer account.",
+ "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/intro",
+ "openapi_spec_url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+ "auth_methods": ["jwt_service_account", "oauth2", "bearer_token"],
+ "auth_notes": "Per-account endpoint. Key-pair JWT, OAuth token, or programmatic access token, all sent as Authorization: Bearer; optional X-Snowflake-Authorization-Token-Type header.",
+ "oauth_details": {"flows": [], "scopes_granular": "unknown", "app_review_required": "no"},
+ "access": "self_serve_trial",
+ "access_notes": "No vendor app review; credentials are issued inside each customer's own account. Free 30-day trial needs only an email; trial ends at 30 days or credit depletion, then suspended.",
+ "sandbox_or_test_env": "30-day free trial account (no payment info); AI features disabled until credit card added",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "yes (result partitions)",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {"exists": true, "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp", "official": true, "notes": "Snowflake-managed MCP server; Snowflake-Labs/mcp community-style repo is deprecated."},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "auth_complexity",
+  "rationale": "Documented REST (SQL API /api/v2/statements plus OpenAPI resource APIs) with standard Bearer tokens, but per-customer account hostnames, user key-pair/OAuth setup by admin, network policies, and SQL API statement limits.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Official trial page: email-only 30-day trial; no approval gate. Paid account needed after trial."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": true, "why": "Official Snowflake-managed MCP server documented; Snowflake-Labs repo is deprecated in favour of it."},
+  {"field": "auth_methods", "first_pass": [], "yours": ["jwt_service_account", "oauth2", "bearer_token"], "why": "SQL API auth page lists OAuth, key-pair JWT and PAT, all Bearer."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "REST APIs cover accounts, users, warehouses, tables, tasks, etc. with OpenAPI specs; count not verified."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating", "quote": "Authorization: Bearer JWT where JWT is the token that you generated.", "source_type": "official_docs"},
+           {"url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating", "quote": "PROGRAMMATIC_ACCESS_TOKEN (for programmatic access tokens)", "source_type": "official_docs"}],
+  "access": [{"url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "quote": "all you need is a valid email address; no payment information or other qualifying information is required.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "quote": "The trial continues for 30 days (from the sign-up date) or until you’ve depleted your free usage balance", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api", "quote": "These REST APIs are compliant with the OpenAPI specification.", "source_type": "official_docs"},
+                  {"url": "https://docs.snowflake.com/en/developer-guide/sql-api/intro", "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp", "quote": "The Snowflake-managed MCP server lets AI agents securely retrieve data from Snowflake accounts without needing to deploy separate infrastructure.", "source_type": "official_docs"},
+          {"url": "https://github.com/Snowflake-Labs/mcp", "quote": "This project is deprecated and no longer maintained. Please migrate to the official Snowflake MCP Server.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://docs.snowflake.com/en/developer-guide/sql-api/intro", "quote": "The endpoint for the SQL API (/api/v2/statements) is protected by the network policies", "source_type": "official_docs"},
+                   {"url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api", "quote": "not all resources in the API currently provide 100% coverage of their equivalent SQL commands", "source_type": "official_docs"}],
+  "identity": [{"url": "https://docs.snowflake.com/en/developer-guide/sql-api/intro", "quote": "The Snowflake SQL API is a REST API that you can use to access and update data in a Snowflake database.", "source_type": "official_docs"}]
+ }
+}

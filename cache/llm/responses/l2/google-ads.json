@@ -62,28 +62,62 @@
  },
  "needs_human": false,
  "needs_human_reason": "Endpoint count not measured; no push webhooks found.",
- "evidence": [
-  {
-   "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
-   "quote": "Developer tokens were sunset on September 9, 2026."
-  },
-  {
-   "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
-   "quote": "Basic access applications are automated and will be reviewed within minutes after brand verification and submission."
-  },
-  {
-   "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
-   "quote": "apply for Explorer access level"
-  },
-  {
-   "url": "https://developers.google.com/google-ads/api/docs/best-practices/quotas",
-   "quote": "Unlimited API operations per day against both test and production accounts"
-  },
-  {
-   "url": "https://github.com/googleads/google-ads-mcp",
-   "quote": "An MCP (Model Context Protocol) server that enables LLMs and AI agents to query and manage Google Ads accounts."
-  }
- ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+    "quote": "Developer tokens were sunset on September 9, 2026.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+    "quote": "Basic access applications are automated and will be reviewed within minutes after brand verification and submission.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "apply for Explorer access level",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+    "quote": "Test accounts",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/best-practices/quotas",
+    "quote": "Unlimited API operations per day against both test and production accounts",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/googleads/google-ads-mcp",
+    "quote": "An MCP (Model Context Protocol) server that enables LLMs and AI agents to query and manage Google Ads accounts.",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+    "quote": "Developer tokens were sunset on September 9, 2026.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developers.google.com/google-ads/api/rest/overview",
+    "quote": "The Google Ads API can be called either using gRPC or REST.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
  "disputes": [
   {
    "field": "auth_notes",

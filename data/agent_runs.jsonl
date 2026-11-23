@@ -44,3 +44,7 @@
 {"stage":"l2_retry","batch":2,"model":"sonnet","apps":["copper","dealcloud","zendesk","intercom"],"tokens":10809,"tool_uses":5,"ms":42635,"note":"incremental approx"}
 {"stage":"l2","batch":7,"model":"sonnet","apps":["aircall","vonage","google-ads","meta-ads"],"tokens":110819,"tool_uses":27,"ms":335023}
 {"stage":"l2","batch":0,"model":"sonnet","apps":["salesforce","hubspot","pipedrive","attio"],"tokens":6302,"tool_uses":3,"ms":67753,"note":"retry incremental approx"}
+{"stage":"l2_retry","batch":7,"model":"sonnet","apps":["aircall","vonage","google-ads","meta-ads"],"tokens":4253,"tool_uses":2,"ms":12625,"note":"incremental approx"}
+{"stage":"l2","batch":13,"model":"sonnet","apps":["ahrefs","mrscraper","apify","firecrawl"],"tokens":71184,"tool_uses":3,"ms":33835,"note":"resumed after 429; tokens = total"}
+{"stage":"l2","batch":8,"model":"sonnet","apps":["linkedin-ads","gohighlevel","mailchimp","klaviyo"],"tokens":101635,"tool_uses":7,"ms":49817,"note":"resumed after 429; tokens = total"}
+{"stage":"l2","batch":9,"model":"sonnet","apps":["systeme-io","pinterest","threads-meta","sendgrid"],"tokens":91195,"tool_uses":6,"ms":55013,"note":"resumed after 429; tokens = total"}

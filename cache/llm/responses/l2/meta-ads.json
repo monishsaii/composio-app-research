@@ -56,24 +56,66 @@
  },
  "needs_human": true,
  "needs_human_reason": "Meta developer docs were not fetchable (error pages); claims rest on third-party guides and the official SDK README. Verify tier names, sandbox, webhooks on developers.facebook.com.",
- "evidence": [
-  {
-   "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/README.md",
-   "quote": "To manage the Marketing API, please visit your App Dashboard and add the Marketing API product to your app."
-  },
-  {
-   "url": "https://skaler.app/blog/meta-marketing-api",
-   "quote": "If it manages other people's ad accounts (an agency tool or a SaaS product), you need advanced access, which goes through App Review per permission."
-  },
-  {
-   "url": "https://skaler.app/blog/meta-marketing-api",
-   "quote": "at least 500 successful Marketing API calls in the last 15 days, and an error rate under 15% across your last 500 calls"
-  },
-  {
-   "url": "https://mcp.facebook.com/ads",
-   "quote": "MCP endpoints accept POST for JSON-RPC; GET is not supported."
-  }
- ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://skaler.app/blog/meta-marketing-api",
+    "quote": "System user token",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://github.com/facebook/facebook-python-business-sdk",
+    "quote": "you need to generate a user access token for your app and ask for the ads_management permission",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://skaler.app/blog/meta-marketing-api",
+    "quote": "If it manages other people's ad accounts (an agency tool or a SaaS product), you need advanced access, which goes through App Review per permission.",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://skaler.app/blog/meta-marketing-api",
+    "quote": "at least 500 successful Marketing API calls in the last 15 days, and an error rate under 15% across your last 500 calls",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://github.com/facebook/facebook-python-business-sdk",
+    "quote": "To manage the Marketing API, please visit your App Dashboard and add the Marketing API product to your app.",
+    "source_type": "official_repo"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://skaler.app/blog/meta-marketing-api",
+    "quote": "The Marketing API has its own throttling, separate from general Graph API limits.",
+    "source_type": "third_party"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://mcp.facebook.com/ads",
+    "quote": "MCP endpoints accept POST for JSON-RPC; GET is not supported.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://skaler.app/blog/meta-marketing-api",
+    "quote": "If it manages other people's ad accounts (an agency tool or a SaaS product), you need advanced access, which goes through App Review per permission.",
+    "source_type": "third_party"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://github.com/facebook/facebook-python-business-sdk",
+    "quote": "The Business SDK is an upgraded version of the Marketing API SDK that includes the Marketing API",
+    "source_type": "official_repo"
+   }
+  ]
+ },
  "disputes": [
   {
    "field": "access",
