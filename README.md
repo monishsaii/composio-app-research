@@ -1,5 +1,5 @@
 # appresearch: integration readiness of 100 apps for agent tool-calling
-nLive case study: https://monishsaii.github.io/composio-app-research/ · Repo: https://github.com/monishsaii/composio-app-research
+Live case study: https://monishsaii.github.io/composio-app-research/ · Repo: https://github.com/monishsaii/composio-app-research
 
 For each of 100 apps, the pipeline records how it authenticates and what gates API credentials. It also records how big the API is, whether an MCP server exists, and a rubric verdict (BUILD_NOW … BLOCKED_NO_PUBLIC_API). Every non-unknown value carries `{url, ≤25-word quote, source_type, fetched_at}`. The output is `site/index.html`, a self-contained case study, plus `data/final.json`.
 
