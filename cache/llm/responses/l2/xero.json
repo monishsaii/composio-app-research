@@ -1,0 +1,192 @@
+{
+ "id": "xero",
+ "name": "Xero",
+ "category": "Finance/Fintech",
+ "one_liner": "Xero cloud accounting platform with OAuth 2.0 REST APIs (Accounting, Payroll, Files, Projects, Assets, Bank Feeds).",
+ "docs_url": "https://developer.xero.com/documentation",
+ "openapi_spec_url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_accounting.yaml",
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "OAuth 2.0 authorization code (PKCE) for multi-org apps; Custom Connections (client credentials, single org); MCP also accepts a bearer token.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "PKCE",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Starter plan: max 5 connections, no payment method, 1000 calls/day/org. Plus and above need App Certification; Advanced/Enterprise need security assessment. Journals, XPM, bulk connections gated.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "csharp",
+   "java",
+   "nodejs",
+   "php",
+   "python",
+   "ruby"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/XeroAPI/xero-mcp-server"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Self-serve Starter tier works but caps at 5 connections; scaling past 50 orgs needs App Certification, premium endpoints need security assessment.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "medium",
+  "access": "high",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "quote": "Xero OAuth2 authentication with custom connections",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "quote": "allow the MCP client to execute an auth flow (such as PKCE) as required",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Connections (maximum) | 5 | 50 | 1000 | 10,000 | No Limit",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Payment Method | Not Applicable | Required | Required | Required | Required",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Prerequisites |  |  | App Certification | App Certification | App Certification",
+    "source_type": "pricing_page"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "quote": "We recommend using a Demo Company to start with because it comes with some pre-loaded sample data.",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/README.md",
+    "quote": "This repository holds the official Xero [OpenAPI](https://www.openapis.org/) descriptions.",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Rate Limits | 1000 per day per org | 5000 per day per org",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Webhooks",
+    "source_type": "pricing_page"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "quote": "This is a Model Context Protocol (MCP) server implementation for Xero.",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "AI toolkit (Remote MCP server) | Demo org only",
+    "source_type": "pricing_page"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "Journal endpoint (require security assessment and use case approval) | Not Included | Not Included | Not Included",
+    "source_type": "pricing_page"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.xero.com/pricing",
+    "quote": "connect to Xero’s 4.6+ million global subscribers",
+    "source_type": "pricing_page"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2"
+   ],
+   "why": "Official Xero MCP repo documents OAuth2 and custom connections."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Starter plan has no payment method and 5 connections; certification only for higher tiers."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Demo Company documented in official repo."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Official OpenAPI specs for nine API families."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Pricing page lists Webhooks as a standard feature."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "XeroAPI GitHub org publishes xero-mcp-server."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Self-serve credentials, official specs and SDKs; tiered connection caps and certification."
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "id": "ecwid",
+ "name": "Ecwid",
+ "category": "Ecommerce",
+ "one_liner": "Ecommerce platform (Lightspeed) adding stores to any site, with REST API, OAuth apps and webhooks.",
+ "docs_url": "https://docs.ecwid.com",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "bearer_token"
+ ],
+ "auth_notes": "Public apps use OAuth 2.0; a store's custom app provides a secret token used as Bearer token plus store ID in the path. Custom apps have limited default permissions (no webhooks until app configuration updated).",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": true
+ },
+ "access": "paid_plan_required",
+ "access_notes": "Only stores on paid plans can access the API; free upgrade for test stores on request to API support. Public App Market apps go through validation.",
+ "sandbox_or_test_env": "No test mode in the API; docs recommend a separate test store (free paid-plan upgrade on request).",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "none_found",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented REST API with Bearer tokens and OAuth, but the store needs a paid plan and public apps need validation; no sandbox mode.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.ecwid.com/get-started/make-your-first-api-request.md",
+    "quote": "Ecwid uses OAuth 2.0 to provide secure access to the store data for public apps.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.ecwid.com/get-started/make-your-first-api-request.md",
+    "quote": "Secret token** grants full access to REST API (provided the app has all required permissions)",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+    "quote": "Only stores on paid plans can access API.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://docs.ecwid.com/get-started/make-your-first-api-request.md",
+    "quote": "There is **no test mode** in Ecwid API, so we recommend setting up a separate test store.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.ecwid.com/llms-full.txt",
+    "quote": "Yes, there are API rate limits in place to ensure stable performance.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.ecwid.com/llms-full.txt",
+    "quote": "such apps cannot add new customers through REST API or automate store processes with webhooks",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [],
+  "buildability": [
+   {
+    "url": "https://www.ecwid.com/pricing",
+    "quote": "Up to 10 products",
+    "source_type": "pricing_page"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "paid_plan_required",
+   "why": "Dev guide states only stores on paid plans can access the API."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "other"
+   ],
+   "yours": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "why": "Docs state OAuth 2.0 for public apps and Bearer secret token for custom apps."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": "no test mode; use separate test store",
+   "why": "Docs explicitly state no test mode."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "app_review",
+   "yours": "paid_plan_gate",
+   "why": "Paid plan needed for any API access; app validation affects only public apps."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "FAQ says rate limits exist and are documented; exact numbers not retrieved."
+  }
+ ]
+}

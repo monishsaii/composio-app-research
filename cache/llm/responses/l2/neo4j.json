@@ -1,0 +1,57 @@
+{
+ "id": "neo4j",
+ "name": "Neo4j",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Graph database with a REST Aura management API, an HTTP Query API for Cypher, drivers, and an official local MCP server.",
+ "docs_url": "https://neo4j.com/docs/aura/api/overview/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "basic"],
+ "auth_notes": "Aura management API: OAuth2 client_credentials (client ID/secret from console) yielding a bearer token. Query API and drivers authenticate to a database instance with database user credentials (HTTP Basic). Basic for Query API inferred, not quoted.",
+ "oauth_details": {"flows": ["client_credentials"], "scopes_granular": "unknown", "app_review_required": false},
+ "access": "self_serve_free",
+ "access_notes": "Aura API credentials self-serve in console for all tiers; AuraDB Free (one instance per account) exists. Aura API limit 25 req/min for Free/unbilled trials, 125 req/min for paid tiers. Query API works against any instance, incl. self-managed.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": false,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": ["python", "java", "javascript", "go", "dotnet"]
+ },
+ "mcp": {"exists": "official", "url": "https://github.com/neo4j/mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "ambiguous_product",
+  "rationale": "Both Aura management API (self-serve OAuth client credentials) and Query API (per-instance Cypher over HTTP) are documented and self-serve. Choose target: instance lifecycle vs data access; endpoint count unverified and Free tier is rate limited.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "medium", "auth": "high", "access": "high", "sandbox": "medium", "api_surface": "low", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Must decide whether the target is the Aura management API or per-instance Query API/Cypher; Aura endpoint list is in a JS-rendered spec not fetched.",
+ "evidence": {
+  "access": [
+   {"url": "https://neo4j.com/docs/aura/api/overview/", "quote": "AuraDB Free and AuraDB Professional trial accounts without a billing method attached, get a rate limit of 25 requests per minute.", "source_type": "official_docs"},
+   {"url": "https://neo4j.com/docs/aura/classic/auradb/getting-started/create-database/", "quote": "You can only create one Free instance per account.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://neo4j.com/docs/aura/api/overview/", "quote": "The Aura API allows you to programmatically perform actions on your Aura instances without the need to log in to the Console.", "source_type": "official_docs"},
+   {"url": "https://neo4j.com/docs/query-api/current/", "quote": "The Query API allows to execute Cypher statements against a Neo4j server through HTTP requests.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/", "quote": "The official MCP Server for Neo4j, is a local MCP server that is downloadable as a binary", "source_type": "official_docs"},
+   {"url": "https://github.com/neo4j/mcp", "quote": "Neo4j MCP gives AI assistants and LLM-powered tools direct, structured access to your Neo4j graph database.", "source_type": "official_repo"}
+  ]
+ },
+ "disputes": [
+  {"field": "api_surface.style", "first_pass": ["other"], "yours": ["rest"], "why": "Aura API and Query API are both HTTP APIs; Query API executes Cypher over HTTP."},
+  {"field": "auth_methods", "first_pass": ["oauth2"], "yours": ["oauth2", "basic"], "why": "Per-instance Query API needs database credentials in addition to Aura OAuth client credentials."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Aura API overview documents 25 and 125 req/min tiers."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "ambiguous_product", "why": "Aura management API vs Query API/drivers target remains the real decision."},
+  {"field": "mcp.url", "first_pass": "https://pypi.org/project/neo4j-mcp-server/", "yours": "https://github.com/neo4j/mcp", "why": "Vendor GitHub repo is the canonical official source; PyPI is a package mirror. MCP is local, not hosted."},
+  {"field": "sandbox_or_test_env", "first_pass": "unknown", "yours": true, "why": "AuraDB Free instance and local self-managed installs available for testing."}
+ ]
+}

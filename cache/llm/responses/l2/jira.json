@@ -1,0 +1,159 @@
+{
+ "id": "jira",
+ "name": "Jira",
+ "category": "Productivity/PM",
+ "one_liner": "Atlassian Jira Cloud issue tracking and project management product with a REST API.",
+ "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "basic"
+ ],
+ "auth_notes": "OAuth 2.0 (3LO) authorization code apps created in developer console; basic auth with account email plus API token for scripts (passwords deprecated). Atlassian discourages collecting API tokens in distributed apps.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Jira has a Free pricing tier; API tokens and 3LO apps are self-serve. Plan-level API gating not found. Rate limits are points-based per hour, enforced from 2 Mar 2026.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.atlassian.com/v2/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Documented REST v3 with self-serve OAuth 3LO and API tokens; official Atlassian MCP exists. Caveats: per-site consent, points-based rate limits, Atlassian discourages per-customer token apps.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "quote": "This page shows you how REST clients can authenticate themselves using basic authentication with an Atlassian account email address and API token.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "OAuth 2.0 (3LO) allows external applications and services to access Atlassian product APIs on a user's behalf.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://www.atlassian.com/software/jira/pricing",
+    "quote": "Jira pricing: Free, Standard, Premium, Enterprise | Atlassian",
+    "source_type": "pricing_page"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/",
+    "quote": "You can use Jira webhooks to notify your app or web application when certain events occur in Jira.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+    "quote": "When any limit is exceeded, Jira returns an HTTP 429 Too Many Requests response.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "quote": "The Jira REST API enables you to interact with Jira programmatically.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "quote": "The official Atlassian MCP Server is a cloud-based bridge between your Atlassian Cloud site and compatible external tools.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://github.com/atlassian/atlassian-mcp-server",
+    "quote": "New setups should use https://mcp.atlassian.com/v2/mcp",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+    "quote": "Apps that collect API tokens or instruct customers to create individual 3LO apps don't comply with our Security requirements for cloud apps",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "quote": "This documentation is for version 3 of the Jira Cloud platform REST API, which is the latest version.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "Atlassian's own GitHub org publishes the official MCP server at mcp.atlassian.com."
+  },
+  {
+   "field": "mcp.url",
+   "first_pass": "https://github.com/MankowskiNick/jira-mcp",
+   "yours": "https://mcp.atlassian.com/v2/mcp",
+   "why": "First pass used a third-party repo."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_NOW",
+   "why": "Self-serve API tokens/3LO and Free tier; documented rate limits."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "none",
+   "why": "No gating found."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Points-based rate limit page exists."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Free tier plus self-serve API tokens; medium confidence."
+  }
+ ]
+}

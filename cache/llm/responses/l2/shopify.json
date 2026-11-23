@@ -1,0 +1,153 @@
+{
+ "id": "shopify",
+ "name": "Shopify",
+ "category": "Ecommerce",
+ "one_liner": "E-commerce platform whose APIs let apps read and write store products, orders, customers, and inventory.",
+ "docs_url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "other"
+ ],
+ "auth_notes": "Per-store access token (offline or online) obtained after merchant install/scope approval (auth code or token exchange, client credentials later), sent in X-Shopify-Access-Token. Storefront and Customer Account APIs use their own tokens.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": true
+ },
+ "access": "self_serve_free",
+ "access_notes": "Dev Dashboard and free dev stores are self-serve for building. Some scopes need Shopify's approval and public apps need protected-customer-data approval; App Store listing is reviewed. Whether a Partner account costs anything is not stated on fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "graphql",
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "ruby",
+   "node",
+   "php",
+   "go",
+   "dotnet"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://shopify.dev/docs/api/ai-toolkit"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Broad documented GraphQL Admin API, free dev stores, standard OAuth. Caveats: per-store install, approval for some scopes and protected customer data, plan-based rate limits.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Shopify MCP found is a coding-agent AI Toolkit; no official store-data MCP URL confirmed. Partner account cost and scope-approval details not verified.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "Shopify apps call the GraphQL Admin API to read and write store data on behalf of merchants.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "Your app sends the token in the X-Shopify-Access-Token header on every GraphQL Admin API request.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "Shopify grants some access scopes to individual apps rather than to every app that declares them.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+    "quote": "Fields that return a customer's personal data need a separate approval if your app is public.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://shopify.dev/docs/apps/build/dev-dashboard",
+    "quote": "Dev stores: You own them, for building and testing without touching a live store.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://shopify.dev/docs/api/usage/rate-limits",
+    "quote": "Every API applies limits differently, so the figures and the mechanics are documented with each API",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://shopify.dev/docs/api/usage/rate-limits",
+    "quote": "Pagination of arrays of objects caps at 25,000 objects",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://shopify.dev/docs/apps/build/webhooks",
+    "quote": "it can subscribe to Shopify webhook topics as a mechanism for receiving near-real-time data about these events",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://shopify.dev/docs/apps/build/devmcp",
+    "quote": "Shopify AI Toolkit gives your AI coding tool a Shopify-aware starting point.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Dev Dashboard and free dev stores are self-serve; gated scopes and protected customer data approval are explicit."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2",
+    "other"
+   ],
+   "why": "OAuth install flow plus X-Shopify-Access-Token header documented."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "app_review",
+   "why": "Docs name Shopify approval for some scopes and protected customer data for public apps."
+  },
+  {
+   "field": "oauth_details.app_review_required",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Separate approval needed for protected customer data if app is public."
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "id": "grain",
+ "name": "Grain",
+ "category": "AI/Research/Media",
+ "one_liner": "Meeting recorder (grain.com) with transcripts, AI notes, recordings and clips.",
+ "docs_url": "https://developers.grain.com",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "bearer_token",
+  "oauth2"
+ ],
+ "auth_notes": "Personal Access Token (any plan), Workspace Access Token (admin, Business/Enterprise), OAuth2 for distributed integrations; sent as Authorization: Bearer plus Public-Api-Version header.",
+ "oauth_details": {
+  "flows": [
+   "authorization_code_pkce"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "PAT generated in account settings on every plan incl. Free; workspace-wide tokens need admin on Business/Enterprise. Third-party Scalekit claims Free has no API access, contradicted by Grain's own support page.",
+ "sandbox_or_test_env": false,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": 24,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Versioned REST API v2 with webhooks and 300 req/min per token. PAT is self-serve but per-user; workspace tokens need paid admin; OAuth app registration unverified; no sandbox.",
+  "est_tool_count_if_built": 19,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "developers.grain.com sub-pages returned AccessDenied; endpoint count comes from third-party Scalekit; OAuth client registration and MCP URL not verified on vendor pages.",
+ "disputes": [
+  {
+   "field": "api_surface.style",
+   "first_pass": [
+    "graphql"
+   ],
+   "yours": [
+    "rest"
+   ],
+   "why": "Developer quick start shows REST paths like GET api.grain.com/_/public-api/v2/token-info with version header; no GraphQL evidence."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "Third-party Scalekit counts about two dozen API endpoints."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "api_key",
+    "oauth2"
+   ],
+   "yours": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+   ],
+   "why": "Quick start sends tokens as Authorization: Bearer."
+  },
+  {
+   "field": "oauth_details.flows",
+   "first_pass": [],
+   "yours": [
+    "authorization_code_pkce"
+   ],
+   "why": "Third-party Scalekit states OAuth 2.0 Authorization Code with PKCE."
+  },
+  {
+   "field": "api_surface.official_sdks",
+   "first_pass": [
+    "typescript"
+   ],
+   "yours": [],
+   "why": "No official SDK found in any fetched vendor page."
+  }
+ ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developers.grain.com",
+    "quote": "Every request needs a token in the Authorization header and a Public-Api-Version",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://www.scalekit.com/blog/grain-mcp-vs-api",
+    "quote": "OAuth 2.0 access token obtained via Authorization Code with PKCE",
+    "source_type": "third_party"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Not for personal API access, which is available on every plan, including Free.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "No sandbox is available at this time.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developers.grain.com",
+    "quote": "https://api.grain.com/_/public-api/v2/token-info",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://www.scalekit.com/blog/grain-mcp-vs-api",
+    "quote": "The API's two dozen endpoints include webhooks, media upload and download, and sharing.",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "The API allows 300 requests per minute per token.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://www.scalekit.com/blog/grain-mcp-vs-api",
+    "quote": "Grain launched its official remote MCP server on June 18, 2025, and it is available to every Grain plan.",
+    "source_type": "third_party"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://support.grain.com/en/articles/15507288-grain-api",
+    "quote": "Requires admin access to generate and is available on Business and Enterprise plans.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developers.grain.com",
+    "quote": "The Grain API lets you read and manage recordings, highlights, uploads, and more.",
+    "source_type": "official_docs"
+   }
+  ]
+ }
+}

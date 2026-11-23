@@ -1,0 +1,157 @@
+{
+ "id": "amazon-selling-partner",
+ "name": "Amazon Selling Partner",
+ "category": "Ecommerce",
+ "one_liner": "REST APIs that let Amazon selling partners automate orders, shipments, pricing, listings, inventory and reports.",
+ "docs_url": "https://developer-docs.amazon.com/sp-api",
+ "openapi_spec_url": "https://github.com/amzn/selling-partner-api-models",
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "Public apps: OAuth 2.0 via Login with Amazon (LWA), seller authorizes, reauthorization annually. Private apps: self-authorize in Seller Central/Vendor Central/Solution Provider Portal. Restricted data needs a Restricted Data Token.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": true
+ },
+ "access": "app_review_required",
+ "access_notes": "Register in Solution Provider Portal (identity verification, business docs). Public developers need a complete security review and appear in the Selling Partner Appstore; private developers get streamlined review. Restricted (PII) roles need enhanced security documentation. No fee found on fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "java",
+   "csharp",
+   "python",
+   "javascript",
+   "php"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/amzn/selling-partner-api-samples"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Broad documented REST API, sandbox, notifications and rate limits, but production needs developer registration with identity verification, role approval and (public apps) security review.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Endpoint count and breadth rely on a third-party claim (300+ endpoints); MCP is a local sample-repo server from Amazon's amzn GitHub org, not a hosted product; role approval timing unknown.",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+    "quote": "OAuth 2.0 through Login with Amazon (LWA)",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+    "quote": "Private applications are for exclusive use by a single organization.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-1-prepare-for-registration",
+    "quote": "Restricted roles: Provide access to personally identifiable information (PII) and require enhanced security.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-1-prepare-for-registration",
+    "quote": "Your applications appear in the Selling Partner Appstore and require a complete security review.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/sp-api-sandbox",
+    "quote": "provides two hosted and one local sandbox environment that you can use to test your applications",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits",
+    "quote": "The SP-API uses the token bucket algorithm to rate-limit requests to the API.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer-docs.amazon.com/sp-api/docs/notifications-api-v1-use-case-guide",
+    "quote": "Instead of polling for information, your application can receive information directly from Amazon when an event generates a notification",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://www.datadoe.com/blog-posts/amazon-sp-api-mcp-ultimate-guide",
+    "quote": "over 300 endpoints across Orders, Catalog, Finances, Inventory, Reports, Notifications, Vendor Central, and more",
+    "source_type": "third_party"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/amzn/selling-partner-api-samples",
+    "quote": "A local MCP server that bundles SP-API developer tools into a single npm package",
+    "source_type": "official_repo"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "Amazon's amzn GitHub org publishes sp-api-dev-mcp (local MCP) in samples repo; jay-trivedi repo is a separate community project."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Notifications API pushes events to destinations (EventBridge/SQS) instead of polling."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Many API families; third-party guide cites 300+ endpoints (not primary-verified)."
+  },
+  {
+   "field": "api_surface.official_sdks",
+   "first_pass": [],
+   "yours": [
+    "java",
+    "csharp",
+    "python",
+    "javascript",
+    "php"
+   ],
+   "why": "Docs list generated Java/C# SDKs and prebuilt SDK tutorials for five languages."
+  },
+  {
+   "field": "oauth_details.app_review_required",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Public apps require a complete security review before Appstore listing."
+  }
+ ]
+}

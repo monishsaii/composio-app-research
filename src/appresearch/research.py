@@ -186,6 +186,35 @@ def normalize(raw: dict, rid: str) -> dict:
         raw["needs_human"] = False
     if raw.get("confidence") is None:
         raw["confidence"] = {}
+    api = raw.get("api_surface")
+    if isinstance(api, dict) and isinstance(api.get("style"), list):
+        smap = {"grpc": "other", "rpc": "other", "json-rpc": "other", "soap/xml": "soap", "sdk": "sdk_only", "cli": "cli_only"}
+        ok = {"rest", "graphql", "soap", "sdk_only", "cli_only", "websocket", "other"}
+        new = [smap.get(str(x).lower(), str(x).lower()) for x in api["style"]]
+        new = list(dict.fromkeys(x for x in new if x in ok))
+        if new != api["style"]:
+            cache.log_event("normalize", id=rid, field="api_surface.style", change=f"{api['style']}->{new}")
+            api["style"] = new
+    m = raw.get("mcp")
+    if isinstance(m, dict) and m.get("exists") is True:  # official vs community not stated -> let L5 decide
+        cache.log_event("normalize", id=rid, field="mcp.exists", change="True->'unknown'")
+        m["exists"] = "unknown"
+    if isinstance(m, dict) and m.get("exists") in ("none", "no", False):
+        cache.log_event("normalize", id=rid, field="mcp.exists", change=f"{m['exists']!r}->'none_found'")
+        m["exists"] = "none_found"
+    for path in (("sandbox_or_test_env",), ("api_surface", "webhooks"), ("api_surface", "pagination_documented"),
+                 ("api_surface", "rate_limits_documented"), ("oauth_details", "scopes_granular"),
+                 ("oauth_details", "app_review_required")):
+        cur = raw
+        for k in path[:-1]:
+            cur = cur.get(k) if isinstance(cur, dict) else None
+        v = cur.get(path[-1]) if isinstance(cur, dict) else None
+        if isinstance(v, str) and v != "unknown":
+            low = v.strip().lower()
+            new = True if low.startswith(("yes", "true")) else False if low.startswith(("no ", "no,", "no:", "no(", "false", "none")) or low == "no" else "unknown"
+            cur[path[-1]] = new
+            raw["access_notes"] = ((raw.get("access_notes") or "") + f" [{'.'.join(path)}: {v[:160]}]").strip()
+            cache.log_event("normalize", id=rid, field=".".join(path), change=f"prose->{new!r}")
     for path in TRI_PATHS:
         cur = raw
         for k in path[:-1]:

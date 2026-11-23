@@ -1,0 +1,96 @@
+{
+ "id": "fanbasis",
+ "name": "fanbasis",
+ "category": "Ecommerce",
+ "one_liner": "Creator-commerce platform (payments, subscriptions, courses, checkout); fanbasis.com now redirects to Commas. Not Openstage.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "No first-party API docs found. Third-party search snippet (not fetched) mentions API keys under Settings > Developer; unverified.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "No official developer docs located; fanbasis.com plus docs/apidocs/developers subpaths all redirect to the Commas marketing page. Integrators (Emergent, Actionist) describe webhook/API use but are third parties.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "unknown",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "UNCLEAR",
+  "main_blocker": "unstable_or_undocumented_api",
+  "rationale": "Creator-commerce platform that redirects to Commas; first-pass Openstage Fanbase pages are a different product. No official public API docs found.",
+  "est_tool_count_if_built": null,
+  "est_effort": null
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "medium",
+  "auth": "low",
+  "access": "low",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "low",
+  "buildability": "low"
+ },
+ "needs_human": true,
+ "needs_human_reason": "No primary API documentation reachable; verify in a logged-in FanBasis/Commas dashboard whether a Developer/API key section exists.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://commas.com/",
+    "quote": "The first webinar platform with checkout and payments built in.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://emergent.sh/integrations/fanbasis",
+    "quote": "FanBasis is a comprehensive creator economy platform trusted by content creators, influencers, coaches, and digital entrepreneurs worldwide",
+    "source_type": "third_party"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://actionist.ai/app-store/apps/fanbasis",
+    "quote": "Sell, host, and scale your digital business",
+    "source_type": "third_party"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "identity",
+   "first_pass": "Openstage Fanbase (unconfirmed)",
+   "yours": "FanBasis creator-commerce platform, fanbasis.com redirects to commas.com",
+   "why": "Openstage pages never mention fanbasis; fanbasis.com is a separate payments/course platform."
+  },
+  {
+   "field": "access",
+   "first_pass": "paid_plan_required",
+   "yours": "unknown",
+   "why": "Legendary-plan gating applied to Openstage, not fanbasis; no fanbasis API pricing found."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [
+    "bearer_token",
+    "other"
+   ],
+   "yours": [],
+   "why": "Openstage auth facts do not transfer; nothing verified for fanbasis."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": true,
+   "yours": "unknown",
+   "why": "Webhook claim came from Openstage pages."
+  }
+ ]
+}

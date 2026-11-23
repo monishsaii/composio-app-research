@@ -1,0 +1,132 @@
+{
+ "id": "monday-com",
+ "name": "Monday.com",
+ "category": "Productivity/PM",
+ "one_liner": "Work management platform (boards, items, columns) with GraphQL API for apps and AI agents.",
+ "docs_url": "https://developer.monday.com/api-reference/reference",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Personal API token for admins/members; OAuth2 for apps with scopes (new OAuth 2.1 flow with refresh tokens available).",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "API is a free feature across all plans (daily call limit 200 on Free); viewers, guests (no key), student accounts cannot get tokens. Free developer account available for testing.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "graphql"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.monday.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Free-plan API access with self-serve token and OAuth; documented rate limits and versioning; official hosted MCP. Free daily limit is low.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "Admins and members have access to their own API tokens.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.monday.com/apps/docs/oauth",
+    "quote": "OAuth 2.0 is a protocol that lets your app request authorization to read or modify data in a user's monday account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+    "quote": "maintains the API service as a free feature across all plans",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "For building and testing apps or API integrations without touching production data, use a free developer account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/webhooks",
+    "quote": "You can use it to subscribe to events on your boards and get notified by an HTTP or HTTPS post request",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.monday.com/api-reference/docs/api-versioning",
+    "quote": "We guarantee at least three different versions of the API in parallel and release a new version every quarter.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+    "quote": "The Platform MCP is monday.com's hosted MCP (Model Context Protocol) server, maintained by the monday.com AI team.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+    "quote": "| Free | 200 |",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.monday.com/api-reference/docs/basics",
+    "quote": "The monday GraphQL API is part of the monday apps framework.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Docs say API is a free feature across all plans."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Docs recommend free developer account for testing."
+  }
+ ]
+}

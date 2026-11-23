@@ -1,0 +1,152 @@
+{
+ "id": "magento-adobe-commerce",
+ "name": "Magento (Adobe Commerce)",
+ "category": "Ecommerce",
+ "one_liner": "Adobe Commerce / Magento Open Source ecommerce platform exposing per-instance REST and GraphQL web APIs; also a SaaS variant (Adobe Commerce as a Cloud Service) with IMS auth.",
+ "docs_url": "https://developer.adobe.com/commerce/webapi/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "bearer_token",
+  "other"
+ ],
+ "auth_notes": "PaaS/on-prem/Magento Open Source: admin/customer bearer tokens from token service, and OAuth 1.0a integrations (System > Extensions > Integrations). SaaS: Adobe IMS access token on every request. Base URL is per instance: https://<host>/rest/<store-view-code>/<endpoint>.",
+ "oauth_details": {
+  "flows": [
+   "oauth1a_integration",
+   "ims_server_to_server"
+  ],
+  "scopes_granular": true,
+  "app_review_required": false
+ },
+ "access": "admin_approval",
+ "access_notes": "No central developer signup: the store admin creates an integration or admin token on each instance. Magento Open Source is free (OSL 3.0); Adobe Commerce is licensed/paid. SaaS needs Adobe IMS project credentials.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest",
+   "graphql"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "community",
+  "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Well-documented REST/GraphQL, but every customer is a separate instance (own base URL), credentials need store-admin setup, and SaaS vs PaaS differ in auth and endpoints.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Rate limits, sandbox and endpoint count not found; webhooks are synchronous (plus I/O Events for async) and version dependent.",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "Third-party applications authenticate with OAuth 1.0a.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "you must use Adobe Identity Management Service (IMS) to authenticate your requests.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "Customer Token—Use this token in applications to authorize specific customer and query data related to that customer",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+    "quote": "After activating an integration (self activated), you can use the generated consumer key, consumer secret, access token, and access token secret",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://github.com/magento/magento2",
+    "quote": "Magento Open Source software delivers basic eCommerce capabilities to build a unique online store from the ground up.",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "https://<host>/rest/<store-view-code>/<endpoint>",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+    "quote": "Adobe Commerce provides two comprehensive GraphQL implementations",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.adobe.com/commerce/extensibility/webhooks/",
+    "quote": "Webhooks enable developers to configure synchronous logic to execute calls to external systems when an Adobe Commerce event triggers.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [],
+  "buildability": [
+   {
+    "url": "https://developer.adobe.com/commerce/webapi/rest/",
+    "quote": "the customer and guest REST APIs that are available in Adobe Commerce on Cloud and on-premises deployments are not available in Adobe Commerce as a Cloud Service",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2",
+    "bearer_token",
+    "other"
+   ],
+   "why": "Docs describe OAuth 1.0a integrations, bearer tokens, and IMS tokens for SaaS."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "admin_approval",
+   "why": "Credentials created by store admin per instance via integrations; no central developer signup."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Official REST and GraphQL guides cover catalog, customers, orders; count not measured."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Official webhooks overview exists (synchronous), plus I/O Events."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Public documented API; per-instance admin setup and SaaS/PaaS differences."
+  }
+ ]
+}

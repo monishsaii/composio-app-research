@@ -1,0 +1,63 @@
+{
+ "id": "fathom",
+ "name": "Fathom",
+ "category": "AI/Research/Media",
+ "one_liner": "AI meeting recorder (fathom.video / fathom.ai) with a REST API and webhooks for meetings, transcripts, summaries, teams.",
+ "docs_url": "https://developers.fathom.ai/api-overview",
+ "openapi_spec_url": "https://developers.fathom.ai/api-reference/openapi.yaml",
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "OpenAPI declares X-Api-Key header and Bearer security schemes. OAuth is for public apps; OAuth apps are subject to Fathom review.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": true},
+ "access": "self_serve_free",
+ "access_notes": "Per-user API key from User Settings, available on all plans per FAQ (first pass). OAuth apps for public marketplace require registration and review.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": 11,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["python", "typescript"]
+ },
+ "mcp": {"exists": "official", "url": "https://api.fathom.ai/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve per-user API key, OpenAPI 3.1 spec with 11 paths including webhooks, cursor pagination, official MCP. OAuth for public apps requires review but API key path is open.",
+  "est_tool_count_if_built": 11,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "oauth_details.app_review_required", "first_pass": "unknown", "yours": true, "why": "Fathom OAuth page says OAuth apps are subject to review."},
+  {"field": "buildability.est_effort", "first_pass": "M", "yours": "S", "why": "Only 11 endpoints with a complete OpenAPI spec."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "title: Fathom External API", "source_type": "official_docs"},
+   {"url": "https://fathom.video/pricing", "quote": "Unlimited meetings captured & instant AI summaries", "source_type": "pricing_page"}
+  ],
+  "auth": [
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "Include your API key in the `X-Api-Key` header of every request.", "source_type": "official_docs"},
+   {"url": "https://developers.fathom.ai/oauth", "quote": "They are subject to review to ensure the best experience for all users.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://developers.fathom.ai/oauth", "quote": "Configure your redirects and receive your OAuth credentials. (2 mins)", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "optionally receive webhooks when content from a new meeting is ready.", "source_type": "official_docs"},
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "- url: https://api.fathom.ai/external/v1", "source_type": "official_docs"},
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "type: cursor", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://developers.fathom.ai/mcp-docs", "quote": "https://api.fathom.ai/mcp", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://developers.fathom.ai/api-reference/openapi.yaml", "quote": "/webhooks:", "source_type": "official_docs"}
+  ]
+ }
+}

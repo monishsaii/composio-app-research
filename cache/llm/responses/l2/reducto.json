@@ -1,0 +1,64 @@
+{
+ "id": "reducto",
+ "name": "Reducto",
+ "category": "AI/Research/Media",
+ "one_liner": "Agentic document platform to parse, extract, split, classify and edit documents via REST API, SDKs, CLI and MCP.",
+ "docs_url": "https://docs.reducto.ai",
+ "openapi_spec_url": "https://reducto.ai/openapi.json",
+ "auth_methods": ["api_key", "bearer_token"],
+ "auth_notes": "API key from Studio (studio.reducto.ai) API Keys page; SDKs read REDUCTO_API_KEY; sent as Bearer. The openapi.json URL currently returns 'temporarily unavailable'.",
+ "oauth_details": null,
+ "access": "self_serve_trial",
+ "access_notes": "Standard pay-as-you-go plan with $150 free usage then list rates; Growth/Enterprise via sales add rate limits, BAA, data residency. Startup program credits.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": 13,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["python", "node", "go"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.reducto.ai/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve API key with free starter usage, documented REST endpoints (parse, extract, split, classify, edit, upload, async variants, job), webhooks on async calls, official MCP. Concurrency 429s documented without numbers.",
+  "est_tool_count_if_built": 9,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Pricing page: Standard pay-as-you-go includes $150 of free usage, then list rates apply."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "narrow", "why": "Agent guide lists about 13 endpoints (parse, extract, split, classify, edit, upload, 5 async, job)."},
+  {"field": "api_surface.official_sdks", "first_pass": ["python", "node"], "yours": ["python", "node", "go"], "why": "Agent guide says Python, Node.js, and Go SDKs read REDUCTO_API_KEY."},
+  {"field": "needs_human", "first_pass": true, "yours": false, "why": "Pricing page now verified."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://docs.reducto.ai/llms.txt", "quote": "Reducto turns PDFs, spreadsheets, images, and office files into structured data.", "source_type": "official_docs"}
+  ],
+  "auth": [
+   {"url": "https://docs.reducto.ai/agent-guide/index.md", "quote": "The Python, Node.js, and Go SDKs read `REDUCTO_API_KEY` from the environment.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://reducto.ai/pricing", "quote": "Standard includes $150 of free usage, then list rates apply.", "source_type": "pricing_page"},
+   {"url": "https://reducto.ai/pricing", "quote": "Pay-as-you-go for early-stage teams", "source_type": "pricing_page"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.reducto.ai/agent-guide/index.md", "quote": "`/parse_async`, `/extract_async`, `/split_async`, `/classify_async`, `/edit_async`", "source_type": "official_docs"},
+   {"url": "https://docs.reducto.ai/agent-guide/index.md", "quote": "| 429 | Rate limited | Too many concurrent requests. Retry with backoff. |", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://docs.reducto.ai/llms.txt", "quote": "Connect AI agents to Reducto via the Model Context Protocol.", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://reducto.ai/pricing", "quote": "Parse API", "source_type": "pricing_page"},
+   {"url": "https://docs.reducto.ai/agent-guide/index.md", "quote": "`POST https://platform.reducto.ai/parse`", "source_type": "official_docs"}
+  ]
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "id": "ipayx",
+ "name": "iPayX",
+ "category": "Finance/Fintech",
+ "one_liner": "iPayX Protocol: FINTRAC-registered FX forensic audit layer with an API and remote MCP server that compares bank FX rates to mid-market.",
+ "docs_url": "https://ipayx.ai/llms.txt",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token"
+ ],
+ "auth_notes": "Audit API uses a Bearer token (key from ipayx.ai/ai-access). MCP: some tools need no auth; full_forensic_fx_report needs a Bearer API key.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "llms.txt lists API plans from $99/mo; MCP has free tools and 3 free audits per IP per month; key via ipayx.ai/ai-access (JS shell, not read).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "narrow",
+  "approx_endpoint_count": 5,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.ipayx.ai/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "A public API (POST fx-audit-engine, Bearer) and an official remote MCP exist; narrow FX audit scope and paid API plans. Docs are thin.",
+  "est_tool_count_if_built": 4,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "medium",
+  "access": "low",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "ipayx.ai pages are JS shells; ai-access and pricing details not rendered.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://ipayx.ai/llms.txt",
+    "quote": "FINTRAC-registered (MSB C10001283) FX forensic audit layer. Real-time foreign-exchange auditing API and MCP server for AI agents",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://ipayx.ai/llms.txt",
+    "quote": "Auth: Bearer token",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/iPAYX-Technologies/mcp-fx-audit/main/README.md",
+    "quote": "**Auth:** None | **Cost:** Free",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://ipayx.ai/llms.txt",
+    "quote": "Forensic Pack from $297, API plans from $99/mo.",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/iPAYX-Technologies/mcp-fx-audit/main/README.md",
+    "quote": "3 free audits per IP per calendar month",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://ipayx.ai/llms.txt",
+    "quote": "POST https://api.ipayx.ai/functions/v1/fx-audit-engine",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://raw.githubusercontent.com/iPAYX-Technologies/mcp-fx-audit/main/README.md",
+    "quote": "**Live endpoint:** `https://mcp.ipayx.ai/mcp`",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://raw.githubusercontent.com/iPAYX-Technologies/mcp-fx-audit/main/README.md",
+    "quote": "the server never moves money and never executes transfers. Audit information only",
+    "source_type": "official_repo"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "partner_or_contact_sales",
+   "yours": "paid_plan_required",
+   "why": "llms.txt lists API plans from $99/mo and an API key page; not contact-sales."
+  },
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "bearer_token"
+   ],
+   "why": "llms.txt and official MCP repo state Bearer token auth."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Vendor GitHub org repo mcp-fx-audit plus vendor-domain endpoint mcp.ipayx.ai."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "none",
+   "yours": "narrow",
+   "why": "Documented API endpoint fx-audit-engine and 4 MCP tools."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BLOCKED_NO_PUBLIC_API",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Public API and MCP documented in llms.txt and repo README; paid plans, narrow scope."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "no_api",
+   "yours": "paid_plan_gate",
+   "why": "API exists; plans start at $99/mo."
+  }
+ ]
+}

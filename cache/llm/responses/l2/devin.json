@@ -1,0 +1,67 @@
+{
+ "id": "devin",
+ "name": "Devin",
+ "category": "AI/Research/Media",
+ "one_liner": "Cognition's autonomous AI software engineer (Devin Cloud) with a documented v3 REST API, official MCP server and CLI.",
+ "docs_url": "https://docs.devin.ai/api-reference/overview.md",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "api_key"],
+ "auth_notes": "cog_-prefixed Service User API keys or Personal Access Tokens sent as Authorization: Bearer. Service user created in Settings > Devin API; keys expire (default 30 days).",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "Self-serve service user provisioning for Teams/standard orgs; Devin Cloud (which the API drives) is listed from the Pro plan ($20/mo) up, not the Free plan. Enterprise API scope (cross-org analytics, audit) is for enterprise customers. Plan-by-plan API gating not fully legible in the fetched pricing table.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": 237,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.devin.ai/mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented v3 REST API (organization and enterprise scopes, 200+ reference pages) with self-serve service-user keys, but requires a paid Devin org; enterprise endpoints need enterprise plan.",
+  "est_tool_count_if_built": 20,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "docs_url", "first_pass": null, "yours": "https://docs.devin.ai/api-reference/overview.md", "why": "Core v3 REST API overview exists and was fetchable."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "API llms index lists about 237 v3 reference pages across organization and enterprise scopes."},
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Pricing page lists Devin Cloud under Pro and above; API keys come from an org's Settings."},
+  {"field": "api_surface.pagination_documented", "first_pass": "unknown", "yours": true, "why": "Migration guide mentions cursor pagination in v3."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "paid_plan_gate", "why": "Core API gate is paid plan; enterprise-only for cross-org endpoints."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://docs.devin.ai/api-reference/overview.md", "quote": "The Devin API enables you to integrate Devin into your applications, automate workflows, and build powerful tools.", "source_type": "official_docs"}
+  ],
+  "auth": [
+   {"url": "https://docs.devin.ai/api-reference/authentication.md", "quote": "All API credentials use the `cog_` prefix format.", "source_type": "official_docs"},
+   {"url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md", "quote": "Copy the key immediately", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md", "quote": "Go to **Settings > Devin API** in your organization and open the **Service users** tab", "source_type": "official_docs"},
+   {"url": "https://devin.ai/pricing", "quote": "Access to cloud agents (Devin Cloud)", "source_type": "pricing_page"},
+   {"url": "https://docs.devin.ai/api-reference/overview.md", "quote": "Available to enterprise customers.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.devin.ai/api-reference/overview.md", "quote": "**Base URL:** `https://api.devin.ai/v3/organizations/*`", "source_type": "official_docs"},
+   {"url": "https://docs.devin.ai/llms.txt", "quote": "API (315 pages)", "source_type": "official_docs"},
+   {"url": "https://docs.devin.ai/_llms/en/api.txt", "quote": "new endpoint URLs, cursor pagination, and v2 enterprise equivalents.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://docs.devin.ai/work-with-devin/devin-mcp", "quote": "https://mcp.devin.ai/mcp", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://docs.devin.ai/api-reference/overview.md", "quote": "Use **service users** with role-based access control for secure, auditable API access.", "source_type": "official_docs"}
+  ]
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "id": "brex",
+ "name": "Brex",
+ "category": "Finance/Fintech",
+ "one_liner": "Brex spend platform with corporate cards, expenses and bill pay, plus REST API and hosted MCP.",
+ "docs_url": "https://developer.brex.com/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token",
+  "oauth2"
+ ],
+ "auth_notes": "Admin-generated user token (Bearer) for own account; partner OAuth2 (auth code; client credentials for onboarding) for other accounts; MCP uses OAuth with dynamic client registration.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "client_credentials"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "admin_approval",
+ "access_notes": "Own account: account or card admin accepts the developer API agreement and creates a token. Third-party multi-tenant OAuth is partner-only.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://api.brex.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BLOCKED_NEEDS_OUTREACH",
+  "main_blocker": "partner_gate",
+  "rationale": "Multi-tenant OAuth requires partner status; user tokens only work for the admin's own account and need an existing Brex customer account.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Staging is documented only under partner auth; unclear whether customers get a sandbox. Verdict depends on whether multi-tenant OAuth is needed.",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.brex.com/guides/authentication.md",
+    "quote": "Sign in to [dashboard.brex.com](https://dashboard.brex.com/) as an [account admin or card admin]",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.brex.com/guides/partner_authentication.md",
+    "quote": "This section is only for Brex developer partners.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.brex.com/guides/authentication.md",
+    "quote": "These must be accepted to use the developer API.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.brex.com/docs/faq.md",
+    "quote": "The [OAuth token](/guides/partner_authentication/) is used when building partner applications to authenticate other Brex accounts.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developer.brex.com/guides/authentication.md",
+    "quote": "Brex currently only offers a production API server at `https://api.brex.com`.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.brex.com/guides/partner_authentication.md",
+    "quote": "`https://api-staging.brex.com`",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.brex.com/guides/rate_limits.md",
+    "quote": "Up to 1,000 requests in 60 seconds.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.brex.com/guides/webhooks.md",
+    "quote": "Brex APIs offer webhooks to notify you in real-time when certain events happen in your account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developer.brex.com/docs/mcp.md",
+    "quote": "The server is hosted at `https://api.brex.com/mcp` and supports any MCP-compatible client.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.brex.com/docs/mcp.md",
+    "quote": "This is different from the Brex Developer API, which requires admin-provisioned API tokens.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.brex.com/llms.txt",
+    "quote": "APIs to build on top of the Brex financial OS.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": true,
+   "yours": "unknown",
+   "why": "Customer auth page says only a production server; staging appears only in partner auth with no availability guarantees."
+  },
+  {
+   "field": "access",
+   "first_pass": "partner_or_contact_sales",
+   "yours": "admin_approval",
+   "why": "Own-account tokens are admin self-serve; only partner OAuth is gated."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Rate limits page documents 1,000 requests per 60 seconds."
+  }
+ ]
+}

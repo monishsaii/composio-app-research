@@ -1,0 +1,50 @@
+{
+ "id": "mongodb-atlas",
+ "name": "MongoDB Atlas",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Managed cloud MongoDB service; Atlas Administration API manages projects, clusters, users (not cluster data).",
+ "docs_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2", "api_key"],
+ "auth_notes": "Service accounts via OAuth2 client credentials (POST /api/oauth/token, 1h bearer) recommended; API keys use HTTP Digest (legacy). Optional per-org IP access list (403 if not listed). Admin API does not read/write cluster data; the Atlas Data API is end of life.",
+ "oauth_details": {"flows": ["client_credentials"], "scopes_granular": "unknown", "app_review_required": "no (service accounts self-created by Org Owner)"},
+ "access": "self_serve_free",
+ "access_notes": "Any Atlas account holder who is Organization Owner can create service accounts or API keys; no sales or approval step is stated. Free M0 tier exists. Whether Admin API works on M0 not separately verified.",
+ "sandbox_or_test_env": "Free forever M0 cluster tier",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["go"]
+ },
+ "mcp": {"exists": "official", "url": "https://github.com/mongodb-js/mongodb-mcp-server"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Documented admin API with self-serve service accounts, but per-org setup by an Org Owner, optional IP access list, and no data-plane access: reading documents needs a DB user and connection string, not this API.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Docs require only an Atlas account and Org Owner role to create service accounts; free M0 tier listed; no paid gate stated."},
+  {"field": "identity", "first_pass": "Admin API vs Data API unresolved", "yours": "Administration API; Data API is End of Life", "why": "Data API docs page is titled End of Life; Admin API does not access cluster data."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "API 'allows developers to manage all components in MongoDB Atlas'; count unverified, so confidence medium."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/", "quote": "Service accounts are the recommended authentication method and API keys are considered a legacy option.", "source_type": "official_docs"}],
+  "access": [{"url": "https://www.mongodb.com/docs/atlas/configure-api-access/", "quote": "To create a service account or API keys for an organization, you must have Organization Owner access to that organization.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://www.mongodb.com/pricing", "quote": "| M0 | 512 MB | Shared | Shared | Free forever |", "source_type": "pricing_page"}],
+  "api_surface": [{"url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/", "quote": "The MongoDB Atlas Administration API allows developers to manage all components in MongoDB Atlas.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://github.com/mongodb-js/mongodb-mcp-server", "quote": "A Model Context Protocol server for interacting with MongoDB Databases and MongoDB Atlas.", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://www.mongodb.com/docs/atlas/configure-api-access/", "quote": "The Atlas Administration API doesn't provide access to the data stored in your clusters.", "source_type": "official_docs"},
+                   {"url": "https://www.mongodb.com/docs/atlas/configure-api-access/", "quote": "If you make a request to the Atlas Administration API without an IP access list entry, the server responds with a 403 status code.", "source_type": "official_docs"}],
+  "identity": [{"url": "https://www.mongodb.com/docs/atlas/api/data-api/", "quote": "Atlas Data API [End of Life] - Atlas App Services - MongoDB Docs", "source_type": "official_docs"}]
+ }
+}

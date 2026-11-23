@@ -1,0 +1,140 @@
+{
+ "id": "gumroad",
+ "name": "Gumroad",
+ "category": "Ecommerce",
+ "one_liner": "Creator commerce platform with a REST API (v2) covering products, sales, subscribers, payouts, offer codes, licenses, webhooks (resource subscriptions) and hosted MCP endpoints.",
+ "docs_url": "https://gumroad.com/api",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "bearer_token"
+ ],
+ "auth_notes": "Create an application in account advanced settings for client ID/secret (OAuth), or generate an access token for own account; tokens do not expire until revoked (help article cited by first pass).",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": false
+ },
+ "access": "self_serve_free",
+ "access_notes": "Applications and access tokens are created in any seller account's settings; no approval step or plan gate found. Gumroad charges per-sale fees, not API fees.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": 120,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://gumroad.com/.well-known/mcp.json"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve tokens/OAuth, v2 API with many resources, webhooks via resource_subscriptions, vendor-run MCP endpoints. Endpoint count (~120) is estimated from routes.rb.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "medium",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "gumroad.com/api and help pages are JS shells; endpoint count estimated from vendor GitHub routes file; rate limits unknown; auth/no-approval inferred from first-pass help article.",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/config/routes.rb",
+    "quote": "# Partner applications (client credentials, partner_api scope).",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/config/routes.rb",
+    "quote": "# API routes used in both api.gumroad.com and gumroad.com/api",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/config/routes.rb",
+    "quote": "put \"/resource_subscriptions\", to: \"resource_subscriptions#create\"",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/config/routes.rb",
+    "quote": "resources :links, path: \"products\", only: [:index, :show, :update, :create, :destroy] do",
+    "source_type": "official_repo"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://raw.githubusercontent.com/antiwork/gumroad/main/config/routes.rb",
+    "quote": "get \"/.well-known/mcp.json\" => \"api/v2/mcp#mcp_discovery\"",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://github.com/antiwork/gumroad",
+    "quote": "Gumroad is an e-commerce platform that enables creators to sell products directly to consumers.",
+    "source_type": "official_repo"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "why": "L1 and help article indicate OAuth app plus access tokens; routes show oauth token endpoints."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "No approval or plan gate found; tokens self-generated in account settings."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Vendor repo routes serve /.well-known/mcp.json and per-client /v1/mcp endpoints on gumroad.com."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "v2 routes include resource_subscriptions with test_event."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "routes.rb v2 scope lists dozens of resources; est. ~120 endpoints."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_NOW",
+   "why": "Self-serve credentials, documented API, standard auth, no blocker."
+  }
+ ]
+}

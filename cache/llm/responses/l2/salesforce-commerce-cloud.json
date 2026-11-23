@@ -1,0 +1,121 @@
+{
+ "id": "salesforce-commerce-cloud",
+ "name": "Salesforce Commerce Cloud",
+ "category": "Ecommerce",
+ "one_liner": "Salesforce B2C Commerce platform exposing Shopper/Admin APIs (SCAPI, legacy OCAPI) per tenant.",
+ "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/overview",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "Shopper APIs use Bearer access tokens obtained via SLAS (Shopper Login) with clientId, organizationId, shortCode and siteId; Admin API auth not verified (official docs return HTTP 403).",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "SDK README says SCAPI must be configured for the tenant. Licence cost, sandbox provisioning and credential steps not readable because developer.salesforce.com returns HTTP 403 to the fetcher.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "node",
+   "typescript"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Documented SCAPI with official SDKs and SLAS tokens, but per-tenant SCAPI configuration is required and cost/credential path could not be verified from blocked official docs.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "medium",
+  "auth": "medium",
+  "access": "low",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "medium",
+  "buildability": "low"
+ },
+ "needs_human": true,
+ "needs_human_reason": "developer.salesforce.com pages return HTTP 403; verify access cost, Account Manager client setup, sandbox and rate limits in a browser. Official MCP claim rests on the vendor GitHub org repo description.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://raw.githubusercontent.com/SalesforceCommerceCloud/commerce-sdk-isomorphic/main/README.md",
+    "quote": "This SDK provides a Browser & Node.js JavaScript client for calling",
+    "source_type": "official_repo"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://github.com/SalesforceCommerceCloud/commerce-sdk",
+    "quote": "Get a JWT to use with Shopper API clients",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://raw.githubusercontent.com/SalesforceCommerceCloud/commerce-sdk-isomorphic/main/README.md",
+    "quote": "The SDK requires B2C Commerce API (SCAPI) to be configured.",
+    "source_type": "official_repo"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://raw.githubusercontent.com/SalesforceCommerceCloud/commerce-sdk-isomorphic/main/README.md",
+    "quote": "For a Node.js only SDK that can also access Admin APIs",
+    "source_type": "official_repo"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/SalesforceCommerceCloud",
+    "quote": "B2C CLI, VSCode Extension, Skills+MCP, and Tooling SDK for Salesforce Agentforce Commerce B2C",
+    "source_type": "official_repo"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "oauth2"
+   ],
+   "why": "SLAS Bearer access tokens used by official SDK for Shopper APIs."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "community",
+   "yours": "official",
+   "why": "Vendor GitHub org SalesforceCommerceCloud publishes b2c-developer-tooling with Skills+MCP; first-pass repo is third party."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BUILD_WITH_CAVEATS",
+   "why": "Official SDK READMEs show documented SCAPI with token auth; tenant configuration required. UNCLEAR is not a rubric verdict."
+  },
+  {
+   "field": "api_surface.style",
+   "first_pass": [],
+   "yours": [
+    "rest"
+   ],
+   "why": "SDK wraps SCAPI REST Shopper/Admin API classes."
+  }
+ ]
+}

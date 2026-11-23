@@ -2073,3 +2073,523 @@
 {"t": "2026-11-23T16:25:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://otter.ai/llms.txt", "status": 200, "chars": 4426}
 {"t": "2026-11-23T16:25:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.asana.com/docs/rate-limits", "status": 200, "chars": 12610}
 {"t": "2026-11-23T16:25:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://help.getharvest.com/api-v2/projects-api/projects/projects/", "status": 200, "chars": 14427}
+{"t": "2026-11-23T16:25:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://fanbasis.com/developers", "status": 200, "chars": 5139}
+{"t": "2026-11-23T16:25:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.asana.com/docs/webhooks-guide", "status": 200, "chars": 22502}
+{"t": "2026-11-23T16:25:07Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:07Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/", "status": 200, "chars": 32}
+{"t": "2026-11-23T16:25:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/harvesthq/api", "status": 200, "chars": 5508}
+{"t": "2026-11-23T16:25:09Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:09Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.grain.com/authentication", "status": 403, "chars": 26}
+{"t": "2026-11-23T16:25:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/api/", "status": 200, "chars": 101130}
+{"t": "2026-11-23T16:25:10Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:10Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.otter.ai", "status": 0, "chars": 0}
+{"t": "2026-11-23T16:25:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/", "status": 200, "chars": 1154}
+{"t": "2026-11-23T16:25:11Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:11Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/rate-limits", "status": 200, "chars": 62}
+{"t": "2026-11-23T16:25:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/cloudflare/mcp-server-cloudflare", "status": 200, "chars": 6181}
+{"t": "2026-11-23T16:25:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/", "status": 200, "chars": 4531}
+{"t": "2026-11-23T16:25:14Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:14Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.asana.com/docs/mcp-server", "status": 200, "chars": 400}
+{"t": "2026-11-23T16:25:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/pricing", "status": 200, "chars": 16725}
+{"t": "2026-11-23T16:25:18Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:18Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.grain.com/rate-limits", "status": 403, "chars": 26}
+{"t": "2026-11-23T16:25:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://asana.com/pricing", "status": 200, "chars": 31512}
+{"t": "2026-11-23T16:25:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.otter.ai/hc/en-us/articles/37056127805719", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:25:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/atlas/configure-api-access/", "status": 200, "chars": 6008}
+{"t": "2026-11-23T16:25:19Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:19Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.cloudflare.com/api/openapi.json", "status": 404, "chars": 9}
+{"t": "2026-11-23T16:25:21Z", "event": "removed_fabricated_search", "query": "Waterfall.io API access requirements which plan pricing developer app review partner", "reason": "recorded without a WebSearch call"}
+{"t": "2026-11-23T16:25:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.asana.com/docs/oauth", "status": 200, "chars": 25521}
+{"t": "2026-11-23T16:25:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/", "status": 200, "chars": 5305}
+{"t": "2026-11-23T16:25:22Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:22Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks", "status": 200, "chars": 62}
+{"t": "2026-11-23T16:25:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/rate-limits", "status": 200, "chars": 10692}
+{"t": "2026-11-23T16:25:24Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:24Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.squarespace.com/commerce-apis/webhook-subscriptions", "status": 404, "chars": 201}
+{"t": "2026-11-23T16:25:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/", "status": 200, "chars": 1955}
+{"t": "2026-11-23T16:25:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/pagination", "status": 200, "chars": 2586}
+{"t": "2026-11-23T16:25:27Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:27Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.grain.com/endpoints", "status": 403, "chars": 26}
+{"t": "2026-11-23T16:25:28Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/stripe-apps", "status": 200, "chars": 599}
+{"t": "2026-11-23T16:25:28Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.asana.com/docs/scopes", "status": 404, "chars": 455}
+{"t": "2026-11-23T16:25:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.squarespace.com/commerce-apis/faq", "status": 200, "chars": 3099}
+{"t": "2026-11-23T16:25:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/development/get-started", "status": 200, "chars": 4176}
+{"t": "2026-11-23T16:25:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://transcriptapi.com/docs/llms-small.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T16:25:30Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:30Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API-beta", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:25:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/stripe/openapi", "status": 200, "chars": 3174}
+{"t": "2026-11-23T16:25:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/mcp", "status": 200, "chars": 7377}
+{"t": "2026-11-23T16:25:32Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:32Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.cloudflare.com/fundamentals/api/reference/webhooks/", "status": 404, "chars": 3939}
+{"t": "2026-11-23T16:25:32Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:32Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.mongodb.com/docs/atlas/api/rate-limits/", "status": 404, "chars": 5602}
+{"t": "2026-11-23T16:25:33Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:33Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes", "status": 200, "chars": 62}
+{"t": "2026-11-23T16:25:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/stripe", "status": 200, "chars": 4948}
+{"t": "2026-11-23T16:25:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/api", "status": 200, "chars": 916}
+{"t": "2026-11-23T16:25:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.cloudflare.com/notifications/get-started/configure-webhooks/", "status": 200, "chars": 4767}
+{"t": "2026-11-23T16:25:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.mongodb.com/docs/atlas/configure-alerts/", "status": 200, "chars": 3346}
+{"t": "2026-11-23T16:25:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-oauth/", "status": 404, "chars": 55}
+{"t": "2026-11-23T16:25:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.intuit.com/robots.txt", "status": 200, "chars": 480}
+{"t": "2026-11-23T16:25:38Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.asana.com/docs/service-accounts", "status": 404, "chars": 455}
+{"t": "2026-11-23T16:25:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth", "status": 200, "chars": 6360}
+{"t": "2026-11-23T16:25:39Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:39Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:25:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/stripe/ai", "status": 200, "chars": 2023}
+{"t": "2026-11-23T16:25:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.higgsfield.ai/docs/webhooks", "status": 404, "chars": 43872}
+{"t": "2026-11-23T16:25:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.cloudflare.com/plans/", "status": 200, "chars": 306}
+{"t": "2026-11-23T16:25:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.stripe.com/webhooks", "status": 200, "chars": 22502}
+{"t": "2026-11-23T16:25:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://otter.ai/pricing.md", "status": 200, "chars": 5253}
+{"t": "2026-11-23T16:25:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.xero.com/documentation/guides/oauth2/overview", "status": 200, "chars": 26}
+{"t": "2026-11-23T16:25:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/api/latest/rate-limits/", "status": 200, "chars": 12018}
+{"t": "2026-11-23T16:25:51Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.xero.com/documentation/guides/oauth2/limits", "status": 200, "chars": 37}
+{"t": "2026-11-23T16:25:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/api-reference/openapi.yaml", "status": 200, "chars": 46088}
+{"t": "2026-11-23T16:25:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/developers/authorization/", "status": 200, "chars": 1861}
+{"t": "2026-11-23T16:25:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/XeroAPI/xero-mcp-server", "status": 200, "chars": 7971}
+{"t": "2026-11-23T16:25:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/basics", "status": 200, "chars": 2323}
+{"t": "2026-11-23T16:25:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/integrations/webhooks/", "status": 200, "chars": 14290}
+{"t": "2026-11-23T16:25:56Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "higgsfield API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T16:25:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/rate-limits", "status": 200, "chars": 9865}
+{"t": "2026-11-23T16:25:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/apps/docs/oauth", "status": 200, "chars": 9636}
+{"t": "2026-11-23T16:25:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/DataDog/datadog-api-client-go", "status": 200, "chars": 6200}
+{"t": "2026-11-23T16:25:58Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp", "status": 200, "chars": 1312}
+{"t": "2026-11-23T16:25:59Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:25:59Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.fathom.ai/rate-limits", "status": 404, "chars": 17141}
+{"t": "2026-11-23T16:25:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/quickstart/", "status": 200, "chars": 12245}
+{"t": "2026-11-23T16:26:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/webhooks", "status": 200, "chars": 10270}
+{"t": "2026-11-23T16:26:00Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/getting-started/mcp", "status": 200, "chars": 21505}
+{"t": "2026-11-23T16:26:01Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:01Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.xero.com/documentation/guides/oauth2/auth-flow", "status": 200, "chars": 53}
+{"t": "2026-11-23T16:26:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/api", "status": 200, "chars": 2196}
+{"t": "2026-11-23T16:26:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.fathom.ai/oauth", "status": 200, "chars": 626}
+{"t": "2026-11-23T16:26:02Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/api/latest/", "status": 200, "chars": 4092}
+{"t": "2026-11-23T16:26:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/platform/oauth-apps/build-a-supabase-integration", "status": 200, "chars": 8026}
+{"t": "2026-11-23T16:26:03Z", "event": "fetch", "via": "direct:httpx", "url": "https://fathom.video/pricing", "status": 200, "chars": 2952}
+{"t": "2026-11-23T16:26:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://monday.com/pricing", "status": 200, "chars": 9783}
+{"t": "2026-11-23T16:26:04Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/pricing", "status": 200, "chars": 18620}
+{"t": "2026-11-23T16:26:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/database/webhooks", "status": 200, "chars": 4239}
+{"t": "2026-11-23T16:26:06Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:06Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://plaid.com/docs/api/rate-limits/", "status": 404, "chars": 1509}
+{"t": "2026-11-23T16:26:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql", "status": 200, "chars": 6483}
+{"t": "2026-11-23T16:26:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/getting_started/application/", "status": 200, "chars": 6064}
+{"t": "2026-11-23T16:26:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/README.md", "status": 200, "chars": 5350}
+{"t": "2026-11-23T16:26:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.datadoghq.com/free-datadog-trial/", "status": 200, "chars": 693}
+{"t": "2026-11-23T16:26:08Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Otter AI API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T16:26:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.xero.com/pricing", "status": 200, "chars": 7730}
+{"t": "2026-11-23T16:26:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/intuit/QuickBooks-V3-Java-SDK/master/README.md", "status": 200, "chars": 5401}
+{"t": "2026-11-23T16:26:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/bits_ai/mcp_server/", "status": 200, "chars": 6753}
+{"t": "2026-11-23T16:26:10Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration", "status": 200, "chars": 8026}
+{"t": "2026-11-23T16:26:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/account/billing/", "status": 200, "chars": 25920}
+{"t": "2026-11-23T16:26:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/intuit/quickbooks-online-mcp-server", "status": 200, "chars": 15701}
+{"t": "2026-11-23T16:26:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.datadoghq.com/developers/integrations/", "status": 200, "chars": 5315}
+{"t": "2026-11-23T16:26:13Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/resources/mcp/", "status": 200, "chars": 8344}
+{"t": "2026-11-23T16:26:13Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:13Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.monday.com/apps/docs/app-review", "status": 404, "chars": 379}
+{"t": "2026-11-23T16:26:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://brightdata.com/pricing/web-scraper", "status": 200, "chars": 3702}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "cloudflare", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "github", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "github", "field": "oauth_details.flows", "change": "['auth_code', 'device_code']->['auth_code', 'device']; dropped []"}
+{"t": "2026-11-23T16:26:14Z", "event": "l2_invalid", "id": "google-ads", "error": "1 validation error for Record\napi_surface.style.0\n  Input should be 'rest', 'graphql', 'soap', 'sdk_only', 'cli_only', 'websocket' or 'other' [type=literal_error, input_value='grpc', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "harvest", "field": "oauth_details.flows", "change": "['auth_code', 'implicit']->['auth_code']; dropped ['implicit']"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "klaviyo", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "l2_invalid", "id": "klaviyo", "error": "2 validation errors for Record\nsandbox_or_test_env.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='test account: a regular ... production environment', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing"}
+{"t": "2026-11-23T16:26:14Z", "event": "l2_invalid", "id": "linkedin-ads", "error": "2 validation errors for Record\nsandbox_or_test_env.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='partial: Development tie...lls hit production data', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "mailchimp", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "l2_invalid", "id": "mailchimp", "error": "1 validation error for Record\nmcp.exists\n  Input should be 'official', 'community', 'none_found' or 'unknown' [type=literal_error, input_value='none', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "mongodb-atlas", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "l2_invalid", "id": "mongodb-atlas", "error": "4 validation errors for Record\noauth_details.app_review_required.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='no (service accounts self-created by Org Owner)', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/b"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "netlify", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "normalize", "id": "pinterest", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://consensus.app/home/api/", "status": 200, "chars": 5816}
+{"t": "2026-11-23T16:26:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/plaid/plaid-openapi", "status": 200, "chars": 2979}
+{"t": "2026-11-23T16:26:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.monday.com/api-reference/docs/api-versioning", "status": 200, "chars": 8864}
+{"t": "2026-11-23T16:26:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.supabase.com/api/v1", "status": 200, "chars": 20}
+{"t": "2026-11-23T16:26:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://higgsfield.ai/higgsfield-api", "status": 200, "chars": 9972}
+{"t": "2026-11-23T16:26:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://plaid.com/docs/api/webhooks/", "status": 200, "chars": 5209}
+{"t": "2026-11-23T16:26:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.pinterest.com/docs/getting-started/connect-app/", "status": 200, "chars": 3126}
+{"t": "2026-11-23T16:26:16Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:16Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T16:26:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/mondaycom/mcp", "status": 200, "chars": 12469}
+{"t": "2026-11-23T16:26:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://open.higgsfield.ai/quick-start", "status": 200, "chars": 10239}
+{"t": "2026-11-23T16:26:18Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.salesforce.com/sales/pricing/", "status": 200, "chars": 7450}
+{"t": "2026-11-23T16:26:18Z", "event": "normalize", "id": "sendgrid", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:19Z", "event": "fetch", "via": "direct:httpx", "url": "https://transcriptapi.com/docs/llms-full.txt", "status": 200, "chars": 120000}
+{"t": "2026-11-23T16:26:20Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.twilio.com/en-us/sendgrid", "status": 200, "chars": 1485}
+{"t": "2026-11-23T16:26:20Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:20Z", "event": "normalize", "id": "snowflake", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:20Z", "event": "l2_invalid", "id": "snowflake", "error": "5 validation errors for Record\nsandbox_or_test_env.bool\n  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value='30-day free trial accoun...until credit card added', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/bool_parsing"}
+{"t": "2026-11-23T16:26:20Z", "event": "l2_invalid", "id": "stripe", "error": "1 validation error for Record\napi_surface.style.1\n  Input should be 'rest', 'graphql', 'soap', 'sdk_only', 'cli_only', 'websocket' or 'other' [type=literal_error, input_value='webhook', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T16:26:20Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:20Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:20Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.consensus.app", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:26:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.blotato.com/blog/threads-api-pricing", "status": 200, "chars": 23131}
+{"t": "2026-11-23T16:26:21Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:21Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/api/rest/client-libs", "status": 200, "chars": 710}
+{"t": "2026-11-23T16:26:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://consensus.app/llms.txt", "status": 200, "chars": 5520}
+{"t": "2026-11-23T16:26:25Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:25Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/start-developing-your-app", "status": 200, "chars": 62}
+{"t": "2026-11-23T16:26:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://consensus.app/home/blog/", "status": 200, "chars": 2113}
+{"t": "2026-11-23T16:26:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://supabase.com/docs/guides/api/api-keys", "status": 200, "chars": 16660}
+{"t": "2026-11-23T16:26:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://consensus.app/llms-full.txt", "status": 200, "chars": 15338}
+{"t": "2026-11-23T16:26:30Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:30Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.higgsfield.ai/docs/webhooks.md", "status": 404, "chars": 499}
+{"t": "2026-11-23T16:26:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/api/ratelimits/", "status": 200, "chars": 1753}
+{"t": "2026-11-23T16:26:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/rate-limits", "status": 200, "chars": 911}
+{"t": "2026-11-23T16:26:31Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/product/integrations/integration-platform/", "status": 200, "chars": 3265}
+{"t": "2026-11-23T16:26:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/webhooks", "status": 200, "chars": 5709}
+{"t": "2026-11-23T16:26:32Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/product/sentry-mcp/", "status": 200, "chars": 2633}
+{"t": "2026-11-23T16:26:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://consensus.app/.well-known/pricing.md", "status": 200, "chars": 3573}
+{"t": "2026-11-23T16:26:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/authentication", "status": 200, "chars": 2871}
+{"t": "2026-11-23T16:26:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/binance/binance-spot-api-docs", "status": 200, "chars": 4248}
+{"t": "2026-11-23T16:26:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.sentry.io/product/integrations/integration-platform/webhooks/", "status": 200, "chars": 5097}
+{"t": "2026-11-23T16:26:34Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:34Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/sitemap.xml", "status": 404, "chars": 35}
+{"t": "2026-11-23T16:26:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server", "status": 200, "chars": 3950}
+{"t": "2026-11-23T16:26:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md", "status": 200, "chars": 120000}
+{"t": "2026-11-23T16:26:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://clickup.com/pricing", "status": 200, "chars": 19783}
+{"t": "2026-11-23T16:26:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://sentry.io/pricing/", "status": 200, "chars": 2780}
+{"t": "2026-11-23T16:26:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.clickup.com/docs/open-api-spec", "status": 200, "chars": 435}
+{"t": "2026-11-23T16:26:37Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:37Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.higgsfield.ai/docs/rate-limits.md", "status": 404, "chars": 511}
+{"t": "2026-11-23T16:26:39Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:39Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.consensus.app/openapi.json", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "cloudflare", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/docs/aura/api/overview/", "status": 200, "chars": 2864}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "datadog", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "datadog", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "datadog", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "datadog", "field": "api_surface.webhooks", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "datadog", "field": "api_surface.rate_limits_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "github", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "github", "field": "oauth_details.flows", "change": "['auth_code', 'device_code']->['auth_code', 'device']; dropped []"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "google-ads", "field": "api_surface.style", "change": "['grpc', 'rest']->['other', 'rest']"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "harvest", "field": "oauth_details.flows", "change": "['auth_code', 'implicit']->['auth_code']; dropped ['implicit']"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "klaviyo", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "klaviyo", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "linkedin-ads", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "mailchimp", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "mailchimp", "field": "mcp.exists", "change": "'none'->'none_found'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "mongodb-atlas", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "mongodb-atlas", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "mongodb-atlas", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "netlify", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "pinterest", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "plaid", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "sendgrid", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "snowflake", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "snowflake", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "snowflake", "field": "api_surface.pagination_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "snowflake", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:26:40Z", "event": "l2_invalid", "id": "snowflake", "error": "1 validation error for Record\nmcp.exists\n  Input should be 'official', 'community', 'none_found' or 'unknown' [type=literal_error, input_value=True, input_type=bool]\n    For further information visit https://errors.pydantic.dev/2.14/v/literal_error"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "stripe", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "supabase", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:40Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:41Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:41Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/binance/binance-mcp", "status": 404, "chars": 1079}
+{"t": "2026-11-23T16:26:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/docs/query-api/current/", "status": 200, "chars": 2368}
+{"t": "2026-11-23T16:26:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://transcriptapi.com/docs/api/", "status": 200, "chars": 28176}
+{"t": "2026-11-23T16:26:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/neo4j/mcp", "status": 200, "chars": 2080}
+{"t": "2026-11-23T16:26:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://transcriptapi.com/docs/mcp/", "status": 200, "chars": 24565}
+{"t": "2026-11-23T16:26:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://grain.com/pricing", "status": 200, "chars": 6506}
+{"t": "2026-11-23T16:26:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/pricing/", "status": 200, "chars": 10314}
+{"t": "2026-11-23T16:26:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.clickup.com/docs/oauth-2-0-flow", "status": 404, "chars": 243}
+{"t": "2026-11-23T16:26:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://reducto.ai/pricing", "status": 200, "chars": 2294}
+{"t": "2026-11-23T16:26:48Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:48Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developers.binance.com/llms.txt", "status": 404, "chars": 0}
+{"t": "2026-11-23T16:26:48Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits.md", "status": 200, "chars": 3607}
+{"t": "2026-11-23T16:26:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/how-to/webhooks.md", "status": 200, "chars": 7200}
+{"t": "2026-11-23T16:26:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.reducto.ai/llms.txt", "status": 200, "chars": 3339}
+{"t": "2026-11-23T16:26:50Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:50Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.higgsfield.ai/docs/concepts/billing-and-retention.md", "status": 200, "chars": 2774}
+{"t": "2026-11-23T16:26:50Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://neo4j.com/docs/aura/platform/api/specification/", "status": 200, "chars": 30}
+{"t": "2026-11-23T16:26:51Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/reference/request-limits.md", "status": 200, "chars": 14154}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "cloudflare", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "datadog", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "datadog", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "datadog", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "datadog", "field": "api_surface.webhooks", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "datadog", "field": "api_surface.rate_limits_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "github", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "github", "field": "oauth_details.flows", "change": "['auth_code', 'device_code']->['auth_code', 'device']; dropped []"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "google-ads", "field": "api_surface.style", "change": "['grpc', 'rest']->['other', 'rest']"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "harvest", "field": "oauth_details.flows", "change": "['auth_code', 'implicit']->['auth_code']; dropped ['implicit']"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "klaviyo", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "klaviyo", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "linkedin-ads", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "mailchimp", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "mailchimp", "field": "mcp.exists", "change": "'none'->'none_found'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "mongodb-atlas", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "mongodb-atlas", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "mongodb-atlas", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "netlify", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "pinterest", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "plaid", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "sendgrid", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "sentry", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "sentry", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "snowflake", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "snowflake", "field": "mcp.exists", "change": "True->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "snowflake", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "snowflake", "field": "api_surface.pagination_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "snowflake", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "stripe", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "supabase", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:51Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:26:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/guides/mcp/mcp.md", "status": 200, "chars": 4969}
+{"t": "2026-11-23T16:26:52Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/reference/webhooks.md", "status": 200, "chars": 15554}
+{"t": "2026-11-23T16:26:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.notion.com/pricing", "status": 200, "chars": 994}
+{"t": "2026-11-23T16:26:54Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "QuickBooks API access requirements which plan pricing developer app review partner", "n": 2}
+{"t": "2026-11-23T16:26:54Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "PitchBook API access requirements which plan pricing developer app review partner", "n": 3}
+{"t": "2026-11-23T16:26:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://developers.notion.com/guides/get-started/create-a-notion-integration.md", "status": 200, "chars": 8534}
+{"t": "2026-11-23T16:26:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/binance", "status": 200, "chars": 554}
+{"t": "2026-11-23T16:26:55Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:26:55Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://reducto.ai/openapi.json", "status": 502, "chars": 73}
+{"t": "2026-11-23T16:26:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/binance/binance-connector-python", "status": 200, "chars": 4886}
+{"t": "2026-11-23T16:26:59Z", "event": "fetch", "via": "direct:httpx", "url": "https://coda.io/developers", "status": 200, "chars": 90715}
+{"t": "2026-11-23T16:27:00Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-mcp", "status": 404, "chars": 347}
+{"t": "2026-11-23T16:27:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://neo4j.com/docs/aura/api/rate-limits/", "status": 404, "chars": 1376}
+{"t": "2026-11-23T16:27:02Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:02Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq", "status": 200, "chars": 62}
+{"t": "2026-11-23T16:27:03Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:03Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/binance/binance-mcp-server", "status": 404, "chars": 1100}
+{"t": "2026-11-23T16:27:03Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:03Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.reducto.ai/api-reference/rate-limits", "status": 404, "chars": 433}
+{"t": "2026-11-23T16:27:05Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/docs/aura/classic/auradb/getting-started/create-database/", "status": 200, "chars": 1258}
+{"t": "2026-11-23T16:27:05Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:05Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.coda.io/en/articles/1216254-getting-started-with-the-coda-api", "status": 404, "chars": 243}
+{"t": "2026-11-23T16:27:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program", "status": 200, "chars": 8274}
+{"t": "2026-11-23T16:27:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/docs/aura/", "status": 200, "chars": 1629}
+{"t": "2026-11-23T16:27:07Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/binance/binance-skills-hub", "status": 200, "chars": 4208}
+{"t": "2026-11-23T16:27:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/", "status": 200, "chars": 15182}
+{"t": "2026-11-23T16:27:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.scalekit.com/blog/higgsfield-mcp-vs-api", "status": 200, "chars": 23053}
+{"t": "2026-11-23T16:27:11Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:11Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.reducto.ai/webhooks/overview", "status": 404, "chars": 433}
+{"t": "2026-11-23T16:27:12Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:12Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://shareholders.morningstar.com/investor-resources/investor-qa/qa-details/2026/How-is-the-PitchBook-Direct-Data-offering-monetized-Are-users-required-to-be-PitchBook-license-customers-first-2026-YTmObBZUFy/default.aspx", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:27:13Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:13Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/api/rate-limits", "status": 200, "chars": 16}
+{"t": "2026-11-23T16:27:14Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:14Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://coda.io/pricing", "status": 200, "chars": 33}
+{"t": "2026-11-23T16:27:15Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/faqs/api_key_types.md", "status": 200, "chars": 3189}
+{"t": "2026-11-23T16:27:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://api.mermaid.ai/docs", "status": 404, "chars": 77}
+{"t": "2026-11-23T16:27:16Z", "event": "fetch", "via": "direct:httpx", "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/testnet/rest-api.md", "status": 200, "chars": 120000}
+{"t": "2026-11-23T16:27:21Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:21Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://shareholders.morningstar.com/investor-resources/investor-qa/qa-details/2026/How-are-PitchBook-Model-Context-Protocol-MCP-Connectors-monetized-today-if-at-all--2026-cy9M2BxfO7/default.aspx", "status": 403, "chars": 16}
+{"t": "2026-11-23T16:27:21Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:21Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.reducto.ai/api-reference/llms.txt", "status": 200, "chars": 178}
+{"t": "2026-11-23T16:27:21Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:21Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/api/introduction", "status": 200, "chars": 16}
+{"t": "2026-11-23T16:27:21Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:21Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://coda.io/developers/apis/v1/spec", "status": 404, "chars": 130}
+{"t": "2026-11-23T16:27:22Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:22Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.binance.com/en/support/faq/how-to-create-api-keys-on-binance-360002502072", "status": 202, "chars": 0}
+{"t": "2026-11-23T16:27:24Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.reducto.ai/agent-guide/index.md", "status": 200, "chars": 13252}
+{"t": "2026-11-23T16:27:25Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.reducto.ai/studio-quickstart/index.md", "status": 200, "chars": 4154}
+{"t": "2026-11-23T16:27:27Z", "event": "fetch", "via": "direct:httpx", "url": "https://privateequitylist.com/intelligence/md/pitchbook-crunchbase-api-pricing", "status": 200, "chars": 10844}
+{"t": "2026-11-23T16:27:28Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Grain API reference rate limits webhooks official MCP server", "n": 3}
+{"t": "2026-11-23T16:27:29Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:29Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.coda.io/en/articles/9300803-use-the-coda-mcp-server", "status": 404, "chars": 243}
+{"t": "2026-11-23T16:27:29Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.scalekit.com/blog/grain-mcp-vs-api", "status": 200, "chars": 25474}
+{"t": "2026-11-23T16:27:30Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:30Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/guides/oauth-integrations", "status": 200, "chars": 16}
+{"t": "2026-11-23T16:27:30Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/llms.txt", "status": 200, "chars": 31314}
+{"t": "2026-11-23T16:27:32Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:32Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.brex.com/docs/api_overview", "status": 404, "chars": 323}
+{"t": "2026-11-23T16:27:33Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/_llms/en/api.txt", "status": 200, "chars": 55547}
+{"t": "2026-11-23T16:27:34Z", "event": "fetch", "via": "direct:httpx", "url": "https://devin.ai/pricing", "status": 200, "chars": 4343}
+{"t": "2026-11-23T16:27:35Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/llms.txt", "status": 200, "chars": 3138}
+{"t": "2026-11-23T16:27:35Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:35Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://github.com/orgs/codaio/repositories", "status": 404, "chars": 9}
+{"t": "2026-11-23T16:27:36Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms.txt", "status": 200, "chars": 14583}
+{"t": "2026-11-23T16:27:37Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/developer-api/v1/ramp-mcp", "status": 200, "chars": 1217}
+{"t": "2026-11-23T16:27:38Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:38Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.airtable.com/docs/airtable-mcp-server", "status": 404, "chars": 129}
+{"t": "2026-11-23T16:27:38Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/api-reference/overview.md", "status": 200, "chars": 4829}
+{"t": "2026-11-23T16:27:39Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md", "status": 200, "chars": 5333}
+{"t": "2026-11-23T16:27:40Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.devin.ai/api-reference/authentication.md", "status": 200, "chars": 9723}
+{"t": "2026-11-23T16:27:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/guides/authentication.md", "status": 200, "chars": 2960}
+{"t": "2026-11-23T16:27:41Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/pricing", "status": 200, "chars": 3569}
+{"t": "2026-11-23T16:27:42Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/guides/rate_limits.md", "status": 200, "chars": 1837}
+{"t": "2026-11-23T16:27:43Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/docs/mcp.md", "status": 200, "chars": 11346}
+{"t": "2026-11-23T16:27:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/docs/faq.md", "status": 200, "chars": 4443}
+{"t": "2026-11-23T16:27:44Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:44Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://coda.io/llms.txt", "status": 404, "chars": 130}
+{"t": "2026-11-23T16:27:44Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt", "status": 200, "chars": 1972}
+{"t": "2026-11-23T16:27:45Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:45Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.paygent.com", "status": 200, "chars": 0}
+{"t": "2026-11-23T16:27:45Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/rate-limiting.txt", "status": 200, "chars": 5010}
+{"t": "2026-11-23T16:27:46Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/webhooks.txt", "status": 200, "chars": 20902}
+{"t": "2026-11-23T16:27:47Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:47Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/developers/web/api/webhooks-overview", "status": 200, "chars": 16}
+{"t": "2026-11-23T16:27:49Z", "event": "fetch", "via": "direct:httpx", "url": "https://coda.io/developers/apis/v1#tag/Webhooks", "status": 200, "chars": 90715}
+{"t": "2026-11-23T16:27:51Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:51Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://paygentconnect.com", "status": 0, "chars": 0}
+{"t": "2026-11-23T16:27:53Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/openapi/developer-api.json", "status": 200, "chars": 120000}
+{"t": "2026-11-23T16:27:53Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:53Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://developer.coda.io", "status": 0, "chars": 0}
+{"t": "2026-11-23T16:27:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/introduction.txt", "status": 200, "chars": 4225}
+{"t": "2026-11-23T16:27:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.paygent.co.jp/", "status": 200, "chars": 534}
+{"t": "2026-11-23T16:27:54Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/Airtable/airtable.js", "status": 200, "chars": 2915}
+{"t": "2026-11-23T16:27:55Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/sandbox.txt", "status": 200, "chars": 3085}
+{"t": "2026-11-23T16:27:56Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/guides/partner_authentication.md", "status": 200, "chars": 12163}
+{"t": "2026-11-23T16:27:57Z", "event": "fetch", "via": "direct:httpx", "url": "https://developer.brex.com/guides/webhooks.md", "status": 200, "chars": 10757}
+{"t": "2026-11-23T16:27:58Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:27:58Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.paygent.com", "status": 0, "chars": 0}
+{"t": "2026-11-23T16:28:00Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:00Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://support.airtable.com/docs/creating-and-using-oauth-integrations", "status": 404, "chars": 129}
+{"t": "2026-11-23T16:28:01Z", "event": "fetch", "via": "direct:httpx", "url": "https://github.com/codaio", "status": 200, "chars": 486}
+{"t": "2026-11-23T16:28:05Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:05Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://docs.ramp.com/llms-guides/sandbox-access.txt", "status": 200, "chars": 102}
+{"t": "2026-11-23T16:28:06Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server", "status": 200, "chars": 15777}
+{"t": "2026-11-23T16:28:07Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:07Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://help.coda.io/en/collections/1210302-coda-api", "status": 404, "chars": 243}
+{"t": "2026-11-23T16:28:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/getting-started.txt", "status": 200, "chars": 3728}
+{"t": "2026-11-23T16:28:08Z", "event": "fetch", "via": "direct:httpx", "url": "https://docs.ramp.com/llms-guides/build-with-ramp.txt", "status": 200, "chars": 6951}
+{"t": "2026-11-23T16:28:10Z", "event": "fallback", "kind": "search", "via": "fallback:claude_code_websearch", "query": "Paygent Connect API access requirements which plan pricing developer app review partner", "n": 0}
+{"t": "2026-11-23T16:28:11Z", "event": "fetch", "via": "direct:httpx", "url": "https://www.paygent.co.jp/service/", "status": 200, "chars": 1372}
+{"t": "2026-11-23T16:28:12Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:12Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://airtable.com/llms.txt", "status": 404, "chars": 4148}
+{"t": "2026-11-23T16:28:14Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/developers/web/api/list-records.md", "status": 200, "chars": 9132}
+{"t": "2026-11-23T16:28:15Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:15Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://coda.io/@codahq/coda-mcp", "status": 404, "chars": 130}
+{"t": "2026-11-23T16:28:16Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:16Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://paygent.com/", "status": 200, "chars": 0}
+{"t": "2026-11-23T16:28:17Z", "event": "fetch", "via": "direct:httpx", "url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable", "status": 200, "chars": 12160}
+{"t": "2026-11-23T16:28:21Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/developers/web/api/webhooks-overview.md", "status": 200, "chars": 5789}
+{"t": "2026-11-23T16:28:22Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/developers/web/api/oauth-reference.md", "status": 200, "chars": 29658}
+{"t": "2026-11-23T16:28:23Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/developers/web/guides/personal-access-tokens.md", "status": 200, "chars": 4037}
+{"t": "2026-11-23T16:28:23Z", "event": "composio_error", "tool": "COMPOSIO_SEARCH_FETCH_URL_CONTENT", "error": "410 Toolkit COMPOSIO_SEARCH version 20261119_00 is retired and its tools can no longer be executed."}
+{"t": "2026-11-23T16:28:23Z", "event": "fetch", "via": "direct:httpx(thin)", "url": "https://www.paygent.com/connect", "status": 200, "chars": 0}
+{"t": "2026-11-23T16:28:26Z", "event": "fetch", "via": "direct:httpx", "url": "https://airtable.com/developers/web/guides/oauth-integrations.md", "status": 200, "chars": 7620}
+{"t": "2026-11-23T16:28:46Z", "event": "removed_empty_search", "query": "Smartsheet API access requirements which plan pricing developer app review partner", "reason": "0 URLs; unclear a search ran"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "airtable", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "airtable", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "cloudflare", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "consensus", "field": "oauth_details.flows", "change": "['auth_code', 'pkce']->['auth_code', 'PKCE']; dropped []"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "datadog", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "datadog", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "datadog", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "datadog", "field": "api_surface.webhooks", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "datadog", "field": "api_surface.rate_limits_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "ecwid", "field": "sandbox_or_test_env", "change": "prose->False"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "github", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "github", "field": "oauth_details.flows", "change": "['auth_code', 'device_code']->['auth_code', 'device']; dropped []"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "google-ads", "field": "api_surface.style", "change": "['grpc', 'rest']->['other', 'rest']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "grain", "field": "oauth_details.flows", "change": "['authorization_code_pkce']->[]; dropped ['authorization_code_pkce']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "harvest", "field": "oauth_details.flows", "change": "['auth_code', 'implicit']->['auth_code']; dropped ['implicit']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "klaviyo", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "klaviyo", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "linkedin-ads", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "magento-adobe-commerce", "field": "oauth_details.flows", "change": "['oauth1a_integration', 'ims_server_to_server']->[]; dropped ['oauth1a_integration', 'ims_server_to_server']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mailchimp", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mailchimp", "field": "mcp.exists", "change": "'none'->'none_found'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mermaid-cli", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mongodb-atlas", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mongodb-atlas", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "mongodb-atlas", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "netlify", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "notion", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "pinterest", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "plaid", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "sendgrid", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "sentry", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "sentry", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "snowflake", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "snowflake", "field": "mcp.exists", "change": "True->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "snowflake", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "snowflake", "field": "api_surface.pagination_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "snowflake", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "squarespace", "field": "oauth_details.flows", "change": "['auth_code', 'refresh_token']->['auth_code']; dropped ['refresh_token']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "stripe", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "supabase", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:15Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "airtable", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "airtable", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "cloudflare", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "consensus", "field": "oauth_details.flows", "change": "['auth_code', 'pkce']->['auth_code', 'PKCE']; dropped []"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "datadog", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "datadog", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "datadog", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "datadog", "field": "api_surface.webhooks", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "datadog", "field": "api_surface.rate_limits_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "ecwid", "field": "sandbox_or_test_env", "change": "prose->False"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "front", "field": "oauth_details.flows", "change": "['authorization_code']->['auth_code']; dropped []"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "github", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "github", "field": "oauth_details.flows", "change": "['auth_code', 'device_code']->['auth_code', 'device']; dropped []"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "google-ads", "field": "api_surface.style", "change": "['grpc', 'rest']->['other', 'rest']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "gorgias", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "grain", "field": "oauth_details.flows", "change": "['authorization_code_pkce']->[]; dropped ['authorization_code_pkce']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "harvest", "field": "oauth_details.flows", "change": "['auth_code', 'implicit']->['auth_code']; dropped ['implicit']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "help-scout", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "klaviyo", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "klaviyo", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "linkedin-ads", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "magento-adobe-commerce", "field": "oauth_details.flows", "change": "['oauth1a_integration', 'ims_server_to_server']->[]; dropped ['oauth1a_integration', 'ims_server_to_server']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mailchimp", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mailchimp", "field": "mcp.exists", "change": "'none'->'none_found'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mermaid-cli", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mongodb-atlas", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mongodb-atlas", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "mongodb-atlas", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "netlify", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "notion", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "pinterest", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "plaid", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "plain", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "salesforce", "field": "oauth_details.flows", "change": "['auth_code', 'PKCE', 'client_credentials', 'jwt_bearer']->['auth_code', 'PKCE', 'client_credentials']; dropped ['jwt_bearer']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "sendgrid", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "sentry", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "sentry", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "slack", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "snowflake", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "snowflake", "field": "mcp.exists", "change": "True->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "snowflake", "field": "sandbox_or_test_env", "change": "prose->'unknown'"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "snowflake", "field": "api_surface.pagination_documented", "change": "prose->True"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "snowflake", "field": "oauth_details.app_review_required", "change": "prose->False"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "squarespace", "field": "oauth_details.flows", "change": "['auth_code', 'refresh_token']->['auth_code']; dropped ['refresh_token']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "stripe", "field": "api_surface.style", "change": "['rest', 'webhook']->['rest']"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "supabase", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:16Z", "event": "normalize", "id": "systeme-io", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:17Z", "event": "normalize", "id": "twilio", "field": "needs_human_reason", "change": "null->''"}
+{"t": "2026-11-23T16:30:17Z", "event": "normalize", "id": "vercel", "field": "needs_human_reason", "change": "null->''"}

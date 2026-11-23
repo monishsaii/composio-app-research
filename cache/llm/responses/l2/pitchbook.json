@@ -1,0 +1,88 @@
+{
+ "id": "pitchbook",
+ "name": "PitchBook",
+ "category": "Finance/Fintech",
+ "one_liner": "Morningstar's PitchBook private-capital market data platform; API/Direct Data sold separately by quote.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "unknown: pitchbook.com pages return 403 to automated fetch.",
+ "oauth_details": null,
+ "access": "partner_or_contact_sales",
+ "access_notes": "Third-party guide: API/Direct Data priced by quote, separate from platform; no public key signup. Official pages unreadable (403).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "unknown",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BLOCKED_NEEDS_OUTREACH",
+  "main_blocker": "enterprise_only",
+  "rationale": "API access is sold by quote under contract; no self-serve credentials found. Third-party source only.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "medium",
+  "auth": "low",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "low",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Official PitchBook and Morningstar pages blocked by Cloudflare; confirm API terms manually.",
+ "evidence": {
+  "access": [
+   {
+    "url": "https://privateequitylist.com/intelligence/md/pitchbook-crunchbase-api-pricing",
+    "quote": "neither PitchBook nor Crunchbase publishes API prices. Both sell API access by quote",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://privateequitylist.com/intelligence/md/pitchbook-crunchbase-api-pricing",
+    "quote": "A platform licence is not required, but many Direct Data clients hold one.",
+    "source_type": "third_party"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://privateequitylist.com/intelligence/md/pitchbook-crunchbase-api-pricing",
+    "quote": "separately from the platform licence, by data volume, refresh frequency and technical specifications",
+    "source_type": "third_party"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://privateequitylist.com/intelligence/md/pitchbook-crunchbase-api-pricing",
+    "quote": "PitchBook sells its data outside the platform as Direct Data, delivered through an API or a scheduled data feed",
+    "source_type": "third_party"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "partner_or_contact_sales",
+   "why": "Third-party source says API sold by quote; official pages blocked (403)."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "UNCLEAR",
+   "yours": "BLOCKED_NEEDS_OUTREACH",
+   "why": "No self-serve credentials; contract required, per third-party source."
+  }
+ ]
+}

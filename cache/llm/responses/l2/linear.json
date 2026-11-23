@@ -1,0 +1,130 @@
+{
+ "id": "linear",
+ "name": "Linear",
+ "category": "Productivity/PM",
+ "one_liner": "Issue tracking product whose public GraphQL API covers issues, teams, projects and workflow states.",
+ "docs_url": "https://linear.app/developers/graphql",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "api_key"
+ ],
+ "auth_notes": "Personal API keys and OAuth2 (auth code, client credentials, PKCE). MCP server also accepts bearer token or API key.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "client_credentials",
+   "PKCE"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "API and webhook access is included on every plan including Free (pricing table). Rate limits: API key 2,500/hr, OAuth app 5,000/hr.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "graphql"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "typescript"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.linear.app/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Free plan includes API and webhooks; self-serve API keys and OAuth2; documented rate limits; official hosted MCP.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "access": [
+   {
+    "url": "https://linear.app/pricing",
+    "quote": "API and webhook access",
+    "source_type": "pricing_page"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://linear.app/developers/webhooks",
+    "quote": "Linear provides webhooks which allow you to receive HTTP push notifications whenever data is created, updated or removed.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://linear.app/developers/rate-limiting",
+    "quote": "When authenticated using an API key you can make up to 2,500 requests per hour.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://linear.app/docs/mcp",
+    "quote": "Read-write access is provided through https://mcp.linear.app/mcp by default.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://linear.app/docs/mcp",
+    "quote": "You can also authenticate directly with a bearer token or Linear API key",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://linear.app/pricing",
+    "quote": "Free for everyone",
+    "source_type": "pricing_page"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://linear.app/docs/mcp",
+    "quote": "The Model Context Protocol (MCP) server provides a standardized interface that allows any compatible AI model or agent to access your Linear data",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Pricing table marks API and webhook access Included on all plans including Free."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Vendor docs page documents hosted mcp.linear.app server."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Official rate-limiting page lists per-hour limits."
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "id": "stripe",
+ "name": "Stripe",
+ "category": "Finance/Fintech",
+ "one_liner": "Payments platform with a broad REST API, OpenAPI specs, official SDKs, webhooks and a hosted MCP server.",
+ "docs_url": "https://docs.stripe.com/api",
+ "openapi_spec_url": "https://github.com/stripe/openapi",
+ "auth_methods": ["api_key", "bearer_token", "oauth2"],
+ "auth_notes": "Secret and restricted API keys per account (test sandbox and live). OAuth 2.0 via Stripe Apps to act on behalf of other Stripe accounts.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Keys are generated on account creation; sandbox keys work immediately. Live-mode money movement requires account activation (business verification). No per-call fee for API access.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest", "webhook"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["Node", "PHP", "Go", "iOS", "Android"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.stripe.com"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve keys and sandbox, documented broad REST API with OpenAPI specs and webhooks. Live mode needs account activation; multi-account OAuth requires building a Stripe App.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "high", "api_surface": "high", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Docs: keys generated on account creation, sandbox and live; live mode needs account setup."},
+  {"field": "openapi_spec_url", "first_pass": null, "yours": "https://github.com/stripe/openapi", "why": "Official repo publishes OpenAPI specs."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "OpenAPI spec covers v1 and v2 endpoints; many named operations with separate rate limits."},
+  {"field": "api_surface.pagination_documented", "first_pass": "unknown", "yours": true, "why": "Official pagination page."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["Node", "PHP", "Go", "iOS", "Android"], "why": "Vendor GitHub org lists official SDK repos."},
+  {"field": "oauth_details.flows", "first_pass": [], "yours": ["auth_code"], "why": "Stripe Apps OAuth page describes redirect-and-install authorization flow."}
+ ],
+ "evidence": {
+  "auth": [
+   {"url": "https://docs.stripe.com/development/get-started", "quote": "Every call to a Stripe API must include an API secret key.", "source_type": "official_docs"},
+   {"url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth", "quote": "Use the industry standard OAuth 2.0 to authenticate requests to the Stripe API on behalf of your users.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://docs.stripe.com/development/get-started", "quote": "After you create a Stripe account, we generate two pairs of API keys for you", "source_type": "official_docs"},
+   {"url": "https://docs.stripe.com/development/get-started", "quote": "To start moving real money with your live-mode keys, you must set up your Stripe account.", "source_type": "official_docs"}
+  ],
+  "sandbox": [
+   {"url": "https://docs.stripe.com/rate-limits", "quote": "Sandbox: 25 requests per second", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://docs.stripe.com/rate-limits", "quote": "Live mode: 100 requests per second", "source_type": "official_docs"},
+   {"url": "https://docs.stripe.com/webhooks", "quote": "Stripe pushes real-time data to it when events happen in your Stripe account.", "source_type": "official_docs"},
+   {"url": "https://docs.stripe.com/pagination", "quote": "each page containing up to 10 results by default", "source_type": "official_docs"},
+   {"url": "https://github.com/stripe/openapi", "quote": "This repository contains OpenAPI specifications for Stripe's API.", "source_type": "official_repo"}
+  ],
+  "mcp": [
+   {"url": "https://github.com/stripe/ai", "quote": "Stripe hosts a remote MCP server at https://mcp.stripe.com. This allows secure MCP client access via OAuth.", "source_type": "official_repo"}
+  ],
+  "buildability": [
+   {"url": "https://docs.stripe.com/development/get-started", "quote": "To start moving real money with your live-mode keys, you must set up your Stripe account.", "source_type": "official_docs"}
+  ],
+  "identity": [
+   {"url": "https://docs.stripe.com/development/get-started", "quote": "Get started with the Stripe API.", "source_type": "official_docs"}
+  ]
+ }
+}

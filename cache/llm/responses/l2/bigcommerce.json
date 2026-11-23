@@ -1,0 +1,127 @@
+{
+ "id": "bigcommerce",
+ "name": "BigCommerce",
+ "category": "Ecommerce",
+ "one_liner": "SaaS commerce platform whose store APIs manage product catalogs, orders, customers, and storefront experiences.",
+ "docs_url": "https://docs.bigcommerce.com/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2",
+  "other"
+ ],
+ "auth_notes": "Store-level (merchant-created static access_token), app-level (per-store token after install) and account-level OAuth API accounts. Store Management MCP uses OAuth 2.1 with PKCE.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "PKCE"
+  ],
+  "scopes_granular": true,
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_trial",
+ "access_notes": "Merchants create store-level credentials in their control panel; sandbox stores are created via the BigCommerce Partner Portal (partner sign-in). Rate limits vary by store plan.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest",
+   "graphql"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Documented REST and GraphQL APIs with OAuth, webhooks and partner sandbox, but per-store credentials/installation, plan-dependent quotas and Partner Portal sandbox access.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Production plan pricing not verified; endpoint count not measured; Store Management MCP is early access.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/authentication/api-accounts",
+    "quote": "BigCommerce offers three types of OAuth-based API accounts to developers who wish to use BigCommerce’s REST APIs",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/authentication/api-accounts",
+    "quote": "Merchants generate single-store API credentials when they create API accounts in their store control panel",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits",
+    "quote": "The maximum quota varies by store plan and requested resources.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/about/sandboxes",
+    "quote": "Sandbox stores are intended for developing and testing apps.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/about/sandboxes",
+    "quote": "They cannot process any live transactions.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.bigcommerce.com/docs/integrations/webhooks",
+    "quote": "Webhooks notify applications when specific events occur on a BigCommerce store.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.bigcommerce.com/docs/start/best-practices/api-rate-limits",
+    "quote": "Each API request consumes one quota unit.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "quote": "BigCommerce supports MCP in three ways.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Dedicated rate-limits page: quota refreshed every 30s, varies by plan, 429 handling."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "broad",
+   "why": "Separate catalog, orders, customers, carts, webhooks, storefront GraphQL APIs; count not measured."
+  }
+ ]
+}

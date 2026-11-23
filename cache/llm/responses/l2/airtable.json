@@ -1,0 +1,54 @@
+{
+ "id": "airtable",
+ "name": "Airtable",
+ "category": "Productivity/PM",
+ "one_liner": "Base/table/record database platform with a REST Web API at api.airtable.com/v0.",
+ "docs_url": "https://airtable.com/developers/web/api/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Personal access tokens (self-created at airtable.com/create/tokens) as Bearer; OAuth integrations registered by any developer with redirect URL and scopes (token creation per OAuth reference). Legacy API keys deprecated.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Web API is available on all plan types; Free is capped at 1000 calls per workspace per month, Team 100,000, Business/Enterprise unlimited. 5 requests/sec per base on all tiers, no increases. No app review step found in the OAuth registration guide.",
+ "sandbox_or_test_env": "Free plan workspace usable for testing (1000 calls/month cap)",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve PAT and OAuth registration, documented REST, webhooks API and rate limits. Free tier call cap (1000/month) and 5 rps per base are practical limits, not gates.",
+  "est_tool_count_if_built": 13,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {"field": "mcp.exists", "first_pass": "community", "yours": "official", "why": "Airtable's own help center documents an Airtable MCP server (all plans); felixrieseberg repo is a third-party community project."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Official Webhooks API with create, list, delete, refresh and payload endpoints."},
+  {"field": "auth_methods/oauth", "first_pass": "flows []", "yours": "oauth2 auth_code via registered integrations", "why": "Official OAuth reference and registration guide fetched via .md variants."},
+  {"field": "needs_human", "first_pass": true, "yours": false, "why": "Official docs now retrieved via .md variants; reference pages no longer unverified."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://airtable.com/developers/web/guides/personal-access-tokens.md", "quote": "Personal access tokens are used to authenticate requests to Airtable's API", "source_type": "official_docs"},
+           {"url": "https://airtable.com/developers/web/guides/oauth-integrations.md", "quote": "Click the ‘Register new OAuth integration’ button to create a new OAuth integration.", "source_type": "official_docs"}],
+  "access": [{"url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "quote": "| Plan availability | All plan types with varying call limitations |", "source_type": "official_docs"},
+             {"url": "https://support.airtable.com/docs/managing-api-call-limits-in-airtable", "quote": "Is there a Web API rate limit?", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "quote": "Free plan - 1000 calls per workspace per month", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://airtable.com/developers/web/api/webhooks-overview.md", "quote": "Webhooks are a user-configurable way to get programmatic notifications when data is changed in an Airtable base.", "source_type": "official_docs"},
+                  {"url": "https://airtable.com/developers/web/api/list-records.md", "quote": "The server returns one page of records at a time. Each page will contain **pageSize** records, which is 100 by default.", "source_type": "official_docs"},
+                  {"url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "quote": "the Web API has a rate limit of 5 requests per second, per base.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://support.airtable.com/docs/using-the-airtable-mcp-server", "quote": "Airtable’s MCP server lets you connect AI tools directly to your Airtable bases.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api", "quote": "Business and Enterprise plans - Unlimited API calls", "source_type": "official_docs"}],
+  "identity": [{"url": "https://github.com/Airtable/airtable.js", "quote": "The official Airtable JavaScript library.", "source_type": "official_repo"}]
+ }
+}

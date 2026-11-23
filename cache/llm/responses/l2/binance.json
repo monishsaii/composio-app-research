@@ -1,0 +1,67 @@
+{
+ "id": "binance",
+ "name": "Binance",
+ "category": "Finance/Fintech",
+ "one_liner": "Global crypto exchange (binance.com) with spot, futures, margin, wallet and earn REST/WebSocket/FIX APIs.",
+ "docs_url": "https://github.com/binance/binance-spot-api-docs",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "hmac_signature", "other"],
+ "auth_notes": "Public endpoints need no key. SIGNED endpoints need X-MBX-APIKEY header plus signature from HMAC, RSA or Ed25519 keys (Ed25519 recommended).",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "API keys are created in the Binance account; a Binance account is required. Official key-creation and regional/KYC rules not verified because the help page and developer portal returned no text. Binance.US is a separate entity with its own API.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest", "websocket", "other"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": false,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": ["python", "multiple (binance-connector family)"]
+ },
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "regulatory_or_pci",
+  "rationale": "Documented broad API with self-created signed-request keys and a Spot Testnet. Caveats: trading/money-moving scope, IP-based rate limits and bans, region restrictions and KYC unverified, signature handling is non-standard.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "medium", "auth": "high", "access": "medium", "sandbox": "medium", "api_surface": "high", "mcp": "low", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Regional availability, KYC requirement for API keys, and official MCP status could not be verified from official pages that loaded.",
+ "disputes": [
+  {"field": "auth_methods", "first_pass": ["none"], "yours": ["api_key", "hmac_signature", "other"], "why": "Official spec docs: SIGNED endpoints need API key header and HMAC/RSA/Ed25519 signature."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Official repo lists spot, margin, futures, wallet, earn, loans, pay and many more modules."},
+  {"field": "sandbox_or_test_env", "first_pass": "unknown", "yours": true, "why": "Official repo has Spot Testnet docs."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "REST docs describe request weight limits per IP."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["python", "multiple (binance-connector family)"], "why": "Binance GitHub org has binance-connector-python SDK collection."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BUILD_WITH_CAVEATS", "why": "Official docs found and show self-created keys; caveats are regional and financial risk."}
+ ],
+ "evidence": {
+  "auth": [
+   {"url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/faqs/api_key_types.md", "quote": "Binance APIs require an API key to access authenticated endpoints for trading, account history, etc.", "source_type": "official_repo"},
+   {"url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md", "quote": "We support HMAC, RSA, and Ed25519 keys.", "source_type": "official_repo"}
+  ],
+  "access": [
+   {"url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/faqs/api_key_types.md", "quote": "Binance APIs require an API key to access authenticated endpoints for trading, account history, etc.", "source_type": "official_repo"}
+  ],
+  "sandbox": [
+   {"url": "https://github.com/binance/binance-spot-api-docs", "quote": "testnet | API docs for features available only on SPOT Testnet", "source_type": "official_repo"}
+  ],
+  "api_surface": [
+   {"url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md", "quote": "The limits on the API are based on the IPs, not the API keys.", "source_type": "official_repo"},
+   {"url": "https://github.com/binance/binance-spot-api-docs", "quote": "Derivative UM Futures | Details on Derivative UM Futures ( /fapi)", "source_type": "official_repo"},
+   {"url": "https://github.com/binance/binance-connector-python", "quote": "Collection of auto-generated Python SDK for Binance APIs.", "source_type": "official_repo"}
+  ],
+  "mcp": [],
+  "buildability": [
+   {"url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md", "quote": "We support HMAC, RSA, and Ed25519 keys.", "source_type": "official_repo"}
+  ],
+  "identity": [
+   {"url": "https://github.com/binance/binance-spot-api-docs", "quote": "Streams, endpoints, parameters, payloads, etc. described in the documents in this repository are considered official and supported.", "source_type": "official_repo"}
+  ]
+ }
+}

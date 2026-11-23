@@ -1,0 +1,56 @@
+{
+ "id": "waterfall-io",
+ "name": "Waterfall.io",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Waterfall aggregates 30+ B2B data vendors into one API for contact, email, phone and company enrichment, search, verification and job-change checks.",
+ "docs_url": "https://docs.waterfall.io/v1/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "API key in the x-api-key header; sub-keys managed with a master key. Webhook deliveries are Ed25519-signed with a JWKS endpoint.",
+ "oauth_details": null,
+ "access": "partner_or_contact_sales",
+ "access_notes": "Keys are not self-serve: docs say to contact the team for API access and pricing. No public rate card; pricing is quoted after a benchmark on your data. No free trial stated.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": 25,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "none_found", "url": null},
+ "buildability": {
+  "verdict": "BLOCKED_NEEDS_OUTREACH",
+  "main_blocker": "partner_gate",
+  "rationale": "Well-documented REST API with api key auth, but credentials require contacting the vendor and commercial quote; no self-serve signup or public pricing.",
+  "est_tool_count_if_built": 15,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "identity": [{"url": "https://www.waterfall.io/", "quote": "Waterfall® aggregates 30+ different data vendors so that you can maximize contact, email and mobile number coverage", "source_type": "official_docs"}],
+  "auth": [{"url": "https://docs.waterfall.io/v1/authentication", "quote": "Authenticate data and account API requests with your Waterfall API key in the x-api-key header.", "source_type": "official_docs"}],
+  "access": [
+   {"url": "https://docs.waterfall.io/v1/authentication", "quote": "Contact the team for API access and pricing.", "source_type": "official_docs"},
+   {"url": "https://www.waterfall.io/pricing", "quote": "Why there is no public rate card", "source_type": "pricing_page"}
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {"url": "https://docs.waterfall.io/v1/rate-limit", "quote": "The default limit for Prospector, Search, Enrichment, Job Change, and Email Verification is 50 requests per 60 seconds.", "source_type": "official_docs"},
+   {"url": "https://docs.waterfall.io/v1/quickstart", "quote": "For automated delivery, add awebhook_url to the launch request.", "source_type": "official_docs"}
+  ],
+  "mcp": [],
+  "buildability": [{"url": "https://docs.waterfall.io/v1/quickstart", "quote": "Contact the team for access and pricing.", "source_type": "official_docs"}]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "partner_or_contact_sales", "why": "Vendor docs state to contact the team for API access and pricing; pricing page has no public rate card."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BLOCKED_NEEDS_OUTREACH", "why": "Credentials require vendor contact and quote, not self-serve."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "partner_gate", "why": "Access gated behind contacting sales."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Quickstart documents webhook_url and signed webhook verification."}
+ ]
+}

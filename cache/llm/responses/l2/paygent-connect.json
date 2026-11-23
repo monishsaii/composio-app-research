@@ -1,0 +1,47 @@
+{
+ "id": "paygent-connect",
+ "name": "Paygent Connect",
+ "category": "Finance/Fintech",
+ "one_liner": "Unresolved: no official Paygent Connect product, docs or API found. Candidates are Paygent (Japanese PSP, paygent.co.jp) and unrelated paygent.to; the NMI-powered US gateway could not be verified.",
+ "docs_url": null,
+ "openapi_spec_url": null,
+ "auth_methods": [],
+ "auth_notes": "unknown",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "No sign-up, credential or pricing page for Paygent Connect found. paygent.com and paygentconnect.com returned no content; docs.paygent.com unreachable. paygent.co.jp is a Japanese merchant payment gateway (ADAPTIS) with no public developer docs found.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {"exists": "none_found", "url": null},
+ "buildability": {
+  "verdict": "UNCLEAR",
+  "main_blocker": "ambiguous_product",
+  "rationale": "Cannot identify the product or find any public API documentation. The only verifiable Paygent entity is the Japanese PSP, a merchant-contract gateway, which is likely not self-serve.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "low", "auth": "low", "access": "low", "sandbox": "low", "api_surface": "low", "mcp": "low", "buildability": "low"},
+ "needs_human": true,
+ "needs_human_reason": "Confirm vendor and provide official developer docs URL for Paygent Connect; a web search returned nothing relevant and official domains returned empty pages.",
+ "disputes": [],
+ "evidence": {
+  "auth": [],
+  "access": [],
+  "sandbox": [],
+  "api_surface": [],
+  "mcp": [],
+  "buildability": [],
+  "identity": [
+   {"url": "https://www.paygent.co.jp/", "quote": "ADAPTIS e-Commerce オムニ決済ゲートウェイ by PAYGENT", "source_type": "official_docs"}
+  ]
+ }
+}

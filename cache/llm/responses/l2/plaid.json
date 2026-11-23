@@ -1,0 +1,71 @@
+{
+ "id": "plaid",
+ "name": "Plaid",
+ "category": "Finance/Fintech",
+ "one_liner": "Financial data API for connecting end-user bank accounts to apps via Plaid Link, with webhooks, OpenAPI spec and SDKs.",
+ "docs_url": "https://plaid.com/docs/",
+ "openapi_spec_url": "https://github.com/plaid/plaid-openapi",
+ "auth_methods": ["api_key", "other"],
+ "auth_notes": "Server calls use client_id plus secret from the Dashboard. End users link banks through Plaid Link producing a public token exchanged for an access token. OAuth client_credentials tokens exist for the Dashboard MCP server.",
+ "oauth_details": null,
+ "access": "app_review_required",
+ "access_notes": "Sandbox keys come from a free Dashboard signup. Production requires applying for Production access; pricing is shown only on application. Free Trial (10 production Items) only for new US/Canada teams; EU/UK customers only get Custom plans.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": ["rest", "webhook"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["javascript", "python", "ruby", "go", "java"]
+ },
+ "mcp": {"exists": "official", "url": "https://api.dashboard.plaid.com/mcp/"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Sandbox is self-serve and the API is documented, but Production needs an approved application, some products are Custom-plan only, and the Dashboard MCP covers diagnostics only, not bank data.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "high", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "app_review_required", "why": "Pricing page says apply for Production access; trial limited to US/Canada; EU/UK Custom only."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "app_review", "why": "Production access requires an application and approval."},
+  {"field": "openapi_spec_url", "first_pass": null, "yours": "https://github.com/plaid/plaid-openapi", "why": "Official OpenAPI 3.0 repo."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Many products listed (Auth, Identity, Balance, Transactions, Investments, Liabilities, Income, Transfer, etc.)."},
+  {"field": "mcp.url", "first_pass": null, "yours": "https://api.dashboard.plaid.com/mcp/", "why": "Plaid-hosted Dashboard MCP; production-only diagnostics scope."},
+  {"field": "auth_methods", "first_pass": ["other"], "yours": ["api_key", "other"], "why": "client_id and secret are static API credentials; public-token exchange is the other mechanism."}
+ ],
+ "evidence": {
+  "auth": [
+   {"url": "https://plaid.com/docs/quickstart/", "quote": "You'll need API keys, which you can receive by signing up in the Dashboard.", "source_type": "official_docs"},
+   {"url": "https://plaid.com/docs/resources/mcp/", "quote": "create an OAuth token with the mcp:dashboard scope and the client_credentials grant type", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://plaid.com/docs/account/billing/", "quote": "To view pricing, apply for Production access.", "source_type": "official_docs"},
+   {"url": "https://plaid.com/docs/account/billing/", "quote": "If your business is based in the EU or UK, or serves end users there, only Custom plans are available.", "source_type": "official_docs"},
+   {"url": "https://plaid.com/docs/account/billing/", "quote": "Free Trial plans are available to new Plaid teams (US/Canada only) created on or after April 15, 2026.", "source_type": "official_docs"}
+  ],
+  "sandbox": [
+   {"url": "https://plaid.com/docs/quickstart/", "quote": "Today we'll start in the Sandbox environment.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://plaid.com/docs/api/webhooks/", "quote": "Plaid sends webhooks to programmatically inform you about changes to Plaid Items", "source_type": "official_docs"},
+   {"url": "https://github.com/plaid/plaid-openapi", "quote": "Plaid uses the OpenAPI 3.0.0 specification to schematize our docs and to generate our supported client libraries.", "source_type": "official_repo"}
+  ],
+  "mcp": [
+   {"url": "https://plaid.com/docs/resources/mcp/", "quote": "The Dashboard MCP server is a remote MCP server hosted by Plaid.", "source_type": "official_docs"},
+   {"url": "https://plaid.com/docs/resources/mcp/", "quote": "Your team must be approved for Production access with at least one Plaid product to use the MCP server.", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://plaid.com/docs/account/billing/", "quote": "To view pricing, apply for Production access.", "source_type": "official_docs"}
+  ],
+  "identity": [
+   {"url": "https://plaid.com/docs/quickstart/", "quote": "A quick introduction to building with Plaid", "source_type": "official_docs"}
+  ]
+ }
+}

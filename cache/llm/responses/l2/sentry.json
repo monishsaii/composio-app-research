@@ -1,0 +1,52 @@
+{
+ "id": "sentry",
+ "name": "Sentry",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Error and performance monitoring platform with a documented REST web API and integration platform.",
+ "docs_url": "https://docs.sentry.io/api/",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Bearer auth tokens from internal integrations or personal tokens; OAuth2 (auth code with PKCE, device flow) for public integrations. Region hosts (us/de) and self-hosted base URLs differ.",
+ "oauth_details": {"flows": ["auth_code", "device", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Internal integrations and tokens are self-created under Settings > Developer Settings. Free Developer plan ($0) exists; pricing page lists 'API & third-party integrations' under the Team plan, so free-plan API limits are unverified.",
+ "sandbox_or_test_env": "Free Developer plan ($0, one user) usable as a test org",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.sentry.dev/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve tokens and standard OAuth2, documented rate-limit headers, signed webhooks. Residual doubt: pricing page lists API under the paid Team plan; per-endpoint rate limits.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Tokens self-created in Developer Settings; $0 Developer plan exists. Caveat: Team plan lists 'API & third-party integrations'."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Integration platform webhooks with signed headers for issue, alert, error, comment resources."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Rate Limits page documents per-endpoint windows, concurrency limit and X-Sentry-Rate-Limit headers."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://docs.sentry.io/product/integrations/integration-platform/", "quote": "Internal integrations can only be used by your organization, whereas public integrations can be published and are available for all Sentry users.", "source_type": "official_docs"}],
+  "access": [{"url": "https://sentry.io/pricing/", "quote": "For solo devs working on small projects", "source_type": "pricing_page"},
+             {"url": "https://sentry.io/pricing/", "quote": "API & third-party integrations", "source_type": "pricing_page"},
+             {"url": "https://docs.sentry.io/product/integrations/integration-platform/", "quote": "In sentry.io, navigate to Settings > Developer Settings. From here, you can choose to create an internal or public integration.", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://sentry.io/pricing/", "quote": "$0", "source_type": "pricing_page"}],
+  "api_surface": [{"url": "https://docs.sentry.io/api/ratelimits/", "quote": "Each endpoint has its own maximum number of requests and window size.", "source_type": "official_docs"},
+                  {"url": "https://docs.sentry.io/product/integrations/integration-platform/webhooks/", "quote": "Sentry uses JSON webhooks to get error notifications to your systems or services.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.sentry.io/product/sentry-mcp/", "quote": "The base MCP server address is: https://mcp.sentry.dev/mcp", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://docs.sentry.io/api/ratelimits/", "quote": "Polling the API for updates is likely to quickly trigger rate limiting. We recommend using our webhooks, if possible.", "source_type": "official_docs"}],
+  "identity": [{"url": "https://docs.sentry.io/product/integrations/integration-platform/", "quote": "Sentry’s integration platform provides a way for external services to interact with Sentry using webhooks, UI components, and the REST API.", "source_type": "official_docs"}]
+ }
+}

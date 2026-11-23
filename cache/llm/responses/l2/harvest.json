@@ -1,0 +1,64 @@
+{
+ "id": "harvest",
+ "name": "Harvest",
+ "category": "Productivity/PM",
+ "one_liner": "getharvest.com time-tracking app with a V2 REST API covering time, expenses, projects, clients and invoices.",
+ "docs_url": "https://help.getharvest.com/api-v2/",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Personal Access Token created in Harvest ID Developers section (Bearer plus Harvest-Account-Id header), or OAuth2 app registered in Harvest ID (auth code and implicit flows, refresh tokens).",
+ "oauth_details": {"flows": ["auth_code", "implicit"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "self_serve_trial",
+ "access_notes": "Tokens and OAuth apps are created self-serve in Harvest ID. Harvest account needed; pricing page says free trial, no credit card, and the free plan is 1 seat. No plan gating of API found on the pricing page.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve personal tokens and OAuth2 app registration, documented REST API with rate limits and pagination. No evidence of approval gating. Webhooks and sandbox not documented.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "low", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_trial", "why": "Auth docs show tokens and OAuth apps self-created in Harvest ID; pricing page offers free trial without credit card."},
+  {"field": "auth_methods oauth flows", "first_pass": [], "yours": ["auth_code", "implicit"], "why": "Auth page documents authorization code and implicit grant flows."},
+  {"field": "api_surface.pagination_documented", "first_pass": "unknown", "yours": true, "why": "API V2 index lists a Pagination page."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BUILD_NOW", "why": "Self-serve credentials, documented API, standard auth, no blocker found."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "none", "why": "No gate found."}
+ ],
+ "evidence": {
+  "auth": [
+   {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "quote": "The API can be accessed by creating a Personal Access Token from the Developers section of Harvest ID.", "source_type": "official_docs"},
+   {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "quote": "We use the Authorization Code flow for server-side authorization.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://www.getharvest.com/pricing", "quote": "Get started on any plan with a free trial. No credit card required.", "source_type": "pricing_page"},
+   {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "quote": "The application can be created from the Developers section of Harvest ID", "source_type": "official_docs"}
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {"url": "https://help.getharvest.com/api-v2/introduction/overview/general/", "quote": "The rate limit for general API requests is 100 requests per 15 seconds.", "source_type": "official_docs"},
+   {"url": "https://help.getharvest.com/api-v2/", "quote": "Pagination", "source_type": "official_docs"}
+  ],
+  "mcp": [],
+  "buildability": [
+   {"url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/", "quote": "Personal Access Tokens are the preferred method when you want to write your own scripts that consume our API.", "source_type": "official_docs"}
+  ],
+  "identity": [
+   {"url": "https://help.getharvest.com/api-v2/", "quote": "Welcome to the Harvest API v2 Help Center", "source_type": "official_docs"}
+  ]
+ }
+}

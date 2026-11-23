@@ -1,0 +1,51 @@
+{
+ "id": "notion",
+ "name": "Notion",
+ "category": "Productivity/PM",
+ "one_liner": "Workspace of pages and databases with a public REST API at api.notion.com.",
+ "docs_url": "https://developers.notion.com/reference/intro",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2"],
+ "auth_notes": "Personal access tokens (self-created in Developer portal) and internal/public connection tokens as Bearer; OAuth 2.0 authorization code for public connections. Pages must be shared with the connection. On Business/Enterprise, PAT creation is restricted by default until a workspace owner enables it.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": false},
+ "access": "self_serve_free",
+ "access_notes": "Quickstart needs only a Notion account and a PAT from the Developer portal; no plan tier required. Business/Enterprise admins may restrict PAT creation.",
+ "sandbox_or_test_env": "Use a free personal workspace (no dedicated sandbox documented)",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": ["javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.notion.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve PAT and OAuth, documented REST with webhooks and rate limits (180 or 600 req/min per connection). Per-page sharing with the connection is a usage caveat, not an access gate.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "api_surface": "medium", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Quickstart: need only a Notion account and terminal; PAT created self-serve in Developer portal."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Request limits page gives 180 or 600 requests per minute per connection by plan."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_WITH_CAVEATS", "yours": "BUILD_NOW", "why": "Page-sharing is normal scope behavior of the connection model, not a blocker; credentials self-serve, standard auth."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://developers.notion.com/guides/get-started/create-a-notion-integration.md", "quote": "A personal access token (PAT) lets you authenticate API requests as yourself without setting up a connection or completing an OAuth flow.", "source_type": "official_docs"}],
+  "access": [{"url": "https://developers.notion.com/guides/get-started/create-a-notion-integration.md", "quote": "You need a Notion account and a terminal.", "source_type": "official_docs"},
+             {"url": "https://developers.notion.com/guides/get-started/create-a-notion-integration.md", "quote": "On Business and Enterprise plans, PAT creation is restricted by default. Ask a workspace owner to enable it", "source_type": "official_docs"}],
+  "sandbox": [{"url": "https://developers.notion.com/reference/request-limits.md", "quote": "Workspace plan limits are separate from request limits.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://developers.notion.com/reference/request-limits.md", "quote": "| Business and Enterprise | 600 requests per minute (an average of 10 per second) |", "source_type": "official_docs"},
+                  {"url": "https://developers.notion.com/reference/webhooks.md", "quote": "Whenever a page or database changes, Notion sends a secure HTTP POST request to your webhook endpoint.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://developers.notion.com/guides/mcp/mcp.md", "quote": "Notion MCP lets your AI assistant search your workspace, create and edit pages, and manage databases.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://developers.notion.com/reference/request-limits.md", "quote": "| All other plans | 180 requests per minute (an average of 3 per second) |", "source_type": "official_docs"}],
+  "identity": [{"url": "https://developers.notion.com/guides/get-started/create-a-notion-integration.md", "quote": "Create a page in your Notion workspace with a personal access token and a single API request.", "source_type": "official_docs"}]
+ }
+}

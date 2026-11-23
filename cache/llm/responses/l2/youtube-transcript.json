@@ -1,0 +1,126 @@
+{
+ "id": "youtube-transcript",
+ "name": "YouTube Transcript",
+ "category": "AI/Research/Media",
+ "one_liner": "Third-party (TranscriptAPI) REST API and hosted MCP server returning YouTube transcripts, search, channel and playlist data.",
+ "docs_url": "https://transcriptapi.com/docs/api/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "bearer_token"
+ ],
+ "auth_notes": "Bearer API key in Authorization header from dashboard. MCP also supports OAuth 2.1. No Google API key.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Self-serve signup; new accounts get 100 free credits; paid plans for more credits.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "narrow",
+  "approx_endpoint_count": 13,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://transcriptapi.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve key, 13 documented REST endpoints with Bearer auth and per-account rate limits. Third-party scraper of YouTube; terms and reliability need review.",
+  "est_tool_count_if_built": 12,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "high",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Third-party service not affiliated with YouTube; legal/terms review needed.",
+ "disputes": [
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Vendor docs state a hosted MCP server at transcriptapi.com/mcp with 12 tools, same keys and credits."
+  },
+  {
+   "field": "mcp.url",
+   "first_pass": null,
+   "yours": "https://transcriptapi.com/mcp",
+   "why": "Stated in vendor MCP docs."
+  },
+  {
+   "field": "api_surface.approx_endpoint_count",
+   "first_pass": null,
+   "yours": 13,
+   "why": "Vendor API reference endpoint table lists 13 endpoints."
+  },
+  {
+   "field": "api_surface.pagination_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Channel videos, playlists and playlist videos are listed as paginated endpoints."
+  }
+ ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://transcriptapi.com/docs/llms-small.txt",
+    "quote": "The API uses Bearer token authentication.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "New accounts get 100 free credits.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://transcriptapi.com/docs/llms-small.txt",
+    "quote": "Paginated channel feed",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://transcriptapi.com/docs/llms-full.txt",
+    "quote": "The limit applies **per account**: all API keys on your account share it.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://transcriptapi.com/docs/mcp/",
+    "quote": "TranscriptAPI runs a hosted (remote) MCP server at https://transcriptapi.com/mcp.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://transcriptapi.com/docs/llms-small.txt",
+    "quote": "https://transcriptapi.com/api/v2",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://transcriptapi.com/docs/llms-small.txt",
+    "quote": "Extract YouTube video transcripts with a simple API call or through Model Context Protocol",
+    "source_type": "official_docs"
+   }
+  ]
+ }
+}

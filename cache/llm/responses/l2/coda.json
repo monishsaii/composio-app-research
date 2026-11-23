@@ -1,0 +1,107 @@
+{
+ "id": "coda",
+ "name": "Coda (Superhuman Docs)",
+ "category": "Productivity/PM",
+ "one_liner": "Superhuman Docs (formerly Coda), a document platform with a REST API for docs, tables, and rows.",
+ "docs_url": "https://coda.io/developers/apis/v1",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "bearer_token"
+ ],
+ "auth_notes": "Bearer API token in Authorization header; actions bound to token owner's workspace role.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "API is free in free and paid workspaces; createDoc needs Doc Maker/Admin role.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": null
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Free self-serve bearer token, documented REST API and rate limits. Only inbound webhook-triggered automation found, no outbound event subscriptions seen; MCP server URL not located.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "medium",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "low",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "headers = {'Authorization': 'Bearer <your API token>'}",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "Reading data (with the exceptions below): 100 requests per 6 seconds",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "Triggers webhook-invoked automation",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "you may also want to consider using the Superhuman Docs MCP server.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "the owner of the API token must be a Doc Maker (or Admin) in the workspace.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://coda.io/developers/apis/v1",
+    "quote": "We make the Superhuman Docs API available to all of our users",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "mcp.url",
+   "first_pass": null,
+   "yours": null,
+   "why": "Docs mention a Superhuman Docs MCP server but no URL or vendor-hosting evidence; official unconfirmed, confidence low."
+  }
+ ]
+}

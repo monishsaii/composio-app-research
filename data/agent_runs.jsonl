@@ -48,3 +48,14 @@
 {"stage":"l2","batch":13,"model":"sonnet","apps":["ahrefs","mrscraper","apify","firecrawl"],"tokens":71184,"tool_uses":3,"ms":33835,"note":"resumed after 429; tokens = total"}
 {"stage":"l2","batch":8,"model":"sonnet","apps":["linkedin-ads","gohighlevel","mailchimp","klaviyo"],"tokens":101635,"tool_uses":7,"ms":49817,"note":"resumed after 429; tokens = total"}
 {"stage":"l2","batch":9,"model":"sonnet","apps":["systeme-io","pinterest","threads-meta","sendgrid"],"tokens":91195,"tool_uses":6,"ms":55013,"note":"resumed after 429; tokens = total"}
+{"stage":"l2","batch":14,"model":"sonnet","apps":["bright-data","sherlock","waterfall-io","clay"],"tokens":79490,"tool_uses":14,"ms":136955,"note":"resumed after 429; 1 fabricated search record removed"}
+{"stage":"l2","batch":12,"model":"sonnet","apps":["amazon-selling-partner","fanbasis","dataforseo","se-ranking"],"tokens":92925,"tool_uses":12,"ms":212947,"note":"resumed after 429"}
+{"stage":"l2","batch":10,"model":"sonnet","apps":["shopify","woocommerce","bigcommerce","salesforce-commerce-cloud"],"tokens":88217,"tool_uses":15,"ms":214782,"note":"resumed after 429"}
+{"stage":"l2","batch":11,"model":"sonnet","apps":["magento-adobe-commerce","squarespace","ecwid","gumroad"],"tokens":91669,"tool_uses":16,"ms":245598,"note":"resumed after 429"}
+{"stage":"l2","batch":15,"model":"sonnet","apps":["github","vercel","netlify","cloudflare","supabase","neo4j"],"tokens":82637,"tool_uses":25,"ms":268662}
+{"stage":"l2","batch":18,"model":"sonnet","apps":["smartsheet","harvest","stripe","plaid","binance","paygent-connect"],"tokens":98589,"tool_uses":32,"ms":278413}
+{"stage":"l2","batch":16,"model":"sonnet","apps":["snowflake","mongodb-atlas","datadog","sentry","notion","airtable"],"tokens":91346,"tool_uses":19,"ms":308017}
+{"stage":"l2","batch":21,"model":"sonnet","apps":["higgsfield","mermaid-cli","youtube-transcript","grain"],"tokens":94155,"tool_uses":20,"ms":273257}
+{"stage":"l2","batch":20,"model":"sonnet","apps":["notebooklm","otter-ai","fathom","consensus","reducto","devin"],"tokens":108505,"tool_uses":28,"ms":299760}
+{"stage":"l2","batch":19,"model":"sonnet","apps":["ipayx","quickbooks","xero","brex","ramp","pitchbook"],"tokens":107736,"tool_uses":23,"ms":345695}
+{"stage":"l2","batch":17,"model":"sonnet","apps":["linear","jira","asana","monday-com","clickup","coda"],"tokens":95909,"tool_uses":28,"ms":377246}

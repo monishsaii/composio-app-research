@@ -1,0 +1,136 @@
+{
+ "id": "squarespace",
+ "name": "Squarespace",
+ "category": "Ecommerce",
+ "one_liner": "Website builder with Commerce REST APIs (orders, products, inventory, transactions, contacts, discounts, webhooks).",
+ "docs_url": "https://developers.squarespace.com/commerce-apis/overview",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "API key (Bearer) generated per site, or OAuth 2.0 authorization code with Basic-auth client credentials; access token valid 30 minutes, refresh token one-time use, expires after seven days. Scoped to one website.",
+ "oauth_details": {
+  "flows": [
+   "auth_code",
+   "refresh_token"
+  ],
+  "scopes_granular": true,
+  "app_review_required": true
+ },
+ "access": "app_review_required",
+ "access_notes": "API keys need a Commerce Advanced plan site. OAuth client registration is reviewed by Squarespace before client_id/secret are issued; Extensions listing is a separate process.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "community",
+  "url": "https://stackone.com/connectors/squarespace/mcp/"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Documented REST APIs; OAuth needs reviewed client registration and key access needs a paid Commerce Advanced site. Rate limit 300 req/min.",
+  "est_tool_count_if_built": 27,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developers.squarespace.com/oauth",
+    "quote": "access_token is only valid for 30 minutes.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.squarespace.com/oauth",
+    "quote": "The refresh token expires after seven days.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developers.squarespace.com/oauth",
+    "quote": "We will review your registration and respond with your_client_id and your_client_secret as soon as possible.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.squarespace.com/commerce-apis/faq",
+    "quote": "With Squarespace's Commerce Advanced plan, you can develop a custom application for a Squarespace merchant site.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developers.squarespace.com/commerce-apis/overview",
+    "quote": "Webhook Subscriptions API: Subscribe to notifications from a site, like when an order was created, by configuring a webhook endpoint.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developers.squarespace.com/commerce-apis/rate-limits",
+    "quote": "Squarespace Commerce APIs employ a rate limit of 300 requests per minute",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [],
+  "buildability": [
+   {
+    "url": "https://developers.squarespace.com/commerce-apis/rate-limits",
+    "quote": "the Create Order endpoint has a separate, stricter rate limit of 100 requests per hour, per website when an API Key is used",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "paid_plan_required",
+   "yours": "app_review_required",
+   "why": "Third-party OAuth clients are reviewed; paid plan applies only to site-owner API keys. Both gates documented."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "paid_plan_gate",
+   "yours": "app_review",
+   "why": "Multi-tenant integration must use OAuth, which requires reviewed client registration."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "Overview lists nine API groups; 20-100 endpoints plausible, not counted."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Rate limits page states 300 requests per minute."
+  },
+  {
+   "field": "api_surface.pagination_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "FAQ documents dynamic cursors for collections."
+  }
+ ]
+}

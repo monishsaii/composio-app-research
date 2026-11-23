@@ -1,0 +1,110 @@
+{
+ "id": "se-ranking",
+ "name": "SE Ranking",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "SEO platform with Data API (keywords, backlinks, SERP, AI search) and Project API; unified API of about 194 operations.",
+ "docs_url": "https://seranking.com/api/data/getting-started/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key"
+ ],
+ "auth_notes": "API key from API Dashboard, sent as 'Authorization: Token KEY' or apikey query param. MCP server uses OAuth.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "API access comes with any SE Ranking plan (Core $129/mo, Growth $279/mo); testable in free trial account; API Add-On from $149/mo; pay-as-you-go with $50 minimum deposit.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": 194,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://api.seranking.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve API key and documented REST API; sustained use needs a paid plan, add-on or PAYG deposit (trial allows testing).",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://seranking.com/api/data/getting-started/",
+    "quote": "Include an Authorization header in your request, with the value Token YOUR_API_KEY.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://seranking.com/api/",
+    "quote": "API access comes with any SE Ranking plan (Core at $129/mo and Growth at $279/mo).",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://seranking.com/api/",
+    "quote": "Pay-as-you-go is also available with a $50 minimum deposit.",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://seranking.com/api/",
+    "quote": "You can even test it in the free trial account.",
+    "source_type": "pricing_page"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://github.com/seranking",
+    "quote": "194 operations across 21 resources",
+    "source_type": "official_repo"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://seranking.com/api/",
+    "quote": "Connect via API for custom integrations and bulk processes, or via MCP to query data from inside Claude or any AI assistant.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "medium",
+   "yours": "broad",
+   "why": "SE Ranking's GitHub org describes its unified API as 194 operations across 21 resources; 63 covered only the Data API table."
+  },
+  {
+   "field": "api_surface.approx_endpoint_count",
+   "first_pass": 63,
+   "yours": 194,
+   "why": "Unified API incl. Project, audits, AI search, backlinks per official n8n node repo."
+  },
+  {
+   "field": "access_notes",
+   "first_pass": "paid subscription or PAYG",
+   "yours": "free trial account can test API; plans/add-on/PAYG for volume",
+   "why": "API landing page says trial accounts can test the API."
+  }
+ ]
+}

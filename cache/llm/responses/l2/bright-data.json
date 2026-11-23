@@ -1,0 +1,57 @@
+{
+ "id": "bright-data",
+ "name": "Bright Data",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Web data platform that turns websites into structured data via scrapers, SERP, unblocking and browser APIs.",
+ "docs_url": "https://docs.brightdata.com/api-reference/introduction",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "api_key", "basic"],
+ "auth_notes": "API key/token sent as Bearer in the Authorization header; a default key is created at signup and more can be added in Account settings with permission levels and expiry. Native access uses proxy username/password.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Self-serve signup with a free 5,000 monthly credit tier and no card; default API key is created automatically on account creation. Heavier products (residential proxies) may require KYC.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": ["python", "node"]
+ },
+ "mcp": {"exists": "official", "url": "https://github.com/brightdata/brightdata-mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve free tier and automatic API key, documented REST API with bearer auth, official SDKs and MCP server. Docs index shows hundreds of API reference pages. Rate limits not verified.",
+  "est_tool_count_if_built": 12,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "high", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "identity": [{"url": "https://brightdata.com/pricing", "quote": "Web Scraper API Pricing Easily extract web data with our powerful Web Scraper API.", "source_type": "pricing_page"}],
+  "auth": [
+   {"url": "https://docs.brightdata.com/api-reference/authentication", "quote": "API Access - Authenticate and interact with the Bright Data platform using an API key/token.", "source_type": "official_docs"},
+   {"url": "https://docs.brightdata.com/api-reference/authentication", "quote": "Native Access - Authenticate and interact with the Bright Data platform using proxy protocol username and password.", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://docs.brightdata.com/api-reference/authentication", "quote": "We create a default key for you upon account creation automatically.", "source_type": "official_docs"},
+   {"url": "https://brightdata.com/pricing/web-scraper", "quote": "Start free with 5,000 monthly credits", "source_type": "pricing_page"}
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {"url": "https://brightdata.com/pricing/web-scraper", "quote": "Webhook or API delivery", "source_type": "pricing_page"},
+   {"url": "https://docs.brightdata.com/api-reference/rate-limiting", "quote": "\"tag\":\"API reference\",\"count\":340", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://github.com/brightdata/brightdata-mcp", "quote": "The Bright Data MCP server gives AI agents real-time access to public web data. It exposes 31 tools covering:", "source_type": "official_repo"}],
+  "buildability": [{"url": "https://github.com/brightdata/brightdata-mcp", "quote": "Free tier: 5,000 requests per month. No credit card required. Renews monthly.", "source_type": "official_repo"}]
+ },
+ "disputes": [
+  {"field": "auth_methods", "first_pass": ["api_key", "basic"], "yours": ["bearer_token", "api_key", "basic"], "why": "Docs config declares bearer auth for the API; key is relayed as Authorization header token."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Docs search index counts 340 API reference pages plus 51 administrative API pages."}
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "id": "datadog",
+ "name": "Datadog",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Observability platform with a broad HTTP REST API (v1/v2) per Datadog site.",
+ "docs_url": "https://docs.datadoghq.com/api/latest/",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2", "other"],
+ "auth_notes": "Classic: DD-API-KEY (write/submit) plus DD-APPLICATION-KEY (reads). OAuth2 clients exist for third-party apps (granular scopes; confidential clients). Newer PAT/SAT tokens per first pass (not re-verified). Multiple regional sites (us1, us3, us5, eu, ap1, ap2, uk1, gov) require per-customer base URL.",
+ "oauth_details": {"flows": ["authorization_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "paid_plan_required",
+ "access_notes": "Credentials are created in the customer's Datadog org; a free trial exists but pricing is paid per product. No self-serve free tier shown on fetched pages. Rate limits raised via support.",
+ "sandbox_or_test_env": "Free Datadog trial account (duration not verified on fetched pages)",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "broad",
+  "approx_endpoint_count": null,
+  "webhooks": "outbound webhooks integration (Datadog calls your URL from monitor alerts)",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "yes",
+  "official_sdks": ["java", "go", "javascript", "rust", "python", "ruby"]
+ },
+ "mcp": {"exists": "official", "url": "https://docs.datadoghq.com/bits_ai/mcp_server/"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Well-documented REST API and keys, but needs a Datadog org (trial or paid), per-site base URLs, two-key auth, and endpoint-specific rate limits; many features are product-plan dependent.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "medium", "access": "medium", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Pricing page is paid-only credits/products; free trial exists but no free tier. Not directly verified whether API works on trial."},
+  {"field": "buildability.main_blocker", "first_pass": "auth_complexity", "yours": "paid_plan_gate", "why": "Classic API+app key auth is simple and documented; the real gate is needing a paying/trial Datadog org."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": "yes", "why": "Official rate limit page documents 429 and X-RateLimit headers."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": "outbound webhooks via integration tile", "why": "Webhooks integration page: monitor alerts POST to a configured URL."}
+ ],
+ "evidence": {
+  "auth": [{"url": "https://docs.datadoghq.com/api/latest/", "quote": "Authenticate to the API with an API key using the header DD-API-KEY. For some endpoints, you also need an Application key", "source_type": "official_docs"},
+           {"url": "https://docs.datadoghq.com/developers/authorization/", "quote": "Datadog uses the OAuth 2.0 (OAuth2) Authorization Framework to allow users to securely authorize third-party applications’ access", "source_type": "official_docs"}],
+  "access": [{"url": "https://www.datadoghq.com/free-datadog-trial/", "quote": "Use these resources to test out and learn about the unified Datadog platform.", "source_type": "pricing_page"},
+             {"url": "https://www.datadoghq.com/pricing/", "quote": "*Billed annually or $1.30 per credit on-demand.", "source_type": "pricing_page"}],
+  "sandbox": [{"url": "https://docs.datadoghq.com/getting_started/application/", "quote": "Learn without cost on real cloud compute capacity and a Datadog trial account.", "source_type": "official_docs"}],
+  "api_surface": [{"url": "https://docs.datadoghq.com/api/latest/", "quote": "The Datadog API is an HTTP REST API.", "source_type": "official_docs"},
+                  {"url": "https://docs.datadoghq.com/api/latest/rate-limits/", "quote": "If you are rate limited, you can see a 429 in the response code.", "source_type": "official_docs"},
+                  {"url": "https://docs.datadoghq.com/integrations/webhooks/", "quote": "It triggers a POST request to the URL you set with the following content in JSON format.", "source_type": "official_docs"}],
+  "mcp": [{"url": "https://docs.datadoghq.com/bits_ai/mcp_server/", "quote": "It provides remote access to most Datadog products (APM, logs, metrics, monitors, dashboards, security signals, and more).", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://docs.datadoghq.com/api/latest/authentication/", "quote": "Requests that read data require full access and also require an application key.", "source_type": "official_docs"}],
+  "identity": [{"url": "https://docs.datadoghq.com/api/latest/", "quote": "Use the Datadog API to access the Datadog platform programmatically.", "source_type": "official_docs"}]
+ }
+}

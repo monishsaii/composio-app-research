@@ -10,5 +10,12 @@
   "claim_supports": 489,
   "claim_irrelevant": 150,
   "claim_contradicts": 4
+ },
+ "L2": {
+  "compared": 800,
+  "agree": 460,
+  "disagree": 340,
+  "adopted_l2": 287,
+  "missing_l2": 0
  }
 }

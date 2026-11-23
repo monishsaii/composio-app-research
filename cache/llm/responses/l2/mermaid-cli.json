@@ -1,0 +1,123 @@
+{
+ "id": "mermaid-cli",
+ "name": "Mermaid CLI",
+ "category": "AI/Research/Media",
+ "one_liner": "Command-line tool that renders Mermaid diagram files to SVG, PNG, or PDF.",
+ "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "none"
+ ],
+ "auth_notes": "No credentials for local mmdc CLI or Node run() API. Hosted Mermaid MCP is separate and requires a (free) Mermaid account via OAuth or token.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Open-source npm package installed locally; no account or key.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "cli_only"
+  ],
+  "breadth": "none",
+  "approx_endpoint_count": null,
+  "webhooks": false,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "javascript"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.mermaid.ai/mcp"
+ },
+ "buildability": {
+  "verdict": "NOT_APPLICABLE_NOT_A_SERVICE",
+  "main_blocker": "cli_or_local_only",
+  "rationale": "Local OSS CLI. Wrap by shelling out to mmdc (stdin or file input, -o output) or the Docker image, or call Node run() API (not semver-covered). Hosted MCP is a separate product.",
+  "est_tool_count_if_built": 1,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "high"
+ },
+ "needs_human": false,
+ "needs_human_reason": null,
+ "disputes": [
+  {
+   "field": "api_surface.style",
+   "first_pass": [],
+   "yours": [
+    "cli_only"
+   ],
+   "why": "README documents only CLI, Docker and Node run() API; no network API."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "none",
+   "why": "Local tool with no hosted endpoints."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": false,
+   "why": "Local CLI; no hosted service to emit webhooks."
+  }
+ ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "npm install -g @mermaid-js/mermaid-cli",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "mmdc -i input.mmd -o output.svg",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "It's possible to call mermaid-cli via a Node.JS API.",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "This is a command-line interface (CLI) for mermaid.",
+    "source_type": "official_repo"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://mermaid.ai/docs/ai/mcp-server",
+    "quote": "HTTP: https://mcp.mermaid.ai/mcp with \"type\": \"http\"",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "docker pull ghcr.io/mermaid-js/mermaid-cli/mermaid-cli",
+    "source_type": "official_repo"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "quote": "It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+    "source_type": "official_repo"
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "supabase",
+ "name": "Supabase",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Postgres backend platform: Management API (projects/orgs) plus per-project PostgREST data API, auth, storage, realtime and edge functions.",
+ "docs_url": "https://supabase.com/docs",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2", "api_key"],
+ "auth_notes": "Management API: Bearer PAT (scoped or legacy) or OAuth2 authorization code (api.supabase.com/v1/oauth/authorize). Per-project data API: publishable key (RLS-limited) or secret key (bypasses RLS).",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "PATs generated in account page; OAuth apps self-serve via building an integration. Free plan exists (2 active projects, paused after 1 week inactivity). Management API rate limited.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": ["javascript"]
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.supabase.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve PATs and OAuth2 for the Management API, documented rate limits, free tier, official hosted MCP. Per-project data API is PostgREST (schema-specific, key based), so scope the tool design to Management API first.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "auth": [
+   {"url": "https://supabase.com/docs/reference/api/introduction", "quote": "All API requests require an access token to be included in the Authorization header: Authorization Bearer <access_token>.", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration", "quote": "redirect the user to https://api.supabase.com/v1/oauth/authorize.", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/api/api-keys", "quote": "Secret key | It bypasses Row Level Security, so it must never leave your control", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://supabase.com/pricing", "quote": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects.", "source_type": "pricing_page"}
+  ],
+  "api_surface": [
+   {"url": "https://supabase.com/docs/guides/api", "quote": "Supabase provides a RESTful API using PostgREST, a thin API layer on top of Postgres.", "source_type": "official_docs"},
+   {"url": "https://supabase.com/docs/guides/database/webhooks", "quote": "Database Webhooks allow you to send real-time data from your database to another system whenever a table event occurs.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://supabase.com/docs/guides/getting-started/mcp", "quote": "Connecting an LLM to your Supabase projects carries security risks.", "source_type": "official_docs"}
+  ]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Free plan exists and PATs/OAuth apps are self-serve; no paid gate found for Management API."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "Supabase docs publish hosted MCP at mcp.supabase.com/mcp (matches L1 removed finding)."},
+  {"field": "buildability.verdict", "first_pass": "BUILD_WITH_CAVEATS", "yours": "BUILD_NOW", "why": "No tier/cost gate found; only per-project design choice remains."},
+  {"field": "buildability.main_blocker", "first_pass": "other", "yours": "none", "why": "Ambiguity resolved: Management API (PAT/OAuth) vs per-project PostgREST (API keys) are both documented and self-serve."},
+  {"field": "auth_methods", "first_pass": ["bearer_token", "oauth2"], "yours": ["bearer_token", "oauth2", "api_key"], "why": "Per-project data API uses publishable/secret keys."},
+  {"field": "oauth_details.flows", "first_pass": [], "yours": ["auth_code"], "why": "Integration guide shows response_type=code authorize redirect."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Database Webhooks documented."},
+  {"field": "api_surface.official_sdks", "first_pass": [], "yours": ["javascript"], "why": "Official client libraries listed; supabase-js assumed from docs, specific names not verified."}
+ ]
+}

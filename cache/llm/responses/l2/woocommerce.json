@@ -1,0 +1,113 @@
+{
+ "id": "woocommerce",
+ "name": "WooCommerce",
+ "category": "Ecommerce",
+ "one_liner": "Free WordPress e-commerce plugin whose REST API lets external systems read and write store data.",
+ "docs_url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "api_key",
+  "basic",
+  "other"
+ ],
+ "auth_notes": "Per-store consumer key/secret via Basic Auth over HTTPS (OAuth 1.0a over HTTP). The MCP adapter instead uses WordPress Application Passwords.",
+ "oauth_details": null,
+ "access": "self_serve_free",
+ "access_notes": "Self-hosted: store admin generates keys in own WordPress admin; no vendor gate. Requires WooCommerce 3.5+, WordPress 4.4+, pretty permalinks.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": [
+   "node",
+   "php",
+   "python",
+   "ruby"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://developer.woocommerce.com/docs/features/mcp/"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "other",
+  "rationale": "Self-serve free REST API, but every merchant store is a separate self-hosted instance needing its own keys and HTTPS/permalink setup; no sandbox or rate limits documented.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "high",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "Per-store self-hosted setup; sandbox, rate limits and exact endpoint count not documented; MCP is developer preview and needs the MCP Adapter plugin.",
+ "evidence": {
+  "identity": [
+   {
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "You are not required to install the WP REST API (WP API) plugin.",
+    "source_type": "official_docs"
+   }
+  ],
+  "auth": [
+   {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "Do not use your account password or a WooCommerce REST API key.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+    "quote": "WooCommerce 3.5+",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+    "quote": "Use /wp-json/wc/v3/ endpoints for all new integrations.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+    "quote": "The webhooks API allows you to create, view, update, and delete individual, or a batch, of webhooks.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "The MCP implementation in WooCommerce is currently in developer preview.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "quote": "WooCommerce does not bundle the MCP adapter.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "v3 reference lists roughly 25-30 resources (coupons, orders, products, webhooks, settings); exact endpoint count not measured."
+  }
+ ]
+}

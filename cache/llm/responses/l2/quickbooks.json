@@ -1,0 +1,143 @@
+{
+ "id": "quickbooks",
+ "name": "QuickBooks",
+ "category": "Finance/Fintech",
+ "one_liner": "Intuit QuickBooks Online accounting product with OAuth 2.0 REST API.",
+ "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/learn/explore-the-quickbooks-online-api",
+ "openapi_spec_url": null,
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "OAuth 2.0 with client id/secret; app registered on Intuit Developer Portal; refresh tokens rotate with 100-day window.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Free Builder partner tier ($0, 500,000 CorePlus credits/month, blocked after); Silver $300, Gold $1,700, Platinum $4,500; premium APIs need Silver+ and a support ticket. Go-live app review not verified from fetched pages.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "broad",
+  "approx_endpoint_count": 145,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/intuit/quickbooks-online-mcp-server"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "auth_complexity",
+  "rationale": "Free sandbox and Builder tier; production needs public HTTPS redirect, 100-day refresh window and metered CorePlus reads beyond 500k.",
+  "est_tool_count_if_built": 145,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "medium",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "developer.intuit.com is a JS shell; go-live review, webhooks and rate limits not verified; pricing from third party (apideck).",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "You must register an app on the Intuit Developer Portal and complete a one-time, browser-based OAuth handshake.",
+    "source_type": "official_repo"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+    "quote": "Monthly Fee: $0",
+    "source_type": "third_party"
+   },
+   {
+    "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+    "quote": "Overage: API calls are blocked after exceeding the 500,000 limit",
+    "source_type": "third_party"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "Sandbox supports http://localhost redirect URIs; production requires a public HTTPS callback for the initial authorization.",
+    "source_type": "official_repo"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "145 Total Tools - Complete coverage of QuickBooks Online API",
+    "source_type": "official_repo"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "this is a local MCP server. It runs as a stdio subprocess on the developer's or partner's machine",
+    "source_type": "official_repo"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "quote": "until the 100-day refresh window lapses",
+    "source_type": "official_repo"
+   },
+   {
+    "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+    "quote": "Premium API Access: Not included",
+    "source_type": "third_party"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://www.apideck.com/blog/quickbooks-api-pricing-and-the-intuit-app-partner-program",
+    "quote": "only applies to QuickBooks Online (QBO) integrations",
+    "source_type": "third_party"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Free Builder tier at $0 with 500k CorePlus credits; premium APIs gated to paid tiers."
+  },
+  {
+   "field": "sandbox_or_test_env",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Official MCP README documents sandbox environment and localhost redirects."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "intuit GitHub org publishes quickbooks-online-mcp-server (local stdio)."
+  },
+  {
+   "field": "api_surface.approx_endpoint_count",
+   "first_pass": 145,
+   "yours": 145,
+   "why": "145 is the MCP tool count, not a REST endpoint count; treat as tool estimate."
+  }
+ ]
+}

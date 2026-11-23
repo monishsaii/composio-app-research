@@ -1,0 +1,136 @@
+{
+ "id": "dataforseo",
+ "name": "DataForSEO",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "REST API suite for SEO and search data: SERPs, keywords, backlinks, on-page, and more.",
+ "docs_url": "https://docs.dataforseo.com/v3/",
+ "openapi_spec_url": "https://github.com/dataforseo/OpenApiDocumentation",
+ "auth_methods": [
+  "basic"
+ ],
+ "auth_notes": "HTTP Basic with API login and API-generated password from app.dataforseo.com/api-access (different from account password). MCP HTTP mode also supports OAuth 2.0.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "Free account gives credentials and free Sandbox; real calls draw on prepaid balance, pay-as-you-go with $50 minimum top-up, no subscriptions.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "php",
+   "csharp",
+   "java",
+   "python"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://github.com/dataforseo/mcp-server-typescript"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Self-serve Basic-auth credentials, documented REST API, free sandbox, but live calls need a prepaid balance ($50 minimum top-up).",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.dataforseo.com/v3/auth/",
+    "quote": "Create a free account with DataForSEO, then go to the API Access tab in the account dashboard to find your API login and password",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://dataforseo.com/pricing",
+    "quote": "$50 minimum top-up",
+    "source_type": "pricing_page"
+   },
+   {
+    "url": "https://dataforseo.com/pricing",
+    "quote": "No subscriptions",
+    "source_type": "pricing_page"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+    "quote": "Sandbox is completely free for any registered user at DataForSEO.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.dataforseo.com/v3/appendix/sandbox/",
+    "quote": "Sandbox environment also works with pingback_url and postback_url functions.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://dataforseo.com/help-center/rate-limits-and-request-limits",
+    "quote": "The general rate limit for DataForSEO API is 10,000 requests per minute.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://github.com/dataforseo/mcp-server-typescript",
+    "quote": "MCP server and CLI for LLM agents to browse DataForSEO API documentation and make authenticated API requests.",
+    "source_type": "official_repo"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "auth_methods",
+   "first_pass": [],
+   "yours": [
+    "basic"
+   ],
+   "why": "Auth docs show Authorization Basic with base64 login:password from API Access tab."
+  },
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "paid_plan_required",
+   "why": "Free account and sandbox, but pay-as-you-go prepaid with $50 minimum top-up for live calls."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "dataforseo GitHub org publishes mcp-server-typescript."
+  },
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "pingback_url/postback_url task callbacks documented."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "paid_plan_gate",
+   "why": "Credentials are clear; the gate is prepaid balance."
+  }
+ ]
+}

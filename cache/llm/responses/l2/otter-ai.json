@@ -1,0 +1,67 @@
+{
+ "id": "otter-ai",
+ "name": "Otter AI",
+ "category": "AI/Research/Media",
+ "one_liner": "Otter.ai AI meeting assistant for transcription, summaries and action items; has an Enterprise-gated Public API (beta) and an official read-only MCP server.",
+ "docs_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API-beta",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key", "oauth2"],
+ "auth_notes": "Public API: Bearer API key created in workspace Developer settings (max 2 per user). MCP server (mcp.otter.ai/mcp): OAuth 2.1 with per-meeting permissions. Details are from a third-party source because help.otter.ai is Cloudflare-blocked to the fetcher.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": "unknown", "app_review_required": "unknown"},
+ "access": "partner_or_contact_sales",
+ "access_notes": "Public API reportedly available to Enterprise workspaces only (Enterprise is contact sales). Official pricing lists the Otter MCP server as a feature of the free Basic plan. Official help articles were not fetchable.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.otter.ai/mcp"},
+ "buildability": {
+  "verdict": "BLOCKED_NEEDS_OUTREACH",
+  "main_blocker": "enterprise_only",
+  "rationale": "A public API (beta) exists at api.otter.ai/v1 but is gated to Enterprise workspaces. Official MCP server is read-only (3 tools, OAuth). Evidence for gating is third-party.",
+  "est_tool_count_if_built": 8,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "medium", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "high", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "help.otter.ai articles (Public API beta, MCP server) are behind Cloudflare and could not be fetched; Enterprise gating comes from a Scalekit blog.",
+ "disputes": [
+  {"field": "docs_url", "first_pass": null, "yours": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API-beta", "why": "Otter's official llms.txt links this Public API (beta) article."},
+  {"field": "auth_methods", "first_pass": [], "yours": ["api_key", "oauth2"], "why": "Third-party analysis: API uses Bearer API keys, MCP uses OAuth."},
+  {"field": "access", "first_pass": "unknown", "yours": "partner_or_contact_sales", "why": "Public API reportedly Enterprise-only; Enterprise is contact sales."},
+  {"field": "mcp.exists", "first_pass": "community", "yours": "official", "why": "Otter's own llms.txt links an official MCP Server article and pricing lists Otter MCP server; hosted at mcp.otter.ai."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BLOCKED_NEEDS_OUTREACH", "why": "Public API exists but Enterprise-gated; product identity resolved (otter.ai, not OtterlyAI)."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://otter.ai/llms.txt", "quote": "Otter.ai is an AI meeting assistant and meeting agent platform for real-time transcription, automated notes and summaries", "source_type": "official_docs"}
+  ],
+  "auth": [
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "the Public API is gated to Enterprise workspaces and authenticates with Bearer API keys only, no OAuth.", "source_type": "third_party"},
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "Access is OAuth-authenticated with per-meeting permissions", "source_type": "third_party"}
+  ],
+  "access": [
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "The Public API is a REST surface at api.otter.ai/v1, available to Enterprise workspaces only.", "source_type": "third_party"},
+   {"url": "https://otter.ai/llms.txt", "quote": "Enterprise contact sales.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://otter.ai/llms.txt", "quote": "Public API (beta): https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API-beta", "source_type": "official_docs"},
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "It also ships webhooks.", "source_type": "third_party"},
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "capped at two keys per user and 10 requests per second", "source_type": "third_party"}
+  ],
+  "mcp": [
+   {"url": "https://otter.ai/llms.txt", "quote": "MCP Server: https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server", "source_type": "official_docs"},
+   {"url": "https://otter.ai/pricing.md", "quote": "Otter MCP server", "source_type": "pricing_page"}
+  ],
+  "buildability": [
+   {"url": "https://www.scalekit.com/blog/otter-mcp-vs-api", "quote": "the server is read-only by design", "source_type": "third_party"}
+  ]
+ }
+}

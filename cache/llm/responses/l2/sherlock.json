@@ -1,0 +1,45 @@
+{
+ "id": "sherlock",
+ "name": "Sherlock",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Open-source CLI that hunts down usernames across 400+ social networks.",
+ "docs_url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+ "openapi_spec_url": null,
+ "auth_methods": ["none"],
+ "auth_notes": "Local CLI; the documented install and usage steps involve no account, key or credentials.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "No hosted API or account. Install locally via pipx, Docker or distro packages. Not a service.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["cli_only"],
+  "breadth": "none",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {"exists": "unknown", "url": null},
+ "buildability": {
+  "verdict": "NOT_APPLICABLE_NOT_A_SERVICE",
+  "main_blocker": "cli_or_local_only",
+  "rationale": "Local OSS CLI. Wrap by shelling out to sherlock (pipx or Docker image) with --json/--csv/--xlsx output and parse results.",
+  "est_tool_count_if_built": 1,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": false,
+ "confidence": {"identity": "high", "auth": "medium", "access": "low", "sandbox": "low", "api_surface": "high", "mcp": "low", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "identity": [{"url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md", "quote": "Hunt down social media accounts by username across 400+ social networks", "source_type": "official_repo"}],
+  "auth": [{"url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md", "quote": "To search for only one user: sherlock user123", "source_type": "official_repo"}],
+  "access": [{"url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md", "quote": "pipx install sherlock-project", "source_type": "official_repo"}],
+  "sandbox": [],
+  "api_surface": [{"url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md", "quote": "--csv Create Comma-Separated Values (CSV) File.", "source_type": "official_repo"}],
+  "mcp": [],
+  "buildability": [{"url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md", "quote": "docker run -it --rm sherlock/sherlock", "source_type": "official_repo"}]
+ },
+ "disputes": []
+}

@@ -1,0 +1,57 @@
+{
+ "id": "cloudflare",
+ "name": "Cloudflare",
+ "category": "Dev/Infra/Data",
+ "one_liner": "Internet infrastructure platform (CDN, DNS, Workers, Zero Trust) with a very large REST API, OAuth clients and official MCP servers.",
+ "docs_url": "https://developers.cloudflare.com/api/",
+ "openapi_spec_url": null,
+ "auth_methods": ["bearer_token", "oauth2", "api_key"],
+ "auth_notes": "Scoped API tokens as Bearer; OAuth clients (auth code, PKCE) for third-party apps; legacy global API key also exists (not verified on fetched pages).",
+ "oauth_details": {"flows": ["auth_code", "PKCE"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "API tokens created in dashboard on a free account; OAuth client creation needs admin-type role plus DNS verification for public clients. Client API limit 1200 req/5 min per token; some endpoints plan-gated by product.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest", "graphql"],
+  "breadth": "broad",
+  "approx_endpoint_count": 2500,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.cloudflare.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "Self-serve scoped API tokens, enormous documented REST API, documented rate limits and an official Cloudflare API MCP server. Per-product plan gating applies to some endpoints.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "high"},
+ "needs_human": false,
+ "needs_human_reason": null,
+ "evidence": {
+  "access": [
+   {"url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/", "quote": "Enterprise customers can also contact Cloudflare Support to raise the Client API per user, GraphQL, or API token limits to a higher value.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/", "quote": "Client API per user/account token | 1200/5 minutes", "source_type": "official_docs"},
+   {"url": "https://developers.cloudflare.com/notifications/get-started/configure-webhooks/", "quote": "Webhooks let you deliver Cloudflare alerts to any service that accepts HTTP callbacks.", "source_type": "official_docs"},
+   {"url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/", "quote": "It provides access to the entire Cloudflare API — over 2,500 endpoints across DNS, Workers, R2, Zero Trust", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/", "quote": "The Cloudflare API MCP server ↗︎ at https://mcp.cloudflare.com/mcp is the only MCP server you need to work with Cloudflare.", "source_type": "official_docs"},
+   {"url": "https://github.com/cloudflare/mcp-server-cloudflare", "quote": "you can find several MCP servers allowing you to connect to Cloudflare's service from an MCP client", "source_type": "official_repo"}
+  ]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Dashboard tokens on free accounts (first-pass L1 value); no gate found; Enterprise only raises limits."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "Vendor docs and cloudflare GitHub org publish MCP servers, incl. API MCP at mcp.cloudflare.com."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "broad", "why": "Vendor states over 2,500 API endpoints."},
+  {"field": "api_surface.rate_limits_documented", "first_pass": "unknown", "yours": true, "why": "Limits page documents 1200/5 min per token."},
+  {"field": "api_surface.webhooks", "first_pass": "unknown", "yours": true, "why": "Notification webhooks documented (alert delivery only, not general event subscription)."},
+  {"field": "api_surface.style", "first_pass": ["rest"], "yours": ["rest", "graphql"], "why": "Limits page lists a separate GraphQL limit."}
+ ]
+}

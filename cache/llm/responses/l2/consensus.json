@@ -1,0 +1,65 @@
+{
+ "id": "consensus",
+ "name": "Consensus",
+ "category": "AI/Research/Media",
+ "one_liner": "AI-powered scientific search engine (consensus.app) over 400M+ academic papers, with REST API (search, threads) and MCP server.",
+ "docs_url": "https://docs.consensus.app",
+ "openapi_spec_url": "https://docs.consensus.app/openapi.json",
+ "auth_methods": ["api_key", "bearer_token", "oauth2"],
+ "auth_notes": "REST API: organization-scoped API key sent as Authorization: Bearer, issued from consensus.app/subscription/api. MCP server: OAuth 2.1 auth code + PKCE with dynamic client registration; limited anonymous tier.",
+ "oauth_details": {"flows": ["auth_code", "pkce"], "scopes_granular": "unknown", "app_review_required": false},
+ "access": "admin_approval",
+ "access_notes": "REST Search API is optional on Team and Enterprise plans 'available upon approval, rate limited' with pricing via consensus.app/home/api; Enterprise custom. MCP server with OAuth works with a free account (limited quotas).",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": null,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://mcp.consensus.app/mcp"},
+ "buildability": {
+  "verdict": "BLOCKED_NEEDS_OUTREACH",
+  "main_blocker": "partner_gate",
+  "rationale": "REST API (GET /v1/search, POST /v1/threads) needs approval on a Team/Enterprise org subscription; only the OAuth MCP server is self-serve. OpenAPI spec was Cloudflare-blocked.",
+  "est_tool_count_if_built": 2,
+  "est_effort": "S"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "low", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "identity", "first_pass": "low confidence / unknown", "yours": "consensus.app AI scientific search engine", "why": "Official llms.txt and pricing describe the product, API and MCP server."},
+  {"field": "access", "first_pass": "unknown", "yours": "admin_approval", "why": "Official pricing.md says Search API access is available upon approval for Team/Enterprise."},
+  {"field": "auth_methods", "first_pass": [], "yours": ["api_key", "bearer_token", "oauth2"], "why": "llms-full.txt documents Bearer API keys and OAuth 2.1 for MCP."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "Official MCP endpoint mcp.consensus.app/mcp documented on consensus.app."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BLOCKED_NEEDS_OUTREACH", "why": "API approval-gated; resolvable with official docs."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://consensus.app/llms.txt", "quote": "Consensus is an AI-powered scientific search engine that finds, ranks, and synthesizes peer-reviewed research", "source_type": "official_docs"}
+  ],
+  "auth": [
+   {"url": "https://consensus.app/llms-full.txt", "quote": "Sent as `Authorization: Bearer <key>` on every request", "source_type": "official_docs"},
+   {"url": "https://consensus.app/llms-full.txt", "quote": "Authorization Code flow with PKCE", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://consensus.app/.well-known/pricing.md", "quote": "Optional access to the Consensus Search API (available upon approval, rate limited; see https://consensus.app/home/api/ for pricing)", "source_type": "pricing_page"},
+   {"url": "https://consensus.app/llms-full.txt", "quote": "Issued from the organization subscription page at https://consensus.app/subscription/api/", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://consensus.app/home/api/", "quote": "Search returns ranked papers in one call. Threads hands the whole research task to the Consensus agent.", "source_type": "official_docs"},
+   {"url": "https://consensus.app/llms-full.txt", "quote": "When a limit is exceeded the API returns HTTP 429 with a `Retry-After` header.", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://consensus.app/llms-full.txt", "quote": "Endpoint: https://mcp.consensus.app/mcp", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://consensus.app/.well-known/pricing.md", "quote": "Optional access to the Consensus Search API with custom pricing and rate limits", "source_type": "pricing_page"}
+  ]
+ }
+}

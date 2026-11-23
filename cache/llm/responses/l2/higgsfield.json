@@ -1,0 +1,127 @@
+{
+ "id": "higgsfield",
+ "name": "higgsfield",
+ "category": "AI/Research/Media",
+ "one_liner": "Pay-as-you-go REST API and hosted MCP server for generating image and video with many AI models.",
+ "docs_url": "https://docs.higgsfield.ai/docs",
+ "openapi_spec_url": "https://docs.higgsfield.ai/docs/openapi.json",
+ "auth_methods": [
+  "api_key"
+ ],
+ "auth_notes": "Server-side Authorization: Key KEY_ID:KEY_SECRET created in Higgsfield Console; legacy hf-api-key/hf-secret headers also accepted. No OAuth for the API; the hosted MCP uses account sign-in.",
+ "oauth_details": null,
+ "access": "unknown",
+ "access_notes": "Self-serve console key, billed against a prepaid USD account balance (funds expire after one year); not a free tier and not a subscription plan, and the enum has no pay-as-you-go value.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": [
+   "python",
+   "typescript"
+  ]
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.higgsfield.ai/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "paid_plan_gate",
+  "rationale": "Documented REST API with webhooks, estimate endpoint and key auth, but requires a funded prepaid balance. Async generation, concurrency-based limits, outputs deleted after 7 days.",
+  "est_tool_count_if_built": null,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "medium",
+  "buildability": "medium"
+ },
+ "needs_human": true,
+ "needs_human_reason": "No enum value for prepaid pay-as-you-go. MCP URL comes from a third-party search snippet, not a fetched vendor page.",
+ "disputes": [
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Official rate-limits page documents concurrency limits, queueing, 429 with Retry-After."
+  },
+  {
+   "field": "mcp.url",
+   "first_pass": null,
+   "yours": "https://mcp.higgsfield.ai/mcp",
+   "why": "Third-party search snippet cites this hosted endpoint; scalekit confirms official hosted MCP. Not verified on a vendor page."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "other",
+   "yours": "paid_plan_gate",
+   "why": "Prepaid funded balance is required to spend; closest enum value to a payment gate."
+  }
+ ],
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.higgsfield.ai/docs/authentication.md",
+    "quote": "Authorization: Key YOUR_KEY_ID:YOUR_KEY_SECRET",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.higgsfield.ai/docs/authentication.md",
+    "quote": "The API also accepts the legacy `hf-api-key` and `hf-secret` headers.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://docs.higgsfield.ai/docs/concepts/billing-and-retention.md",
+    "quote": "Funds added to your account balance expire one year after they are added.",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.higgsfield.ai/docs/concepts/rate-limits.md",
+    "quote": "The primary generation limit is concurrency: the number of requests that may be processing at the same time.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.higgsfield.ai/docs/how-to/webhooks.md",
+    "quote": "Pass an HTTPS endpoint in the `hf_webhook` query parameter when submitting generation.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://www.scalekit.com/blog/higgsfield-mcp-vs-api",
+    "quote": "Higgsfield runs a hosted, remote Model Context Protocol (MCP) server, launched in spring 2026",
+    "source_type": "third_party"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://docs.higgsfield.ai/docs/concepts/billing-and-retention.md",
+    "quote": "Request files are kept for seven days after the request finishes, then deleted.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://higgsfield.ai/higgsfield-api",
+    "quote": "OPEN HIGGSFIELD API",
+    "source_type": "official_docs"
+   }
+  ]
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "id": "ramp",
+ "name": "Ramp",
+ "category": "Finance/Fintech",
+ "one_liner": "Ramp spend management platform with Developer API, webhooks, MCP server and CLI.",
+ "docs_url": "https://docs.ramp.com",
+ "openapi_spec_url": "https://docs.ramp.com/openapi/developer-api.json",
+ "auth_methods": [
+  "oauth2"
+ ],
+ "auth_notes": "OAuth 2.0: client credentials for own business, authorization code for partner apps; MCP via OAuth sign-in.",
+ "oauth_details": {
+  "flows": [
+   "client_credentials",
+   "auth_code"
+  ],
+  "scopes_granular": true,
+  "app_review_required": true
+ },
+ "access": "app_review_required",
+ "access_notes": "Customer admins create an app and credentials in Company > Developer. Sandbox by request. Partners building for other businesses follow the partner program.",
+ "sandbox_or_test_env": true,
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "medium",
+  "approx_endpoint_count": 73,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.ramp.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "app_review",
+  "rationale": "Own-business credentials are self-serve for admins; multi-tenant OAuth needs the partner program and approvals; MCP redirect URIs must be allowlisted.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "high",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "Under **Grant types**, click **Add new grant type** → select **Client Credentials**.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+    "quote": "This guide assumes you are a Ramp customer with **admin** access to your dashboard.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.ramp.com/llms-guides/introduction.txt",
+    "quote": "Building an integration for other businesses? Start with the partner program.",
+    "source_type": "official_docs"
+   }
+  ],
+  "sandbox": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/sandbox.txt",
+    "quote": "Base URL for API calls in the Sandbox environment",
+    "source_type": "official_docs"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/rate-limiting.txt",
+    "quote": "The standard Developer API limit is **200 requests per 10 seconds per source IP address**.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://docs.ramp.com/llms-guides/webhooks.txt",
+    "quote": "Webhooks allow your application to receive real-time notifications about events that occur in your Ramp account.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+    "quote": "claude mcp add --transport http ramp https://mcp.ramp.com/mcp",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+    "quote": "your client's redirect URI isn't allowlisted.",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://docs.ramp.com/llms-guides/introduction.txt",
+    "quote": "Use Ramp at your company, or build for others.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "api_surface.webhooks",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Official webhooks guide documents event subscriptions."
+  },
+  {
+   "field": "api_surface.rate_limits_documented",
+   "first_pass": "unknown",
+   "yours": true,
+   "why": "Rate-limiting guide documents 200 requests per 10 seconds per IP."
+  },
+  {
+   "field": "mcp.exists",
+   "first_pass": "unknown",
+   "yours": "official",
+   "why": "Ramp docs document hosted MCP at mcp.ramp.com/mcp."
+  },
+  {
+   "field": "api_surface.breadth",
+   "first_pass": "unknown",
+   "yours": "medium",
+   "why": "OpenAPI spec shows about 73 operations in the first 120k chars read."
+  }
+ ]
+}

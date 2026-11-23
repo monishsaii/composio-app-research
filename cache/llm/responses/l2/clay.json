@@ -1,0 +1,59 @@
+{
+ "id": "clay",
+ "name": "Clay",
+ "category": "Data/SEO/Scraping",
+ "one_liner": "Clay is a GTM platform for enriching and searching company and people data, with CLI, public API and agent access.",
+ "docs_url": "https://developers.clay.com/llms.txt",
+ "openapi_spec_url": null,
+ "auth_methods": ["api_key"],
+ "auth_notes": "Clay API key in the clay-api-key header, tied to a user and workspace; created under API and CLI in the app or via clay api-keys create. Rate-limit docs also mention OAuth credentials.",
+ "oauth_details": null,
+ "access": "paid_plan_required",
+ "access_notes": "Pricing page lists Clay API access under the Enterprise plan (custom pricing, annual commitment); Growth lists HTTP API integrations (outbound) and webhooks. Developer docs do not state a plan gate; key creation is self-serve in the app. Gating of the Public API is ambiguous.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": 18,
+  "webhooks": true,
+  "pagination_documented": true,
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": null},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "enterprise_only",
+  "rationale": "Documented Public API with self-serve key header and 300 req/min, but pricing page ties Clay API access to Enterprise; endpoint set is narrow (about 18 reference pages, tables marked Enterprise). Verify plan gate before building.",
+  "est_tool_count_if_built": 12,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "medium", "mcp": "medium", "buildability": "medium"},
+ "needs_human": true,
+ "needs_human_reason": "Pricing page says Enterprise includes Clay API access, but developer docs do not state a plan requirement; confirm whether lower plans can create public API keys. MCP server URL not found."
+ ,
+ "evidence": {
+  "identity": [{"url": "https://www.clay.com/pricing", "quote": "Data Credits are used when you purchase data from Clay's marketplace", "source_type": "pricing_page"}],
+  "auth": [{"url": "https://developers.clay.com/public-api/authentication.md", "quote": "Every request to the Clay Public API must include a Clay API key in the `clay-api-key` header.", "source_type": "official_docs"}],
+  "access": [
+   {"url": "https://www.clay.com/pricing", "quote": "plus unlimited Audiences across sources, unlimited row bulk enrichment, Clay API access, data warehouse syncs, SSO", "source_type": "pricing_page"},
+   {"url": "https://www.clay.com/pricing", "quote": "Growth (starting at $495/mo)", "source_type": "pricing_page"},
+   {"url": "https://developers.clay.com/llms.txt", "quote": "Tables (Enterprise)", "source_type": "official_docs"}
+  ],
+  "sandbox": [],
+  "api_surface": [
+   {"url": "https://developers.clay.com/public-api/rate-limits.md", "quote": "The default limit is **300 requests per minute per workspace**", "source_type": "official_docs"},
+   {"url": "https://developers.clay.com/public-api/webhooks.md", "quote": "Webhooks let Clay notify your service when a routine run finishes, so you can react without polling.", "source_type": "official_docs"}
+  ],
+  "mcp": [{"url": "https://developers.clay.com/use-cases/agent-workflows.md", "quote": "Use MCP to call Clay functions from a coding agent like Claude Code, Codex, or Cursor.", "source_type": "official_docs"}],
+  "buildability": [{"url": "https://www.clay.com/pricing", "quote": "Enterprise (custom pricing with annual commitment)", "source_type": "pricing_page"}]
+ },
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "paid_plan_required", "why": "Pricing page lists Clay API access under Enterprise plan with custom pricing."},
+  {"field": "buildability.verdict", "first_pass": "UNCLEAR", "yours": "BUILD_WITH_CAVEATS", "why": "Documented API with self-serve key header; plan gating and narrow surface are caveats."},
+  {"field": "buildability.main_blocker", "first_pass": "paid_plan_gate", "yours": "enterprise_only", "why": "API access appears on Enterprise tier, not just Growth."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "narrow", "why": "llms.txt lists about 18 api-reference pages."},
+  {"field": "api_surface.style", "first_pass": ["other"], "yours": ["rest"], "why": "Docs show curl to api.clay.com/public/v0 REST endpoints."}
+ ]
+}

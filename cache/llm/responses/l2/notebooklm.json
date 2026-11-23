@@ -1,0 +1,66 @@
+{
+ "id": "notebooklm",
+ "name": "NotebookLM",
+ "category": "AI/Research/Media",
+ "one_liner": "AI notebook tool (now branded Gemini Notebook) that ingests user sources and generates insights; has a personal REST API plus MCP server in Public Preview and a separate Enterprise API.",
+ "docs_url": "https://developers.google.com/notebook/docs",
+ "openapi_spec_url": null,
+ "auth_methods": ["oauth2"],
+ "auth_notes": "OAuth 2.0 bearer token with scope https://www.googleapis.com/auth/notebook plus x-goog-user-project header; personal Google Accounts only during Public Preview (Workspace fails 403). Enterprise API (discoveryengine v1alpha) uses gcloud user access tokens and needs a license plus roles/discoveryengine.notebookLmUser.",
+ "oauth_details": {"flows": ["auth_code"], "scopes_granular": true, "app_review_required": "unknown"},
+ "access": "self_serve_free",
+ "access_notes": "Personal API: enable notebook.googleapis.com in own Cloud project, OAuth with personal Google account that signed in to Gemini Notebook once; no paid plan stated in prerequisites. Enterprise API requires Gemini Notebook Enterprise licenses. Public Preview, pricing/quota of personal API not stated.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": ["rest"],
+  "breadth": "narrow",
+  "approx_endpoint_count": 7,
+  "webhooks": "unknown",
+  "pagination_documented": "unknown",
+  "rate_limits_documented": "unknown",
+  "official_sdks": []
+ },
+ "mcp": {"exists": "official", "url": "https://notebook.googleapis.com/mcp"},
+ "buildability": {
+  "verdict": "BUILD_WITH_CAVEATS",
+  "main_blocker": "unstable_or_undocumented_api",
+  "rationale": "Documented REST API (7 methods: notebooks create/get/list/patch, sources create/get/list) and official MCP server, but Public Preview and personal Google accounts only; Enterprise variant needs paid licenses.",
+  "est_tool_count_if_built": 7,
+  "est_effort": "M"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {"identity": "high", "auth": "high", "access": "medium", "sandbox": "low", "api_surface": "high", "mcp": "high", "buildability": "medium"},
+ "needs_human": false,
+ "needs_human_reason": "",
+ "disputes": [
+  {"field": "access", "first_pass": "unknown", "yours": "self_serve_free", "why": "Quickstart lists only a personal Google account, one sign-in and enabling the API in own Cloud project; no paid plan or waitlist stated (cost not explicit)."},
+  {"field": "api_surface.breadth", "first_pass": "unknown", "yours": "narrow", "why": "REST reference lists 4 notebooks methods and 3 sources methods (7 total)."},
+  {"field": "mcp.exists", "first_pass": "unknown", "yours": "official", "why": "Google docs describe a remote MCP server at notebook.googleapis.com/mcp."},
+  {"field": "docs_url", "first_pass": "https://developers.google.com/notebook/docs/authentication", "yours": "https://developers.google.com/notebook/docs", "why": "Docs root is the proper entry point."}
+ ],
+ "evidence": {
+  "identity": [
+   {"url": "https://developers.google.com/notebook/reference/rest", "quote": "Gemini Notebook API. Enables developers and AI agents to programmatically create and manage notebooks and sources in Gemini Notebook.", "source_type": "official_docs"},
+   {"url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks", "quote": "Gemini Notebook Enterprise is a powerful tool for generating insights and summaries from your documents.", "source_type": "official_docs"}
+  ],
+  "auth": [
+   {"url": "https://developers.google.com/notebook/docs/quickstart", "quote": "generate an\nOAuth 2.0 access token using the Google Cloud CLI (gcloud):", "source_type": "official_docs"},
+   {"url": "https://developers.google.com/notebook/docs/mcp", "quote": "| OAuth 2.0 scope | https://www.googleapis.com/auth/notebook |", "source_type": "official_docs"}
+  ],
+  "access": [
+   {"url": "https://developers.google.com/notebook/docs", "quote": "Public Preview: The Gemini Notebook API is in Public Preview (pre-GA).", "source_type": "official_docs"},
+   {"url": "https://developers.google.com/notebook/docs/quickstart", "quote": "Personal Google Account: During the Public Preview, the Gemini Notebook\nAPI is only available for personal Google Accounts.", "source_type": "official_docs"},
+   {"url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks", "quote": "Get licenses for Gemini Notebook Enterprise and assign a license to your user account.", "source_type": "official_docs"}
+  ],
+  "api_surface": [
+   {"url": "https://developers.google.com/notebook/reference/rest", "quote": "REST Resource: v1.notebooks.sources", "source_type": "official_docs"},
+   {"url": "https://developers.google.com/notebook/docs", "quote": "The Gemini Notebook API is a REST interface for programmatically creating and", "source_type": "official_docs"}
+  ],
+  "mcp": [
+   {"url": "https://developers.google.com/notebook/docs/mcp", "quote": "The Gemini Notebook API provides a remote Model Context Protocol (MCP)", "source_type": "official_docs"}
+  ],
+  "buildability": [
+   {"url": "https://developers.google.com/notebook/docs", "quote": "Pre-GA products and features might have limited support", "source_type": "official_docs"}
+  ]
+ }
+}

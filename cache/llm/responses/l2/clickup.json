@@ -1,0 +1,147 @@
+{
+ "id": "clickup",
+ "name": "ClickUp",
+ "category": "Productivity/PM",
+ "one_liner": "Project management platform; ClickUp API lets teams build custom workflows, integrations, and automations.",
+ "docs_url": "https://developer.clickup.com/docs/Getting%20Started",
+ "openapi_spec_url": "https://developer.clickup.com/docs/open-api-spec.md",
+ "auth_methods": [
+  "api_key",
+  "oauth2"
+ ],
+ "auth_notes": "Personal API token in Authorization header; OAuth flow for apps that other users authorize per Workspace.",
+ "oauth_details": {
+  "flows": [
+   "auth_code"
+  ],
+  "scopes_granular": "unknown",
+  "app_review_required": "unknown"
+ },
+ "access": "self_serve_free",
+ "access_notes": "Rate limits apply to FreeForever plan (100/min), so API is available on free plans; Enterprise gets 10,000/min and user management API.",
+ "sandbox_or_test_env": "unknown",
+ "api_surface": {
+  "style": [
+   "rest"
+  ],
+  "breadth": "unknown",
+  "approx_endpoint_count": null,
+  "webhooks": true,
+  "pagination_documented": "unknown",
+  "rate_limits_documented": true,
+  "official_sdks": []
+ },
+ "mcp": {
+  "exists": "official",
+  "url": "https://mcp.clickup.com/mcp"
+ },
+ "buildability": {
+  "verdict": "BUILD_NOW",
+  "main_blocker": "none",
+  "rationale": "API on all plans incl. FreeForever with 100 req/min; self-serve token and OAuth; OpenAPI spec and official MCP available.",
+  "est_tool_count_if_built": null,
+  "est_effort": "L"
+ },
+ "composio_existing_toolkit": true,
+ "confidence": {
+  "identity": "high",
+  "auth": "high",
+  "access": "medium",
+  "sandbox": "low",
+  "api_surface": "medium",
+  "mcp": "high",
+  "buildability": "medium"
+ },
+ "needs_human": false,
+ "needs_human_reason": "",
+ "evidence": {
+  "auth": [
+   {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "For personal use, authenticate with your personal API token.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "For apps or integrations that other people use, use the OAuth flow, allowing users to authorize Workspaces for your app.",
+    "source_type": "official_docs"
+   }
+  ],
+  "access": [
+   {
+    "url": "https://developer.clickup.com/docs/rate-limits",
+    "quote": "| FreeForever | 100 |",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://clickup.com/pricing",
+    "quote": "| API Calls | 100/minute | 100/minute | 100/minute | 10,000/minute | 10,000/minute |",
+    "source_type": "pricing_page"
+   }
+  ],
+  "api_surface": [
+   {
+    "url": "https://developer.clickup.com/docs/rate-limits",
+    "quote": "These limits apply to both personal and OAuth tokens and vary by Workspace Plan of the Workspace hosting the token.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.clickup.com/docs/open-api-spec",
+    "quote": "The raw OpenAPI specification for the ClickUp API is available for each version of our Public API.",
+    "source_type": "official_docs"
+   }
+  ],
+  "mcp": [
+   {
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "quote": "ClickUp's MCP Server is available on all plans.",
+    "source_type": "official_docs"
+   },
+   {
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "quote": "Our MCP server URL is https://mcp.clickup.com/mcp.",
+    "source_type": "official_docs"
+   }
+  ],
+  "buildability": [
+   {
+    "url": "https://developer.clickup.com/docs/rate-limits",
+    "quote": "| FreeForever | 100 |",
+    "source_type": "official_docs"
+   }
+  ],
+  "identity": [
+   {
+    "url": "https://developer.clickup.com/docs/authentication",
+    "quote": "To use the ClickUp API, you must authenticate every request.",
+    "source_type": "official_docs"
+   }
+  ]
+ },
+ "disputes": [
+  {
+   "field": "access",
+   "first_pass": "unknown",
+   "yours": "self_serve_free",
+   "why": "Rate limits listed for FreeForever plan; pricing shows 100/min API calls on lowest tiers."
+  },
+  {
+   "field": "buildability.main_blocker",
+   "first_pass": "paid_plan_gate",
+   "yours": "none",
+   "why": "Only higher rate limits are plan-dependent; API access is on all plans."
+  },
+  {
+   "field": "buildability.verdict",
+   "first_pass": "BUILD_WITH_CAVEATS",
+   "yours": "BUILD_NOW",
+   "why": "No credential gate; free plan has API."
+  },
+  {
+   "field": "mcp.url",
+   "first_pass": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+   "yours": "https://mcp.clickup.com/mcp",
+   "why": "Docs page gives actual server URL."
+  }
+ ]
+}
