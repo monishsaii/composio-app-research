@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-23T16:38:59Z",
+ "generated_at": "2026-11-23T16:56:57Z",
  "offline_replay": true,
  "gold_source": {
-  "human": 0,
+  "human": 18,
   "auditor": 180
  },
  "split": {
@@ -39,6 +39,194 @@
    "supabase",
    "telegram",
    "waterfall-io"
+  ]
+ },
+ "human_review": {
+  "rows_marked_Y": 0,
+  "rows_marked_N": 18,
+  "rows_blank": 162,
+  "mode": "errors_only",
+  "corrections": [
+   {
+    "split": "TEST",
+    "id": "amazon-selling-partner",
+    "name": "Amazon Selling Partner",
+    "field": "mcp.exists",
+    "agent": "official",
+    "human": "community",
+    "note": "",
+    "cause": "misread docs"
+   },
+   {
+    "split": "TEST",
+    "id": "copper",
+    "name": "Copper",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_trial",
+    "note": "",
+    "cause": "misread pricing/access gate"
+   },
+   {
+    "split": "TEST",
+    "id": "copper",
+    "name": "Copper",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "TEST",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "auth_methods",
+    "agent": "api_key|oauth2",
+    "human": "oauth2",
+    "note": "[reviewer wrote 'outh2'; mapped to schema value 'oauth2']",
+    "cause": "misread docs"
+   },
+   {
+    "split": "TEST",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "TEST",
+    "id": "dealcloud",
+    "name": "DealCloud",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "human": "other",
+    "note": "[reviewer wrote 'admin_approval'; mapped to schema value 'other']",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "TEST",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_free",
+    "note": "[reviewer wrote 'sandbox_only'; mapped to schema value 'self_serve_free']",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "TEST",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "TEST",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "mcp.exists",
+    "agent": "unknown",
+    "human": "official",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "TEST",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "buildability.main_blocker",
+    "agent": "ambiguous_product",
+    "human": "app_review",
+    "note": "",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "TEST",
+    "id": "fanbasis",
+    "name": "fanbasis",
+    "field": "buildability.verdict",
+    "agent": "UNCLEAR",
+    "human": "BUILD_WITH_CAVEATS",
+    "note": "",
+    "cause": "ambiguous product / unclear tier"
+   },
+   {
+    "split": "TEST",
+    "id": "google-ads",
+    "name": "Google Ads",
+    "field": "auth_methods",
+    "agent": "jwt_service_account|oauth2",
+    "human": "oauth2",
+    "note": "",
+    "cause": "misread docs"
+   },
+   {
+    "split": "DEV",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "access",
+    "agent": "paid_plan_required",
+    "human": "self_serve_trial",
+    "note": "",
+    "cause": "misread pricing/access gate"
+   },
+   {
+    "split": "DEV",
+    "id": "datadog",
+    "name": "Datadog",
+    "field": "buildability.main_blocker",
+    "agent": "paid_plan_gate",
+    "human": "app_review",
+    "note": "",
+    "cause": "misread docs"
+   },
+   {
+    "split": "DEV",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "DEV",
+    "id": "help-scout",
+    "name": "Help Scout",
+    "field": "buildability.main_blocker",
+    "agent": "none",
+    "human": "paid_plan_gate",
+    "note": "",
+    "cause": "misread docs"
+   },
+   {
+    "split": "DEV",
+    "id": "linkedin-ads",
+    "name": "LinkedIn Ads",
+    "field": "api_surface.breadth",
+    "agent": "unknown",
+    "human": "broad",
+    "note": "",
+    "cause": "insufficient evidence found"
+   },
+   {
+    "split": "DEV",
+    "id": "mrscraper",
+    "name": "MrScraper",
+    "field": "buildability.main_blocker",
+    "agent": "other",
+    "human": "none",
+    "note": "",
+    "cause": "misread docs"
+   }
   ]
  },
  "human": null,

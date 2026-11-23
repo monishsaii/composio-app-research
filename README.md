@@ -38,7 +38,7 @@ A saved real trace of one app: [`data/traces/`](data/traces/) (queries → sourc
 - **L3 rules** (unit-tested, `tests/test_rules.py`). The deterministic rubric verdict. oauth2 ⇒ authorize/token evidence. paid ⇒ pricing evidence. Official MCP ⇒ resolves on a vendor domain. docs_url is 200 and not a marketing page. Breadth matches the endpoint count.
 - **L4 browser.** Playwright renders the 15 hardest apps (screenshots in `data/screenshots/`) to recover JS-rendered evidence. Observe only.
 - **L5 adjudication.** Sonnet (lowered from Opus to cut usage) takes each disputed or low-confidence field, with the conflicting evidence plus targeted re-research. Its quotes must string-match too. Anything unresolved goes to `data/human_queue.md`.
-- **Human check.** `data/human_check.csv` (30 apps × 6 fields) is filled by a human. A blind Opus "auditor" also answers the same fields without seeing the agent's answers. It is reported separately and is **not** ground truth.
+- **Human check.** `data/human_check.csv` (30 apps × 6 fields). The reviewer recorded 18 errors (rows marked N with corrections) and did not review the other 162 rows, so no human accuracy rate is claimed. The 18 corrections are applied to `final.json` as labelled overrides (`human_overrides`), and agent-only scores use `after_L5.json`. The raw sheet is kept as `human_check.raw.csv`. A blind Opus "auditor" also answers the same fields without seeing the agent's answers. It is reported separately and is **not** ground truth.
 
 ## Verdict rubric (code: `src/appresearch/rubric.py`, first match wins)
 1. NOT_APPLICABLE_NOT_A_SERVICE: blocker cli_or_local_only (local OSS/CLI; wrap it as a skill).

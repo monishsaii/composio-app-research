@@ -10,7 +10,7 @@ from . import cache, human, research, rubric, split
 from .loops.l2_second_pass import get
 
 SNAPSHOTS = [("pass1", "pass1.json"), ("L1", "after_L1.json"), ("L2", "after_L2.json"), ("L3", "after_L3.json"),
-             ("L4", "after_L4.json"), ("final", "final.json")]
+             ("L4", "after_L4.json"), ("final", "after_L5.json")]  # final = agent output, before human overrides
 FIELDS = human.KEY_FIELDS
 GATED_ACCESS = rubric.GATED_ACCESS | {"no_public_api"}
 
@@ -118,6 +118,20 @@ def main() -> dict:
             snaps[name] = {r["id"]: r for r in research.load(fn)}
     out = {"generated_at": cache.now_iso(), "offline_replay": bool(os.environ.get("APPRESEARCH_OFFLINE")),
            "gold_source": {"human": len(hum), "auditor": len(aud)}, "split": {k: sp[k] for k in ("dev", "test")}}
+    # If the reviewer only filled rows they judged wrong (no Y rows), an accuracy number would be 0% by construction:
+    # report those rows as human-found misses instead of scoring.
+    import csv as _csv
+    hrows = [r for r in _csv.DictReader(human.CSV.open(encoding="utf-8"))] if human.CSV.exists() else []
+    n_y = sum(1 for r in hrows if (r.get("human_correct") or "").strip().upper().startswith("Y"))
+    n_n = sum(1 for r in hrows if (r.get("human_correct") or "").strip().upper().startswith("N"))
+    out["human_review"] = {"rows_marked_Y": n_y, "rows_marked_N": n_n, "rows_blank": len(hrows) - n_y - n_n,
+                           "mode": "errors_only" if n_n and not n_y else ("scored" if n_y else "none"),
+                           "corrections": [{"split": r["split"], "id": r["app_id"], "name": r["app"], "field": r["field"],
+                                            "agent": r["agent_value"], "human": r["human_value"], "note": r.get("note", ""),
+                                            "cause": cause(snaps["final"][r["app_id"]], r["field"], "") if "final" in snaps else ""}
+                                           for r in hrows if (r.get("human_correct") or "").strip().upper().startswith("N")]}
+    if out["human_review"]["mode"] == "errors_only":
+        hum = {}
     for label, gold in (("human", hum), ("auditor_NOT_ground_truth", aud)):
         if not gold:
             out[label] = None

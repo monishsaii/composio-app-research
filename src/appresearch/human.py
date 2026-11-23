@@ -78,6 +78,40 @@ def emit_auditor() -> int:
     return len(sp["test"]) + len(sp["dev"])
 
 
+def apply_overrides() -> int:
+    """final.json = agent output (after_L5.json) + human corrections from human_check.csv (N rows with a value),
+    verdict recomputed by the rubric. Overrides are labelled; the agent snapshot stays untouched for scoring."""
+    import copy
+
+    from . import rubric
+    from .loops.l2_second_pass import put
+
+    recs = {r["id"]: r for r in research.load("after_L5.json")}
+    n = 0
+    if CSV.exists():
+        with CSV.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if not (row.get("human_correct") or "").strip().upper().startswith("N") or not row.get("human_value", "").strip():
+                    continue
+                r = recs[row["app_id"]]
+                v = row["human_value"].strip()
+                old = get(r, row["field"])
+                val = sorted(x for x in v.replace(",", "|").split("|") if x) if row["field"] == "auth_methods" else v
+                put(r, row["field"], val)
+                group = GROUP[row["field"]] if row["field"] != "buildability.main_blocker" else "buildability"
+                r.setdefault("evidence", {}).setdefault(group, []).append(
+                    {"url": r.get("docs_url") or "", "quote": f"Human reviewer correction: {old} -> {v}. {row.get('note', '')}"[:200],
+                     "source_type": "none", "fetched_at": "2026-11-23", "support": "human_review"})
+                r.setdefault("flags", []).append(f"HUMAN {row['field']}: {old} -> {v}")
+                r.setdefault("human_overrides", []).append({"field": row["field"], "agent": old, "human": v, "note": row.get("note", "")})
+                n += 1
+    for r in recs.values():
+        if r.get("human_overrides"):
+            r["buildability"]["verdict"] = rubric.verdict(r)
+    research.save("final.json", list(recs.values()))
+    return n
+
+
 def load_human() -> dict:
     """{(app_id, field): gold_value} from filled rows. Y -> agent value is gold; N -> human_value is gold."""
     gold = {}

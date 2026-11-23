@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-23T16:38:59Z",
+ "generated_at": "2026-11-23T16:56:58Z",
  "n": 100,
  "verdicts": {
-  "BUILD_NOW": 35,
+  "BUILD_NOW": 36,
   "BUILD_WITH_CAVEATS": 52,
   "BLOCKED_NEEDS_OUTREACH": 7,
   "BLOCKED_NO_PUBLIC_API": 0,
   "NOT_APPLICABLE_NOT_A_SERVICE": 2,
-  "UNCLEAR": 4
+  "UNCLEAR": 3
  },
  "access": {
-  "self_serve_free": 45,
-  "self_serve_trial": 12,
-  "paid_plan_required": 18,
+  "self_serve_free": 46,
+  "self_serve_trial": 14,
+  "paid_plan_required": 15,
   "admin_approval": 6,
   "app_review_required": 11,
   "partner_or_contact_sales": 4,
@@ -21,18 +21,18 @@
  },
  "auth_single": {
   "oauth2": 70,
-  "api_key": 48,
+  "api_key": 47,
   "bearer_token": 38,
   "basic": 12,
   "other": 11,
-  "jwt_service_account": 5,
+  "jwt_service_account": 4,
   "hmac_signature": 3,
   "none": 2
  },
  "auth_combos": {
-  "api_key+oauth2": 17,
   "bearer_token+oauth2": 17,
-  "oauth2": 13,
+  "api_key+oauth2": 16,
+  "oauth2": 15,
   "api_key": 9,
   "api_key+bearer_token+oauth2": 6,
   "bearer_token": 5,
@@ -45,21 +45,21 @@
  },
  "blockers": {
   "paid_plan_gate": 16,
-  "other": 14,
-  "app_review": 13,
+  "app_review": 15,
+  "other": 13,
   "partner_gate": 4,
   "enterprise_only": 3,
-  "ambiguous_product": 2,
   "cli_or_local_only": 2,
   "auth_complexity": 2,
   "regulatory_or_pci": 1,
-  "unstable_or_undocumented_api": 1
+  "unstable_or_undocumented_api": 1,
+  "ambiguous_product": 1
  },
  "mcp": {
   "official": 72,
-  "community": 15,
+  "community": 16,
   "none_found": 4,
-  "unknown": 9
+  "unknown": 8
  },
  "mcp_by_category": {
   "crm": {
@@ -82,10 +82,9 @@
    "unknown": 1
   },
   "ecommerce": {
+   "community": 3,
    "official": 6,
-   "none_found": 1,
-   "unknown": 1,
-   "community": 2
+   "none_found": 1
   },
   "data": {
    "official": 8,
@@ -112,15 +111,15 @@
   }
  },
  "composio_existing": 80,
- "self_serve": 57,
- "gated": 40,
+ "self_serve": 60,
+ "gated": 37,
  "known_access": 97,
  "oauth": 70,
  "category_access": {
   "crm": {
    "self_serve_free": 4,
-   "self_serve_trial": 1,
-   "paid_plan_required": 3,
+   "self_serve_trial": 2,
+   "paid_plan_required": 2,
    "admin_approval": 1,
    "app_review_required": 0,
    "partner_or_contact_sales": 0,
@@ -158,9 +157,9 @@
    "unknown": 0
   },
   "ecommerce": {
-   "self_serve_free": 3,
+   "self_serve_free": 4,
    "self_serve_trial": 1,
-   "paid_plan_required": 2,
+   "paid_plan_required": 1,
    "admin_approval": 1,
    "app_review_required": 2,
    "partner_or_contact_sales": 0,
@@ -179,8 +178,8 @@
   },
   "dev": {
    "self_serve_free": 8,
-   "self_serve_trial": 1,
-   "paid_plan_required": 1,
+   "self_serve_trial": 2,
+   "paid_plan_required": 0,
    "admin_approval": 0,
    "app_review_required": 0,
    "partner_or_contact_sales": 0,
@@ -253,15 +252,15 @@
   },
   "ecommerce": {
    "BUILD_NOW": 1,
-   "BUILD_WITH_CAVEATS": 7,
+   "BUILD_WITH_CAVEATS": 8,
    "BLOCKED_NEEDS_OUTREACH": 0,
    "BLOCKED_NO_PUBLIC_API": 0,
    "NOT_APPLICABLE_NOT_A_SERVICE": 0,
-   "UNCLEAR": 2
+   "UNCLEAR": 1
   },
   "data": {
-   "BUILD_NOW": 3,
-   "BUILD_WITH_CAVEATS": 4,
+   "BUILD_NOW": 4,
+   "BUILD_WITH_CAVEATS": 3,
    "BLOCKED_NEEDS_OUTREACH": 2,
    "BLOCKED_NO_PUBLIC_API": 0,
    "NOT_APPLICABLE_NOT_A_SERVICE": 1,
@@ -302,9 +301,9 @@
  },
  "gating_by_category": {
   "crm": {
-   "gated": 4,
+   "gated": 3,
    "known": 9,
-   "pct": 44
+   "pct": 33
   },
   "support": {
    "gated": 5,
@@ -322,9 +321,9 @@
    "pct": 60
   },
   "ecommerce": {
-   "gated": 5,
+   "gated": 4,
    "known": 9,
-   "pct": 56
+   "pct": 44
   },
   "data": {
    "gated": 6,
@@ -332,9 +331,9 @@
    "pct": 60
   },
   "dev": {
-   "gated": 1,
+   "gated": 0,
    "known": 10,
-   "pct": 10
+   "pct": 0
   },
   "productivity": {
    "gated": 1,
@@ -358,7 +357,7 @@
    "n": 9
   },
   "other": {
-   "gated": 35,
+   "gated": 32,
    "n": 88
   }
  },
@@ -661,6 +660,19 @@
    "mcp": "official",
    "notes": "API is a free feature across all plans (daily call limit 200 on Free); viewers, guests (no key), student accounts cannot get tokens. Free developer account available for testing.",
    "docs_url": "https://developer.monday.com/api-reference/reference"
+  },
+  {
+   "id": "mrscraper",
+   "name": "MrScraper",
+   "category": "Data/SEO/Scraping",
+   "access": "self_serve_free",
+   "blocker": "none",
+   "verdict": "BUILD_NOW",
+   "tools": null,
+   "composio": true,
+   "mcp": "official",
+   "notes": "Free API token from mrscraper.com per the vendor blog, which describes a free tier. Free-tier limits and paid pricing are not verified from the fetched pages, and some blog text is truncated.",
+   "docs_url": "https://docs.mrscraper.com/docs/api/overview"
   },
   {
    "id": "netlify",
@@ -983,16 +995,6 @@
    }
   },
   {
-   "id": "amazon-selling-partner",
-   "name": "Amazon Selling Partner",
-   "changes": {
-    "mcp": [
-     "community",
-     "official"
-    ]
-   }
-  },
-  {
    "id": "asana",
    "name": "Asana",
    "changes": {
@@ -1146,6 +1148,10 @@
    "id": "copper",
    "name": "Copper",
    "changes": {
+    "access": [
+     "paid_plan_required",
+     "self_serve_trial"
+    ],
     "mcp": [
      "unknown",
      "official"
@@ -1158,11 +1164,11 @@
    "changes": {
     "access": [
      "unknown",
-     "paid_plan_required"
+     "self_serve_trial"
     ],
     "blocker": [
      "auth_complexity",
-     "paid_plan_gate"
+     "app_review"
     ]
    }
   },
@@ -1219,6 +1225,28 @@
     "blocker": [
      "app_review",
      "paid_plan_gate"
+    ]
+   }
+  },
+  {
+   "id": "fanbasis",
+   "name": "fanbasis",
+   "changes": {
+    "verdict": [
+     "UNCLEAR",
+     "BUILD_WITH_CAVEATS"
+    ],
+    "access": [
+     "paid_plan_required",
+     "self_serve_free"
+    ],
+    "blocker": [
+     "ambiguous_product",
+     "app_review"
+    ],
+    "mcp": [
+     "unknown",
+     "official"
     ]
    }
   },
@@ -1337,6 +1365,10 @@
     "access": [
      "unknown",
      "paid_plan_required"
+    ],
+    "blocker": [
+     "none",
+     "paid_plan_gate"
     ]
    }
   },
@@ -1556,6 +1588,14 @@
    "id": "mrscraper",
    "name": "MrScraper",
    "changes": {
+    "verdict": [
+     "BUILD_WITH_CAVEATS",
+     "BUILD_NOW"
+    ],
+    "blocker": [
+     "other",
+     "none"
+    ],
     "mcp": [
      "unknown",
      "official"
@@ -2116,41 +2156,41 @@
  "pass1_unknown_access": 59,
  "headlines": [
   {
-   "text": "57 of 100 apps give a developer working API credentials free and self-serve (45 free, 12 via trial).",
+   "text": "60 of 100 apps give a developer working API credentials free and self-serve (46 free, 14 via trial).",
    "filter": {
     "acc": "self_serve_free"
    }
   },
   {
-   "text": "40 of 100 are gated. The most common gate is paid plan required (18 apps); only 4 require partner or sales contact.",
+   "text": "37 of 100 are gated. The most common gate is paid plan required (15 apps); only 4 require partner or sales contact.",
    "filter": {
     "acc": "paid_plan_required"
    }
   },
   {
-   "text": "Auth is dominated by oauth2 (70 apps) and api_key (48); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.",
+   "text": "Auth is dominated by oauth2 (70 apps) and api_key (47); 70 apps support OAuth 2.0, so per-user OAuth is the norm Composio must handle.",
    "filter": {
     "auth": "oauth2"
    }
   },
   {
-   "text": "72 of 100 vendors now publish an official MCP server; 15 more have only community servers.",
+   "text": "72 of 100 vendors now publish an official MCP server; 16 more have only community servers.",
    "filter": {}
   },
   {
-   "text": "35 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.",
+   "text": "36 apps are BUILD_NOW. 3 of them have no Composio toolkit today: LiveAgent, systeme.io, Vonage.",
    "filter": {
     "ver": "BUILD_NOW"
    }
   },
   {
-   "text": "Finance apps: 5 of 9 gated vs 35 of 88 in other categories.",
+   "text": "Finance apps: 5 of 9 gated vs 32 of 88 in other categories.",
    "filter": {
     "cat": "Finance/Fintech"
    }
   },
   {
-   "text": "Verification changed the verdict for 34 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.",
+   "text": "Verification changed the verdict for 36 of 100 apps versus the single-shot pass 1; access went from 59 unknown to 3 unknown.",
    "filter": {}
   }
  ],
@@ -2159,11 +2199,6 @@
    "id": "close",
    "name": "Close",
    "why": "unresolved after L5: access; access unknown; verdict UNCLEAR"
-  },
-  {
-   "id": "fanbasis",
-   "name": "fanbasis",
-   "why": "unresolved after L5: access, api_surface.webhooks, buildability.main_blocker, mcp.exists; verdict UNCLEAR"
   },
   {
    "id": "paygent-connect",

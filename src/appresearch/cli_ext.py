@@ -140,9 +140,10 @@ def cmd_replay(a):
     import os
 
     os.environ["APPRESEARCH_OFFLINE"] = "1"
-    from . import accuracy, analyze
+    from . import accuracy, analyze, human
     from .site import build
 
+    print(f"applied {human.apply_overrides()} human corrections -> data/final.json")
     accuracy.main()
     analyze.main()
     build.main()
